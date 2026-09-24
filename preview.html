@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PORTMATRIX Logistics — Excellence in Compliance</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT:'#2E3192',50:'#EEEFFB',100:'#DEE0F6',300:'#8E94E0',600:'#2E3192',700:'#262877',900:'#131444' },
+        brandred: { DEFAULT:'#ED1B24',300:'#F3777E',600:'#C8141C' },
+        ink:'#0D102E', paper:'#F6F7FC', mist:'#EBEEF7', slatey:'#5B6178', hairline:'#E2E6F2'
+      },
+      fontFamily: {
+        display:['"Space Grotesk"','sans-serif'],
+        sans:['Inter','sans-serif'],
+        mono:['"Space Mono"','monospace']
+      },
+      boxShadow: {
+        card:'0 1px 2px rgba(13,16,46,.04),0 12px 32px -12px rgba(46,49,146,.18)',
+        lift:'0 1px 2px rgba(13,16,46,.04),0 24px 48px -16px rgba(46,49,146,.28)',
+        glow:'0 0 0 1px rgba(46,49,146,.08),0 18px 50px -20px rgba(237,27,36,.30)'
+      }
+    }
+  }
+}
+</script>
+<style>
+  body{font-family:Inter,sans-serif;background:#F6F7FC;color:#0D102E;-webkit-font-smoothing:antialiased}
+  .font-display{font-family:"Space Grotesk",sans-serif}
+  .font-mono{font-family:"Space Mono",monospace}
+  html{scroll-behavior:smooth}
+  .bg-blueprint{background-image:linear-gradient(rgba(46,49,146,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(46,49,146,.05) 1px,transparent 1px);background-size:34px 34px}
+  .bg-blueprint-dark{background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:34px 34px}
+  .kicker{font-family:"Space Mono",monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .animate-marquee{animation:marquee 28s linear infinite}
+  @keyframes ping{75%,100%{transform:scale(2);opacity:0}}
+  .animate-ping{animation:ping 1.2s cubic-bezier(0,0,.2,1) infinite}
+  .input{width:100%;border-radius:.85rem;border:1px solid #E2E6F2;background:#F6F7FC;padding:.7rem .9rem;font-size:.875rem;color:#0D102E;outline:none;transition:.2s}
+  .input:focus{border-color:#2E3192;box-shadow:0 0 0 3px rgba(46,49,146,.12);background:#fff}
+  .input::placeholder{color:#9AA1BB}
+  :focus-visible{outline:2px solid #2E3192;outline-offset:2px;border-radius:4px}
+  @media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+  [v-cloak]{display:none}
+</style>
+</head>
+<body class="overflow-x-hidden">
+
+<!-- HEADER -->
+<header id="hdr" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+  <div class="mx-auto flex h-[68px] max-w-7xl items-center justify-between px-5 sm:px-8">
+    <a href="#top" class="flex items-center gap-2.5">
+      <svg width="34" height="34" viewBox="0 0 34 34" class="shrink-0">
+        <rect x="0" y="0" width="15" height="15" rx="3.2" fill="#2E3192"/><rect x="19" y="0" width="15" height="15" rx="3.2" fill="#ED1B24"/>
+        <rect x="0" y="19" width="15" height="15" rx="3.2" fill="#ED1B24"/><rect x="19" y="19" width="15" height="15" rx="3.2" fill="#2E3192"/>
+      </svg>
+      <div class="flex flex-col leading-none">
+        <span class="font-display text-xl font-bold tracking-tight"><span class="text-navy">Port</span><span class="text-brandred">Matrix</span></span>
+        <span class="mt-0.5 font-mono text-[9px] tracking-[.18em] uppercase text-slatey">Excellence in Compliance</span>
+      </div>
+    </a>
+    <nav class="hidden items-center gap-1 lg:flex">
+      <a href="#services" class="rounded-full px-4 py-2 text-sm font-medium text-ink/75 hover:bg-navy-50 hover:text-navy">Services</a>
+      <a href="#china" class="rounded-full px-4 py-2 text-sm font-medium text-ink/75 hover:bg-navy-50 hover:text-navy">China Sourcing</a>
+      <a href="#process" class="rounded-full px-4 py-2 text-sm font-medium text-ink/75 hover:bg-navy-50 hover:text-navy">How it works</a>
+      <a href="#why" class="rounded-full px-4 py-2 text-sm font-medium text-ink/75 hover:bg-navy-50 hover:text-navy">Why us</a>
+      <a href="#contact" class="rounded-full px-4 py-2 text-sm font-medium text-ink/75 hover:bg-navy-50 hover:text-navy">Contact</a>
+    </nav>
+    <div class="hidden items-center gap-3 lg:flex">
+      <a href="tel:+914448517879" class="text-sm font-medium text-ink/70 hover:text-navy">+91 44 4851 7879</a>
+      <a href="#contact" class="rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white shadow-card hover:bg-navy-700">Get a quote →</a>
+    </div>
+    <button onclick="openDrawer()" class="flex h-10 w-10 items-center justify-center rounded-xl text-navy lg:hidden" aria-label="Menu">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE DRAWER -->
+<div id="overlay" onclick="closeDrawer()" class="fixed inset-0 z-40 hidden bg-ink/40 backdrop-blur-sm lg:hidden"></div>
+<aside id="drawer" class="fixed right-0 top-0 z-50 flex h-full w-[82%] max-w-sm translate-x-full flex-col bg-white p-6 transition-transform duration-300 lg:hidden">
+  <div class="flex items-center justify-between">
+    <span class="font-display text-xl font-bold"><span class="text-navy">Port</span><span class="text-brandred">Matrix</span></span>
+    <button onclick="closeDrawer()" class="flex h-10 w-10 items-center justify-center rounded-xl text-navy"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <nav class="mt-8 flex flex-col gap-1">
+    <a onclick="closeDrawer()" href="#services" class="rounded-xl px-4 py-3 text-base font-medium hover:bg-navy-50 hover:text-navy">Services</a>
+    <a onclick="closeDrawer()" href="#china" class="rounded-xl px-4 py-3 text-base font-medium hover:bg-navy-50 hover:text-navy">China Sourcing</a>
+    <a onclick="closeDrawer()" href="#process" class="rounded-xl px-4 py-3 text-base font-medium hover:bg-navy-50 hover:text-navy">How it works</a>
+    <a onclick="closeDrawer()" href="#why" class="rounded-xl px-4 py-3 text-base font-medium hover:bg-navy-50 hover:text-navy">Why us</a>
+    <a onclick="closeDrawer()" href="#contact" class="rounded-xl px-4 py-3 text-base font-medium hover:bg-navy-50 hover:text-navy">Contact</a>
+  </nav>
+  <div class="mt-auto space-y-3 border-t border-hairline pt-6">
+    <a href="tel:+914448517879" class="block text-sm font-medium text-slatey">📞 +91 44 4851 7879</a>
+    <a onclick="closeDrawer()" href="#contact" class="block rounded-full bg-navy px-5 py-3 text-center text-sm font-semibold text-white">Get a free consultation</a>
+  </div>
+</aside>
+
+<!-- HERO -->
+<section id="top" class="relative overflow-hidden bg-paper pt-28 pb-16 sm:pt-32 lg:pb-24">
+  <div class="bg-blueprint pointer-events-none absolute inset-0 opacity-70"></div>
+  <div class="pointer-events-none absolute -right-40 -top-24 h-[480px] w-[480px] rounded-full bg-brandred/10 blur-[120px]"></div>
+  <div class="pointer-events-none absolute -left-40 top-40 h-[420px] w-[420px] rounded-full bg-navy/10 blur-[120px]"></div>
+  <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:gap-10">
+    <div class="reveal">
+      <div class="inline-flex items-center gap-2 rounded-full border border-navy/15 bg-white px-3.5 py-1.5 shadow-sm">
+        <span class="text-brandred">✔</span><span class="kicker text-navy">Govt. Licensed Customs Broker · Since 1996</span>
+      </div>
+      <h1 class="mt-5 font-display text-[2.5rem] font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl">
+        Move cargo across borders, <span class="relative whitespace-nowrap"><span class="relative z-10 text-navy">without the friction</span>
+        <svg class="absolute -bottom-2 left-0 z-0 h-3 w-full" viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M2 8 C 80 2,220 2,298 8" stroke="#ED1B24" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span>
+      </h1>
+      <p class="mt-6 max-w-xl text-base leading-relaxed text-slatey sm:text-lg">
+        PORTMATRIX handles end-to-end customs clearance for exporters, importers and vessel agents — with the accuracy, speed and transparency that complex EXIM compliance demands. One partner, every Customs Station in India.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href="#contact" class="flex items-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-semibold text-white shadow-card hover:bg-navy-700">Get a free consultation →</a>
+        <a href="#services" class="flex items-center gap-2 rounded-full border border-navy/20 bg-white px-6 py-3.5 text-sm font-semibold text-navy hover:border-navy hover:bg-navy-50">Explore services</a>
+      </div>
+      <div class="mt-10">
+        <div class="flex items-center gap-2 text-xs font-medium text-slatey">🛡️ Compliant across every PGA</div>
+        <div class="mt-3 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-wide text-slatey/80">
+          <span>ICEGATE</span><span>DGFT</span><span>FSSAI</span><span>BIS</span><span>CDSCO</span><span>Plant Quarantine</span><span>RBI / FEMA</span><span>GST / IEC</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRACKER WIDGET -->
+    <div class="reveal relative mx-auto w-full max-w-md lg:max-w-none">
+      <div class="absolute -left-3 -top-3 z-20 hidden items-center gap-1.5 rounded-full bg-brandred px-3 py-1.5 text-xs font-semibold text-white shadow-glow sm:flex">
+        <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/70"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-white"></span></span>Live clearance
+      </div>
+      <div class="overflow-hidden rounded-3xl border border-hairline bg-white shadow-lift">
+        <div class="flex items-center justify-between gap-3 border-b border-hairline bg-navy px-5 py-4">
+          <div class="min-w-0">
+            <p class="font-mono text-[10px] uppercase tracking-[.18em] text-white/55">Shipment reference</p>
+            <p id="tk-ref" class="truncate font-mono text-sm font-bold text-white">BOE-IN-4827193</p>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button id="tk-play" onclick="togglePlay()" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-white hover:bg-white/20">⏸</button>
+            <button onclick="resetTrack()" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-white hover:bg-white/20">↺</button>
+          </div>
+        </div>
+        <div id="tk-tabs" class="flex gap-1 p-2"></div>
+        <div class="px-5 pb-1 pt-2">
+          <div class="flex items-center justify-between gap-2 text-xs text-slatey">
+            <span id="tk-route" class="truncate font-medium"></span><span id="tk-eta" class="shrink-0 font-mono text-navy"></span>
+          </div>
+          <div class="mt-3 h-2 w-full overflow-hidden rounded-full bg-mist"><div id="tk-bar" class="h-full rounded-full bg-gradient-to-r from-navy to-brandred transition-all duration-500" style="width:50%"></div></div>
+          <div class="mt-1.5 flex justify-between font-mono text-[10px] text-slatey"><span id="tk-pct">Cleared 50%</span><span id="tk-stage">Stage 3/6</span></div>
+        </div>
+        <div id="tk-stages" class="space-y-1 px-3 pb-4 pt-2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="relative border-y border-hairline bg-white">
+  <div class="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:py-14">
+    <div class="grid grid-cols-2 gap-6 lg:grid-cols-4">
+      <div class="reveal text-center sm:text-left"><div class="font-display text-3xl font-bold text-navy sm:text-4xl" data-count="1996" data-plain="1">1996</div><p class="mt-1.5 text-sm font-medium text-slatey">Licensed broker since</p></div>
+      <div class="reveal text-center sm:text-left"><div class="font-display text-3xl font-bold text-navy sm:text-4xl" data-count="1974" data-plain="1">1974</div><p class="mt-1.5 text-sm font-medium text-slatey">China trade roots from</p></div>
+      <div class="reveal text-center sm:text-left"><div class="font-display text-3xl font-bold text-navy sm:text-4xl" data-count="40" data-suffix="%">40%</div><p class="mt-1.5 text-sm font-medium text-slatey">Avg. China cost saved</p></div>
+      <div class="reveal text-center sm:text-left"><div class="font-display text-3xl font-bold text-navy sm:text-4xl" data-count="100" data-suffix="%">100%</div><p class="mt-1.5 text-sm font-medium text-slatey">Pan-India clearance</p></div>
+    </div>
+  </div>
+  <div class="relative overflow-hidden border-t border-hairline bg-paper py-3.5">
+    <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-paper to-transparent"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-paper to-transparent"></div>
+    <div id="marquee" class="flex w-max animate-marquee gap-8 pr-8"></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="relative scroll-mt-20 py-20 sm:py-28">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <div class="reveal max-w-2xl">
+        <span class="kicker mb-3 flex items-center gap-2 text-brandred"><span class="h-px w-6 bg-current"></span>Core services</span>
+        <h2 class="font-display text-3xl font-bold leading-tight tracking-tight text-ink sm:text-[2.5rem]">Everything between the factory and the final mile</h2>
+        <p class="mt-4 text-base leading-relaxed text-slatey">One licensed partner for clearance, sourcing, warehousing and trade consultancy — so you never juggle five vendors for one shipment.</p>
+      </div>
+      <a href="#contact" class="reveal hidden shrink-0 items-center gap-1.5 rounded-full border border-navy/20 px-5 py-3 text-sm font-semibold text-navy hover:bg-navy-50 md:inline-flex">Discuss your shipment ↗</a>
+    </div>
+    <div id="services-grid" class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+  </div>
+</section>
+
+<!-- CHINA -->
+<section id="china" class="relative scroll-mt-20 overflow-hidden bg-navy py-20 text-white sm:py-28">
+  <div class="bg-blueprint-dark pointer-events-none absolute inset-0 opacity-60"></div>
+  <div class="pointer-events-none absolute -right-32 top-0 h-[420px] w-[420px] rounded-full bg-brandred/20 blur-[130px]"></div>
+  <div class="relative mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2">
+    <div class="reveal">
+      <span class="kicker mb-3 flex items-center gap-2 text-brandred-300"><span class="h-px w-6 bg-current"></span>The gateway to China</span>
+      <h2 class="font-display text-3xl font-bold leading-tight tracking-tight sm:text-[2.5rem]">Source from China and cut purchase cost by 30–40%</h2>
+      <p class="mt-4 max-w-lg text-white/70">Our trade link to China dates back to 1974. Against the myth, China produces very high-quality goods — we help you source, negotiate, inspect and deliver them to your door, with utmost transparency.</p>
+      <a href="#contact" class="mt-8 inline-flex items-center gap-2 rounded-full bg-brandred px-6 py-3.5 text-sm font-semibold text-white shadow-glow hover:bg-brandred-600">Plan a China import →</a>
+      <div class="mt-8 flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4">
+        <span class="text-2xl">🌏</span><p class="text-sm text-white/75"><span class="font-semibold text-white">5 decades</span> of trade with Hong Kong &amp; China — from gemstones in 1974 to full-scale sourcing today.</p>
+      </div>
+    </div>
+    <div id="china-grid" class="grid gap-4 sm:grid-cols-2"></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="relative scroll-mt-20 bg-white py-20 sm:py-28">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="reveal mx-auto flex max-w-2xl flex-col items-center text-center">
+      <span class="kicker mb-3 flex items-center gap-2 text-brandred"><span class="h-px w-6 bg-current"></span>How it works</span>
+      <h2 class="font-display text-3xl font-bold leading-tight tracking-tight text-ink sm:text-[2.5rem]">A clearance workflow you can actually see</h2>
+      <p class="mt-4 text-base leading-relaxed text-slatey">Every shipment follows a defined, transparent sequence. Switch between import and export to see exactly where PORTMATRIX steps in.</p>
+    </div>
+    <div class="mt-10 flex justify-center">
+      <div class="inline-flex rounded-full border border-hairline bg-paper p-1">
+        <button id="pf-import" onclick="setFlow('import')" class="rounded-full px-6 py-2.5 text-sm font-semibold text-white bg-navy transition-colors">⬇ Import</button>
+        <button id="pf-export" onclick="setFlow('export')" class="rounded-full px-6 py-2.5 text-sm font-semibold text-slatey transition-colors">⬆ Export</button>
+      </div>
+    </div>
+    <div class="relative mx-auto mt-14 max-w-4xl">
+      <div class="absolute left-[19px] top-2 bottom-2 w-px bg-gradient-to-b from-navy via-navy/40 to-brandred sm:left-1/2 sm:-translate-x-1/2"></div>
+      <ol id="timeline" class="space-y-6"></ol>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="relative scroll-mt-20 py-20 sm:py-28">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="grid gap-14 lg:grid-cols-[1fr_.9fr] lg:gap-16">
+      <div>
+        <div class="reveal max-w-2xl">
+          <span class="kicker mb-3 flex items-center gap-2 text-brandred"><span class="h-px w-6 bg-current"></span>Why PORTMATRIX</span>
+          <h2 class="font-display text-3xl font-bold leading-tight tracking-tight text-ink sm:text-[2.5rem]">Compliance is not a checkbox. It's our whole discipline.</h2>
+          <p class="mt-4 text-base leading-relaxed text-slatey">Customs compliance is a structured legal obligation under the Customs Act and allied laws. We treat every shipment with the rigor that demands.</p>
+        </div>
+        <div id="strengths" class="mt-10 grid gap-4 sm:grid-cols-2"></div>
+      </div>
+      <div class="flex flex-col gap-5">
+        <div class="reveal relative overflow-hidden rounded-3xl border border-hairline bg-navy p-7 text-white shadow-lift">
+          <div class="bg-blueprint-dark pointer-events-none absolute inset-0 opacity-50"></div>
+          <div class="relative">
+            <div class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[.16em] text-brandred-300">🎓 Led by the Managing Director</div>
+            <p class="mt-4 font-display text-2xl font-bold leading-snug">Mr. Rahim Iyaz</p>
+            <p class="mt-1 text-sm text-white/70">Government Licensed Customs Broker · M.Com, MBA, M.Phil · PGDIBO</p>
+            <p class="mt-4 text-sm leading-relaxed text-white/70">Vintage foreign-trade experience since 1996 across the Maldives, Singapore, China, Hong Kong, UAE, Saudi Arabia and Sri Lanka — and an authorised export-training resource person for MSME, FIEO, EDII-TN and TNAPEx.</p>
+          </div>
+        </div>
+        <div class="reveal rounded-3xl border border-hairline bg-white p-7 shadow-card">
+          <div class="flex items-center gap-2 text-brandred">📈 <span class="kicker">EXIM market intelligence</span></div>
+          <h3 class="mt-3 font-display text-xl font-bold text-ink">Decide with data, not guesswork</h3>
+          <p class="mt-2 text-sm text-slatey">Beyond clearance, we scan global markets and interpret the trade indices that tell you where — and what — to sell.</p>
+          <div id="intel" class="mt-5 flex flex-wrap gap-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="relative scroll-mt-20 bg-paper py-20 sm:py-28">
+  <div class="bg-blueprint pointer-events-none absolute inset-0 opacity-60"></div>
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="overflow-hidden rounded-[28px] border border-hairline bg-white shadow-lift lg:grid lg:grid-cols-[1fr_1.1fr]">
+      <div class="relative bg-navy p-8 text-white sm:p-10">
+        <div class="bg-blueprint-dark pointer-events-none absolute inset-0 opacity-50"></div>
+        <div class="relative">
+          <span class="kicker text-brandred-300">Get in touch</span>
+          <h2 class="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">Let's clear your next shipment together</h2>
+          <p class="mt-4 text-white/70">Tell us what you're moving. We'll get back with a transparent plan and an agreed service charge — no hidden costs.</p>
+          <ul class="mt-9 space-y-5 text-sm text-white/80">
+            <li class="flex gap-4">📍 <span>Wavoo Mansion Annex, No. 105-B, I Floor,<br>58/39 Rajaji Salai, Chennai 600 001, Tamil Nadu</span></li>
+            <li class="flex gap-4">📞 <span><a href="tel:+914448517879" class="block hover:text-white">+91 44 4851 7879</a><a href="tel:+919359352345" class="block hover:text-white">+91 935 935 2345 · 95857 90909</a></span></li>
+            <li class="flex gap-4">✉️ <a href="mailto:info@portmatrix.in" class="hover:text-white">info@portmatrix.in</a></li>
+            <li class="flex gap-4">🌐 <a href="https://www.portmatrix.in" class="hover:text-white">www.portmatrix.in</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="p-8 sm:p-10">
+        <h3 class="font-display text-xl font-bold text-ink">Request a quote</h3>
+        <p class="mt-1.5 text-sm text-slatey">We typically respond within one business day.</p>
+        <div class="mt-6 space-y-4">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="block"><span class="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slatey">Your name</span><input id="f-name" class="input" placeholder="Full name"></label>
+            <label class="block"><span class="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slatey">Phone</span><input id="f-phone" class="input" placeholder="+91"></label>
+          </div>
+          <div><span class="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slatey">Service needed</span><div id="svc-chips" class="flex flex-wrap gap-2"></div></div>
+          <label class="block"><span class="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slatey">Shipment details</span><textarea rows="3" class="input resize-none" placeholder="Commodity, origin/destination, container type…"></textarea></label>
+          <button id="f-submit" onclick="submitForm()" class="flex w-full items-center justify-center gap-2 rounded-full bg-brandred px-6 py-3.5 text-sm font-semibold text-white shadow-card hover:bg-brandred-600">Send request →</button>
+          <p class="text-center text-xs text-slatey">Prefer to talk? Call <a href="tel:+914448517879" class="font-semibold text-navy">+91 44 4851 7879</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="relative overflow-hidden bg-ink text-white">
+  <div class="bg-blueprint-dark pointer-events-none absolute inset-0 opacity-40"></div>
+  <div class="relative mx-auto max-w-7xl px-5 py-14 sm:px-8">
+    <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div>
+        <div class="flex items-center gap-2.5">
+          <svg width="34" height="34" viewBox="0 0 34 34"><rect x="0" y="0" width="15" height="15" rx="3.2" fill="#2E3192"/><rect x="19" y="0" width="15" height="15" rx="3.2" fill="#ED1B24"/><rect x="0" y="19" width="15" height="15" rx="3.2" fill="#ED1B24"/><rect x="19" y="19" width="15" height="15" rx="3.2" fill="#2E3192"/></svg>
+          <span class="font-display text-xl font-bold"><span class="text-white">Port</span><span class="text-brandred">Matrix</span></span>
+        </div>
+        <p class="mt-5 max-w-xs text-sm leading-relaxed text-white/60">PORTMATRIX Logistics Pvt. Ltd. — a Government Licensed Customs Broking company delivering end-to-end EXIM clearance and trade consultancy across India.</p>
+        <p class="mt-5 font-mono text-xs uppercase tracking-wide text-white/40">Allied: Regional Institute of International Trade (RIIT)</p>
+      </div>
+      <div><h4 class="font-mono text-xs uppercase tracking-[.16em] text-white/50">Services</h4><ul class="mt-4 space-y-2.5 text-sm text-white/70"><li>Customs Clearance</li><li>Export–Import</li><li>China Sourcing</li><li>MOOWR Warehousing</li><li>DGFT Consultancy</li><li>SEZ &amp; FTWZ</li></ul></div>
+      <div><h4 class="font-mono text-xs uppercase tracking-[.16em] text-white/50">Company</h4><ul class="mt-4 space-y-2.5 text-sm text-white/70"><li>About PORTMATRIX</li><li>Our MD</li><li>RIIT Training</li><li>Canton Fair</li><li>Contact</li></ul></div>
+      <div><h4 class="font-mono text-xs uppercase tracking-[.16em] text-white/50">Reach us</h4><ul class="mt-4 space-y-2.5 text-sm text-white/70"><li>+91 44 4851 7879</li><li>info@portmatrix.in</li><li>Chennai 600 001, TN</li></ul></div>
+    </div>
+    <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/45 sm:flex-row">
+      <p>© <span id="yr"></span> PORTMATRIX Logistics Pvt. Ltd. All rights reserved.</p>
+      <p class="font-mono uppercase tracking-wide">Excellence in Compliance</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* Header scroll */
+addEventListener('scroll',()=>{const h=document.getElementById('hdr');if(scrollY>12){h.classList.add('bg-white/85','backdrop-blur-md','shadow-[0_1px_0_rgba(226,230,242,1)]')}else{h.classList.remove('bg-white/85','backdrop-blur-md','shadow-[0_1px_0_rgba(226,230,242,1)]')}});
+
+/* Drawer */
+function openDrawer(){document.getElementById('drawer').classList.remove('translate-x-full');document.getElementById('overlay').classList.remove('hidden');document.body.style.overflow='hidden'}
+function closeDrawer(){document.getElementById('drawer').classList.add('translate-x-full');document.getElementById('overlay').classList.add('hidden');document.body.style.overflow=''}
+
+/* ---- Clearance Tracker ---- */
+const MODES={
+  import:{label:'Import',ref:'BOE-IN-4827193',route:'Shenzhen, CN → Chennai Port, IN',eta:'2 days',stages:[['📄','Documents received','Invoice, packing list, B/L'],['📝','Bill of Entry filed','Submitted on ICEGATE'],['🧮','Duty assessed','BCD + IGST + SWS computed'],['🔍','Examination','Customs inspection cleared'],['🛡️','Out of Charge','OoC granted'],['🚚','Delivered','Last-mile to warehouse']]},
+  export:{label:'Export',ref:'SB-EX-9051482',route:'Chennai, IN → Rotterdam, NL',eta:'On schedule',stages:[['📄','Export docs collected','Invoice, PO, LUT'],['📝','Shipping Bill filed','Generated in ICEGATE'],['🧮','Scheme verified','RoDTEP / Drawback checked'],['🔍','Examination','Cargo stuffing inspected'],['🛡️','LEO granted','Let Export Order issued'],['🚢','Vessel departed','B/L generated']]},
+  china:{label:'China Sourcing',ref:'CN-SRC-2024-118',route:'Guangzhou → Door delivery, IN',eta:'End to end',stages:[['📄','Supplier sourced','Right factory identified'],['🧮','Price negotiated','30–40% cost reduction'],['🔍','Factory inspection','QC by local team'],['🚢','FCL / LCL booked','Vessel arranged'],['🛡️','Customs cleared','Licensed broker handling'],['🚚','Door delivered','Hassle-free to your dock']]}
+};
+let curMode='import',active=2,playing=true,tkTimer=null;
+function renderTabs(){const t=document.getElementById('tk-tabs');t.innerHTML='';Object.entries(MODES).forEach(([k,m])=>{const b=document.createElement('button');b.className='flex-1 rounded-xl px-2 py-2 text-xs font-semibold sm:text-sm transition-colors '+(k===curMode?'bg-navy text-white':'text-slatey hover:text-navy');b.textContent=m.label;b.onclick=()=>{curMode=k;active=2;renderAll()};t.appendChild(b)})}
+function renderStages(){const d=MODES[curMode];const c=document.getElementById('tk-stages');c.innerHTML='';d.stages.forEach((s,i)=>{const done=i<active,cur=i===active;const b=document.createElement('button');b.className='flex w-full items-center gap-3 rounded-xl px-3 py-2 text-left transition-colors '+(cur?'bg-navy-50':'hover:bg-paper');b.onclick=()=>{active=i;playing=false;document.getElementById('tk-play').textContent='▶';clearInterval(tkTimer);renderAll()};b.innerHTML='<div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-base '+(cur?'bg-brandred text-white':done?'bg-navy text-white':'bg-mist')+'">'+(done?'✓':s[0])+'</div><div class="min-w-0 flex-1"><p class="truncate text-sm font-semibold '+(cur?'text-navy':done?'text-ink':'text-slatey')+'">'+s[1]+'</p><p class="truncate text-xs text-slatey">'+s[2]+'</p></div>'+(cur?'<span class="shrink-0 rounded-full bg-brandred/10 px-2 py-0.5 font-mono text-[10px] font-bold uppercase text-brandred">In progress</span>':'');c.appendChild(b)})}
+function renderMeta(){const d=MODES[curMode],total=d.stages.length,pct=Math.round(((active+1)/total)*100);document.getElementById('tk-ref').textContent=d.ref;document.getElementById('tk-route').textContent=d.route;document.getElementById('tk-eta').textContent='ETA '+d.eta;document.getElementById('tk-bar').style.width=pct+'%';document.getElementById('tk-pct').textContent='Cleared '+pct+'%';document.getElementById('tk-stage').textContent='Stage '+(active+1)+'/'+total}
+function renderAll(){renderTabs();renderStages();renderMeta()}
+function startTimer(){clearInterval(tkTimer);tkTimer=setInterval(()=>{active=(active+1)%MODES[curMode].stages.length;renderAll()},1900)}
+function togglePlay(){playing=!playing;document.getElementById('tk-play').textContent=playing?'⏸':'▶';if(playing)startTimer();else clearInterval(tkTimer)}
+function resetTrack(){active=0;playing=true;document.getElementById('tk-play').textContent='⏸';renderAll();startTimer()}
+renderAll();startTimer();
+
+/* Marquee */
+const MQ=['Customs Brokers Regulations 2018','ICEGATE e-filing','Bill of Entry & Shipping Bill','HS Code classification','DGFT consultancy','MOOWR · Section 65','SEZ & FTWZ registration','Advance Authorisation · EPCG','RoDTEP · Duty Drawback','China sourcing since 1974'];
+document.getElementById('marquee').innerHTML=[...MQ,...MQ].map(x=>'<span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-wide text-slatey">'+x+'<span class="h-1 w-1 rounded-full bg-brandred"></span></span>').join('');
+
+/* Services */
+const SVC=[['🏛️','Customs Clearance','Licensed clearing agent under CBLR 2018 — Bill of Entry, Shipping Bill, examinations and Out-of-Charge across every Indian port.','Core'],['🔁','Export–Import Clearance','Full documentary compliance (CCR), correct HS codes and accurate duty calculation so cargo moves without delays or seizure.','EXIM'],['📦','China Import Sourcing','End-to-end sourcing, factory inspection and FCL/LCL delivery — with a permanent Chinese-speaking team since 1974.','Since 1974'],['🏭','MOOWR Warehousing','Section 65 bonded-warehouse setup — import raw materials and capital goods with full duty deferment, no export obligation.','Duty deferment'],['📑','DGFT Consultancy','Advance Authorisation, EPCG, RoDTEP and incentive schemes — structured for maximum, compliant duty savings.','Schemes'],['🏢','SEZ & FTWZ Registration','Set up in duty-free zones treated as foreign territory — built for exporters who need scale and simplified compliance.','Setup']];
+document.getElementById('services-grid').innerHTML=SVC.map(s=>'<div class="group relative overflow-hidden rounded-2xl border border-hairline bg-white p-6 shadow-card transition-all hover:-translate-y-1.5 hover:shadow-lift"><span class="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-navy to-brandred transition-transform duration-300 group-hover:scale-x-100"></span><div class="flex items-start justify-between"><div class="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-50 text-2xl">'+s[0]+'</div><span class="rounded-full bg-paper px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-slatey">'+s[3]+'</span></div><h3 class="mt-5 font-display text-xl font-bold text-ink">'+s[1]+'</h3><p class="mt-2.5 text-sm leading-relaxed text-slatey">'+s[2]+'</p></div>').join('');
+
+/* China points */
+const CP=[['👥','Permanent China team','Chinese-speaking staff and a local intelligence cell that finds the right factory, not a wrong supplier.'],['🛡️','Factory inspection & QC','Goods inspected, re-packed and verified before they ever board a vessel.'],['📦','FCL & LCL delivery','Full or part container loads, door-to-door, with one agreed service charge and zero hidden costs.'],['✈️','Canton Fair support','Visa, ticketing, hotels and guided factory visits for the bi-annual Guangzhou trade fair.']];
+document.getElementById('china-grid').innerHTML=CP.map(p=>'<div class="rounded-2xl border border-white/10 bg-white/[.06] p-5 backdrop-blur-sm transition-all hover:-translate-y-1 hover:bg-white/[.1]"><div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brandred/15 text-xl">'+p[0]+'</div><h3 class="mt-4 font-display text-base font-bold">'+p[1]+'</h3><p class="mt-1.5 text-sm leading-relaxed text-white/65">'+p[2]+'</p></div>').join('');
+
+/* Strengths + intel */
+const STR=[['📋','Error-free documentation','Absence of even one requirement can mean penalties or seizure. We get the paperwork right the first time.'],['⏱️','Faster clearance turnaround','Due diligence and electronic filing that keeps your cargo moving without avoidable delays.'],['🤝','Strong PGA liaison','Good standing with Customs and Partner Government Agencies for speedy releases.'],['👁️','Total transparency','No hidden charges — only an agreed service fee. You always know what you\'re paying for.']];
+document.getElementById('strengths').innerHTML=STR.map(s=>'<div class="rounded-2xl border border-hairline bg-white p-5 shadow-card"><div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brandred/10 text-xl">'+s[0]+'</div><h3 class="mt-4 font-display text-base font-bold text-ink">'+s[1]+'</h3><p class="mt-1.5 text-sm leading-relaxed text-slatey">'+s[2]+'</p></div>').join('');
+const INTEL=['Import Penetration Index','Trade Intensity Index','Export Propensity Index','SHI & RHI interpretation','Competitor analysis','Right Regional Trade Agreements'];
+document.getElementById('intel').innerHTML=INTEL.map(t=>'<span class="rounded-full bg-navy-50 px-3 py-1.5 font-mono text-[11px] text-navy">'+t+'</span>').join('');
+
+/* Process timeline */
+const FLOWS={import:[['Receive shipping documents','We collect the B/L, invoice and packing list from the importer.'],['File Bill of Entry on ICEGATE','Electronic declaration filed for home consumption or warehousing.'],['Calculate customs duties','BCD, IGST, SWS, ADD and cess computed against the correct HS code.'],['Coordinate inspection','We arrange examination and respond to any customs queries.'],['Get Out of Charge','Duty advised and paid; cargo released with OoC.'],['Arrange last-mile transport','Container moved to the importer\'s warehouse.']],export:[['Collect export documents','Invoice, packing list, PO and LUT/Bond gathered.'],['Classify & check compliance','HS code classification and PGA compliance verified.'],['File Shipping Bill','Bill of Export generated in ICEGATE with scheme verification.'],['Cargo stuffing & examination','Goods stuffed, moved to CFS/ICD and examined.'],['Let Export Order (LEO)','LEO approved; container loaded or handed to airline.'],['Vessel departure & B/L','Bill of Lading generated; export documents guided to your bank.']]};
+function setFlow(f){const imp=document.getElementById('pf-import'),exp=document.getElementById('pf-export');if(f==='import'){imp.className='rounded-full px-6 py-2.5 text-sm font-semibold text-white bg-navy';exp.className='rounded-full px-6 py-2.5 text-sm font-semibold text-slatey'}else{exp.className='rounded-full px-6 py-2.5 text-sm font-semibold text-white bg-navy';imp.className='rounded-full px-6 py-2.5 text-sm font-semibold text-slatey'}
+  document.getElementById('timeline').innerHTML=FLOWS[f].map((s,i)=>{const left=i%2===0;return '<li class="relative flex items-start gap-5 sm:w-1/2 '+(left?'sm:ml-0 sm:pr-12 sm:text-right sm:flex-row-reverse':'sm:ml-auto sm:pl-12')+'"><span class="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy font-mono text-sm font-bold text-white shadow-card">'+String(i+1).padStart(2,'0')+'</span><div class="rounded-2xl border border-hairline bg-white p-4 shadow-card"><h3 class="font-display text-base font-bold text-ink">'+s[0]+'</h3><p class="mt-1 text-sm text-slatey">'+s[1]+'</p></div></li>'}).join('')}
+setFlow('import');
+
+/* Service chips */
+const SVCO=['Customs Clearance','Export–Import','China Sourcing','MOOWR / SEZ / DGFT'];let chosen=SVCO[0];
+function renderChips(){document.getElementById('svc-chips').innerHTML=SVCO.map(o=>'<button onclick="pickSvc(\''+o+'\')" class="rounded-full border px-3.5 py-2 text-xs font-semibold transition-colors '+(o===chosen?'border-navy bg-navy text-white':'border-hairline bg-paper text-slatey hover:border-navy/40')+'">'+o+'</button>').join('')}
+function pickSvc(o){chosen=o;renderChips()}renderChips();
+function submitForm(){const n=document.getElementById('f-name').value,p=document.getElementById('f-phone').value;if(!n||!p){alert('Please add your name and phone.');return}const b=document.getElementById('f-submit');b.textContent='✓ Request received';setTimeout(()=>b.textContent='Send request →',4000)}
+
+/* Reveal on scroll */
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.18});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* Counters */
+const cio=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){const el=e.target,to=+el.dataset.count,plain=el.dataset.plain,suf=el.dataset.suffix||'';let s=null;const dur=1500;function step(t){if(!s)s=t;const p=Math.min((t-s)/dur,1),v=Math.round((1-Math.pow(1-p,3))*to);el.textContent=(plain?v:v.toLocaleString('en-IN'))+suf;if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step);cio.unobserve(el)}}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>

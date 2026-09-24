@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f6f7fc;
+  --section-space: clamp(3.5rem, 6vw, 5.5rem);
+  --content-space: clamp(2.5rem, 4vw, 4rem);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--paper);
+  color: #0d102e;
+}
+
+/* Blueprint grid backdrop — the "matrix" signature */
+.bg-blueprint {
+  background-image:
+    linear-gradient(rgba(46, 49, 146, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46, 49, 146, 0.05) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.bg-blueprint-dark {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+/* Eyebrow / kicker label — Inter, not mono: mono-uppercase eyebrows read as
+   a dev-tool/crypto signature, which works against the institutional brand. */
+.kicker {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Sitewide heading scale — one fluid size per level, used via className on
+   the correct semantic tag (<h1 className="h1">, never on a <div>) so
+   visual size and document heading level stay independent but consistent
+   across every internal page. */
+.h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.07;
+  font-size: clamp(2.375rem, 4.5vw, 4rem);
+}
+.h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+}
+.h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+/* Long-form article body — used on internal pages carrying prose/lists
+   converted from source paragraphs. Caps line length near the 60-75
+   character target and sets the body/heading rhythm in one place. */
+.article-body {
+  max-width: 68ch;
+  font-size: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+  line-height: 1.68;
+  color: #5b6178;
+}
+.article-body p + p,
+.article-body ul + p,
+.article-body p + ul {
+  margin-top: 1rem;
+}
+.article-body ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.article-body li + li {
+  margin-top: 0.375rem;
+}
+.article-body a {
+  color: #2e3192;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.page-shell {
+  padding-top: clamp(3.5rem, 6vw, 5rem);
+  padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
+}
+
+.section-rule {
+  border-top: 1px solid #e2e6f2;
+  padding-top: var(--content-space);
+}
+
+/* Thin custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7cce6;
+  border-radius: 999px;
+  border: 2px solid var(--paper);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2e3192;
+}
+
+/* Focus visibility for keyboard users */
+:focus-visible {
+  outline: 2px solid #2e3192;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
