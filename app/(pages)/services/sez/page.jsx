@@ -6,7 +6,7 @@ import { SEZ_PAGE } from "@/lib/schemes-data";
 
 export const metadata = {
   title: "SEZ",
-  description: "Duty-free enclave registration support, featuring the Mahindra World City, Tamil Nadu example.",
+  description: "Special Economic Zone (SEZ). Major SEZ in Tamil Nadu: Mahindra World City - Tamil Nadu - IT & Manufacturing.",
   alternates: { canonical: "/services/sez" },
 };
 
@@ -28,7 +28,7 @@ export default function SezPage() {
         title="Special Economic Zone (SEZ)"
         intro={SEZ_PAGE.intro}
       />
-      <p className="mt-4 text-sm font-medium text-ink">{SEZ_PAGE.serviceIntro}</p>
+      <p className="mt-4 text-base font-medium text-ink sm:text-lg">{SEZ_PAGE.serviceIntro}</p>
 
       <div className="article-body mt-8 max-w-none">
         <p>{SEZ_PAGE.definition}</p>
@@ -40,7 +40,7 @@ export default function SezPage() {
           <h2 className="h3 text-ink">Main Features</h2>
           <ul className="mt-3 space-y-1.5">
             {SEZ_PAGE.features.map((f) => (
-              <li key={f} className="text-[15px] leading-relaxed text-ink/80">· {f}</li>
+              <li key={f} className="text-base leading-relaxed text-ink/80">· {f}</li>
             ))}
           </ul>
         </div>
@@ -48,7 +48,7 @@ export default function SezPage() {
           <h2 className="h3 text-ink">Objectives</h2>
           <ul className="mt-3 space-y-1.5">
             {SEZ_PAGE.objectives.map((o) => (
-              <li key={o} className="text-[15px] leading-relaxed text-ink/80">· {o}</li>
+              <li key={o} className="text-base leading-relaxed text-ink/80">· {o}</li>
             ))}
           </ul>
         </div>
@@ -57,14 +57,14 @@ export default function SezPage() {
       <h2 className="h3 mt-10 text-ink">Types of SEZs</h2>
       <ul className="mt-3 space-y-1.5">
         {SEZ_PAGE.types.map((t) => (
-          <li key={t} className="text-[15px] leading-relaxed text-ink/80">· {t}</li>
+          <li key={t} className="text-base leading-relaxed text-ink/80">· {t}</li>
         ))}
       </ul>
 
       <div className="mt-8 flex items-center gap-3 rounded-xl border border-hairline bg-paper px-5 py-4">
         <MapPin className="h-5 w-5 shrink-0 text-brandred" />
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-slatey/70">Major SEZ in Tamil Nadu</p>
+          <p className="text-[13px] font-semibold uppercase tracking-wide text-slatey">Major SEZ in Tamil Nadu</p>
           <p className="text-sm font-medium text-ink">{SEZ_PAGE.localExample}</p>
         </div>
       </div>
@@ -72,7 +72,7 @@ export default function SezPage() {
       <h2 className="h3 mt-10 text-ink">Benefits for Businesses</h2>
       <ul className="mt-3 space-y-1.5">
         {SEZ_PAGE.benefits.map((b) => (
-          <li key={b} className="text-[15px] leading-relaxed text-ink/80">· {b}</li>
+          <li key={b} className="text-base leading-relaxed text-ink/80">· {b}</li>
         ))}
       </ul>
       <p className="mt-4 text-sm text-slatey">Authority: {SEZ_PAGE.authority}</p>

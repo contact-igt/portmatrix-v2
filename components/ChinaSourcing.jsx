@@ -24,12 +24,13 @@ export default function ChinaSourcing() {
             kicker+H2+intro pattern repeated elsewhere on the page: this is
             the one section where the photo, not the heading, opens. */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-3xl border border-white/15 bg-navy-700/40 p-2"
         >
-          <div className="relative aspect-[3/2] w-full">
+          {/* native ratio — the caption identifies people by position */}
+          <div className="relative aspect-[1289/816] w-full">
             <Image
               src={CHINA.images.history.src}
               alt={CHINA.images.history.alt}
@@ -43,7 +44,7 @@ export default function ChinaSourcing() {
               Kong in May 1974"), baked into the source image. */}
         </motion.div>
 
-        <h2 className="mt-8 max-w-2xl font-display text-3xl font-semibold leading-tight tracking-tight sm:text-[2.75rem]">
+        <h2 className="h2 mt-8 max-w-2xl">
           {CHINA.heading}
         </h2>
 
@@ -74,7 +75,7 @@ export default function ChinaSourcing() {
             it, so it now gets its own portrait tile. */}
         <div className="mt-8 grid items-start gap-6 sm:grid-cols-2">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
@@ -92,7 +93,7 @@ export default function ChinaSourcing() {
             </p>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.08 }}
             className="mx-auto w-full max-w-[300px] sm:mx-0"

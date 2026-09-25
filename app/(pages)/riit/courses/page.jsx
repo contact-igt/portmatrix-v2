@@ -29,19 +29,19 @@ export default function RiitCoursesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
         breadcrumb={<Breadcrumb items={[{ label: "RIIT", href: "/riit" }, { label: "Courses", href: "/riit/courses" }]} />}
-        kicker="RIIT training partner courses"
+        kicker="RIIT"
         title="Courses & Certificate Programmes"
         intro="We impart Export Import Training - Research - Consultancy for the employees of Corporates and MSMEs on a structural basis."
       />
 
-      <h2 className="h2 mt-12 text-ink">RIIT Courses</h2>
+      <h2 className="h2 mt-12 text-ink">Our Courses</h2>
       <div className="mt-6 grid gap-px overflow-hidden rounded-xl border border-hairline bg-hairline sm:grid-cols-2">
         {RIIT_COURSES.map((c, i) => (
           <div key={c.title} className="flex gap-4 bg-white p-5">
-            <span className="text-xs text-slatey/50">{String(i + 1).padStart(2, "0")}</span>
+            <span className="text-[13px] text-slatey">{String(i + 1).padStart(2, "0")}</span>
             <div>
               <h3 className="h3 text-ink">{c.title}</h3>
-              <p className="mt-1 text-sm leading-relaxed text-slatey">{c.desc}</p>
+              <p className="mt-1 text-base leading-relaxed text-slatey">{c.desc}</p>
             </div>
           </div>
         ))}
@@ -54,7 +54,7 @@ export default function RiitCoursesPage() {
           <GraduationCap className="mt-1 h-6 w-6 shrink-0 text-brandred" />
           <div>
             <h2 className="h2 text-ink">{CERTIFICATE_PROGRAMME.title}</h2>
-            <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-slatey">{CERTIFICATE_PROGRAMME.intro}</p>
+            <p className="mt-3 max-w-3xl text-base leading-relaxed text-slatey">{CERTIFICATE_PROGRAMME.intro}</p>
             <p className="mt-3 text-sm font-medium text-ink">Who shall take this course? {CERTIFICATE_PROGRAMME.whoShouldTake}</p>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function RiitCoursesPage() {
         <h3 className="h3 mt-8 text-ink">Course Curriculum</h3>
         <ol className="mt-4 grid gap-x-8 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
           {CERTIFICATE_PROGRAMME.curriculum.map((topic, i) => (
-            <li key={topic} className="text-[15px] leading-relaxed text-ink/80">
+            <li key={topic} className="text-base leading-relaxed text-ink/80">
               {i + 1}. {topic}
             </li>
           ))}

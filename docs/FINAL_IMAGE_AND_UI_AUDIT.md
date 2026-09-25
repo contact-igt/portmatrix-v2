@@ -16,7 +16,7 @@ All images used across the PORTMATRIX website follow strict documentary priority
 | **Cargo Inspection (USA)** | `customs/export-shipment-inspection-usa-2025.png` | `/services/export-import-clearance` | Level 1 (Genuine Evidence) | Export shipment inspection to USA, 2025. |
 | **Government & RIIT Events** | `riit/riit-inauguration-2023-11-14.png`, `events/alagappa-university-mou-2022-10-31.png`, `riit/deputy-dgft-reddy-session-2023-11-19.png`, `credentials/certificate-of-appreciation-msme-dfo-2023-11-28.png`, `riit/agriculture-export-training-edii-tn-2025-08-12.png`, `riit/fieo-training-sakthivel-unnikrishnan-2022-12-20.png` | `/riit`, `/riit/training-events` | Level 1 (Genuine Evidence) | Institutional training and government collaboration milestones. |
 | **Press & Media** | `media/nanayam-vikatan-article-2024-02-04.png` | `/media` | Level 1 (Genuine Evidence) | Nanayam Vikatan Tamil magazine feature, 4 Feb 2024. |
-| **AI Decorative Hero** | `generated/global-trade-hero.jpg` | `/` (Homepage Hero) | Level 2 (AI-Decorative) | Generated global seaport terminal landscape. Labeled `ai-decorative`, never presented as PORTMATRIX evidence. |
+| ~~AI Decorative Hero~~ **REMOVED (V6 pass, 2026-09-25)** | ~~`generated/global-trade-hero.jpg`~~ | — | — | Not source material; removed from the site and from `public/`. The homepage hero is now typographic + the p.7 phase index. |
 | **Process Banners** | `export-handholding/phase1-6-infographic.png` | `/services/export-handholding/[phase]` | Level 4 (Source Process Infographics) | Approved Phase 1–6 infographics, rendered with `object-contain`. |
 
 ## 2. 17/17 Service Visual Treatment Status

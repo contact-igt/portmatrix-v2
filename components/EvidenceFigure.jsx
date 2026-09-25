@@ -8,7 +8,7 @@ import ImageCaption from "./ImageCaption";
 const VARIANTS = {
   documentary: { aspect: "aspect-[4/3]", frame: "overflow-hidden rounded-2xl border border-hairline bg-white", image: "object-cover" },
   portrait: { aspect: "aspect-[4/5]", frame: "overflow-hidden rounded-[1.5rem] border border-hairline bg-white", image: "object-cover" },
-  infographic: { aspect: "", frame: "min-h-[14rem] overflow-hidden border border-hairline bg-white p-2 sm:min-h-[18rem]", image: "object-contain" },
+  infographic: { aspect: "", frame: "overflow-hidden border border-hairline bg-white p-2", image: "object-contain" },
   "source-illustration": { aspect: "aspect-[16/10]", frame: "overflow-hidden border border-hairline bg-mist p-2", image: "object-contain" },
   "document-scan": { aspect: "", frame: "min-h-[16rem] overflow-hidden border border-hairline bg-white p-3", image: "object-contain" },
   "wide-evidence": { aspect: "aspect-[16/9]", frame: "overflow-hidden rounded-2xl border border-hairline bg-white", image: "object-cover" },
@@ -23,18 +23,29 @@ export default function EvidenceFigure({
   variant = "documentary",
   illustrative = false,
   priority = false,
+  zoom = false, // link the image to its full-size source file (dense infographics)
   sizes = "(min-width: 1024px) 600px, 100vw",
   className = "",
 }) {
   const treatment = VARIANTS[variant] || VARIANTS.documentary;
+  const frame = (
+    <div className={`relative w-full ${treatment.frame} ${aspect || treatment.aspect}`}>
+      <Image src={src} alt={alt} fill priority={priority} sizes={sizes} className={treatment.image} />
+    </div>
+  );
   return (
     <figure className={className}>
-      <div className={`relative w-full ${treatment.frame} ${aspect || treatment.aspect}`}>
-        <Image src={src} alt={alt} fill priority={priority} sizes={sizes} className={treatment.image} />
-      </div>
+      {zoom ? (
+        <a href={src} target="_blank" rel="noopener" className="block" aria-label={`${alt} — open full size`}>
+          {frame}
+        </a>
+      ) : (
+        frame
+      )}
       <ImageCaption>
         {caption}
-        {illustrative && <span className="ml-1.5 text-slatey/60">(illustrative)</span>}
+        {illustrative && <span className="ml-1.5 text-slatey">(illustrative)</span>}
+        {zoom && <a href={src} target="_blank" rel="noopener" className="ml-2 font-medium text-navy underline underline-offset-2">Open full size</a>}
       </ImageCaption>
     </figure>
   );

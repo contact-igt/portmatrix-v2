@@ -39,9 +39,10 @@ body {
 
 /* Eyebrow / kicker label — Inter, not mono: mono-uppercase eyebrows read as
    a dev-tool/crypto signature, which works against the institutional brand. */
+/* 13px floor: captions/labels never drop below the caption minimum. */
 .kicker {
   font-family: var(--font-body), system-ui, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -130,6 +131,20 @@ body {
   outline-offset: 2px;
   border-radius: 4px;
 }
+/* ≥3:1 ring on dark surfaces (navy ring is ~1.7:1 on ink, 1:1 on navy). */
+.bg-ink :focus-visible,
+.bg-navy :focus-visible {
+  outline-color: #fff;
+}
+/* Link-cards in gap-px grids sit inside overflow-hidden: draw the ring
+   inside the card so it is never clipped or covered by a neighbour. */
+.gap-px > a:focus-visible {
+  outline-offset: -3px;
+}
+/* Small brand-red labels: #ED1B24 is 4.4:1 on white; use the 600 shade. */
+.kicker.text-brandred {
+  color: #c8141c;
+}
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -140,4 +155,10 @@ body {
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Headings inside long-form prose need air before the list/pill row/table
+   that follows them (previously flush). */
+.article-body :is(h2, h3) + * {
+  margin-top: 0.75rem;
 }

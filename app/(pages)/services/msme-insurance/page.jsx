@@ -6,7 +6,7 @@ import { MSME_INSURANCE_PAGE } from "@/lib/insurance-data";
 
 export const metadata = {
   title: "MSME Insurance Package",
-  description: "14 trade-insurance products from export credit to keyman insurance, compared side by side where the source provides a table.",
+  description: "MSME Insurance Package — insurance products from Export Credit Insurance to Keyman Insurance.",
   alternates: { canonical: "/services/msme-insurance" },
 };
 
@@ -29,10 +29,10 @@ export default function MsmeInsurancePage() {
         intro={MSME_INSURANCE_PAGE.intro}
       />
 
-      <p className="mt-8 text-sm font-medium text-ink">{MSME_INSURANCE_PAGE.audienceIntro}</p>
+      <p className="mt-8 text-base font-medium text-ink sm:text-lg">{MSME_INSURANCE_PAGE.audienceIntro}</p>
       <div className="mt-2 flex flex-wrap gap-2">
         {MSME_INSURANCE_PAGE.audience.map((a) => (
-          <span key={a} className="rounded-full border border-hairline px-3 py-1 text-xs text-ink/70">
+          <span key={a} className="rounded-full border border-hairline px-3 py-1 text-[13px] text-ink/75">
             {a}
           </span>
         ))}
@@ -46,7 +46,7 @@ export default function MsmeInsurancePage() {
               {cat.products.map((p) => (
                 <div key={p.name}>
                   <h3 className="h3 text-lg text-ink">{p.name}</h3>
-                  <p className="mt-2 text-[15px] leading-relaxed text-slatey">{p.desc}</p>
+                  <p className="mt-2 text-base leading-relaxed text-slatey">{p.desc}</p>
                 </div>
               ))}
             </div>

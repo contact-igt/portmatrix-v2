@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { fadeUp, stagger, inView } from "@/lib/animations";
+import { fadeUp, stagger } from "@/lib/animations";
 import Breadcrumb from "./Breadcrumb";
 
 // Shared internal-page opening block: breadcrumb + kicker + H1 + intro.
@@ -10,7 +10,9 @@ import Breadcrumb from "./Breadcrumb";
 // page, in the correct semantic tag, sized via the sitewide .h1 scale.
 export default function PageIntro({ breadcrumb, kicker, title, intro, light = false }) {
   return (
-    <motion.div variants={stagger} {...inView} className="max-w-3xl">
+    // initial={false}: the page's H1 and intro are server-rendered visible —
+    // never shipped at opacity 0 waiting on hydration.
+    <motion.div variants={stagger} initial={false} animate="show" className="max-w-3xl">
       {breadcrumb && <div className="mb-5">{breadcrumb}</div>}
       {kicker && (
         <motion.p variants={fadeUp} className={`kicker mb-3 flex items-center gap-2.5 ${light ? "text-brandred-300" : "text-brandred"}`}>

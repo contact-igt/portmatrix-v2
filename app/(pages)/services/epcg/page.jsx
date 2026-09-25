@@ -28,7 +28,7 @@ export default function EpcgPage() {
         title="Export Promotion Capital Goods (EPCG) Scheme"
         intro={EPCG_PAGE.intro}
       />
-      <p className="mt-4 max-w-3xl text-sm font-medium text-ink">{EPCG_PAGE.serviceIntro}</p>
+      <p className="mt-4 max-w-3xl text-base font-medium text-ink sm:text-lg">{EPCG_PAGE.serviceIntro}</p>
 
       <div className="mt-10 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <div className="article-body max-w-none">
@@ -55,7 +55,7 @@ export default function EpcgPage() {
               detail on this page. */}
           <div className="rounded-2xl border-l-4 border-brandred bg-paper p-6">
             <p className="text-sm font-semibold uppercase tracking-wide text-brandred">Example</p>
-            <p className="mt-2 text-[15px] leading-relaxed text-ink/85">{EPCG_PAGE.workedExample}</p>
+            <p className="mt-2 text-base leading-relaxed text-ink/85">{EPCG_PAGE.workedExample}</p>
           </div>
 
           <h2 className="h3 mt-8 text-ink">EPCG Scheme Flow Chart</h2>
@@ -64,7 +64,7 @@ export default function EpcgPage() {
           <h2 className="h3 mt-8 text-ink">Related Authorities</h2>
           <ul className="mt-3 space-y-1.5">
             {EPCG_PAGE.authorities.map((a) => (
-              <li key={a} className="text-[15px] text-ink/80">· {a}</li>
+              <li key={a} className="text-base text-ink/80">· {a}</li>
             ))}
           </ul>
         </div>

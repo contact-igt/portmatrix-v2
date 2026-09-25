@@ -5,7 +5,7 @@ import { CONTACT } from "@/lib/content";
 
 export const metadata = {
   title: "Contact Us",
-  description: "Contact PORTMATRIX Logistics Pvt. Ltd. — registered office in Chennai, Tamil Nadu. Government Licensed Customs Broker.",
+  description: "Contact PORTMATRIX Logistics Pvt. Ltd. — registered office in Chennai, Tamil Nadu.",
   alternates: { canonical: "/contact" },
 };
 
@@ -41,7 +41,7 @@ export default function ContactPage() {
         breadcrumb={<Breadcrumb items={[{ label: "Contact", href: "/contact" }]} />}
         kicker="Get in touch"
         title="Contact Us"
-        intro="Government Licensed Customs Broker — reach us directly by phone, or visit our registered office in Chennai."
+        intro="Reach us directly by phone, or visit our registered office in Chennai."
       />
 
       <div className="mt-10 overflow-hidden rounded-2xl border border-hairline">
@@ -58,31 +58,31 @@ export default function ContactPage() {
           <div className="mt-4 flex items-center gap-3">
             <Mail className="h-5 w-5 shrink-0 text-brandred-300" />
             <p className="text-sm text-white/80">
+              {/* CLIENT_CONFIRMATION_REQUIRED: shown exactly as PDF p.87 prints it */}
               {CONTACT.emailRaw}
-              <span className="ml-2 text-xs text-white/40">(as published — pending confirmation)</span>
             </p>
           </div>
-          <p className="mt-3 text-xs text-white/40">CIN: {CONTACT.cin}</p>
+          <p className="mt-3 text-[13px] text-white/70">CIN: {CONTACT.cin}</p>
         </div>
 
         <div className="grid divide-y divide-hairline bg-white sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           <a href={CONTACT.phoneHref} className="group flex flex-col gap-2 p-6 transition-colors hover:bg-navy-50">
             <Phone className="h-5 w-5 text-navy" />
             <span className="text-sm font-semibold text-ink">Call now</span>
-            <span className="text-xs text-slatey">{CONTACT.phoneDisplay}</span>
-            <ArrowUpRight className="mt-auto h-4 w-4 text-slatey/50 transition-transform group-hover:translate-x-0.5 group-hover:text-navy" />
+            <span className="text-sm text-slatey">{CONTACT.phoneDisplay}</span>
+            <ArrowUpRight className="mt-auto h-4 w-4 text-slatey transition-transform group-hover:translate-x-0.5 group-hover:text-navy" />
           </a>
           <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="group flex flex-col gap-2 p-6 transition-colors hover:bg-navy-50">
             <MapPin className="h-5 w-5 text-navy" />
             <span className="text-sm font-semibold text-ink">Get directions</span>
-            <span className="text-xs text-slatey">Registered office, Chennai</span>
-            <ArrowUpRight className="mt-auto h-4 w-4 text-slatey/50 transition-transform group-hover:translate-x-0.5 group-hover:text-navy" />
+            <span className="text-[13px] text-slatey">Registered office, Chennai</span>
+            <ArrowUpRight className="mt-auto h-4 w-4 text-slatey transition-transform group-hover:translate-x-0.5 group-hover:text-navy" />
           </a>
           <a href={CONTACT.websiteHref} target="_blank" rel="noopener noreferrer" className="group flex flex-col gap-2 p-6 transition-colors hover:bg-navy-50">
             <Globe className="h-5 w-5 text-navy" />
             <span className="text-sm font-semibold text-ink">Visit our website</span>
-            <span className="text-xs text-slatey">{CONTACT.website}</span>
-            <ArrowUpRight className="mt-auto h-4 w-4 text-slatey/50 transition-transform group-hover:translate-x-0.5 group-hover:text-navy" />
+            <span className="text-[13px] text-slatey">{CONTACT.website}</span>
+            <ArrowUpRight className="mt-auto h-4 w-4 text-slatey transition-transform group-hover:translate-x-0.5 group-hover:text-navy" />
           </a>
         </div>
       </div>

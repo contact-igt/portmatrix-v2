@@ -7,11 +7,11 @@ export const metadata = {
   title: "Rahim Iyaz — Managing Director",
   alternates: { canonical: "/about/rahim-iyaz" },
   description:
-    "Mr. Rahim Iyaz is a Government Licensed Customs Broker with experience since 1996 across 9 international markets, and an authorised export-training resource person.",
+    "Our Managing Director Mr. Rahim Iyaz is a Government Licensed Customs Broker, having a vintage experience in the foreign trade since 1996.",
   openGraph: {
     title: "Rahim Iyaz — Managing Director, PORTMATRIX",
     description:
-      "Government Licensed Customs Broker, vintage experience since 1996, authorised export-training resource person for Govt. of India–MSME, EDII-TN, TNAPEx, FIEO, Alagappa University.",
+      "Our Managing Director Mr. Rahim Iyaz is a Government Licensed Customs Broker, having a vintage experience in the foreign trade since 1996.",
     images: [MD.portrait.src],
   },
 };
@@ -45,7 +45,8 @@ export default function RahimIyazPage() {
       <Breadcrumb items={[{ label: "About", href: "/about" }, { label: "Rahim Iyaz", href: "/about/rahim-iyaz" }]} />
 
       <div className="mt-6 grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-        <div>
+        {/* order-last on mobile: the H1 and profile lead; portrait follows. */}
+        <div className="order-last max-w-sm lg:order-first lg:max-w-none">
           <div className="relative aspect-[2/3] w-full overflow-hidden rounded-2xl">
             <Image
               src={MD.portrait.src}
@@ -56,10 +57,25 @@ export default function RahimIyazPage() {
               className="object-cover"
             />
           </div>
-          <div className="mt-5 border-t border-hairline pt-4">
-            <p className="font-display text-2xl font-semibold text-ink">{MD.name}</p>
-            <p className="text-slatey">{MD.title}</p>
-          </div>
+          {/* PDF p.4 signature/title graphic, drawn from its own luminance
+              mask (the extracted base layer is a flat fill) — not retyped. */}
+          <div
+            role="img"
+            aria-label={`${MD.name} — ${MD.title}`}
+            className="mt-4 aspect-[5/2] w-64"
+            style={{
+              backgroundImage: "url(/images/source/md/rahim-iyaz-signature-base.png)",
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              WebkitMaskImage: "url(/images/source/md/rahim-iyaz-signature-mask.png)",
+              maskImage: "url(/images/source/md/rahim-iyaz-signature-mask.png)",
+              WebkitMaskSize: "contain",
+              maskSize: "contain",
+              WebkitMaskRepeat: "no-repeat",
+              maskRepeat: "no-repeat",
+              maskMode: "luminance",
+            }}
+          />
         </div>
 
         <div>
@@ -71,7 +87,7 @@ export default function RahimIyazPage() {
 
           <dl className="mt-8 divide-y divide-hairline border-y border-hairline">
             {MD.bullets.map((b) => (
-              <div key={b} className="py-4 text-[15px] leading-relaxed text-ink/80">
+              <div key={b} className="py-4 text-base leading-relaxed text-ink/80">
                 {b}
               </div>
             ))}
@@ -93,7 +109,7 @@ export default function RahimIyazPage() {
           title="Related"
           items={[
             { title: "About PORTMATRIX", href: "/about" },
-            { title: "Training Events & Institutional Credibility", href: "/riit/training-events" },
+            { title: "Training Events", href: "/riit/training-events" },
             { title: "RIIT — Export Training & Research", href: "/riit" },
             { title: "China Import Sourcing", href: "/china-import-sourcing" },
           ]}

@@ -1,5 +1,6 @@
 import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
+import MotionRoot from "@/components/MotionRoot";
 
 // Exactly two font families sitewide: Manrope for editorial hierarchy,
 // Inter for body copy and utility UI. The official logo remains its own
@@ -34,7 +35,7 @@ export const metadata = {
     template: "%s | PORTMATRIX",
   },
   description:
-    "Government Licensed Customs Broker offering Customs Broking and End-to-End Export Handholding — from product selection and documentation to customs clearance, logistics and export proceeds realisation. China sourcing since 1974.",
+    "PORTMATRIX is a Customs Broking and End-to-End Export Handholding company supporting exporters and importers in navigating Customs, DGFT and international trade procedures. China Import Sourcing since 1974.",
   keywords: [
     "customs broker Chennai",
     "export handholding",
@@ -48,17 +49,19 @@ export const metadata = {
   openGraph: {
     title: "PORTMATRIX — Customs Broking & Export Handholding",
     description:
-      "Government Licensed Customs Broker. Customs Broking and End-to-End Export Handholding, China sourcing since 1974.",
+      "PORTMATRIX is a Customs Broking and End-to-End Export Handholding company. China Import Sourcing since 1974.",
     type: "website",
     url: SITE_URL,
     siteName: "PORTMATRIX",
     locale: "en_IN",
     images: [
       {
-        url: "/images/source/customs/hotel-supplies-inspection-netherlands-2024.png",
-        width: 1600,
-        height: 1200,
-        alt: "PORTMATRIX product inspection of a hotel supplies shipment to the Netherlands, 2024",
+        // PortMatrix Logo V6 on white — the Netherlands inspection photo
+        // belongs to Export Import Clearance, not the sitewide share card.
+        url: "/images/source/branding/portmatrix-og-v6.png",
+        width: 1200,
+        height: 630,
+        alt: "PortMatrix",
       },
     ],
   },
@@ -66,8 +69,8 @@ export const metadata = {
     card: "summary_large_image",
     title: "PORTMATRIX — Customs Broking & Export Handholding",
     description:
-      "Government Licensed Customs Broker. Customs Broking and End-to-End Export Handholding, China sourcing since 1974.",
-    images: ["/images/source/customs/hotel-supplies-inspection-netherlands-2024.png"],
+      "PORTMATRIX is a Customs Broking and End-to-End Export Handholding company. China Import Sourcing since 1974.",
+    images: ["/images/source/branding/portmatrix-og-v6.png"],
   },
   robots: {
     index: true,
@@ -88,7 +91,9 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${display.variable} ${body.variable}`}
     >
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <MotionRoot>{children}</MotionRoot>
+      </body>
     </html>
   );
 }

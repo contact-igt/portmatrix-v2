@@ -16,7 +16,7 @@ export default function OperationalProof() {
           title={OPERATIONAL_PROOF.heading}
           intro={OPERATIONAL_PROOF.intro}
         />
-        <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-1.5 text-xs font-medium text-slatey">
+        <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-1.5 text-[13px] font-medium text-slatey">
           {OPERATIONAL_PROOF.disciplines.map((d) => (
             <li key={d} className="flex items-center gap-1.5">
               <span className="h-1 w-1 rounded-full bg-brandred" />

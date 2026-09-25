@@ -14,7 +14,7 @@ export const metadata = {
   alternates: { canonical: "/china-import-sourcing" },
   openGraph: {
     title: "China Import Sourcing Since 1974 — PORTMATRIX",
-    description: "Our late Founder began Hong Kong trading in 1974 — five decades of sourcing experience in China.",
+    description: "Our late Founder Mr. M.A. Izzadeen had started his Gem Stones trading in Hong Kong during the year 1974.",
     images: [CHINA.images.history.src],
   },
 };
@@ -44,12 +44,12 @@ export default function ChinaImportSourcingPage() {
           text below (not overlaid) even though it's also baked into the
           photo itself, so it stays screen-reader/AEO legible on this
           content-first page. */}
-      <div className="mt-10 max-w-2xl border border-hairline bg-paper p-2">
+      <div className="mt-10 max-w-2xl">
         <EvidenceFigure
           src={CHINA.images.history.src}
           alt={CHINA.images.history.alt}
           caption={CHINA_PAGE.founderPhotoCaption}
-          aspect="aspect-[3/2]"
+          aspect="aspect-[1289/816]"
           priority
         />
       </div>
@@ -71,7 +71,7 @@ export default function ChinaImportSourcingPage() {
             {CHINA_PAGE.capabilities.map((cap) => (
               <div key={cap.title}>
                 <h3 className="h3 text-ink">{cap.title}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-slatey">{cap.desc}</p>
+                <p className="mt-1.5 text-base leading-relaxed text-slatey">{cap.desc}</p>
               </div>
             ))}
           </div>
@@ -96,7 +96,7 @@ export default function ChinaImportSourcingPage() {
             href="/china-import-sourcing/canton-fair"
             className="group flex items-center justify-between gap-3 rounded-xl border border-hairline bg-white px-5 py-4 transition-colors hover:border-navy/30 hover:bg-navy-50"
           >
-            <span className="text-sm font-semibold text-ink">Visit Canton Fair with us</span>
+            <span className="text-sm font-semibold text-ink">Visit Canton Fair</span>
             <ArrowRight className="h-4 w-4 text-navy transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>
@@ -105,7 +105,7 @@ export default function ChinaImportSourcingPage() {
       <div className="mt-14">
         <RelatedServices
           items={[
-            { title: "Canton Fair Sourcing Services", href: "/china-import-sourcing/canton-fair" },
+            { title: "China Canton Fair Services", href: "/china-import-sourcing/canton-fair" },
             { title: "Export Import Clearance", href: "/services/export-import-clearance" },
             { title: "Freight Forwarding & Logistics", href: "/services/freight-forwarding-logistics" },
             { title: "Contact PORTMATRIX", href: "/contact" },

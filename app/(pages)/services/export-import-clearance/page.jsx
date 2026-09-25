@@ -8,7 +8,7 @@ import { EXIM_CLEARANCE_PAGE } from "@/lib/trade-services-data";
 export const metadata = {
   title: "Export-Import Clearance",
   description:
-    "Documentation, duty & tax calculation, port coordination and full import/export workflows with compulsory-compliance-requirement discipline.",
+    "EXIM clearance with Compulsory Compliance Requirements (CCR) — customs documentation, duty & tax calculation, port & cargo coordination, and our import and export workflow process.",
   alternates: { canonical: "/services/export-import-clearance" },
 };
 
@@ -30,16 +30,16 @@ export default function ExportImportClearancePage() {
         title="Export-Import Clearance"
         intro={EXIM_CLEARANCE_PAGE.intro}
       />
-      <p className="mt-4 max-w-3xl text-[15px] font-medium text-ink">{EXIM_CLEARANCE_PAGE.serviceIntro}</p>
+      <p className="mt-4 max-w-3xl text-base font-medium text-ink">{EXIM_CLEARANCE_PAGE.serviceIntro}</p>
 
       <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:gap-x-16">
         {EXIM_CLEARANCE_PAGE.sections.map((section) => (
           <div key={section.title}>
             <h2 className="h3 text-ink">{section.title}</h2>
-            <p className="mt-2 text-sm text-slatey">{section.intro}</p>
+            <p className="mt-2 text-base text-slatey">{section.intro}</p>
             <ul className="mt-3 space-y-1.5">
               {section.items.map((item) => (
-                <li key={item} className="text-[15px] leading-relaxed text-ink/80">
+                <li key={item} className="text-base leading-relaxed text-ink/80">
                   · {item}
                 </li>
               ))}
@@ -59,7 +59,7 @@ export default function ExportImportClearancePage() {
           />
           <div className="mt-4">
             <h3 className="h3 text-ink">{EXIM_CLEARANCE_PAGE.importWorkflow.title}</h3>
-            <p className="mt-1 text-sm text-slatey">{EXIM_CLEARANCE_PAGE.importWorkflow.scenario}</p>
+            <p className="mt-1 text-base text-slatey">{EXIM_CLEARANCE_PAGE.importWorkflow.scenario}</p>
             <ProcessFlow steps={EXIM_CLEARANCE_PAGE.importWorkflow.steps} />
           </div>
         </div>

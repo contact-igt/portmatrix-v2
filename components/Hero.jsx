@@ -1,90 +1,69 @@
-"use client";
-
-import Image from "next/image";
-import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { fadeUp, stagger } from "@/lib/animations";
-import ImageCaption from "./ImageCaption";
 import { HERO } from "@/lib/content";
+import { PHASES } from "@/lib/export-handholding-data";
 
+// Source-locked homepage hero. No photograph: the only genuine operational
+// photos (Netherlands 2024, USA 2025) belong to Export Import Clearance, and
+// the earlier AI-generated seaport image is not source material. The right
+// column is the PDF's own End-to-End Export Facilitation Process (p.7) —
+// six phase titles verbatim, each linking to its phase page.
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-paper pt-20 pb-10 sm:pt-24 sm:pb-14 lg:pt-28 lg:pb-16">
-      <div className="relative mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[1fr_1.05fr] lg:grid-rows-[auto_auto_auto] lg:items-center lg:gap-x-14 lg:gap-y-0">
-        {/* Text top — kicker + headline. */}
-        <motion.div variants={stagger} initial="hidden" animate="show" className="lg:col-start-1 lg:row-start-1">
-          <motion.p
-            variants={fadeUp}
-            className="kicker flex items-center gap-2.5 text-navy/70"
-          >
-            <span className="h-px w-8 bg-navy/40" />
+    <section id="top" className="relative overflow-hidden border-b border-hairline bg-white pt-28 pb-14 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20">
+      <div className="bg-blueprint pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
+      <div className="relative mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1.15fr_1fr] lg:items-end lg:gap-16">
+        <div>
+          <p className="kicker flex items-center gap-2.5 text-navy">
+            <span className="h-px w-8 bg-brandred" />
             {HERO.kicker}
-          </motion.p>
-
-          <motion.h1
-            variants={fadeUp}
-            className="mt-4 max-w-xl font-display text-[2.25rem] font-bold leading-[1.08] tracking-tight text-ink sm:text-[2.75rem] lg:text-[3.5rem]"
-          >
-            {HERO.heading}
-          </motion.h1>
-        </motion.div>
-
-        {/* Global Trade Seaport Hero Image */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-2 lg:col-start-2 lg:row-start-1 lg:row-span-3 lg:mt-0 lg:self-center"
-        >
-          <div className="overflow-hidden rounded-2xl border border-hairline bg-white shadow-lift">
-            <div className="relative aspect-[16/10] w-full">
-              <Image
-                src={HERO.image.src}
-                alt={HERO.image.alt}
-                fill
-                priority
-                sizes="(min-width: 1024px) 600px, 100vw"
-                className="object-cover"
-              />
-            </div>
+          </p>
+          <h1 className="h1 mt-5 max-w-2xl text-ink">{HERO.heading}</h1>
+          <p className="mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-slatey">
+            {HERO.body}
+          </p>
+          <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <a
+              href="#contact"
+              className="group inline-flex min-h-11 items-center gap-2 rounded-full bg-navy px-7 py-3 text-sm font-semibold text-white transition-colors duration-150 hover:bg-navy-700"
+            >
+              Get in touch
+              <ArrowRight className="h-4 w-4 transition-transform duration-150 group-hover:translate-x-0.5" />
+            </a>
+            <Link
+              href="/services/export-handholding"
+              className="group inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-navy"
+            >
+              <span className="border-b border-navy/30 pb-0.5 transition-colors duration-150 group-hover:border-navy">
+                Explore Export Handholding
+              </span>
+              <ArrowRight className="h-3.5 w-3.5 transition-transform duration-150 group-hover:translate-x-0.5" />
+            </Link>
           </div>
-          <ImageCaption>{HERO.image.caption}</ImageCaption>
-        </motion.div>
+        </div>
 
-        {/* CTAs */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          className="mt-5 flex flex-wrap items-center gap-x-8 gap-y-4 lg:col-start-1 lg:row-start-3 lg:mt-8"
-        >
-          <a
-            href="#contact"
-            className="group flex items-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-navy-700"
-          >
-            Get in touch
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
-          <a
-            href="#export-handholding"
-            className="group flex items-center gap-1.5 text-sm font-semibold text-navy"
-          >
-            <span className="border-b border-navy/30 pb-0.5 transition-colors group-hover:border-navy">
-              Explore Export Handholding
-            </span>
-            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-          </a>
-        </motion.div>
-
-        {/* Body */}
-        <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          className="mt-4 max-w-lg text-[1.05rem] leading-relaxed text-slatey lg:col-start-1 lg:row-start-2 lg:mt-5"
-        >
-          {HERO.body}
-        </motion.p>
+        <nav aria-labelledby="hero-process" className="border-t-2 border-navy bg-white">
+          <p id="hero-process" className="flex items-baseline justify-between gap-4 border-b border-hairline py-3.5 text-[13px] font-semibold uppercase tracking-[0.08em] text-ink">
+            End-to-End Export Facilitation Process
+            <span className="font-medium normal-case tracking-normal text-slatey">6 phases</span>
+          </p>
+          <ol>
+            {PHASES.map((p) => (
+              <li key={p.slug} className="border-b border-hairline">
+                <Link
+                  href={`/services/export-handholding/${p.slug}`}
+                  className="group grid min-h-[3.25rem] grid-cols-[2.5rem_1fr_auto] items-center gap-2 py-2.5 transition-colors duration-150 hover:bg-paper"
+                >
+                  <span className="font-display text-sm font-semibold tabular-nums text-brandred">
+                    {String(p.n).padStart(2, "0")}
+                  </span>
+                  <span className="text-[15px] font-medium leading-snug text-ink">{p.title}</span>
+                  <ArrowRight className="mr-1 h-4 w-4 text-navy/40 transition-colors duration-150 group-hover:text-navy" />
+                </Link>
+              </li>
+            ))}
+          </ol>
+        </nav>
       </div>
     </section>
   );

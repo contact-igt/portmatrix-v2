@@ -7,7 +7,7 @@ import { FREIGHT_FORWARDING_PAGE } from "@/lib/trade-services-data";
 
 export const metadata = {
   title: "Freight Forwarding & Logistics",
-  description: "Multimodal freight forwarding — 8 core services, 8 logistics business segments, full workflow.",
+  description: "Freight Forwarding & Logistics — core services, logistics business segments and workflow.",
   alternates: { canonical: "/services/freight-forwarding-logistics" },
 };
 
@@ -64,7 +64,7 @@ export default function FreightForwardingPage() {
           <h2 className="h3 mt-8 text-ink">Key Documents Used</h2>
           <ul className="mt-3 space-y-1.5">
             {FREIGHT_FORWARDING_PAGE.keyDocuments.map((d) => (
-              <li key={d} className="text-[15px] text-ink/80">
+              <li key={d} className="text-base text-ink/80">
                 · {d}
               </li>
             ))}

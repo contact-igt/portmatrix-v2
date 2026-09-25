@@ -8,7 +8,7 @@ import { FTWZ_PAGE } from "@/lib/schemes-data";
 
 export const metadata = {
   title: "FTWZ",
-  description: "Duty-free warehousing and trading hub registration, featuring the J Matadee FTWZ, Sriperumbudur example.",
+  description: "Free Trade Warehousing Zone (FTWZ). Major FTWZ in Tamil Nadu: J Matadee FTWZ, Sriperumbudur.",
   alternates: { canonical: "/services/ftwz" },
 };
 
@@ -30,7 +30,7 @@ export default function FtwzPage() {
         title="Free Trade Warehousing Zone (FTWZ)"
         intro={FTWZ_PAGE.intro}
       />
-      <p className="mt-4 max-w-3xl text-sm font-medium text-ink">{FTWZ_PAGE.serviceIntro}</p>
+      <p className="mt-4 max-w-3xl text-base font-medium text-ink sm:text-lg">{FTWZ_PAGE.serviceIntro}</p>
 
       <div className="mt-10 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <div className="article-body max-w-none">
@@ -75,22 +75,25 @@ export default function FtwzPage() {
           <h2 className="h3 mt-8 text-ink">Activities Allowed</h2>
           <ul className="mt-3 space-y-1.5">
             {FTWZ_PAGE.activitiesAllowed.map((a) => (
-              <li key={a} className="text-[15px] text-ink/80">· {a}</li>
+              <li key={a} className="text-base text-ink/80">· {a}</li>
             ))}
           </ul>
 
           <div className="mt-8 flex items-center gap-3 rounded-xl border border-hairline bg-paper px-5 py-4">
             <MapPin className="h-5 w-5 shrink-0 text-brandred" />
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-slatey/70">Major FTWZ in Tamil Nadu</p>
+              <p className="text-[13px] font-semibold uppercase tracking-wide text-slatey">Major FTWZ in Tamil Nadu</p>
               <p className="text-sm font-medium text-ink">{FTWZ_PAGE.localExample.developer}, {FTWZ_PAGE.localExample.location}</p>
             </div>
           </div>
 
-          <h2 className="h3 mt-8 text-ink">Difference Between SEZ and FTWZ</h2>
-          <ComparisonTable headers={FTWZ_PAGE.comparisonTable.headers} rows={FTWZ_PAGE.comparisonTable.rows} />
         </div>
       </div>
+
+      <section className="mt-14 border-t border-hairline pt-10">
+        <h2 className="h3 text-ink">Difference Between SEZ and FTWZ</h2>
+        <ComparisonTable headers={FTWZ_PAGE.comparisonTable.headers} rows={FTWZ_PAGE.comparisonTable.rows} />
+      </section>
 
       <div className="mt-14">
         <RelatedServices

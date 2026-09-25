@@ -28,15 +28,10 @@ export default function Services() {
         >
           <motion.h2
             variants={fadeUp}
-            className="font-display text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-[2.5rem] lg:max-w-sm"
+            className="h2 text-ink lg:max-w-sm"
           >
-            Everything between the factory and the final mile
+            Core Services
           </motion.h2>
-          <motion.p variants={fadeUp} className="max-w-md text-base leading-relaxed text-slatey lg:text-right">
-            One licensed partner for clearance, sourcing, warehousing,
-            insurance and trade consultancy — {SERVICES.length} core
-            services in a single PORTMATRIX engagement.
-          </motion.p>
         </motion.div>
 
         {/* Featured — editorial index, not icon cards */}
@@ -58,14 +53,14 @@ export default function Services() {
                 i % 2 === 1 ? "sm:border-l sm:border-hairline" : ""
               }`}
             >
-              <span className="text-sm text-brandred/70 transition-colors group-hover:text-brandred">
+              <span className="text-sm text-brandred-600 transition-colors group-hover:text-brandred">
                 {String(s.n).padStart(2, "0")}
               </span>
               <div className="min-w-0">
                 <h3 className="font-display text-lg font-bold text-ink transition-colors group-hover:text-navy sm:text-xl">
                   {s.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-slatey">{s.desc}</p>
+                <p className="mt-2 text-base leading-relaxed text-slatey">{s.desc}</p>
               </div>
             </motion.a>
           ))}
@@ -85,12 +80,12 @@ export default function Services() {
                 i % 2 === 1 ? "sm:border-l sm:border-hairline" : ""
               } ${i >= MOBILE_PREVIEW_COUNT && !expanded ? "hidden sm:flex" : "flex"}`}
             >
-              <span className="text-xs text-slatey/60">
+              <span className="text-[13px] text-slatey">
                 {String(s.n).padStart(2, "0")}
               </span>
               <div className="min-w-0">
-                <h4 className="text-sm font-bold text-ink">{s.title}</h4>
-                <p className="mt-1 text-[13px] leading-relaxed text-slatey">{s.desc}</p>
+                <h4 className="font-display text-base font-bold text-ink">{s.title}</h4>
+                <p className="mt-1 text-base leading-relaxed text-slatey">{s.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -101,7 +96,7 @@ export default function Services() {
             onClick={() => setExpanded((v) => !v)}
             className="mt-4 flex w-full items-center justify-center gap-1.5 border-t border-hairline py-4 text-sm font-semibold text-navy sm:hidden"
           >
-            {expanded ? "Show fewer services" : `Show all ${COMPACT_SERVICES.length} services`}
+            {expanded ? "Show fewer services" : `Show ${COMPACT_SERVICES.length} more services`}
             <ChevronDown className={`h-4 w-4 transition-transform ${expanded ? "rotate-180" : ""}`} />
           </button>
         )}

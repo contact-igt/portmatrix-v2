@@ -32,7 +32,7 @@ export default function LicensedCustomsBrokerPage() {
 
       <div className="mt-10 border-l-4 border-brandred bg-paper p-6">
         <p className="text-sm font-semibold uppercase tracking-wide text-brandred">Regulatory definition</p>
-        <p className="mt-2 text-[15px] leading-relaxed text-ink/85">{CUSTOMS_BROKER_PAGE.regulationText}</p>
+        <p className="mt-2 text-base leading-relaxed text-ink/85">{CUSTOMS_BROKER_PAGE.regulationText}</p>
       </div>
 
       <h2 className="h3 mt-10 text-ink">How We Work?</h2>
@@ -40,7 +40,7 @@ export default function LicensedCustomsBrokerPage() {
         {CUSTOMS_BROKER_PAGE.howWeWork.map((item) => (
           <li key={item} className="flex items-start gap-3">
             <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-navy" />
-            <span className="text-[15px] leading-relaxed text-ink/85">{item}</span>
+            <span className="text-base leading-relaxed text-ink/85">{item}</span>
           </li>
         ))}
       </ul>

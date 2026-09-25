@@ -29,7 +29,7 @@ export default function MoowrPage() {
         title="MOOWR Warehousing"
         intro={MOOWR_PAGE.intro}
       />
-      <p className="mt-4 max-w-3xl text-sm font-medium text-ink">{MOOWR_PAGE.serviceIntro}</p>
+      <p className="mt-4 max-w-3xl text-base font-medium text-ink sm:text-lg">{MOOWR_PAGE.serviceIntro}</p>
 
       <div className="mt-10 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <div className="article-body max-w-none">
@@ -43,7 +43,7 @@ export default function MoowrPage() {
                 <span className="text-sm font-bold text-brandred">{i + 1}</span>
                 <div>
                   <p className="font-semibold text-ink">{b.title}</p>
-                  <p className="mt-1 text-[15px] leading-relaxed text-slatey">{b.desc}</p>
+                  <p className="mt-1 text-base leading-relaxed text-slatey">{b.desc}</p>
                 </div>
               </div>
             ))}
@@ -70,19 +70,22 @@ export default function MoowrPage() {
           <h2 className="h3 text-ink">MOOWR Scheme Flow Chart</h2>
           <ProcessFlow steps={MOOWR_PAGE.flowChart} />
 
-          <h2 className="h3 mt-8 text-ink">MOOWR vs SEZ vs EPCG</h2>
-          <ComparisonTable headers={MOOWR_PAGE.comparisonTable.headers} rows={MOOWR_PAGE.comparisonTable.rows} />
-
           <h2 className="h3 mt-8 text-ink">Warehousing Compliance Requirements</h2>
           <ul className="mt-3 space-y-1.5">
             {MOOWR_PAGE.compliance.map((c) => (
-              <li key={c} className="text-[15px] text-ink/80">
+              <li key={c} className="text-base text-ink/80">
                 · {c}
               </li>
             ))}
           </ul>
         </div>
       </div>
+
+      {/* Full width: a three-scheme comparison is cramped in the side column. */}
+      <section className="mt-14 border-t border-hairline pt-10">
+        <h2 className="h3 text-ink">MOOWR vs SEZ vs EPCG</h2>
+        <ComparisonTable headers={MOOWR_PAGE.comparisonTable.headers} rows={MOOWR_PAGE.comparisonTable.rows} />
+      </section>
 
       <div className="mt-14">
         <RelatedServices

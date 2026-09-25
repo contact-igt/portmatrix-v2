@@ -145,3 +145,11 @@ All six phase banners share one consistent template/design system — a strong s
 ## Missing / unrecoverable
 
 None. Every image referenced by caption in the M0.5 text-only pass was successfully located and identified against its actual PDF page and neighboring photo once the real PDF became available. The only item still genuinely outstanding is **recompositing the two split alpha-mask assets** (MD signature, RIIT-inauguration photo mask, FIEO-training photo mask, AEO-logo mask, Certificate-of-Appreciation mask) into true RGBA PNGs — deferred because it requires an image-compositing tool not present in this environment and not installed without permission (see [PORTMATRIX_ASSET_MANIFEST.md](PORTMATRIX_ASSET_MANIFEST.md)).
+
+## V6 brand continuation (2026-09-25)
+
+- **Logo authority is now `PortMatrix Logo V6.pdf`** (client-supplied, pure vector). The p.1 logo (`branding/portmatrix-logo-primary.jpg`, "Excellence in Compliance") and `portmatrix-mark-square.png` are superseded — kept on disk as originals, no longer rendered anywhere.
+- V6 web assets (converted with `pdftocairo`, viewBox trimmed only — no redraw/recolour): `branding/portmatrix-logo-v6.svg` (site logo), `branding/portmatrix-logo-v6.png` (JSON-LD), `branding/portmatrix-og-v6.png` (1200×630 share card), `app/icon.png` + `app/apple-icon.png` (2×2 mark only).
+- Sitewide OG image is no longer the Netherlands 2024 inspection photo; that photo stays on Export Import Clearance / operational proof only.
+- Watermarks not previously recorded: `stock/freight-logistics-stock.png` carries an **iStock** watermark (Tryaging / 1273907220); `stock/ecommerce-export-stock-graphic.png` carries a **Gemini** AI mark. Neither is rendered; never use.
+- Source infographics with the **old logo baked in**: p.2 services overview (removed from `/services`, text list covers it), export-handholding hub infographic (removed from the hub page, phase grid covers it), six phase infographics (kept on phase pages, linked full size) and the postal infographic — CLIENT_CONFIRMATION_REQUIRED whether V6 versions will be supplied.

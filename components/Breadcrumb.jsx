@@ -26,12 +26,12 @@ export default function Breadcrumb({ items }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-xs text-slatey">
+      <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-[13px] text-slatey">
         {trail.map((item, i) => {
           const isLast = i === trail.length - 1;
           return (
             <span key={item.href} className="flex items-center gap-1.5">
-              {i > 0 && <ChevronRight className="h-3 w-3 text-slatey/50" />}
+              {i > 0 && <ChevronRight className="h-3 w-3 text-slatey" />}
               {isLast ? (
                 <span className="font-medium text-ink">{item.label}</span>
               ) : (

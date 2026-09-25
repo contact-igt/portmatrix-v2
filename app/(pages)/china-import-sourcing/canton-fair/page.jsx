@@ -6,13 +6,13 @@ import RelatedServices from "@/components/RelatedServices";
 import { CANTON_FAIR_PAGE } from "@/lib/china-data";
 
 export const metadata = {
-  title: "Canton Fair Sourcing Services",
+  title: "China Canton Fair Services",
   description:
-    "Canton Fair trade-fair packages: visa and travel support, factory and market visits, category breakdown across Phases 1-3, and 11 years of documented Canton Fair presence.",
+    "Canton Fair trade-fair packages: visa and travel support, factory and market visits and category breakdown across Phases 1-3.",
   alternates: { canonical: "/china-import-sourcing/canton-fair" },
   openGraph: {
-    title: "Canton Fair Sourcing Services — PORTMATRIX",
-    description: "China's largest bi-annual trade fair — full-service packages from visa to factory visits.",
+    title: "China Canton Fair Services — PORTMATRIX",
+    description: "Canton Fair is the largest Bi-annual China Trade Fair (April & October) held in Guangzhou. We arrange China Trade Fair packages for individuals and groups.",
     images: ["/images/source/china/azeez-usa-clients-canton-fair-2025.png"],
   },
 };
@@ -40,7 +40,7 @@ const GALLERY = [
   },
   {
     src: "/images/source/china/china-sourcing-canton-fair-2015.png",
-    alt: "China sourcing negotiation at Canton Fair, 2015",
+    alt: "China sourcing at Canton Fair in 2015",
     caption: "China sourcing at Canton Fair in 2015",
     aspect: "aspect-[4/3]",
   },
@@ -69,7 +69,7 @@ export default function CantonFairPage() {
 
       <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
-          <h2 className="h3 text-ink">Fair Categories</h2>
+          <h2 className="h3 text-ink">Canton Fair Details</h2>
           <div className="mt-5 space-y-8">
             {CANTON_FAIR_PAGE.categories.map((cat) => (
               <div key={cat.phase}>
@@ -78,7 +78,7 @@ export default function CantonFairPage() {
                   {cat.groups.map((g) => (
                     <div key={g.name} className="py-3">
                       <dt className="text-sm font-semibold text-ink">{g.name}</dt>
-                      <dd className="mt-1 text-sm leading-relaxed text-slatey">{g.desc}</dd>
+                      <dd className="mt-1 text-base leading-relaxed text-slatey">{g.desc}</dd>
                     </div>
                   ))}
                 </dl>
@@ -97,7 +97,7 @@ export default function CantonFairPage() {
 
         <div className="space-y-8">
           <div>
-            <h2 className="h3 text-ink">Group Tour Packages</h2>
+            <h2 className="h3 text-ink">China Canton Fair Services</h2>
             <ul className="mt-4 space-y-2.5">
               {CANTON_FAIR_PAGE.packageInclusions.map((p) => (
                 <li key={p} className="flex items-start gap-2.5">

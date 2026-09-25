@@ -6,7 +6,7 @@ import { ECOMMERCE_EXPORT_PAGE as P } from "@/lib/individual-export-data";
 
 export const metadata = {
   title: "E-Commerce Export",
-  description: "Cross-border e-commerce export via Amazon Global Selling, eBay, Etsy, Alibaba and Flipkart.",
+  description: "E-commerce export refers to the sale of goods from India to overseas customers through online platforms, websites, marketplaces, or direct-to-consumer channels.",
   alternates: { canonical: "/services/e-commerce-export" },
 };
 
@@ -24,18 +24,18 @@ export default function EcommerceExportPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "E-Commerce Export", href: "/services/e-commerce-export" }]} />}
-        kicker="Sell globally, ship directly"
+        kicker="PORTMATRIX trains entrepreneurs in the segment of E-Commerce export"
         title="E-Commerce Export"
         intro={P.intro}
       />
-      <p className="mt-4 max-w-3xl text-sm font-medium text-ink">{P.serviceIntro}</p>
+      <p className="mt-4 max-w-3xl text-base font-medium text-ink sm:text-lg">{P.serviceIntro}</p>
 
       <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:gap-16">
         <div>
           <h2 className="h3 text-ink">Key Features</h2>
           <ul className="mt-3 space-y-1.5">
             {P.keyFeatures.map((f) => (
-              <li key={f} className="text-[15px] leading-relaxed text-ink/80">· {f}</li>
+              <li key={f} className="text-base leading-relaxed text-ink/80">· {f}</li>
             ))}
           </ul>
 
@@ -51,7 +51,7 @@ export default function EcommerceExportPage() {
           <h2 className="h3 mt-8 text-ink">Requirements</h2>
           <ol className="mt-3 space-y-1.5">
             {P.requirements.map((r, i) => (
-              <li key={r} className="text-[15px] leading-relaxed text-ink/80">
+              <li key={r} className="text-base leading-relaxed text-ink/80">
                 {i + 1}. {r}
               </li>
             ))}
@@ -69,7 +69,7 @@ export default function EcommerceExportPage() {
           <h2 className="h3 text-ink">Benefits</h2>
           <ul className="mt-3 space-y-1.5">
             {P.benefits.map((b) => (
-              <li key={b} className="text-[15px] leading-relaxed text-ink/80">· {b}</li>
+              <li key={b} className="text-base leading-relaxed text-ink/80">· {b}</li>
             ))}
           </ul>
         </div>
@@ -77,7 +77,7 @@ export default function EcommerceExportPage() {
           <h2 className="h3 text-ink">Government Support</h2>
           <ul className="mt-3 space-y-1.5">
             {P.govSupport.map((g) => (
-              <li key={g} className="text-[15px] leading-relaxed text-ink/80">· {g}</li>
+              <li key={g} className="text-base leading-relaxed text-ink/80">· {g}</li>
             ))}
           </ul>
         </div>
@@ -85,7 +85,7 @@ export default function EcommerceExportPage() {
           <h2 className="h3 text-ink">Major Products Exported</h2>
           <ul className="mt-3 space-y-1.5">
             {P.majorProducts.map((m) => (
-              <li key={m} className="text-[15px] leading-relaxed text-ink/80">· {m}</li>
+              <li key={m} className="text-base leading-relaxed text-ink/80">· {m}</li>
             ))}
           </ul>
         </div>

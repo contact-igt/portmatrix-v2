@@ -12,11 +12,10 @@ export default function Footer() {
               <Logo variant="light" />
             </div>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/60">
-              {CONTACT.companyName} — a Government Licensed Customs Broking
-              company delivering Customs Broking and End-to-End Export
-              Handholding across India.
+              PORTMATRIX is a Customs Broking and End-to-End Export
+              Handholding company.
             </p>
-            <p className="mt-5 text-xs uppercase tracking-wide text-white/40">
+            <p className="mt-5 text-[13px] uppercase tracking-wide text-white/70">
               Allied: Regional Institute of International Trade (RIIT)
             </p>
           </div>
@@ -25,15 +24,15 @@ export default function Footer() {
             {/* Nav-group label, not a content heading — kept out of the
                 h1-h6 hierarchy so it never skips a level on pages whose
                 content stops at H2 (see docs/TYPOGRAPHY_AND_HEADING_AUDIT.md). */}
-            <p className="text-xs uppercase tracking-[0.16em] text-white/50" role="heading" aria-level="2">
+            <p className="text-[13px] uppercase tracking-[0.16em] text-white/70" role="heading" aria-level="2">
               Explore
             </p>
-            <ul className="mt-4 space-y-2.5">
+            <ul className="mt-3">
               {NAV.map((item) => (
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="text-sm text-white/70 transition-colors hover:text-white"
+                    className="inline-flex min-h-11 items-center text-sm text-white/70 transition-colors hover:text-white"
                   >
                     {item.label}
                   </a>
@@ -43,12 +42,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-[0.16em] text-white/50" role="heading" aria-level="2">
+            <p className="text-[13px] uppercase tracking-[0.16em] text-white/70" role="heading" aria-level="2">
               Reach us
             </p>
             <ul className="mt-4 space-y-2.5 text-sm text-white/70">
               <li>
-                <a href={CONTACT.phoneHref} className="hover:text-white">
+                <a href={CONTACT.phoneHref} className="inline-flex min-h-11 items-center hover:text-white">
                   {CONTACT.phoneDisplay}
                 </a>
               </li>
@@ -56,19 +55,18 @@ export default function Footer() {
             </ul>
             <a
               href="/contact"
-              className="mt-5 inline-flex items-center gap-1.5 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/20"
+              className="mt-5 inline-flex min-h-11 items-center gap-1.5 rounded-full bg-white/10 px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/20"
             >
               Get in touch
             </a>
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-white/10 pt-5 text-xs text-white/45 sm:flex-row">
+        <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-white/10 pt-5 text-[13px] text-white/70 sm:flex-row">
           <p>
             © {new Date().getFullYear()} {CONTACT.companyName} All rights
             reserved. · CIN: {CONTACT.cin}
           </p>
-          <p className="uppercase tracking-wide">Excellence in Compliance</p>
         </div>
       </div>
     </footer>

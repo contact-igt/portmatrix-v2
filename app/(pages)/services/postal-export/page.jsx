@@ -1,6 +1,7 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
 import RelatedServices from "@/components/RelatedServices";
+import BrandedInfographic from "@/components/BrandedInfographic";
 import { Mail } from "lucide-react";
 import { POSTAL_EXPORT_PAGE } from "@/lib/individual-export-data";
 
@@ -29,11 +30,23 @@ export default function PostalExportPage() {
         intro={POSTAL_EXPORT_PAGE.intro}
       />
 
+      {/* PDF p.64 postal export infographic — old logo covered by V6 */}
+      <BrandedInfographic
+        src="/images/source/logistics/postal-export-infographic.png"
+        width={1774}
+        height={887}
+        logoBox={[54, 47, 687, 127]}
+        patchBg="#fefefe"
+        alt="PORTMATRIX postal export infographic"
+        caption="Postal Export Aggregator — source infographic"
+        className="mt-10"
+      />
+
       <div className="mt-10 divide-y divide-hairline border-y border-hairline">
         {POSTAL_EXPORT_PAGE.points.map((p) => (
           <div key={p} className="flex gap-3 py-4">
             <Mail className="mt-0.5 h-4 w-4 shrink-0 text-brandred" />
-            <p className="text-[15px] leading-relaxed text-ink/85">{p}</p>
+            <p className="text-base leading-relaxed text-ink/85">{p}</p>
           </div>
         ))}
       </div>

@@ -9,7 +9,7 @@ export default function ComparisonTable({ caption, headers, rows }) {
 
       {/* Desktop/tablet: real table */}
       <div className="hidden overflow-x-auto border-y border-hairline sm:block">
-        <table className="w-full border-collapse text-[0.9375rem] leading-relaxed">
+        <table className="w-full border-collapse text-base leading-relaxed">
           <thead>
             <tr className="bg-paper">
               {headers.map((h) => (
@@ -39,8 +39,9 @@ export default function ComparisonTable({ caption, headers, rows }) {
           <div key={i} className="border-y border-hairline bg-white p-4 first:border-t last:border-b">
             {row.map((cell, j) => (
               <div key={j} className={j > 0 ? "mt-2 border-t border-hairline pt-2" : ""}>
-                <p className="text-xs font-semibold uppercase tracking-wide text-slatey/70">{headers[j]}</p>
-                <p className="mt-0.5 text-sm text-ink/85">{cell}</p>
+                <p className="text-[13px] font-semibold uppercase tracking-wide text-slatey">{headers[j]}</p>
+                {/* !mt: beats .article-body p + p when the table sits in prose */}
+                <p className="!mt-0.5 text-base leading-relaxed text-ink/85">{cell}</p>
               </div>
             ))}
           </div>

@@ -32,8 +32,8 @@ export default function TrustBar() {
                 variants={fadeUp}
                 className={i === 0 ? "pr-8 sm:pr-12" : "pl-8 sm:pl-12"}
               >
-                {/* label first, number after — "Government Licensed Customs
-                    Broker since [1996]" reads correctly this way round */}
+                {/* label first, number after — client-locked wording
+                    "International Trade exposure since [1996]" */}
                 <p className="max-w-[10rem] text-[13px] leading-snug text-slatey">
                   {s.label}
                 </p>
@@ -61,7 +61,7 @@ export default function TrustBar() {
       {/* quiet credential line — static, not a scrolling "logo ticker" */}
       <div className="border-t border-hairline/70 bg-paper py-3">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <p className="text-xs uppercase leading-relaxed tracking-wide text-slatey/70">
+          <p className="text-[13px] uppercase leading-relaxed tracking-wide text-slatey">
             {MARQUEE.join(" · ")}
           </p>
         </div>

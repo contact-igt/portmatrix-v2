@@ -28,14 +28,14 @@ export default function EouPage() {
         title="Export Oriented Units (EOU)"
         intro={EOU_PAGE.intro}
       />
-      <p className="mt-4 max-w-3xl text-sm font-medium text-ink">{EOU_PAGE.serviceIntro}</p>
+      <p className="mt-4 max-w-3xl text-base font-medium text-ink sm:text-lg">{EOU_PAGE.serviceIntro}</p>
 
       <div className="mt-10 grid gap-10 sm:grid-cols-3">
         <div>
           <h2 className="h3 text-ink">Key Objectives</h2>
           <ul className="mt-3 space-y-1.5">
             {EOU_PAGE.objectives.map((o) => (
-              <li key={o} className="text-[15px] leading-relaxed text-ink/80">· {o}</li>
+              <li key={o} className="text-base leading-relaxed text-ink/80">· {o}</li>
             ))}
           </ul>
         </div>
@@ -43,7 +43,7 @@ export default function EouPage() {
           <h2 className="h3 text-ink">Eligible Activities</h2>
           <ul className="mt-3 space-y-1.5">
             {EOU_PAGE.eligibleActivities.map((a) => (
-              <li key={a} className="text-[15px] leading-relaxed text-ink/80">· {a}</li>
+              <li key={a} className="text-base leading-relaxed text-ink/80">· {a}</li>
             ))}
           </ul>
         </div>
@@ -51,7 +51,7 @@ export default function EouPage() {
           <h2 className="h3 text-ink">Major Benefits</h2>
           <ul className="mt-3 space-y-1.5">
             {EOU_PAGE.benefits.map((b) => (
-              <li key={b} className="text-[15px] leading-relaxed text-ink/80">· {b}</li>
+              <li key={b} className="text-base leading-relaxed text-ink/80">· {b}</li>
             ))}
           </ul>
         </div>
@@ -60,7 +60,7 @@ export default function EouPage() {
       <h2 className="h3 mt-10 text-ink">Basic Eligibility</h2>
       <ul className="mt-3 max-w-3xl space-y-1.5">
         {EOU_PAGE.eligibility.map((e) => (
-          <li key={e} className="text-[15px] leading-relaxed text-ink/80">· {e}</li>
+          <li key={e} className="text-base leading-relaxed text-ink/80">· {e}</li>
         ))}
       </ul>
 

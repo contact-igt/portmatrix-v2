@@ -8,14 +8,14 @@ import { MISSION_TAGLINE, INTELLIGENCE, MD } from "@/lib/content";
 import { ABOUT_PAGE } from "@/lib/about-data";
 
 export const metadata = {
-  title: "About — Customs Broking Since 1996",
+  title: "About PORTMATRIX",
   description:
-    "PORTMATRIX is a government-licensed customs broker and export handholding company. Learn about our history, our MD Rahim Iyaz, and our institutional credibility.",
+    "PORTMATRIX is a Customs Broking and End-to-End Export Handholding company supporting exporters and importers in navigating Customs, DGFT and international trade procedures.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About PORTMATRIX",
     description:
-      "Government-licensed customs broker and export handholding company — our story, our leadership, our credibility.",
+      "PORTMATRIX is a Customs Broking and End-to-End Export Handholding company.",
     images: ["/images/source/md/rahim-iyaz-portrait.png"],
   },
 };
@@ -83,7 +83,7 @@ export default function AboutPage() {
           title="Related"
           items={[
             { title: "RIIT — Export Training & Research", href: "/riit" },
-            { title: "Training Events & Institutional Credibility", href: "/riit/training-events" },
+            { title: "Training Events", href: "/riit/training-events" },
             { title: "China Import Sourcing — Founder History", href: "/china-import-sourcing" },
             { title: "Contact PORTMATRIX", href: "/contact" },
           ]}

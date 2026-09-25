@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp, stagger, inView } from "@/lib/animations";
 import { MD, INTELLIGENCE, MISSION_TAGLINE } from "@/lib/content";
+import { ABOUT_PAGE } from "@/lib/about-data";
 
 export default function About() {
   return (
@@ -13,18 +14,18 @@ export default function About() {
           <span className="h-px w-8 bg-current" />
           About PORTMATRIX
         </p>
-        <h2 className="mt-3 max-w-2xl font-display text-[1.75rem] font-bold leading-tight tracking-tight text-ink sm:text-3xl">
+        <h2 className="h2 mt-3 max-w-2xl text-ink">
           {MISSION_TAGLINE}
         </h2>
         <div className="mt-8 grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
           {/* Portrait — editorial, not a card */}
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7 }}
             className="relative mx-auto w-full max-w-xs lg:mx-0 lg:max-w-none"
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl">
+            <div className="relative aspect-[2/3] w-full overflow-hidden rounded-xl">
               <Image
                 src={MD.portrait.src}
                 alt={MD.portrait.alt}
@@ -58,7 +59,7 @@ export default function About() {
                 <motion.div
                   key={b}
                   variants={fadeUp}
-                  className="py-3.5 text-[15px] leading-relaxed text-ink/80"
+                  className="py-3.5 text-base leading-relaxed text-ink/80"
                 >
                   {b}
                 </motion.div>
@@ -67,14 +68,12 @@ export default function About() {
 
             <motion.div variants={fadeUp} {...inView} className="mt-7">
               <p className="kicker text-navy/70">EXIM market intelligence</p>
-              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slatey">
-                Beyond clearance, PORTMATRIX provides DGFT consultancy, Allied
-                Acts inputs, EXIM analytics and Global Market &amp;
-                International Trade Intelligence.
+              <p className="mt-3 max-w-2xl text-base leading-relaxed text-slatey">
+                {ABOUT_PAGE.scope}
               </p>
               <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
                 {INTELLIGENCE.map((tag) => (
-                  <span key={tag} className="text-xs font-medium text-navy/80">
+                  <span key={tag} className="text-[13px] font-medium text-navy/80">
                     {tag}
                   </span>
                 ))}

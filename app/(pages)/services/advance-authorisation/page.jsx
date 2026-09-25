@@ -28,7 +28,7 @@ export default function AdvanceAuthorisationPage() {
         title="Advance Authorisation Scheme"
         intro={ADVANCE_AUTHORISATION_PAGE.intro}
       />
-      <p className="mt-4 max-w-3xl text-sm font-medium text-ink">{ADVANCE_AUTHORISATION_PAGE.serviceIntro}</p>
+      <p className="mt-4 max-w-3xl text-base font-medium text-ink sm:text-lg">{ADVANCE_AUTHORISATION_PAGE.serviceIntro}</p>
 
       <div className="mt-10 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <div className="article-body max-w-none">
@@ -66,7 +66,7 @@ export default function AdvanceAuthorisationPage() {
         <div>
           <div className="rounded-2xl border-l-4 border-brandred bg-paper p-6">
             <p className="text-sm font-semibold uppercase tracking-wide text-brandred">Simple example</p>
-            <p className="mt-2 text-[15px] leading-relaxed text-ink/85">{ADVANCE_AUTHORISATION_PAGE.workedExample}</p>
+            <p className="mt-2 text-base leading-relaxed text-ink/85">{ADVANCE_AUTHORISATION_PAGE.workedExample}</p>
           </div>
 
           <h2 className="h3 mt-8 text-ink">Flow Chart</h2>
@@ -75,14 +75,14 @@ export default function AdvanceAuthorisationPage() {
           <h2 className="h3 mt-8 text-ink">Key Authorities</h2>
           <ul className="mt-3 space-y-1.5">
             {ADVANCE_AUTHORISATION_PAGE.authorities.map((a) => (
-              <li key={a} className="text-[15px] text-ink/80">· {a}</li>
+              <li key={a} className="text-base text-ink/80">· {a}</li>
             ))}
           </ul>
 
           <h2 className="h3 mt-8 text-ink">Common Documents</h2>
           <ul className="mt-3 space-y-1.5">
             {ADVANCE_AUTHORISATION_PAGE.documents.map((d) => (
-              <li key={d} className="text-[15px] text-ink/80">· {d}</li>
+              <li key={d} className="text-base text-ink/80">· {d}</li>
             ))}
           </ul>
         </div>

@@ -7,7 +7,7 @@ import { AEO_PAGE } from "@/lib/schemes-data";
 
 export const metadata = {
   title: "AEO",
-  description: "Trusted-trader certification support across all 4 AEO categories (T1/T2/T3/LO).",
+  description: "Authorised Economic Operator (AEO). We support in facilitating the procedures for obtaining AEO status.",
   alternates: { canonical: "/services/aeo" },
 };
 
@@ -29,7 +29,7 @@ export default function AeoPage() {
         title="Authorised Economic Operator (AEO)"
         intro={AEO_PAGE.intro}
       />
-      <p className="mt-4 max-w-3xl text-sm font-medium text-ink">{AEO_PAGE.serviceIntro}</p>
+      <p className="mt-4 max-w-3xl text-base font-medium text-ink sm:text-lg">{AEO_PAGE.serviceIntro}</p>
       <p className="mt-2 max-w-3xl font-semibold text-ink">{AEO_PAGE.simpleDefinition}</p>
 
       {/* Categories — the certification structure leads this page */}
@@ -50,14 +50,14 @@ export default function AeoPage() {
           <h2 className="h3 mt-8 text-ink">Certification Benefits</h2>
           <ul className="mt-3 space-y-1.5">
             {AEO_PAGE.benefits.map((b) => (
-              <li key={b} className="text-[15px] leading-relaxed text-ink/80">· {b}</li>
+              <li key={b} className="text-base leading-relaxed text-ink/80">· {b}</li>
             ))}
           </ul>
 
           <h2 className="h3 mt-8 text-ink">Basic Eligibility</h2>
           <ul className="mt-3 space-y-1.5">
             {AEO_PAGE.eligibility.map((e) => (
-              <li key={e} className="text-[15px] leading-relaxed text-ink/80">· {e}</li>
+              <li key={e} className="text-base leading-relaxed text-ink/80">· {e}</li>
             ))}
           </ul>
         </div>
@@ -66,13 +66,13 @@ export default function AeoPage() {
           <h2 className="h3 text-ink">Major Benefits — Importers & Exporters</h2>
           <ul className="mt-3 space-y-1.5">
             {AEO_PAGE.majorBenefits.importersExporters.map((b) => (
-              <li key={b} className="text-[15px] leading-relaxed text-ink/80">· {b}</li>
+              <li key={b} className="text-base leading-relaxed text-ink/80">· {b}</li>
             ))}
           </ul>
-          <h2 className="h3 mt-8 text-ink">Major Benefits — Brokers & Logistics Operators</h2>
+          <h2 className="h3 mt-8 text-ink">For Customs Brokers & Logistics Operators</h2>
           <ul className="mt-3 space-y-1.5">
             {AEO_PAGE.majorBenefits.brokersOperators.map((b) => (
-              <li key={b} className="text-[15px] leading-relaxed text-ink/80">· {b}</li>
+              <li key={b} className="text-base leading-relaxed text-ink/80">· {b}</li>
             ))}
           </ul>
 

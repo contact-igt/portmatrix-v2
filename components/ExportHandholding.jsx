@@ -17,7 +17,7 @@ export default function ExportHandholding() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           kicker="MSME Export Handholding"
-          title="The end-to-end export journey, phase by phase"
+          title="End-to-End Export Facilitation Process"
           intro="Complete support from export registration and documentation to buyer coordination, customs clearance, shipment, transit, insurance, and post-shipment payment realization."
         />
 
@@ -25,15 +25,13 @@ export default function ExportHandholding() {
             Grid (not a scrolling row) so all 6 phases stay fully legible
             and wrap to 2 rows on mobile instead of being cut off. */}
         <div
-          role="tablist"
           aria-label="Export Handholding phases"
           className="mt-8 grid grid-cols-3 gap-x-3 gap-y-6 sm:grid-cols-6"
         >
           {EXPORT_HANDHOLDING_PHASES.map((p, i) => (
             <button
               key={p.n}
-              role="tab"
-              aria-selected={active === i}
+              aria-pressed={active === i}
               onClick={() => setActive(i)}
               className="group flex flex-col items-start pt-3 text-left"
             >
@@ -43,8 +41,8 @@ export default function ExportHandholding() {
                 }`}
               />
               <span
-                className={`mt-3 block text-xs uppercase tracking-wide ${
-                  active === i ? "text-brandred" : "text-slatey/60"
+                className={`mt-3 block text-[13px] uppercase tracking-wide ${
+                  active === i ? "text-brandred" : "text-slatey"
                 }`}
               >
                 {String(p.n).padStart(2, "0")}
@@ -79,10 +77,10 @@ export default function ExportHandholding() {
             <ol className="mt-5 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3">
               {phase.steps.map((step, i) => (
                 <li key={step} className="flex items-baseline gap-3 border-t border-hairline py-2.5">
-                  <span className="text-xs text-slatey/50">
+                  <span className="text-[13px] text-slatey">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="text-[15px] text-ink/80">{step}</span>
+                  <span className="text-base text-ink/80">{step}</span>
                 </li>
               ))}
             </ol>

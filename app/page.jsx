@@ -22,7 +22,7 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: CONTACT.companyName,
   url: CONTACT.websiteHref,
-  logo: "https://www.portmatrix.in/images/source/branding/portmatrix-logo-primary.jpg",
+  logo: "https://www.portmatrix.in/images/source/branding/portmatrix-logo-v6.png",
   address: {
     "@type": "PostalAddress",
     streetAddress: CONTACT.addressLines.slice(0, 2).join(" ").replace(/,\s*$/, ""),

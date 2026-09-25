@@ -3,10 +3,28 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
-import EvidenceFigure from "@/components/EvidenceFigure";
+import BrandedInfographic from "@/components/BrandedInfographic";
 import ProcessFlow from "@/components/ProcessFlow";
 import RelatedServices from "@/components/RelatedServices";
 import { PHASES } from "@/lib/export-handholding-data";
+
+// Source-image size and the measured old-logo box [x, y, w, h] per phase
+// infographic (PDF pp.8–15) — covered by the V6 logo at render time.
+const INFOGRAPHIC_V6 = {
+  "business-setup-registration": { width: 1981, height: 793, logoBox: [33, 18, 484, 88] },
+  "pre-export-planning": { width: 1942, height: 809, logoBox: [30, 17, 481, 88] },
+  "buyer-development-commercial-negotiations": {
+    width: 1983,
+    height: 793,
+    logoBox: [40, 16, 482, 89],
+    // sampled source colours (blue glow along the bottom edge)
+    edgeTop: ["#fffffe", "#fefefe", "#fefefe", "#fefefe", "#fdfdfd", "#fefefe", "#fefefe", "#fdfdfd", "#feffff", "#fefefe", "#fbfdfe"],
+    edgeBottom: ["#fdfefe", "#fafdfe", "#f5faff", "#eff8fe", "#eaf5ff", "#e5f3fd", "#e1f1fe", "#e0f0fd", "#def0fd", "#dff0fd", "#e4f2fd"],
+  },
+  "pre-shipment-procedures": { width: 1981, height: 793, logoBox: [32, 17, 490, 89] },
+  "shipment-procedures": { width: 1981, height: 793, logoBox: [38, 20, 483, 86] },
+  "post-shipment-realisation": { width: 1981, height: 794, logoBox: [36, 18, 486, 88] },
+};
 
 export function generateStaticParams() {
   return PHASES.map((p) => ({ phase: p.slug }));
@@ -15,10 +33,16 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const phase = PHASES.find((p) => p.slug === params.phase);
   if (!phase) return {};
-  const stepNames = phase.steps.map((s) => s.title).join(", ");
+  // Whole source step titles only — never cut a step name mid-word.
+  let stepNames = "";
+  for (const s of phase.steps) {
+    const next = stepNames ? `${stepNames}, ${s.title}` : s.title;
+    if (next.length > 150) break;
+    stepNames = next;
+  }
   return {
     title: `Phase ${phase.n}: ${phase.title}`,
-    description: `${stepNames}.`.slice(0, 155),
+    description: `${stepNames}.`,
     alternates: { canonical: `/services/export-handholding/${phase.slug}` },
     openGraph: { title: `Phase ${phase.n}: ${phase.title} | PORTMATRIX` },
   };
@@ -54,16 +78,14 @@ export default function PhasePage({ params }) {
         }
         kicker={`Phase ${String(phase.n).padStart(2, "0")} of 6`}
         title={phase.title}
-        intro={`${phase.steps.length} steps, in the order PORTMATRIX carries them out for every export shipment.`}
       />
 
-      <EvidenceFigure
+      <BrandedInfographic
         src={phase.infographic}
+        {...INFOGRAPHIC_V6[phase.slug]}
         alt={`PORTMATRIX export handholding infographic for Phase ${phase.n}: ${phase.title}`}
         caption={`PORTMATRIX export handholding — Phase ${phase.n}: ${phase.title}`}
-        variant="infographic"
         priority
-        sizes="(min-width: 1024px) 1200px, 100vw"
         className="mt-10"
       />
 
@@ -73,10 +95,10 @@ export default function PhasePage({ params }) {
           <ol className="mt-5 divide-y divide-hairline border-y border-hairline">
             {phase.steps.map((step, i) => (
               <li key={step.title} className="flex gap-4 py-4">
-                <span className="text-xs text-slatey/50">{String(i + 1).padStart(2, "0")}</span>
+                <span className="text-[13px] text-slatey">{String(i + 1).padStart(2, "0")}</span>
                 <div>
                   <p className="font-semibold text-ink">{step.title}</p>
-                  <p className="mt-1 text-[15px] leading-relaxed text-slatey">{step.desc}</p>
+                  <p className="mt-1 text-base leading-relaxed text-slatey">{step.desc}</p>
                 </div>
               </li>
             ))}
@@ -91,7 +113,7 @@ export default function PhasePage({ params }) {
 
       <div className="mt-12 flex items-center justify-between border-t border-hairline pt-6">
         {prev ? (
-          <Link href={`/services/export-handholding/${prev.slug}`} className="group flex items-center gap-2 text-sm font-semibold text-navy">
+          <Link href={`/services/export-handholding/${prev.slug}`} className="group flex min-h-11 items-center gap-2 text-sm font-semibold text-navy">
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
             Phase {prev.n}: {prev.title}
           </Link>
@@ -99,12 +121,12 @@ export default function PhasePage({ params }) {
           <span />
         )}
         {next ? (
-          <Link href={`/services/export-handholding/${next.slug}`} className="group flex items-center gap-2 text-right text-sm font-semibold text-navy">
+          <Link href={`/services/export-handholding/${next.slug}`} className="group flex min-h-11 items-center gap-2 text-right text-sm font-semibold text-navy">
             Phase {next.n}: {next.title}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
         ) : (
-          <Link href="/services/export-handholding" className="group flex items-center gap-2 text-right text-sm font-semibold text-navy">
+          <Link href="/services/export-handholding" className="group flex min-h-11 items-center gap-2 text-right text-sm font-semibold text-navy">
             Back to overview
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
