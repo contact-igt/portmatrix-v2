@@ -10,6 +10,7 @@ export default function SectionHeading({
   align = "left",
   light = false,
 }) {
+  const sentence = typeof kicker === "string" && kicker.length > 32;
   const alignment = align === "center" ? "mx-auto text-center items-center" : "items-start";
   return (
     <motion.div
@@ -20,7 +21,7 @@ export default function SectionHeading({
       {kicker && (
         <motion.span
           variants={fadeUp}
-          className={`kicker mb-3 flex items-center gap-2 ${
+          className={`${sentence ? "kicker-sentence" : "kicker"} mb-3 flex items-center gap-2 ${
             light ? "text-brandred-300" : "text-brandred"
           }`}
         >

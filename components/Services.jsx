@@ -1,105 +1,55 @@
-"use client";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { SERVICES, SERVICE_ONE_LINERS } from "@/lib/content";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
-import { fadeUp, stagger, inView } from "@/lib/animations";
-import { SERVICES, FEATURED_SERVICES, COMPACT_SERVICES } from "@/lib/content";
-
-// On mobile, showing all 11 secondary services stacks into ~2000px of
-// scroll with no way to scan ahead. Desktop's 2-column grid already keeps
-// this compact, so the collapse only applies below sm — items past the
-// preview count are CSS-hidden (not removed), so nothing changes for sm+.
-const MOBILE_PREVIEW_COUNT = 6;
-
+// Homepage index of the 17 core services (PDF pp.4–7): number, title and a
+// one-line description. Every row links to its own route. The full group
+// structure and full descriptions live on /services.
 export default function Services() {
-  const [expanded, setExpanded] = useState(false);
-
   return (
     <section id="services" className="relative scroll-mt-20 py-14 sm:py-20 lg:py-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        {/* Split header — heading and intro share a baseline instead of
-            stacking, a deliberate variation from the repeated
-            kicker-over-heading pattern used elsewhere. */}
-        <motion.div
-          variants={stagger}
-          {...inView}
-          className="flex flex-col gap-5 border-b border-hairline pb-8 lg:flex-row lg:items-end lg:justify-between lg:gap-10"
-        >
-          <motion.h2
-            variants={fadeUp}
-            className="h2 text-ink lg:max-w-sm"
+        <div className="flex flex-col gap-4 border-b border-hairline pb-8 sm:flex-row sm:items-end sm:justify-between">
+          <h2 className="h2 text-ink">Core Services</h2>
+          <Link
+            href="/services"
+            className="group inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-navy"
           >
-            Core Services
-          </motion.h2>
-        </motion.div>
+            <span className="border-b border-navy/30 pb-0.5 transition-colors duration-150 group-hover:border-navy">
+              All 17 core services, grouped
+            </span>
+            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-150 group-hover:translate-x-0.5" />
+          </Link>
+        </div>
 
-        {/* Featured — editorial index, not icon cards */}
-        <motion.div
-          variants={stagger}
-          {...inView}
-          className="mt-8 grid divide-y divide-hairline border-y border-hairline sm:grid-cols-2"
-        >
-          {/* Tailwind's divide-x adds a border to every sibling but the
-              first, regardless of grid row — in a 2-column, multi-row grid
-              that puts a stray left border on every left-column item after
-              the first row too. An explicit odd-index border avoids it. */}
-          {FEATURED_SERVICES.map((s, i) => (
-            <motion.a
-              key={s.title}
-              href={s.href}
-              variants={fadeUp}
-              className={`group flex gap-5 px-1 py-5 transition-colors sm:px-8 ${
-                i % 2 === 1 ? "sm:border-l sm:border-hairline" : ""
+        <ol className="grid divide-y divide-hairline border-b border-hairline sm:grid-cols-2 sm:divide-y-0">
+          {SERVICES.map((s, i) => (
+            <li
+              key={s.n}
+              className={`sm:border-b sm:border-hairline ${i % 2 === 1 ? "sm:border-l" : ""} ${
+                i >= SERVICES.length - 1 ? "sm:border-b-0" : ""
               }`}
             >
-              <span className="text-sm text-brandred-600 transition-colors group-hover:text-brandred">
-                {String(s.n).padStart(2, "0")}
-              </span>
-              <div className="min-w-0">
-                <h3 className="font-display text-lg font-bold text-ink transition-colors group-hover:text-navy sm:text-xl">
-                  {s.title}
-                </h3>
-                <p className="mt-2 text-base leading-relaxed text-slatey">{s.desc}</p>
-              </div>
-            </motion.a>
+              <Link
+                href={s.href}
+                className="group flex gap-5 px-1 py-5 transition-colors hover:bg-paper sm:px-8"
+              >
+                <span className="font-display text-sm font-semibold tabular-nums text-brandred-600 transition-colors group-hover:text-brandred">
+                  {String(s.n).padStart(2, "0")}
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block font-display text-lg font-bold text-ink transition-colors group-hover:text-navy">
+                    {s.title}
+                  </span>
+                  <span className="mt-1.5 block text-base leading-relaxed text-slatey">
+                    {SERVICE_ONE_LINERS[s.n]}
+                  </span>
+                </span>
+                <ArrowRight className="mt-1.5 h-4 w-4 shrink-0 text-navy/40 transition-colors group-hover:text-navy" aria-hidden="true" />
+              </Link>
+            </li>
           ))}
-        </motion.div>
-
-        {/* Secondary matrix — compact, typography-led */}
-        <motion.div
-          variants={stagger}
-          {...inView}
-          className="mt-2 grid divide-y divide-hairline sm:grid-cols-2"
-        >
-          {COMPACT_SERVICES.map((s, i) => (
-            <motion.div
-              key={s.title}
-              variants={fadeUp}
-              className={`gap-4 px-1 py-5 sm:flex sm:px-8 ${
-                i % 2 === 1 ? "sm:border-l sm:border-hairline" : ""
-              } ${i >= MOBILE_PREVIEW_COUNT && !expanded ? "hidden sm:flex" : "flex"}`}
-            >
-              <span className="text-[13px] text-slatey">
-                {String(s.n).padStart(2, "0")}
-              </span>
-              <div className="min-w-0">
-                <h4 className="font-display text-base font-bold text-ink">{s.title}</h4>
-                <p className="mt-1 text-base leading-relaxed text-slatey">{s.desc}</p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {COMPACT_SERVICES.length > MOBILE_PREVIEW_COUNT && (
-          <button
-            onClick={() => setExpanded((v) => !v)}
-            className="mt-4 flex w-full items-center justify-center gap-1.5 border-t border-hairline py-4 text-sm font-semibold text-navy sm:hidden"
-          >
-            {expanded ? "Show fewer services" : `Show ${COMPACT_SERVICES.length} more services`}
-            <ChevronDown className={`h-4 w-4 transition-transform ${expanded ? "rotate-180" : ""}`} />
-          </button>
-        )}
+        </ol>
       </div>
     </section>
   );

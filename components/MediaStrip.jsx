@@ -1,51 +1,30 @@
-"use client";
-
-import Image from "next/image";
-import { motion } from "framer-motion";
 import { PlayCircle } from "lucide-react";
-import { fadeUp, stagger, inView } from "@/lib/animations";
 import { MEDIA } from "@/lib/content";
 
+// Text-only press strip on the home page. The Nanayam Vikatan scan (with
+// zoom) lives on /media; the home page keeps the dated caption and the
+// interview link.
 export default function MediaStrip() {
   const article = MEDIA.items[0];
 
   return (
-    <section id="media" className="relative bg-white py-14 sm:py-16">
+    <section id="media" className="relative bg-white py-12 sm:py-14">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <motion.div
-          variants={stagger}
-          {...inView}
-          className="flex flex-col items-center gap-6 border-y border-hairline py-8 sm:flex-row sm:gap-8"
-        >
-          <motion.div
-            variants={fadeUp}
-            className="relative h-28 w-28 shrink-0 overflow-hidden rounded-lg border border-hairline sm:h-32 sm:w-32"
-          >
-            <Image
-              src={article.src}
-              alt={article.alt}
-              fill
-              sizes="128px"
-              className="object-cover"
-            />
-          </motion.div>
-
-          <motion.div variants={fadeUp} className="flex-1 text-center sm:text-left">
+        <div className="flex flex-col gap-5 border-y border-hairline py-8 sm:flex-row sm:items-center sm:justify-between sm:gap-10">
+          <div className="max-w-2xl">
             <p className="kicker text-brandred">{MEDIA.heading}</p>
-            <p className="mt-2 text-sm leading-relaxed text-slatey">{article.caption}</p>
-          </motion.div>
-
-          <motion.a
-            variants={fadeUp}
+            <p className="mt-2 text-base leading-relaxed text-slatey">{article.caption}</p>
+          </div>
+          <a
             href={MEDIA.videoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex shrink-0 items-center gap-2 rounded-full border border-navy/20 bg-white px-5 py-3 text-sm font-semibold text-navy transition-colors hover:border-navy hover:bg-navy-50"
+            className="group inline-flex min-h-11 shrink-0 items-center gap-2 self-start rounded-full border border-navy/20 bg-white px-5 py-3 text-sm font-semibold text-navy transition-colors hover:border-navy hover:bg-navy-50 sm:self-auto"
           >
-            <PlayCircle className="h-4 w-4" />
+            <PlayCircle className="h-4 w-4" aria-hidden="true" />
             {MEDIA.videoLabel}
-          </motion.a>
-        </motion.div>
+          </a>
+        </div>
       </div>
     </section>
   );

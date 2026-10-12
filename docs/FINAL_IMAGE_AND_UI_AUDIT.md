@@ -1,49 +1,55 @@
-# PORTMATRIX — Final Image & UI Audit
+# Final Image & UI Audit (Stage 3 — UI + image curation pass)
 
-## 1. Image Priority & Provenance Map
+Content frozen for this pass: no approved copy was rewritten. Source of the curation rules: `docs/CONTENT_UI_REFINEMENT_AUDIT.md` §3–§4. This file replaces the earlier version, whose claims about the RIIT logo on `/riit/courses` and "phase infographics linked full size" were not true of the build.
 
-All images used across the PORTMATRIX website follow strict documentary priority and factual provenance rules.
+## 1. Image curation
 
-| Category | Image Asset / Path | Context / Route | Priority Level | Provenance & Handling |
-|---|---|---|---|---|
-| **Primary Branding** | `branding/portmatrix-logo-primary.jpg` | Header, Footer, Favicon | Level 1 (Authoritative Logo) | Losslessly extracted from source PDF p.1. Used unchanged without redraw or font approximation. |
-| **RIIT Sub-brand** | `branding/riit-logo.png` | `/riit`, `/riit/courses` | Level 1 (Authoritative Mark) | Losslessly extracted from source PDF p.16. |
-| **MD Portrait** | `md/rahim-iyaz-portrait.png` | `/about`, `/about/rahim-iyaz` | Level 1 (Genuine Evidence) | Studio-quality portrait of Mr. Rahim Iyaz. |
-| **Founder & Heritage** | `china/founder-hong-kong-delegation-1974.png` | `/china-import-sourcing` | Level 1 (Genuine Evidence) | 1974 Hong Kong delegation photo featuring Founder Mr. M.A. Izzadeen. |
-| **China Sourcing Proof** | `china/rahim-iyaz-china-factory-2015.png` | `/china-import-sourcing` | Level 1 (Genuine Evidence) | MD factory inspection photo in China, 2015. |
-| **Canton Fair Proof** | `china/azeez-usa-clients-canton-fair-2025.png`, `china/rahim-iyaz-riaz-malik-canton-fair-2014.png`, `china/canton-fair-indian-clients-group-2015.png` | `/china-import-sourcing/canton-fair` | Level 1 (Genuine Evidence) | Chronological Canton Fair documentation spanning 2014–2025. |
-| **Cargo Inspection (Netherlands)** | `customs/hotel-supplies-inspection-netherlands-2024.png` | `/services/export-import-clearance` | Level 1 (Genuine Evidence) | Hotel supplies shipment inspection to Netherlands, 2024. |
-| **Cargo Inspection (USA)** | `customs/export-shipment-inspection-usa-2025.png` | `/services/export-import-clearance` | Level 1 (Genuine Evidence) | Export shipment inspection to USA, 2025. |
-| **Government & RIIT Events** | `riit/riit-inauguration-2023-11-14.png`, `events/alagappa-university-mou-2022-10-31.png`, `riit/deputy-dgft-reddy-session-2023-11-19.png`, `credentials/certificate-of-appreciation-msme-dfo-2023-11-28.png`, `riit/agriculture-export-training-edii-tn-2025-08-12.png`, `riit/fieo-training-sakthivel-unnikrishnan-2022-12-20.png` | `/riit`, `/riit/training-events` | Level 1 (Genuine Evidence) | Institutional training and government collaboration milestones. |
-| **Press & Media** | `media/nanayam-vikatan-article-2024-02-04.png` | `/media` | Level 1 (Genuine Evidence) | Nanayam Vikatan Tamil magazine feature, 4 Feb 2024. |
-| ~~AI Decorative Hero~~ **REMOVED (V6 pass, 2026-09-25)** | ~~`generated/global-trade-hero.jpg`~~ | — | — | Not source material; removed from the site and from `public/`. The homepage hero is now typographic + the p.7 phase index. |
-| **Process Banners** | `export-handholding/phase1-6-infographic.png` | `/services/export-handholding/[phase]` | Level 4 (Source Process Infographics) | Approved Phase 1–6 infographics, rendered with `object-contain`. |
+Rendered distinct source images: **24** (was 53). No file was deleted from `public/images/source/`; every source image remains accounted for in `docs/FINAL_SOURCE_VISUAL_COVERAGE.md` (unrendered ones are marked `ARCHIVED_NOT_RENDERED`).
 
-## 2. 17/17 Service Visual Treatment Status
-
-| Service Destination | Visual Approach | Primary Visual Assets / Information Design |
+| Page | Removed from render | Reason |
 |---|---|---|
-| **MSME Export Handholding** | Phase-by-phase process cards & native step diagrams | Phase 1–6 approved source infographics (`object-contain`), 44 complete steps preserved across 6 phase pages |
-| **Export Import Clearance** | Prominent genuine evidence & dual workflow diagrams | Netherlands 2024 & USA 2025 cargo inspection photos + Import & Export `ProcessFlow` workflows |
-| **Freight Forwarding & Logistics** | Structured logistics segment matrix & workflow | Source-backed segment matrix (`ComparisonTable`), 8 core services, workflow & key documents |
-| **MSME Insurance Package** | Category breakdown & side-by-side comparison tables | 14-product category breakdown, trade finance vs factoring/forfaiting `ComparisonTable`, no generic stock |
-| **MOOWR** | Regulatory process flow & scheme comparison | Benefit breakdown, MOOWR vs SEZ vs EPCG `ComparisonTable`, `ProcessFlow` workflow |
-| **Advance Authorisation** | Entitlement workflow & document list | Duty exemption workflow, obligation calculation example, document checklist |
-| **EPCG Scheme** | Capital goods duty-free process & obligation example | Scheme features, 6-year export obligation worked example, `ProcessFlow` |
-| **SEZ** | Zone classification & feature grid | Objective matrix, SEZ types table, Mahindra World City case illustration |
-| **FTWZ** | Free trade warehousing workflow & benefits | FTWZ activity matrix, FTWZ vs SEZ comparison table, J Matadee case illustration |
-| **EOU** | Activity matrix & approval workflow | Eligibility criteria, approval process steps, NFE calculation model |
-| **AEO** | Multi-tier trust matrix & application process | T1/T2/T3/LO category comparison table, compliance requirements, application workflow |
-| **NRI Baggage Clearance** | Reference-first duty allowance & rule tables | General free allowance, Jewellery, Transfer of Residence & Annexure-II `ComparisonTable`s, no stock airport photos |
-| **Postal Export Aggregator** | Dak Ghar Niryat Kendra workflow & PGA list | India Post integration workflow, Customs clearance steps, PGA requirements |
-| **E-Commerce Export** | Cross-border trade flow & platform integration | D2C & marketplace export process, CSB-V filing steps, benefit matrix |
-| **Licensed Customs Broker** | Regulatory compliance & agent responsibilities | Customs Brokers Regulations 2018 duties, ICEGATE integration checklist |
-| **China Import Sourcing** | Chronological heritage & factory inspection proof | 1974 Founder photo, 2015 factory visit, 2014–2025 Canton Fair gallery |
-| **RIIT (Training & Consultancy)** | Institutional timeline & government training proof | Inauguration, Alagappa MoU, MSME DFO certificate scan, FIEO/DGFT training evidence |
+| /services | services-overview infographic | ~6px text, duplicates the native list, baked-in phones/email |
+| /services/export-handholding + 6 phases | hub infographic + six phase infographics | duplicate native steps; unreadable on mobile; ~1.9 MB priority image |
+| /services/nri-baggage-clearance | baggage-allowance infographic | native tables carry every row; MD credential line differs from p.4 |
+| /services/postal-export | postal-export infographic | scrolls sideways at 390; India Post mark implies endorsement |
+| / | 8 of 13 slots (factory 2015, USA inspection, inauguration, Deputy DGFT, certificate, agriculture 2025, FIEO 2022, Vikatan tile) | reduce to 5 slots; each stays on its own deeper page |
+| /china-import-sourcing/canton-fair | Canton group 2015 (low quality), Canton booth 2015 (redundant) | audit §3 |
+| /media | both YouTube stills | duplicate the embedded video |
+| /about | MD portrait card | portrait stays on `/about/rahim-iyaz` and the home About card |
+| /riit/training-events | certificate hand-off photo, FIEO women audience, Postal/FSSAI/ECGC/EIA session photos, MDP 2025 poster, 2026 agri session, Shiju Thomas photo, DG Vaishnav / MEPCO / SIET-JBAS / Dawoodi Bohra / Indo-UAE photos, four flyers | same room/banner repeats; unrelated-entity branding, GST number, phones and price claim on the MDP poster; flyers |
 
-## 3. Page Family Differentiation
+Kept as essential evidence: V6 logo, MD portrait, 1974 Hong Kong delegation, China factory 2015, Canton Fair 2025 and 2014, Netherlands 2024 and USA 2025 inspections, Alagappa MoU, MSME-DFO Certificate of Appreciation (with full-size link), RIIT inauguration / FIEO 2022 / Agriculture 2025 in context, Nanayam Vikatan scan, RIIT logo.
 
-1. **Homepage (`/`)**: Brand-level Hero (`ai-decorative`), trust indicators, core service navigation grid, operational proof summary, and institutional milestones.
-2. **Institutional & Heritage (`/about`, `/about/rahim-iyaz`, `/china-import-sourcing`, `/riit`)**: Photo-led documentary layouts with large trust imagery, historical context, and timeline evidence.
-3. **Core Services & Schemes (`/services/*`)**: Information-dense reference layouts driven by structured tables, native `ProcessFlow` diagrams, and specific compliance matrices.
-4. **Interactive Event & Media Archives (`/riit/training-events`, `/media`)**: Chronological event logs with complete documentary captions and verified media links.
+Training events keeps 10 images. Five of them (FIEO women speaker, MSME-TN officials, Deputy DGFT, India Post, Loyola photo) are retained per the audit's per-route entry rather than the short "must stay" list; they can be cut to reduce further.
+
+## 2. Page compositions (no two service pages share one template)
+
+- **Export Handholding**: numbered six-phase rail with icon nodes; each phase page has a six-node phase tracker, sticky phase numeral, vertical step rail, prev/next phase navigation.
+- **MOOWR / Advance Authorisation / EPCG**: scheme explainer — definition + fact strip, prominent comparison table, EPCG worked example as the one callout (₹45 lakh focal), horizontal step lines.
+- **SEZ / FTWZ / EOU / AEO**: structured regulatory layouts — gutter headings, AEO tier ladder, FTWZ audience columns, EOU numbered checklists; shared `PageNav`.
+- **Customs clearance**: numbered seven areas, three-stage export workflow rails (numbers 1–15 unchanged), Chennai import example as the one callout, both operational photos.
+- **Broker**: quoted Regulation 2(d) definition band + labelled `dl`. **Freight**: horizontal workflow + checklist. **Insurance**: index + ruled category rows + Cover-by-risk table. **NRI baggage**: table-first, on-page nav, key-allowances strip (existing figures only). **Postal / E-commerce**: compact numbered/ruled.
+- **China**: documentary timeline (1974, 2015) + three ruled capability groups. **Canton Fair**: fact row, three-phase strip, inclusions checklist. **RIIT**: masthead, three ruled columns, dated milestones. **Courses**: syllabus groups. **Training events**: year-grouped archive with jump-nav. **Media**: editorial archive. **Contact**: phone first, no images.
+- **Home**: single hero photo with the defining sentence; page height at 1440 reduced from 10,273 to 6,647 px.
+
+## 3. Shared system changes
+
+Type scale (kicker 14px for 1–3 words, sentence-case kicker variant, 18–20px item titles, 15px captions, 68ch measure); flat `.band` strip (one per page); new `PageNav`, `ReferenceTable`, `Callout`, `StatStrip`; `ProcessFlow` `variant`/`start`; `PageIntro` `aside`; ruled FAQ/KeyPoints/Related lists replacing boxed cards; tap targets ≥44px in header, drawer, breadcrumbs, footer, image zoom links. Header fixes: mega-menu was clipped at 1440 (now left-anchored, 3 columns at xl); header CTA was cut off at 1280 (phone number now shows from 1440). No gradients, no backdrop blur, reduced-motion and focus-visible rules unchanged.
+
+## 4. Verification
+
+- `npm run build`: passes, 39 static pages.
+- All 32 routes: 200, exactly one `<h1>`, one `<main>`; 0 broken internal links; 339 image references across routes, all resolve.
+- Six-width sweep (1440/1280/1024/768/430/390) over all 32 routes: horizontal overflow, text under 13.5px, and H1 count — see result line below.
+
+Result: 192 route×width checks (32 routes × 6 widths), 0 horizontal overflow, 0 text elements under 13.5px in `<main>`, exactly one H1 on every route. Console: no errors on spot-checked pages (only a dev-server HMR socket notice after the server restart). Visual screenshots were spot-checked on home and NRI only; mobile screenshots were not taken for most pages.
+
+## 5. Remaining cosmetic issues (not fixed — one-pass rule)
+
+- Courses at 390px is long (~8,400 px) because of ruled lists; row padding could be tightened.
+- AEO tier ladder stacks four tall blocks on mobile.
+- NRI and MSME on-page navs are local markup, not the shared `PageNav`.
+- `/media` shows 04 February 2024 twice (date line plus the unchanged intro sentence).
+- Netherlands hero photo shows crate labels larger on home (open CLIENT_CONFIRMATION_REQUIRED on shipper/consignee text). If not cleared, swap the hero to the USA 2025 photo in `OPERATIONAL_PROOF`.
+- Other image-provenance items still awaiting the client: whether the 1974 photo is colourised; EIA slide "Assistant Director" vs "Director"; MD name variants on certificate/nameplate.
+- `lib/content.js` still holds unused entries (e.g. `RIIT.gallery`, `MEDIA.videoLabel`) and the short scheme labels.

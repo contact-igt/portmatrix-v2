@@ -1,81 +1,105 @@
+import Link from "next/link";
+import { MapPin, ArrowRight, Landmark } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
+import DefinitionBlock from "@/components/DefinitionBlock";
+import HowPortmatrixHelps from "@/components/HowPortmatrixHelps";
+import Faq from "@/components/Faq";
 import RelatedServices from "@/components/RelatedServices";
-import { MapPin } from "lucide-react";
+import { buildMetadata } from "@/lib/seo";
 import { SEZ_PAGE } from "@/lib/schemes-data";
+import Callout from "@/components/Callout";
+import { CheckList, OnThisPage, Section } from "../_scheme-parts";
 
-export const metadata = {
-  title: "SEZ",
-  description: "Special Economic Zone (SEZ). Major SEZ in Tamil Nadu: Mahindra World City - Tamil Nadu - IT & Manufacturing.",
-  alternates: { canonical: "/services/sez" },
-};
+export const metadata = buildMetadata({
+  title: "Special Economic Zone (SEZ) Registration Support",
+  description:
+    "A Special Economic Zone (SEZ) is a duty-free area treated as foreign territory for trade. PORTMATRIX assists in the registration of SEZs.",
+  path: "/services/sez",
+});
 
 export default function SezPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Special Economic Zone (SEZ)",
+    name: "Special Economic Zone (SEZ) Registration Support",
     provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
     description: SEZ_PAGE.definition,
   };
+  const P = SEZ_PAGE;
 
   return (
-    <div className="mx-auto max-w-4xl px-5 py-14 sm:px-8 sm:py-20">
+    <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "SEZ", href: "/services/sez" }]} />}
-        kicker={SEZ_PAGE.tagline}
-        title="Special Economic Zone (SEZ)"
-        intro={SEZ_PAGE.intro}
+        kicker={P.tagline}
+        title="Special Economic Zone (SEZ) Registration Support"
+        intro={P.intro}
       />
-      <p className="mt-4 text-base font-medium text-ink sm:text-lg">{SEZ_PAGE.serviceIntro}</p>
 
-      <div className="article-body mt-8 max-w-none">
-        <p>{SEZ_PAGE.definition}</p>
-        <p className="font-semibold text-ink">{SEZ_PAGE.simpleDefinition}</p>
+      <OnThisPage
+        items={[
+          { id: "sez-features", label: "Features and benefits" },
+          { id: "sez-objectives", label: "Objectives" },
+          { id: "sez-types", label: "Types of SEZs" },
+          { id: "faq-heading", label: "FAQs" },
+        ]}
+      />
+
+      <div className="lg:grid lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-x-16">
+        <DefinitionBlock title="What an SEZ is">
+          <p>{P.definition}</p>
+          <p className="mt-3 font-semibold">{P.simpleDefinition}</p>
+        </DefinitionBlock>
+        <HowPortmatrixHelps>{P.serviceIntro}</HowPortmatrixHelps>
       </div>
 
-      <div className="mt-10 grid gap-10 sm:grid-cols-2">
-        <div>
-          <h2 className="h3 text-ink">Main Features</h2>
-          <ul className="mt-3 space-y-1.5">
-            {SEZ_PAGE.features.map((f) => (
-              <li key={f} className="text-base leading-relaxed text-ink/80">· {f}</li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h2 className="h3 text-ink">Objectives</h2>
-          <ul className="mt-3 space-y-1.5">
-            {SEZ_PAGE.objectives.map((o) => (
-              <li key={o} className="text-base leading-relaxed text-ink/80">· {o}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      <Section id="sez-features" title="Features and benefits of an SEZ" className="mt-14">
+        <p className="max-w-prose text-base leading-relaxed text-slatey sm:text-[1.0625rem]">{P.enjoyLine}</p>
+        <CheckList className="mt-5" items={P.featuresAndBenefits} />
+      </Section>
 
-      <h2 className="h3 mt-10 text-ink">Types of SEZs</h2>
-      <ul className="mt-3 space-y-1.5">
-        {SEZ_PAGE.types.map((t) => (
-          <li key={t} className="text-base leading-relaxed text-ink/80">· {t}</li>
-        ))}
-      </ul>
+      <Section id="sez-objectives" title="Objectives of SEZs" className="mt-12">
+        <ol className="divide-y divide-hairline border-y border-hairline">
+          {P.objectives.map((o, i) => (
+            <li key={o} className="flex items-baseline gap-5 py-3.5 text-base leading-relaxed text-ink/90">
+              <span className="w-6 shrink-0 font-display text-xl font-bold text-navy" aria-hidden="true">{i + 1}</span>
+              {o}
+            </li>
+          ))}
+        </ol>
+      </Section>
 
-      <div className="mt-8 flex items-center gap-3 rounded-xl border border-hairline bg-paper px-5 py-4">
-        <MapPin className="h-5 w-5 shrink-0 text-brandred" />
-        <div>
-          <p className="text-[13px] font-semibold uppercase tracking-wide text-slatey">Major SEZ in Tamil Nadu</p>
-          <p className="text-sm font-medium text-ink">{SEZ_PAGE.localExample}</p>
-        </div>
-      </div>
+      <Section id="sez-types" title="Types of SEZs" className="mt-12">
+        <ul className="divide-y divide-hairline border-y border-hairline">
+          {P.types.map((t) => (
+            <li key={t.name} className="py-4 sm:grid sm:grid-cols-[minmax(0,15rem)_minmax(0,1fr)] sm:gap-x-8">
+              <p className="font-display text-lg font-semibold text-ink">
+                {t.href ? (
+                  <Link href={t.href} className="inline-flex min-h-11 items-center gap-1.5 text-navy underline-offset-2 hover:underline sm:min-h-0">
+                    {t.name}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
+                ) : (
+                  t.name
+                )}
+              </p>
+              <p className="mt-1 text-base leading-relaxed text-slatey sm:mt-0.5">{t.desc}</p>
+            </li>
+          ))}
+        </ul>
 
-      <h2 className="h3 mt-10 text-ink">Benefits for Businesses</h2>
-      <ul className="mt-3 space-y-1.5">
-        {SEZ_PAGE.benefits.map((b) => (
-          <li key={b} className="text-base leading-relaxed text-ink/80">· {b}</li>
-        ))}
-      </ul>
-      <p className="mt-4 text-sm text-slatey">Authority: {SEZ_PAGE.authority}</p>
+        <Callout tone="example" icon={MapPin} title="Major SEZ in Tamil Nadu">
+          <p className="font-display text-xl font-semibold leading-snug text-ink">{P.localExample}</p>
+        </Callout>
+        <p className="mt-6 flex items-center gap-2 text-base text-slatey">
+          <Landmark className="h-5 w-5 shrink-0 text-navy" aria-hidden="true" />
+          Authority: {P.authority}
+        </p>
+      </Section>
+
+      <Faq items={P.faqs} />
 
       <div className="mt-14">
         <RelatedServices

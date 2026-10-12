@@ -1,16 +1,16 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
-import BrandedInfographic from "@/components/BrandedInfographic";
 import { SERVICES, SERVICE_GROUPS, ALLIED_SERVICES } from "@/lib/content";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Core Services",
-  alternates: { canonical: "/services" },
+export const metadata = buildMetadata({
+  title: "Core Services — Customs Broking & Export Handholding",
   description:
-    "PORTMATRIX Core Services — export handholding, customs broking, China import sourcing, schemes (MOOWR, Advance Authorisation, EPCG, SEZ, FTWZ, EOU, AEO), insurance, logistics and e-commerce export.",
-};
+    "PORTMATRIX's 17 core services: export handholding, customs broking, China import sourcing, RIIT training, clearance, logistics and trade schemes.",
+  path: "/services",
+});
 
 // Maps a group's item back to its full SERVICES entry for the description —
 // group data only carries title+href, description stays single-sourced in
@@ -22,94 +22,100 @@ function findService(href) {
 export default function ServicesIndexPage() {
   return (
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
+      {/* Intro: built from PDF p.3 (supports exporters and importers with
+          Customs, DGFT and international trade procedures) and the Core
+          Services list on pp.4–7. No new facts. */}
       <PageIntro
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }]} />}
         kicker={`${SERVICES.length} core services`}
         title="Core Services"
+        intro={`PORTMATRIX supports exporters and importers with Customs, DGFT and international trade procedures. Its ${SERVICES.length} core services run from MSME export handholding and customs broking to China import sourcing, RIIT training, trade schemes and logistics.`}
       />
 
-      <div className="mt-10 space-y-12">
-        {SERVICE_GROUPS.map((group) => (
-          <div key={group.label}>
-            <h2 className="h2 text-ink">{group.label}</h2>
-            <div className="mt-6 grid gap-px overflow-hidden rounded-xl border border-hairline bg-hairline sm:grid-cols-2">
-              {group.items.map((item) => {
+      {/* Services index: four groups, each a ruled list carrying the source's
+          own service numbers. Group labels sit in a left column from md up. */}
+      <div className="mt-12 border-t-2 border-ink sm:mt-14">
+        {SERVICE_GROUPS.map((group, gi) => (
+          <section
+            key={group.label}
+            aria-labelledby={`group-${gi}`}
+            className="grid gap-x-10 border-b border-hairline py-8 md:grid-cols-[15rem_1fr] md:py-10 lg:grid-cols-[18rem_1fr]"
+          >
+            <h2 id={`group-${gi}`} className="h3 text-ink md:sticky md:top-24 md:self-start">
+              {group.label}
+            </h2>
+            <ul className="mt-5 divide-y divide-hairline border-t border-hairline md:mt-0 md:border-t-0">
+              {group.items.map((item, ii) => {
                 const svc = findService(item.href);
                 return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="group flex flex-col justify-between gap-4 bg-white p-6 transition-colors hover:bg-navy-50"
-                  >
-                    <div>
-                      <h3 className="font-display text-lg font-semibold text-ink transition-colors group-hover:text-navy">
-                        {item.title}
-                      </h3>
-                      {svc && <p className="mt-2 text-base leading-relaxed text-slatey">{svc.desc}</p>}
-                    </div>
-                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy">
-                      Learn more
-                      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-                    </span>
-                  </Link>
+                  <li key={item.href} className={ii === 0 ? "md:-mt-3" : ""}>
+                    <Link
+                      href={item.href}
+                      className="group flex min-h-11 gap-4 py-4 transition-colors hover:bg-white sm:gap-6 sm:px-3"
+                    >
+                      <span className="w-8 shrink-0 pt-0.5 font-display text-lg font-semibold tabular-nums text-brandred-600">
+                        {svc ? String(svc.n).padStart(2, "0") : ""}
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block font-display text-lg font-semibold text-ink transition-colors group-hover:text-navy sm:text-xl">
+                          {item.title}
+                        </span>
+                        {svc && <span className="mt-1 block max-w-prose text-base leading-relaxed text-slatey">{svc.desc}</span>}
+                      </span>
+                      <ArrowRight className="mt-1.5 h-4 w-4 shrink-0 text-navy/40 transition-colors group-hover:text-navy" aria-hidden="true" />
+                    </Link>
+                  </li>
                 );
               })}
-            </div>
-          </div>
+            </ul>
+          </section>
         ))}
       </div>
 
+      {/* PDF p.86 — Target Audience and Key Strengths, verbatim lists.
+          This is the page's single tinted band. */}
+      <div className="-mx-5 mt-14 bg-navy-50/60 px-5 py-12 sm:-mx-8 sm:px-8 sm:py-14">
+        <div className="grid gap-10 md:grid-cols-2 md:gap-16">
+          <section aria-labelledby="who-we-serve">
+            <h2 id="who-we-serve" className="h3 text-ink">Who we serve</h2>
+            <ol className="mt-5 divide-y divide-navy/10 border-y border-navy/10">
+              {ALLIED_SERVICES.targetAudience.map((t, i) => (
+                <li key={t} className="flex gap-4 py-3.5 text-base leading-relaxed text-ink">
+                  <span aria-hidden="true" className="w-7 shrink-0 font-display font-semibold tabular-nums text-navy">{String(i + 1).padStart(2, "0")}</span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ol>
+          </section>
+          <section aria-labelledby="key-strengths">
+            <h2 id="key-strengths" className="h3 text-ink">Key strengths</h2>
+            <ul className="mt-5 divide-y divide-navy/10 border-y border-navy/10">
+              {ALLIED_SERVICES.keyStrengths.map((k) => (
+                <li key={k} className="flex gap-3 py-3.5 text-base leading-relaxed text-ink">
+                  <Check className="mt-1 h-4 w-4 shrink-0 text-navy" aria-hidden="true" />
+                  <span>{k}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
+      </div>
+
       {/* PDF pp.85–86 — Allied Services, verbatim lists */}
-      <section className="mt-16 border-t border-hairline pt-12">
-        <h2 className="h2 text-ink">Allied Services</h2>
-        <div className="mt-8 grid gap-10 md:grid-cols-3">
+      <section className="mt-14" aria-labelledby="allied-services">
+        <h2 id="allied-services" className="h3 text-ink">Allied Services</h2>
+        <div className="mt-6 grid gap-x-10 gap-y-10 md:grid-cols-3">
           {ALLIED_SERVICES.groups.map((g) => (
-            <div key={g.title}>
+            <div key={g.title} className="border-t-2 border-ink pt-4">
               <h3 className="font-display text-lg font-semibold text-ink">{g.title}</h3>
-              <ul className="mt-3 space-y-2 border-t-2 border-navy pt-3 text-base leading-relaxed text-ink/85">
+              <ul className="mt-3 divide-y divide-hairline text-base leading-relaxed text-ink/85">
                 {g.items.map((i) => (
-                  <li key={i}>{i}</li>
+                  <li key={i} className="py-2">{i}</li>
                 ))}
               </ul>
             </div>
           ))}
         </div>
-        <div className="mt-10 grid gap-10 md:grid-cols-2">
-          <div>
-            <h3 className="font-display text-lg font-semibold text-ink">Target Audience</h3>
-            <ol className="mt-3 list-decimal space-y-2 pl-5 text-base text-ink/85">
-              {ALLIED_SERVICES.targetAudience.map((t) => (
-                <li key={t}>{t}</li>
-              ))}
-            </ol>
-          </div>
-          <div>
-            <h3 className="font-display text-lg font-semibold text-ink">Key Strengths</h3>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-base text-ink/85">
-              {ALLIED_SERVICES.keyStrengths.map((k) => (
-                <li key={k}>{k}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* PDF p.2 services overview infographic — old logo covered by V6 */}
-      <section className="mt-16 border-t border-hairline pt-12">
-        <h2 className="h3 text-ink">Services overview</h2>
-        <BrandedInfographic
-          src="/images/source/branding/portmatrix-services-overview-infographic.png"
-          width={1024}
-          height={1536}
-          logoBox={[33, 33, 444, 81]}
-          // sampled source colours (sky gradient at the right end)
-          edgeTop={["#fefefd", "#feffff", "#fefefe", "#fefefe", "#fefefd", "#ffffff", "#fefefd", "#fefefe", "#fcfdfe", "#ebf5fd", "#d3ebfd"]}
-          edgeBottom={["#ffffff", "#fcfcfc", "#fefefd", "#fffffe", "#fcfdfe", "#f9fbfe", "#f6fafe", "#f9fcfe", "#fdfdfe", "#f3f9fd", "#def1fd"]}
-          alt="PORTMATRIX services overview infographic"
-          caption="PORTMATRIX services overview — source infographic"
-          minWidth={0}
-          className="mt-6 max-w-lg"
-        />
       </section>
     </div>
   );

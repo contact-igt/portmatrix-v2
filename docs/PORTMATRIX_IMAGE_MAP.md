@@ -153,3 +153,17 @@ None. Every image referenced by caption in the M0.5 text-only pass was successfu
 - Sitewide OG image is no longer the Netherlands 2024 inspection photo; that photo stays on Export Import Clearance / operational proof only.
 - Watermarks not previously recorded: `stock/freight-logistics-stock.png` carries an **iStock** watermark (Tryaging / 1273907220); `stock/ecommerce-export-stock-graphic.png` carries a **Gemini** AI mark. Neither is rendered; never use.
 - Source infographics with the **old logo baked in**: p.2 services overview (removed from `/services`, text list covers it), export-handholding hub infographic (removed from the hub page, phase grid covers it), six phase infographics (kept on phase pages, linked full size) and the postal infographic — CLIENT_CONFIRMATION_REQUIRED whether V6 versions will be supplied.
+
+## Decorative / non-documentary visuals (added with the About page rebuild)
+
+These are NOT extracted from the source PDF and are NOT evidence. They depict no people, staff, clients, shipments, customs activity, certificates, text or logo.
+
+| Asset | Type | Route | Provenance | Classification |
+|---|---|---|---|---|
+| `components/TradeNetworkVisual.jsx` | Inline SVG (code-drawn): globe graticule, dashed outer lane, quadratic-arc trade lanes between six nodes | `/about` hero (`PageIntro` aside) | Original vector drawn in this repository for this site. No stock, no AI/image-generator output, no third-party artwork, no licence needed. Uses only the brand navy `#2E3192`/red `#ED1B24` as flat fills and strokes; does not reproduce or reinterpret the PortMatrix logo mark. `aria-hidden`, `role="presentation"`; the page's meaning never depends on it | **decorative / non-documentary** |
+
+Rules for any future decorative visual: no fake PORTMATRIX personnel, events, certificates, shipments or customs evidence; no baked-in text or logo; record provenance here.
+
+## About page image budget (current)
+
+`/about` renders four source/brand images: 1974 Hong Kong delegation (timeline, with the p.20 caption), MD portrait (Leadership, natural 2:3), RIIT logo and Alagappa University MoU photo (RIIT section). Plus one decorative SVG (above). No certificates, flyers or event galleries.

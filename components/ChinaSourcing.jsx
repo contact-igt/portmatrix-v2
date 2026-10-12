@@ -1,131 +1,77 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import { fadeUp, stagger, inView } from "@/lib/animations";
 import { CHINA } from "@/lib/content";
 
+// Home summary of China Import Sourcing. One authentic image: Canton Fair 2025.
+// The 1974 Hong Kong delegation photo is NOT repeated here (it lives on /about,
+// in the journey, and on /china-import-sourcing, in the full China history);
+// the history stays as text above. The 2015 factory photo is on
+// /china-import-sourcing.
 export default function ChinaSourcing() {
   return (
-    <section
-      id="china"
-      className="relative scroll-mt-20 overflow-hidden bg-navy py-14 text-white sm:py-20 lg:py-20"
-    >
+    <section id="china" className="relative scroll-mt-20 bg-navy py-14 text-white sm:py-20">
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
-        <p className="kicker mb-6 flex items-center gap-2.5 text-brandred-300">
-          <span className="h-px w-8 bg-current" /> {CHINA.kicker}
-        </p>
-
-        {/* Heritage photo band — the archival 1974 photo leads the section,
-            framed as a document (square corners, thin mat) rather than a
-            rounded app-style card, with the heading set below it at a
-            larger size. This is a deliberate departure from the
-            kicker+H2+intro pattern repeated elsewhere on the page: this is
-            the one section where the photo, not the heading, opens. */}
-        <motion.div
-          initial={false}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mx-auto max-w-3xl border border-white/15 bg-navy-700/40 p-2"
-        >
-          {/* native ratio — the caption identifies people by position */}
-          <div className="relative aspect-[1289/816] w-full">
-            <Image
-              src={CHINA.images.history.src}
-              alt={CHINA.images.history.alt}
-              fill
-              sizes="(min-width: 1024px) 780px, 100vw"
-              className="object-cover"
-            />
-          </div>
-          {/* No caption overlay here — this archival photo already carries
-              its own printed caption ("Indian Business Delegation to Hong
-              Kong in May 1974"), baked into the source image. */}
-        </motion.div>
-
-        <h2 className="h2 mt-8 max-w-2xl">
-          {CHINA.heading}
-        </h2>
-
-        <div className="mt-6 grid gap-6 lg:grid-cols-2 lg:gap-14">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-16">
           <div>
-            <p className="text-white/75">{CHINA.history}</p>
-            <p className="mt-4 text-white/75">{CHINA.intro}</p>
-          </div>
-          <div className="flex flex-col justify-center">
-            <p className="border-l-2 border-brandred pl-4 text-sm text-white/85">
+            <p className="kicker flex items-center gap-2.5 text-brandred-300">
+              <span className="h-px w-8 bg-current" /> {CHINA.kicker}
+            </p>
+            <h2 className="h2 mt-5 max-w-xl">{CHINA.heading}</h2>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80">{CHINA.history}</p>
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-white/80">{CHINA.intro}</p>
+            <p className="mt-6 max-w-xl border-l-2 border-brandred pl-4 text-base leading-relaxed text-white/90">
               {CHINA.costNote}
             </p>
-            <div className="mt-6">
+            <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-2">
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-brandred px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-brandred-600"
+                className="group inline-flex min-h-11 items-center gap-2 rounded-full bg-brandred px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brandred-600"
               >
                 Plan a China import
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </a>
+              <Link href="/china-import-sourcing" className="group inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-white">
+                <span className="border-b border-white/40 pb-0.5 transition-colors group-hover:border-white">
+                  China Import Sourcing in full
+                </span>
+                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+              </Link>
             </div>
           </div>
-        </div>
 
-        {/* Factory visit + Canton Fair photos — each in its true aspect.
-            Canton Fair (750x1000) is a portrait photo; forcing it into the
-            same landscape frame as the factory photo cropped away ~40% of
-            it, so it now gets its own portrait tile. */}
-        <div className="mt-8 grid items-start gap-6 sm:grid-cols-2">
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
-              <Image
-                src={CHINA.images.factory.src}
-                alt={CHINA.images.factory.alt}
-                fill
-                sizes="(min-width: 1024px) 600px, 100vw"
-                className="object-cover"
-              />
-            </div>
-            <p className="mt-2.5 text-[13px] leading-snug text-white/65">
-              {CHINA.images.factory.caption}
-            </p>
-          </motion.div>
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.08 }}
-            className="mx-auto w-full max-w-[300px] sm:mx-0"
-          >
-            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl">
+          <div className="grid content-start gap-8 border-t border-white/15 pt-8 sm:grid-cols-[13rem_minmax(0,1fr)] sm:gap-10 lg:border-t-0 lg:pt-0">
+          <figure className="mx-auto w-full max-w-[13rem] sm:mx-0">
+            <div className="relative aspect-[3/4] w-full overflow-hidden">
               <Image
                 src={CHINA.images.cantonFair.src}
                 alt={CHINA.images.cantonFair.alt}
                 fill
-                sizes="(min-width: 1024px) 300px, 60vw"
+                sizes="208px"
                 className="object-cover"
               />
             </div>
-            <p className="mt-2.5 text-[13px] leading-snug text-white/65">
-              {CHINA.images.cantonFair.caption}
-            </p>
-          </motion.div>
-        </div>
+            <figcaption className="mt-2.5 text-sm leading-snug text-white/75">{CHINA.images.cantonFair.caption}</figcaption>
+          </figure>
 
-        {/* points — plain checklist, no icon-glass cards */}
-        <motion.ul
-          variants={stagger}
-          {...inView}
-          className="mt-8 grid gap-x-10 gap-y-3 border-t border-white/10 pt-6 sm:grid-cols-2 lg:grid-cols-4"
-        >
-          {CHINA.points.map((p) => (
-            <motion.li key={p} variants={fadeUp} className="flex items-start gap-2.5">
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-brandred-300" />
-              <span className="text-sm text-white/80">{p}</span>
-            </motion.li>
-          ))}
-        </motion.ul>
+          <motion.ul
+            variants={stagger}
+            {...inView}
+            className="grid content-start gap-y-4"
+          >
+            {CHINA.points.map((p) => (
+              <motion.li key={p} variants={fadeUp} className="flex items-start gap-3 border-b border-white/10 pb-4">
+                <Check className="mt-1 h-4 w-4 shrink-0 text-brandred-300" aria-hidden="true" />
+                <span className="text-base text-white/90">{p}</span>
+              </motion.li>
+            ))}
+          </motion.ul>
+          </div>
+        </div>
       </div>
     </section>
   );

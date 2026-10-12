@@ -1,108 +1,38 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { MapPin, Phone, Globe, ArrowUpRight, Mail } from "lucide-react";
-import { fadeUp, stagger, inView } from "@/lib/animations";
+import Link from "next/link";
+import { Phone, ArrowRight } from "lucide-react";
 import { CONTACT } from "@/lib/content";
 
-const mapsHref =
-  "https://www.google.com/maps/search/?api=1&query=" +
-  encodeURIComponent(`${CONTACT.companyName}, ${CONTACT.addressLines.join(" ")}`);
-
-const ACTIONS = [
-  {
-    icon: Phone,
-    label: "Call now",
-    value: CONTACT.phoneDisplay,
-    href: CONTACT.phoneHref,
-  },
-  {
-    icon: MapPin,
-    label: "Get directions",
-    value: "Registered office, Chennai",
-    href: mapsHref,
-    external: true,
-  },
-  {
-    icon: Globe,
-    label: "Visit our website",
-    value: CONTACT.website,
-    href: CONTACT.websiteHref,
-    external: true,
-  },
-];
-
+// Short call-to-action only. The registered-office address, email, CIN and
+// directions live on /contact — not repeated here. (id="contact" is the
+// target of the hero's "Get in touch" anchor.)
 export default function ContactCTA() {
   return (
-    <section id="contact" className="relative scroll-mt-20 bg-paper py-14 sm:py-20 lg:py-20">
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="overflow-hidden rounded-2xl border border-hairline bg-white lg:grid lg:grid-cols-[1fr_0.9fr]">
-          {/* left: details */}
-          <motion.div variants={stagger} {...inView} className="bg-navy p-7 text-white sm:p-9">
-            <motion.p variants={fadeUp} className="kicker text-brandred-300">
-              Get in touch
-            </motion.p>
-            <motion.h2
-              variants={fadeUp}
-              className="h2 mt-3"
+    <section id="contact" className="relative scroll-mt-20 bg-paper py-14 sm:py-20">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="grid gap-8 border-t-2 border-navy pt-8 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-16">
+          <div>
+            <p className="kicker text-brandred">Get in touch</p>
+            <h2 className="h2 mt-3 text-ink">Contact PORTMATRIX</h2>
+            <p className="mt-3 max-w-md text-base leading-relaxed text-slatey">
+              Reach {CONTACT.companyName} directly by phone, or find our registered office in Chennai.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <a
+              href={CONTACT.phones[0].href}
+              className="inline-flex min-h-11 items-center gap-3 font-display text-2xl font-semibold text-navy sm:text-3xl"
             >
-              Contact
-            </motion.h2>
-            <motion.p variants={fadeUp} className="mt-3 max-w-sm text-white/70">
-              Reach us directly by phone or visit our registered office in
-              Chennai.
-            </motion.p>
-
-            <motion.ul variants={stagger} className="mt-6 space-y-4 border-t border-white/10 pt-6">
-              <motion.li variants={fadeUp} className="flex gap-4">
-                <MapPin className="h-5 w-5 shrink-0 text-brandred-300" />
-                <span className="text-sm leading-relaxed text-white/80">
-                  {CONTACT.companyName}
-                  <br />
-                  {CONTACT.addressLines.map((l) => (
-                    <span key={l} className="block">
-                      {l}
-                    </span>
-                  ))}
-                </span>
-              </motion.li>
-              <motion.li variants={fadeUp} className="flex gap-4">
-                <Mail className="h-5 w-5 shrink-0 text-brandred-300" />
-                <span className="text-sm text-white/80">
-                  {/* CLIENT_CONFIRMATION_REQUIRED: exactly as PDF p.87 prints it */}
-                  {CONTACT.emailRaw}
-                </span>
-              </motion.li>
-            </motion.ul>
-          </motion.div>
-
-          {/* right: direct-contact actions — one clean list */}
-          <motion.div variants={stagger} {...inView} className="flex flex-col justify-center p-7 sm:p-9">
-            <div className="divide-y divide-hairline border-y border-hairline">
-              {ACTIONS.map((a) => {
-                const Icon = a.icon;
-                return (
-                  <motion.a
-                    key={a.label}
-                    variants={fadeUp}
-                    href={a.href}
-                    target={a.external ? "_blank" : undefined}
-                    rel={a.external ? "noopener noreferrer" : undefined}
-                    className="group flex items-center justify-between gap-3 py-5 transition-colors hover:bg-paper"
-                  >
-                    <span className="flex items-center gap-3.5">
-                      <Icon className="h-4 w-4 text-navy" />
-                      <span>
-                        <span className="block text-sm font-semibold text-ink">{a.label}</span>
-                        <span className="block text-sm text-slatey">{a.value}</span>
-                      </span>
-                    </span>
-                    <ArrowUpRight className="h-4 w-4 text-slatey transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-navy" />
-                  </motion.a>
-                );
-              })}
-            </div>
-          </motion.div>
+              <Phone className="h-5 w-5 text-brandred" aria-hidden="true" />
+              {CONTACT.phones[0].display}
+            </a>
+            <Link href="/contact" className="group inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-navy">
+              <span className="border-b border-navy/30 pb-0.5 transition-colors group-hover:border-navy">
+                Contact details and registered office
+              </span>
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

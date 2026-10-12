@@ -91,7 +91,7 @@ export default function Header() {
           (z-40 below) so the logo/toggle are never dimmed under it — the
           bug where opening the drawer visually "hid" the whole header. */}
       <div className="relative z-50 mx-auto flex h-[68px] max-w-7xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="flex shrink-0 items-center" aria-label="PortMatrix home">
+        <Link href="/" className="flex min-h-11 shrink-0 items-center" aria-label="PortMatrix home">
           <Logo priority />
         </Link>
 
@@ -107,7 +107,7 @@ export default function Header() {
                 onBlur={(e) => !e.currentTarget.contains(e.relatedTarget) && setDesktopMenuOpen(false)}
               >
                 <button
-                  className="flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-ink/75 transition-colors hover:bg-navy-50 hover:text-navy xl:px-4"
+                  className="flex min-h-11 items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-ink/75 transition-colors hover:bg-navy-50 hover:text-navy xl:px-4"
                   onClick={() => setDesktopMenuOpen((v) => !v)}
                   aria-expanded={desktopMenuOpen}
                   aria-controls="services-panel"
@@ -126,20 +126,20 @@ export default function Header() {
                       // pt-2 (not mt-2): the hover gap stays inside the wrapper so
                       // crossing it does not fire onMouseLeave.
                       id="services-panel"
-                      className="absolute right-0 top-full w-[min(640px,calc(100vw-2.5rem))] pt-2"
+                      className="absolute left-0 top-full w-[min(640px,calc(100vw-2.5rem))] pt-2 xl:w-[min(880px,calc(100vw-2.5rem))]"
                     >
-                      <div className="rounded-2xl border border-hairline bg-white p-6 shadow-lift">
-                      <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+                      <div className="max-h-[calc(100vh-5.5rem)] overflow-y-auto rounded-2xl border border-hairline bg-white px-6 pb-3 pt-5 shadow-lift">
+                      <div className="grid grid-cols-2 gap-x-8 gap-y-4 xl:grid-cols-3">
                         {SERVICE_GROUPS.map((group) => (
                           <div key={group.label}>
                             <p className="kicker text-brandred">{group.label}</p>
-                            <ul className="mt-3 space-y-2">
+                            <ul className="mt-2">
                               {group.items.map((svc) => (
                                 <li key={svc.href}>
                                   <Link
                                     href={svc.href}
                                     onClick={() => setDesktopMenuOpen(false)}
-                                    className="text-sm text-ink/80 transition-colors hover:text-navy hover:underline"
+                                    className="inline-flex min-h-11 items-center text-[0.9375rem] text-ink/85 transition-colors hover:text-navy hover:underline"
                                   >
                                     {svc.title}
                                   </Link>
@@ -149,11 +149,11 @@ export default function Header() {
                           </div>
                         ))}
                       </div>
-                      <div className="mt-5 border-t border-hairline pt-4">
+                      <div className="mt-3 border-t border-hairline pt-1">
                         <Link
                           href="/services"
                           onClick={() => setDesktopMenuOpen(false)}
-                          className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy hover:underline"
+                          className="inline-flex min-h-11 items-center gap-1.5 text-[0.9375rem] font-semibold text-navy hover:underline"
                         >
                           View all 17 services
                           <ArrowRight className="h-3.5 w-3.5" />
@@ -168,7 +168,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-ink/75 transition-colors hover:bg-navy-50 hover:text-navy xl:px-4"
+                className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-ink/75 transition-colors hover:bg-navy-50 hover:text-navy xl:px-4"
               >
                 {item.label}
               </Link>
@@ -179,14 +179,14 @@ export default function Header() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href={CONTACT.phoneHref}
-            className="hidden items-center gap-2 whitespace-nowrap text-sm font-medium text-ink/70 transition-colors hover:text-navy xl:flex"
+            className="hidden min-h-11 items-center gap-2 whitespace-nowrap text-sm font-medium text-ink/70 transition-colors hover:text-navy min-[1440px]:flex"
           >
             <Phone className="h-4 w-4" />
             {CONTACT.phoneDisplay}
           </a>
           <Link
             href="/contact"
-            className="group flex items-center gap-1.5 whitespace-nowrap rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy-700"
+            className="group flex min-h-11 items-center gap-1.5 whitespace-nowrap rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy-700"
           >
             Get in touch
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -234,7 +234,7 @@ export default function Header() {
                     <div key="services-mobile">
                       <button
                         onClick={() => setMobileServicesOpen((v) => !v)}
-                        className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-base font-medium text-ink transition-colors hover:bg-navy-50 hover:text-navy"
+                        className="flex min-h-11 w-full items-center justify-between rounded-xl px-4 py-3 text-base font-medium text-ink transition-colors hover:bg-navy-50 hover:text-navy"
                         aria-expanded={mobileServicesOpen}
                       >
                         Services
@@ -257,7 +257,7 @@ export default function Header() {
                                       <Link
                                         href={svc.href}
                                         onClick={closeAll}
-                                        className="block rounded-lg px-2 py-3 text-sm leading-5 text-ink/80 hover:bg-navy-50 hover:text-navy"
+                                        className="flex min-h-11 items-center rounded-lg px-2 py-2 text-[0.9375rem] leading-5 text-ink/85 hover:bg-navy-50 hover:text-navy"
                                       >
                                         {svc.title}
                                       </Link>
@@ -269,7 +269,7 @@ export default function Header() {
                             <Link
                               href="/services"
                               onClick={closeAll}
-                              className="mt-3 block px-2 py-3 text-sm font-semibold leading-5 text-navy"
+                              className="mt-3 flex min-h-11 items-center px-2 py-2 text-[0.9375rem] font-semibold leading-5 text-navy"
                             >
                               View all 17 services →
                             </Link>
@@ -282,7 +282,7 @@ export default function Header() {
                       <Link
                         href={item.href}
                         onClick={closeAll}
-                        className="block rounded-xl px-4 py-3 text-base font-medium text-ink transition-colors hover:bg-navy-50 hover:text-navy"
+                        className="flex min-h-11 items-center rounded-xl px-4 py-3 text-base font-medium text-ink transition-colors hover:bg-navy-50 hover:text-navy"
                       >
                         {item.label}
                       </Link>
@@ -294,14 +294,14 @@ export default function Header() {
               <div className="mt-auto space-y-3 border-t border-hairline pt-6">
                 <a
                   href={CONTACT.phoneHref}
-                  className="flex min-h-11 items-center gap-2 text-sm font-medium text-slatey"
+                  className="flex min-h-11 items-center gap-2 text-[0.9375rem] font-medium text-slatey"
                 >
                   <Phone className="h-4 w-4 text-navy" /> {CONTACT.phoneDisplay}
                 </a>
                 <Link
                   href="/contact"
                   onClick={closeAll}
-                  className="flex items-center justify-center gap-1.5 rounded-full bg-navy px-5 py-3 text-sm font-semibold text-white"
+                  className="flex min-h-11 items-center justify-center gap-1.5 rounded-full bg-navy px-5 py-3 text-[0.9375rem] font-semibold text-white"
                 >
                   Get in touch <ArrowRight className="h-4 w-4" />
                 </Link>

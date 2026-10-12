@@ -2,23 +2,14 @@
 
 import { motion } from "framer-motion";
 import { fadeUp, stagger, inView } from "@/lib/animations";
-import { TRUST_FACTS, TRUST_BADGES } from "@/lib/content";
+import { TRUST_FACTS, TRUST_BADGES, RIIT_PARTNERS } from "@/lib/content";
 
-const MARQUEE = [
-  "Customs Brokers Regulations 2018",
-  "ICEGATE e-filing",
-  "Bill of Entry & Shipping Bill",
-  "HS Code classification",
-  "DGFT consultancy",
-  "MOOWR · Section 65",
-  "SEZ & FTWZ",
-  "Advance Authorisation · EPCG",
-  "China sourcing since 1974",
-];
-
+// Facts only: the two dated figures, two credential badges (PDF p.5 / p.26)
+// and a short RIIT partner list (PDF p.5; defined once as RIIT_PARTNERS).
+// The earlier keyword ticker was removed — it restated service names, not facts.
 export default function TrustBar() {
   return (
-    <section className="relative border-y border-hairline/70 bg-white">
+    <section aria-label="Credentials" className="relative border-y border-hairline/70 bg-white">
       <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8">
         <motion.div
           variants={stagger}
@@ -34,7 +25,7 @@ export default function TrustBar() {
               >
                 {/* label first, number after — client-locked wording
                     "International Trade exposure since [1996]" */}
-                <p className="max-w-[10rem] text-[13px] leading-snug text-slatey">
+                <p className="max-w-[10rem] text-sm leading-snug text-slatey">
                   {s.label}
                 </p>
                 <div className="mt-1 font-display text-[1.75rem] font-semibold text-navy sm:text-3xl">
@@ -46,7 +37,7 @@ export default function TrustBar() {
 
           <motion.ul
             variants={fadeUp}
-            className="flex flex-col gap-x-8 gap-y-2 text-[13px] font-medium text-ink/75 sm:flex-row sm:flex-wrap"
+            className="flex flex-col gap-x-8 gap-y-2 text-sm font-medium text-ink/75 sm:flex-row sm:flex-wrap"
           >
             {TRUST_BADGES.map((b) => (
               <li key={b} className="flex items-baseline gap-2 leading-snug">
@@ -58,12 +49,16 @@ export default function TrustBar() {
         </motion.div>
       </div>
 
-      {/* quiet credential line — static, not a scrolling "logo ticker" */}
-      <div className="border-t border-hairline/70 bg-paper py-3">
+      <div className="border-t border-hairline/70 bg-paper py-4">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <p className="text-[13px] uppercase leading-relaxed tracking-wide text-slatey">
-            {MARQUEE.join(" · ")}
+          <p className="text-sm font-semibold uppercase tracking-wide text-slatey">
+            RIIT — export training partner of
           </p>
+          <ul className="mt-2 flex flex-wrap gap-x-6 gap-y-1 text-sm text-ink/80">
+            {RIIT_PARTNERS.map((p) => (
+              <li key={p}>{p}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

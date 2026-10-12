@@ -38,14 +38,29 @@ body {
 }
 
 /* Eyebrow / kicker label — Inter, not mono: mono-uppercase eyebrows read as
-   a dev-tool/crypto signature, which works against the institutional brand. */
-/* 13px floor: captions/labels never drop below the caption minimum. */
+   a dev-tool/crypto signature, which works against the institutional brand.
+   RESERVED for 1–3 words. 14px floor (caption minimum). Wraps balanced so a
+   two-line label never leaves one orphan word. */
 .kicker {
   font-family: var(--font-body), system-ui, sans-serif;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
+  line-height: 1.35;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-wrap: balance;
+}
+/* Sentence-case variant for longer kicker text (a scheme's full name etc.):
+   same weight/colour, no uppercase tracking, so it wraps like a normal line.
+   PageIntro / SectionHeading switch to it automatically past ~32 characters. */
+.kicker-sentence {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  text-transform: none;
+  text-wrap: balance;
 }
 
 /* Sitewide heading scale — one fluid size per level, used via className on
@@ -72,6 +87,24 @@ body {
   letter-spacing: -0.02em;
   line-height: 1.18;
   font-size: clamp(1.25rem, 2vw, 1.75rem);
+}
+/* Item title (h3/h4 inside a list, step, FAQ question): 18–20px Manrope. */
+.item-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  font-size: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem);
+}
+/* Caption / table caption / figure label: 15px, never below 14px. Colour is
+   set per use (text-slatey / text-ink) — not here, so utilities are not overridden. */
+.caption {
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+/* Prose measure: ~68ch cap for running text outside .article-body. */
+.measure {
+  max-width: 68ch;
 }
 
 /* Long-form article body — used on internal pages carrying prose/lists
@@ -111,6 +144,27 @@ body {
   padding-top: var(--content-space);
 }
 
+/* Section rhythm helper: ONE tinted band per page. Full-bleed even when its
+   parent is a centred container (shadow + clip-path extend the tint past the
+   container without causing horizontal scroll). Flat colour, no gradient. */
+.band {
+  --band-bg: #ebeef7;
+  position: relative;
+  background-color: var(--band-bg);
+  box-shadow: 0 0 0 100vmax var(--band-bg);
+  clip-path: inset(0 -100vmax);
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+  margin-block: var(--section-space);
+}
+.band-paper {
+  --band-bg: #ffffff;
+}
+
+/* Anchored headings clear the fixed 68px header (PageNav targets). */
+:is(h2, h3, section, div)[id] {
+  scroll-margin-top: 6rem;
+}
+
 /* Thin custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -142,7 +196,8 @@ body {
   outline-offset: -3px;
 }
 /* Small brand-red labels: #ED1B24 is 4.4:1 on white; use the 600 shade. */
-.kicker.text-brandred {
+.kicker.text-brandred,
+.kicker-sentence.text-brandred {
   color: #c8141c;
 }
 

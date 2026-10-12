@@ -1,51 +1,46 @@
+import Link from "next/link";
 import Logo from "./Logo";
-import { NAV, CONTACT } from "@/lib/content";
+import { SERVICE_GROUPS, CONTACT } from "@/lib/content";
+
+// Static, server-rendered link groups: every page on the site is reachable
+// from the footer of every page (crawlable without JS or menu interaction).
+const COMPANY = [
+  { label: "About PORTMATRIX", href: "/about" },
+  { label: "Rahim Iyaz", href: "/about/rahim-iyaz" },
+  { label: "China Import Sourcing", href: "/china-import-sourcing" },
+  { label: "Canton Fair", href: "/china-import-sourcing/canton-fair" },
+  { label: "Media & Press", href: "/media" },
+  { label: "Contact", href: "/contact" },
+];
+
+const RIIT_LINKS = [
+  { label: "RIIT overview", href: "/riit" },
+  { label: "Courses & Certificate Programmes", href: "/riit/courses" },
+  { label: "Training Events", href: "/riit/training-events" },
+];
+
+const linkClass =
+  "inline-flex min-h-11 items-center text-[0.9375rem] text-white/75 transition-colors hover:text-white";
+const labelClass = "text-sm font-semibold uppercase tracking-[0.12em] text-white/75";
 
 export default function Footer() {
+  const services = SERVICE_GROUPS.flatMap((g) => g.items);
+
   return (
     <footer className="relative overflow-hidden bg-ink text-white">
-      <div className="bg-blueprint-dark pointer-events-none absolute inset-0 opacity-40" />
       <div className="relative mx-auto max-w-7xl px-5 py-10 sm:px-8">
-        <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_1.6fr_1fr]">
           <div>
             <div className="inline-block">
               <Logo variant="light" />
             </div>
-            <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/60">
-              PORTMATRIX is a Customs Broking and End-to-End Export
-              Handholding company.
+            <p className="mt-5 max-w-xs text-[0.9375rem] leading-relaxed text-white/75">
+              PORTMATRIX is a Customs Broking and End-to-End Export Handholding company.
             </p>
-            <p className="mt-5 text-[13px] uppercase tracking-wide text-white/70">
+            <p className="mt-4 max-w-xs text-[0.9375rem] leading-relaxed text-white/75">
               Allied: Regional Institute of International Trade (RIIT)
             </p>
-          </div>
-
-          <div>
-            {/* Nav-group label, not a content heading — kept out of the
-                h1-h6 hierarchy so it never skips a level on pages whose
-                content stops at H2 (see docs/TYPOGRAPHY_AND_HEADING_AUDIT.md). */}
-            <p className="text-[13px] uppercase tracking-[0.16em] text-white/70" role="heading" aria-level="2">
-              Explore
-            </p>
-            <ul className="mt-3">
-              {NAV.map((item) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    className="inline-flex min-h-11 items-center text-sm text-white/70 transition-colors hover:text-white"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-[13px] uppercase tracking-[0.16em] text-white/70" role="heading" aria-level="2">
-              Reach us
-            </p>
-            <ul className="mt-4 space-y-2.5 text-sm text-white/70">
+            <ul className="mt-5 space-y-1 text-[0.9375rem] text-white/75">
               <li>
                 <a href={CONTACT.phoneHref} className="inline-flex min-h-11 items-center hover:text-white">
                   {CONTACT.phoneDisplay}
@@ -53,19 +48,52 @@ export default function Footer() {
               </li>
               <li>{CONTACT.addressLines[2]}</li>
             </ul>
-            <a
-              href="/contact"
-              className="mt-5 inline-flex min-h-11 items-center gap-1.5 rounded-full bg-white/10 px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/20"
-            >
-              Get in touch
-            </a>
+          </div>
+
+          <nav aria-label="Footer: services">
+            <p className={labelClass}>Services</p>
+            <ul className="mt-3 grid gap-x-8 sm:grid-cols-2">
+              {services.map((s) => (
+                <li key={s.href}>
+                  <Link href={s.href} className={linkClass}>
+                    {s.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-1">
+            <nav aria-label="Footer: company">
+              <p className={labelClass}>Company</p>
+              <ul className="mt-3">
+                {COMPANY.map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} className={linkClass}>
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <nav aria-label="Footer: RIIT">
+              <p className={labelClass}>RIIT</p>
+              <ul className="mt-3">
+                {RIIT_LINKS.map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} className={linkClass}>
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-white/10 pt-5 text-[13px] text-white/70 sm:flex-row">
+        <div className="mt-8 flex flex-col items-start justify-between gap-2 border-t border-white/10 pt-5 text-sm text-white/75 sm:flex-row sm:items-center">
           <p>
-            © {new Date().getFullYear()} {CONTACT.companyName} All rights
-            reserved. · CIN: {CONTACT.cin}
+            © {new Date().getFullYear()} {CONTACT.companyName} All rights reserved. · CIN: {CONTACT.cin}
           </p>
         </div>
       </div>

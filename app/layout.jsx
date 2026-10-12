@@ -36,16 +36,6 @@ export const metadata = {
   },
   description:
     "PORTMATRIX is a Customs Broking and End-to-End Export Handholding company supporting exporters and importers in navigating Customs, DGFT and international trade procedures. China Import Sourcing since 1974.",
-  keywords: [
-    "customs broker Chennai",
-    "export handholding",
-    "customs clearance India",
-    "EXIM consultant",
-    "China import sourcing",
-    "DGFT consultancy",
-    "MOOWR warehousing",
-    "ICEGATE filing",
-  ],
   openGraph: {
     title: "PORTMATRIX — Customs Broking & Export Handholding",
     description:
@@ -88,7 +78,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html
-      lang="en"
+      lang="en-IN"
       className={`${display.variable} ${body.variable}`}
     >
       <body className="font-sans antialiased">
