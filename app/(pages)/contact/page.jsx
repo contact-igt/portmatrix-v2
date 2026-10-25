@@ -17,8 +17,8 @@ const mapsHref =
 
 export default function ContactPage() {
   // The Organization node (with address, phone, CIN) is defined once on the
-  // homepage; this page only references it by @id. No contactType, and the
-  // CLIENT_CONFIRMATION_REQUIRED email is kept out of the schema.
+  // homepage; this page only references it by @id. The email was
+  // confirmed directly by the client on 25 October 2026.
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
@@ -111,10 +111,9 @@ export default function ContactPage() {
             Email
           </h2>
           <div>
-            {/* CLIENT_CONFIRMATION_REQUIRED: shown exactly as PDF p.87 prints it
-                ("md.portmatrix.in", no "@"); not a mailto: link. */}
-            <p className="text-lg text-ink/90">{CONTACT.emailRaw}</p>
-            <p className="mt-1 text-sm text-slatey">Email address pending confirmation.</p>
+            <a href={CONTACT.emailHref} className="inline-flex min-h-11 max-w-full items-center break-all text-lg font-semibold text-navy hover:underline">
+              {CONTACT.email}
+            </a>
           </div>
         </section>
       </div>

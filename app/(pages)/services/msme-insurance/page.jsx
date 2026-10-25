@@ -1,3 +1,4 @@
+import IllustrativeFigure from "@/components/IllustrativeFigure";
 import { Check } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
@@ -39,6 +40,7 @@ export default function MsmeInsurancePage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        aside={<IllustrativeFigure image="cargo-risk-protection" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "MSME Insurance Package", href: "/services/msme-insurance" }]} />}
         kicker={P.tagline}
         title="MSME Insurance Package"

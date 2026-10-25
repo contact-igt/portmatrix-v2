@@ -46,6 +46,11 @@ export default function Footer() {
                   {CONTACT.phoneDisplay}
                 </a>
               </li>
+              <li>
+                <a href={CONTACT.emailHref} className="inline-flex min-h-11 max-w-full items-center break-all hover:text-white">
+                  {CONTACT.email}
+                </a>
+              </li>
               <li>{CONTACT.addressLines[2]}</li>
             </ul>
           </div>

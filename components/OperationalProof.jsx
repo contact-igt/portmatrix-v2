@@ -1,4 +1,5 @@
 import Link from "next/link";
+import IllustrativeFigure from "./IllustrativeFigure";
 import { ArrowRight } from "lucide-react";
 import { OPERATIONAL_PROOF } from "@/lib/content";
 
@@ -21,6 +22,7 @@ export default function OperationalProof() {
             {OPERATIONAL_PROOF.kicker}
           </p>
           <h2 className="h2 mt-4 text-ink">{OPERATIONAL_PROOF.heading}</h2>
+          <IllustrativeFigure image="inland-cargo-movement" className="mt-6 max-w-lg" />
         </div>
         <div>
           <p className="max-w-2xl text-lg leading-relaxed text-ink/85">{OPERATIONAL_PROOF.intro}</p>

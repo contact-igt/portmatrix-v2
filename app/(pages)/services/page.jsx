@@ -1,3 +1,4 @@
+import IllustrativeFigure from "@/components/IllustrativeFigure";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -26,6 +27,7 @@ export default function ServicesIndexPage() {
           Customs, DGFT and international trade procedures) and the Core
           Services list on pp.4–7. No new facts. */}
       <PageIntro
+        aside={<IllustrativeFigure image="trade-services-overview" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }]} />}
         kicker={`${SERVICES.length} core services`}
         title="Core Services"

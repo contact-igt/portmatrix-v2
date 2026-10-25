@@ -26,6 +26,9 @@ export default function ContactCTA() {
               <Phone className="h-5 w-5 text-brandred" aria-hidden="true" />
               {CONTACT.phones[0].display}
             </a>
+            <a href={CONTACT.emailHref} className="inline-flex min-h-11 max-w-full items-center break-all text-base font-semibold text-navy hover:underline">
+              {CONTACT.email}
+            </a>
             <Link href="/contact" className="group inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-navy">
               <span className="border-b border-navy/30 pb-0.5 transition-colors group-hover:border-navy">
                 Contact details and registered office

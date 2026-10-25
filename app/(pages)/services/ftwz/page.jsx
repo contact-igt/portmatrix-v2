@@ -1,3 +1,4 @@
+import IllustrativeFigure from "@/components/IllustrativeFigure";
 import Link from "next/link";
 import { MapPin, Warehouse, ArrowLeftRight, Ship, Landmark, GitBranch, PackageOpen, Container, Globe } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -40,6 +41,7 @@ export default function FtwzPage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        aside={<IllustrativeFigure image="ftwz-distribution" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "FTWZ", href: "/services/ftwz" }]} />}
         kicker={P.tagline}
         title="Free Trade Warehousing Zone (FTWZ)"

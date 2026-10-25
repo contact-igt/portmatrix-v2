@@ -1,3 +1,4 @@
+import IllustrativeFigure from "@/components/IllustrativeFigure";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
@@ -32,6 +33,7 @@ export default function PostalExportPage() {
     <div className="mx-auto max-w-4xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        aside={<IllustrativeFigure image="postal-dispatch" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "Postal Export Aggregator", href: "/services/postal-export" }]} />}
         kicker="Foreign Trade Policy 2023"
         title="Postal Export Aggregator"

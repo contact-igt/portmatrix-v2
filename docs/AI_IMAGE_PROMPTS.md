@@ -1,0 +1,39 @@
+# Additional image prompts — 25 October 2026
+
+Generated with the built-in image generation tool.
+
+## trade-services-overview.webp
+
+Use case: photorealistic-natural. Asset type: one landscape 3:2 premium editorial website photograph for PortMatrix international trade and customs consultancy. Create a distinct single photograph of an elevated oblique view of intermodal freight infrastructure: orderly rows of plain unbranded containers beside a railway siding and road lanes, soft morning daylight, broad architectural composition. Restrained neutral/navy palette with realistic warm accents, natural texture, credible commercial photography rather than glossy CGI. Full-frame balanced composition suitable for responsive layouts. Generic AI illustration only, not actual PortMatrix premises, shipment, staff or client evidence. No people, readable text, numbers, logos, watermarks, government seals, certificates or fake graphics. No collage, no overlays.
+
+## customs-compliance.webp
+
+Use case: photorealistic-natural. Asset type: one landscape 3:2 premium editorial website photograph for PortMatrix international trade and customs consultancy. Create a distinct single photograph of a close editorial still life of a customs-document review workspace: a closed plain navy binder, blank paper forms, a desktop document scanner and a small sealed kraft cargo sample box, neutral office background, natural daylight; no stamps or official insignia. Restrained neutral/navy palette with realistic warm accents, natural texture, credible commercial photography rather than glossy CGI. Full-frame balanced composition suitable for responsive layouts. Generic AI illustration only, not actual PortMatrix premises, shipment, staff or client evidence. No people, readable text, numbers, logos, watermarks, government seals, certificates or fake graphics. No collage, no overlays.
+
+## export-production-inputs.webp
+
+Use case: photorealistic-natural. Asset type: one landscape 3:2 premium editorial website photograph for PortMatrix international trade and customs consultancy. Create a distinct single photograph of industrial raw materials neatly organised for export production in a generic factory store: coils of copper wire, rolled sheet metal and plain wooden crates, muted industrial palette, natural daylight, realistic material textures. Restrained neutral/navy palette with realistic warm accents, natural texture, credible commercial photography rather than glossy CGI. Full-frame balanced composition suitable for responsive layouts. Generic AI illustration only, not actual PortMatrix premises, shipment, staff or client evidence. No people, readable text, numbers, logos, watermarks, government seals, certificates or fake graphics. No collage, no overlays.
+
+## ftwz-distribution.webp
+
+Use case: photorealistic-natural. One landscape 3:2 premium editorial photograph for an international trade consultancy website. A generic international distribution centre exterior with three open loading bays, wrapped pallets under a sheltered dock and an unbranded container trailer; early morning daylight. No customs markings or specific regulatory status. Restrained neutral/navy palette, natural texture and light, credible commercial photography, balanced composition. Generic AI illustration only, not actual PortMatrix premises or shipments. No people, readable text, numbers, logos, watermarks, government seals or certificates. Single photograph, no collage or graphic overlays.
+
+## postal-dispatch.webp
+
+Use case: photorealistic-natural. One landscape 3:2 premium editorial photograph for an international trade consultancy website. Small sealed kraft parcels arranged neatly in shallow grey postal sorting trays on a clean conveyor in a generic parcel dispatch centre. Soft daylight, no postage or official postal logos, distinct sorting-centre setting. Restrained neutral/navy palette, natural texture and light, credible commercial photography, balanced composition. Generic AI illustration only, not actual PortMatrix premises or shipments. No people, readable text, numbers, logos, watermarks, government seals or certificates. Single photograph, no collage or graphic overlays.
+
+## epcg-machinery.webp
+
+Use case: photorealistic-natural. One landscape 3:2 premium editorial photograph for an international trade consultancy website. A clean precision manufacturing workshop with a modern CNC milling machine and neatly organised metal components in the foreground. Neutral steel and navy colours, realistic machine proportions, natural industrial lighting. Restrained neutral/navy palette, natural texture and light, credible commercial photography, balanced composition. Generic AI illustration only, not actual PortMatrix premises or shipments. No people, readable text, numbers, logos, watermarks, government seals or certificates. Single photograph, no collage or graphic overlays.
+
+## sez-industrial-campus.webp
+
+Use case: photorealistic-natural. Asset type: one landscape 3:2 premium editorial website photograph for PortMatrix international trade and customs consultancy. Create a distinct single photograph of a generic modern industrial campus with low-rise manufacturing buildings, a clean access road and modest landscaping, balanced architectural photography in soft daylight, no flags, no identifiable real landmarks, no signage or named economic zone. Restrained neutral/navy palette with realistic warm accents, natural texture, credible commercial photography rather than glossy CGI. Full-frame balanced composition suitable for responsive layouts. Generic AI illustration only, not actual PortMatrix premises, shipment, staff or client evidence. No people, readable text, numbers, logos, watermarks, government seals, certificates or fake graphics. No collage, no overlays.
+
+## cargo-risk-protection.webp
+
+Use case: photorealistic-natural. Asset type: one landscape 3:2 premium editorial website photograph for PortMatrix international trade and customs consultancy. Create a distinct single photograph of a close view of carefully protected cargo: secured plain wooden export crate beside a pallet of cartons with corner protectors and tensioned packaging straps, sheltered warehouse loading area, realistic packaging materials, neutral daylight, no shield symbols or graphics. Restrained neutral/navy palette with realistic warm accents, natural texture, credible commercial photography rather than glossy CGI. Full-frame balanced composition suitable for responsive layouts. Generic AI illustration only, not actual PortMatrix premises, shipment, staff or client evidence. No people, readable text, numbers, logos, watermarks, government seals, certificates or fake graphics. No collage, no overlays.
+
+## inland-cargo-movement.webp
+
+Use case: photorealistic-natural. Asset type: one landscape 3:2 premium editorial website photograph for PortMatrix international trade and customs consultancy. Create a distinct single photograph of a freight train carrying plain unbranded intermodal containers travelling past an orderly logistics yard, side-on editorial perspective with rails visible, subtle morning light, realistic wheels and railway geometry, no logos. Restrained neutral/navy palette with realistic warm accents, natural texture, credible commercial photography rather than glossy CGI. Full-frame balanced composition suitable for responsive layouts. Generic AI illustration only, not actual PortMatrix premises, shipment, staff or client evidence. No people, readable text, numbers, logos, watermarks, government seals, certificates or fake graphics. No collage, no overlays.

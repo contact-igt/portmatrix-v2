@@ -35,6 +35,7 @@ const organizationJsonLd = {
     addressCountry: "IN",
   },
   telephone: CONTACT.phoneHref.replace("tel:", ""),
+  email: CONTACT.email,
   identifier: {
     "@type": "PropertyValue",
     name: "CIN",

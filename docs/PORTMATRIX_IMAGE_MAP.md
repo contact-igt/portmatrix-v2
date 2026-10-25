@@ -167,3 +167,25 @@ Rules for any future decorative visual: no fake PORTMATRIX personnel, events, ce
 ## About page image budget (current)
 
 `/about` renders four source/brand images: 1974 Hong Kong delegation (timeline, with the p.20 caption), MD portrait (Leadership, natural 2:3), RIIT logo and Alagappa University MoU photo (RIIT section). Plus one decorative SVG (above). No certificates, flyers or event galleries.
+
+## AI-generated supporting imagery — 25 October 2026 (revised)
+
+Client requested more images and distinct hero imagery. Thirteen separate AI-generated scenes now have thirteen unique page placements (twelve internal-page heroes and the homepage operational summary). No AI scene repeats across pages. Images generated using the built-in image generation tool; generic supporting scenes only, not evidence of actual PORTMATRIX operations, people, clients or regulatory approvals. Visible AI captions and alt text retained. Original source imagery, confirmed email, fonts and factual copy are unchanged. WebP derivatives: 1536×1024, quality 82.
+
+| Asset | Subject | Placement |
+|---|---|---|
+| `public/images/illustrative/trade-services-overview.webp` | International trade services | /services |
+| `public/images/illustrative/trade-documentation.webp` | Trade documentation | /services/export-handholding |
+| `public/images/illustrative/customs-compliance.webp` | Customs documentation workflow | /services/licensed-customs-broker |
+| `public/images/illustrative/export-production-inputs.webp` | Inputs for export production | /services/advance-authorisation |
+| `public/images/illustrative/export-logistics.webp` | Export logistics | /services/freight-forwarding-logistics |
+| `public/images/illustrative/warehouse-operations.webp` | Warehouse operations | /services/moowr |
+| `public/images/illustrative/ftwz-distribution.webp` | International distribution | /services/ftwz |
+| `public/images/illustrative/parcel-export.webp` | Parcel preparation | /services/e-commerce-export |
+| `public/images/illustrative/postal-dispatch.webp` | Postal parcel dispatch | /services/postal-export |
+| `public/images/illustrative/epcg-machinery.webp` | Capital goods for manufacturing | /services/epcg |
+| `public/images/illustrative/sez-industrial-campus.webp` | Industrial infrastructure | /services/sez |
+| `public/images/illustrative/cargo-risk-protection.webp` | Protecting cargo in transit | /services/msme-insurance |
+| `public/images/illustrative/inland-cargo-movement.webp` | Inland cargo movement | / (operational summary) |
+
+Documentary photographs remain on About, leadership, China sourcing, Canton Fair, RIIT programmes/events and media pages. Phase pages retain source process graphics. Contact remains focused on direct contact details.
