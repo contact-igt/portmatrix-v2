@@ -1,3 +1,4 @@
+import RahimText from "@/components/RahimText";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -40,12 +41,11 @@ export default function RiitPage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      {/* Institutional masthead: RIIT's own mark (PDF p.16, original file),
+      {/* Institutional masthead: client-supplied RIIT mark,
           then the page intro, closed by a heavy rule. */}
       <header className="border-b-2 border-navy pb-10">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/source/branding/riit-logo.png" width={412} height={109} alt="Regional Institute of International Trade (RIIT) logo" className="mb-8 h-12 w-auto sm:h-14" />
         <PageIntro
+          aside={<Image src="/images/source/branding/reginal-institute.png" width={512} height={362} alt="Regional Institute of International Trade (RIIT) logo" sizes="(min-width: 1024px) 512px, 100vw" className="mx-auto h-auto w-full max-w-lg" />}
           breadcrumb={<Breadcrumb items={[{ label: "RIIT", href: "/riit" }]} />}
           kicker="Allied concern of PORTMATRIX"
           title="Regional Institute of International Trade (RIIT)"
@@ -108,7 +108,7 @@ export default function RiitPage() {
                       <div className={`relative w-full overflow-hidden border border-hairline bg-white ${photo.width / photo.height > 1.4 ? "aspect-[3/2]" : "aspect-[4/3]"}`}>
                         <Image src={photo.src} alt={photo.alt} fill sizes="(min-width: 1024px) 416px, 100vw" className="object-cover" />
                       </div>
-                      <figcaption className="mt-3 text-sm leading-relaxed text-slatey">{photo.caption}</figcaption>
+                      <figcaption className="mt-3 text-sm leading-relaxed text-slatey"><RahimText>{photo.caption}</RahimText></figcaption>
                     </figure>
                   )}
                 </div>

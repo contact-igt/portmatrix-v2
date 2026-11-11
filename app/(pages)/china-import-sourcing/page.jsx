@@ -1,3 +1,5 @@
+import IllustrativeFigure from "@/components/IllustrativeFigure";
+import RahimText from "@/components/RahimText";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -132,7 +134,9 @@ export default function ChinaImportSourcingPage() {
         title="China Import Sourcing"
         intro={P.serviceIntro}
         aside={
-          <div className="border-t-2 border-ink pt-4">
+          <div>
+            <IllustrativeFigure image="china-import-sourcing" className="mx-auto w-full max-w-lg" />
+            <div className="mt-5 border-t-2 border-ink pt-4">
             <p className="font-display text-xl font-semibold leading-snug text-ink sm:text-2xl">{P.experienceLine}</p>
             <a
               href="#trade-link"
@@ -141,6 +145,7 @@ export default function ChinaImportSourcingPage() {
               <span className="border-b border-navy/30 pb-0.5 group-hover:border-navy">Our trade link with Hong Kong and China</span>
               <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
             </a>
+            </div>
           </div>
         }
       />
@@ -225,7 +230,7 @@ export default function ChinaImportSourcingPage() {
               sizes="(min-width: 1024px) 440px, 100vw"
               className="h-auto w-full border border-hairline bg-white"
             />
-            <figcaption className="caption mt-3 leading-relaxed text-slatey">{P.factoryPhotoCaption}</figcaption>
+            <figcaption className="caption mt-3 leading-relaxed text-slatey"><RahimText>{P.factoryPhotoCaption}</RahimText></figcaption>
           </figure>
           <div className="divide-y divide-hairline border-y border-hairline">
             {P.importWithEase.map((item) => (

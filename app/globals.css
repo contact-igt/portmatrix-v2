@@ -25,8 +25,8 @@ body {
 /* Blueprint grid backdrop — the "matrix" signature */
 .bg-blueprint {
   background-image:
-    linear-gradient(rgba(46, 49, 146, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(46, 49, 146, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(1, 62, 127, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(1, 62, 127, 0.05) 1px, transparent 1px);
   background-size: 34px 34px;
 }
 
@@ -129,7 +129,7 @@ body {
   margin-top: 0.375rem;
 }
 .article-body a {
-  color: #2e3192;
+  color: #013E7F;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -165,6 +165,31 @@ body {
   scroll-margin-top: 6rem;
 }
 
+@keyframes capabilities-scroll {
+  to { transform: translateX(-50%); }
+}
+
+.capabilities-window {
+  scrollbar-width: none;
+}
+
+.capabilities-window::-webkit-scrollbar {
+  display: none;
+}
+
+.capabilities-track {
+  animation: capabilities-scroll 40s linear infinite;
+}
+
+.capabilities-window:hover .capabilities-track,
+.capabilities-window:focus-within .capabilities-track {
+  animation-play-state: paused !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .capabilities-track { animation: none; }
+}
+
 /* Thin custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -176,12 +201,12 @@ body {
   border: 2px solid var(--paper);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2e3192;
+  background: #013E7F;
 }
 
 /* Focus visibility for keyboard users */
 :focus-visible {
-  outline: 2px solid #2e3192;
+  outline: 2px solid #013E7F;
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -195,10 +220,10 @@ body {
 .gap-px > a:focus-visible {
   outline-offset: -3px;
 }
-/* Small brand-red labels: #ED1B24 is 4.4:1 on white; use the 600 shade. */
+/* The supplied logo red has sufficient contrast for small labels on white. */
 .kicker.text-brandred,
 .kicker-sentence.text-brandred {
-  color: #c8141c;
+  color: #E30007;
 }
 
 @media (prefers-reduced-motion: reduce) {

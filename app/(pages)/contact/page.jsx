@@ -17,8 +17,7 @@ const mapsHref =
 
 export default function ContactPage() {
   // The Organization node (with address, phone, CIN) is defined once on the
-  // homepage; this page only references it by @id. The email was
-  // confirmed directly by the client on 25 October 2026.
+  // homepage; this page only references it by @id.
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
@@ -50,15 +49,9 @@ export default function ContactPage() {
           <ul className="space-y-1">
             {CONTACT.phones.map((ph) => (
               <li key={ph.display} className="font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-                {ph.href ? (
-                  <a href={ph.href} className="inline-flex min-h-11 items-center text-navy hover:underline">
-                    {ph.display}
-                  </a>
-                ) : (
-                  // CLIENT_CONFIRMATION_REQUIRED: PDF p.87 gives no country code
-                  // for this number, so it is not turned into a tel: link.
-                  <span className="inline-flex min-h-11 items-center">{ph.display}</span>
-                )}
+                <a href={ph.href} className="inline-flex min-h-11 items-center text-navy hover:underline">
+                  {ph.display}
+                </a>
               </li>
             ))}
           </ul>

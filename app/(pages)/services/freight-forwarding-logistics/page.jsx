@@ -50,7 +50,7 @@ export default function FreightForwardingPage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
-        aside={<IllustrativeFigure image="export-logistics" className="mx-auto w-full max-w-lg" />}
+        aside={<IllustrativeFigure image="freight-forwarding-logistics" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "Freight Forwarding & Logistics", href: "/services/freight-forwarding-logistics" }]} />}
         kicker={P.tagline}
         title="Freight Forwarding & Logistics"

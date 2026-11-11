@@ -1,0 +1,113 @@
+﻿{
+  "mode": "built-in image_gen",
+  "images": [
+    {
+      "n": 1,
+      "key": "export-handholding",
+      "title": "MSME Export Handholding",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: MSME Export Handholding. Scene: Indian small textile exporter and professional trade adviser reviewing fabric samples, plain shipping paperwork and a packed export carton at a modest well-organized business worktable. Natural candid interaction; focus on end-to-end export guidance."
+    },
+    {
+      "n": 2,
+      "key": "export-training",
+      "title": "Export Training, Research & Consultancy",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: Export Training, Research & Consultancy. Scene: Small professional export-training classroom in India, an instructor teaching adult entrepreneurs around a seminar table with product samples and plain notebooks; screen shows only simple abstract trade-route shapes without words; genuine-looking candid educational atmosphere."
+    },
+    {
+      "n": 3,
+      "key": "china-import-sourcing",
+      "title": "China Import Sourcing",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: China Import Sourcing. Scene: Indian procurement professional and Chinese supplier checking an unbranded electric kettle product sample and a plain quality checklist in a modern Chinese factory showroom, shelves of export-ready homeware in soft focus, realistic professional interaction."
+    },
+    {
+      "n": 4,
+      "key": "licensed-customs-broker",
+      "title": "Licensed Customs Broker",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: Licensed Customs Broker. Scene: Professional Indian customs-broking adviser at a port-adjacent office desk reviewing plain cargo documents beside an unbranded laptop, a colleague hands over a neat folder; through window container stacks out of focus. Business clothing, no uniforms or official badges."
+    },
+    {
+      "n": 5,
+      "key": "export-import-clearance",
+      "title": "Export Import Clearance",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: Export Import Clearance. Scene: Cargo inspection bay at an Indian freight terminal, two logistics professionals wearing ordinary safety vests checking a sealed pallet and plain shipment paperwork beside an open shipping container, compliant realistic handling and safe separation from vehicles."
+    },
+    {
+      "n": 6,
+      "key": "freight-forwarding-logistics",
+      "title": "Freight Forwarding & Logistics",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: Freight Forwarding & Logistics. Scene: Wide coherent port logistics scene with container vessel alongside quay, crane handling one container, and road freight truck on a clearly separate lane in foreground; credible scale and safe realistic operations, morning daylight."
+    },
+    {
+      "n": 7,
+      "key": "msme-insurance",
+      "title": "MSME Insurance Package",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: MSME Insurance Package. Scene: Indian small manufacturing business owner and insurance adviser reviewing plain risk documents beside neatly stored boxed stock in a light industrial workshop, realistic machinery safely stopped in background, calm professional risk-planning scene."
+    },
+    {
+      "n": 8,
+      "key": "moowr",
+      "title": "MOOWR",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: MOOWR. Scene: Interior of a modern bonded manufacturing warehouse, organized imported metal components and a CNC machine in separate marked production area, an Indian warehouse supervisor checking inventory on a clipboard; no customs or government insignia."
+    },
+    {
+      "n": 9,
+      "key": "advance-authorisation",
+      "title": "Advance Authorisation Scheme",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: Advance Authorisation Scheme. Scene: Export-production factory store with raw copper wire coils, neatly stacked aluminum billets and packaging materials, Indian production planner checking materials list near organized racks; focus on raw materials intended for export manufacture."
+    },
+    {
+      "n": 10,
+      "key": "epcg",
+      "title": "EPCG Scheme",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: EPCG Scheme. Scene: High quality precision CNC machining centre in a modern Indian export-manufacturing workshop, properly enclosed machining area, skilled operator checking a finished metal component safely outside the machine, crisp realistic industrial detail."
+    },
+    {
+      "n": 11,
+      "key": "sez",
+      "title": "SEZ",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: SEZ. Scene: Contemporary Indian industrial campus with distinct manufacturing buildings, landscaped access road, loading bays and export containers; plausible functional infrastructure in natural daylight, no signs, no implied specific named site."
+    },
+    {
+      "n": 12,
+      "key": "ftwz",
+      "title": "FTWZ",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: FTWZ. Scene: International distribution warehouse loading bay, shrink-wrapped pallets being staged by a warehouse professional beside a stationary container trailer, clear inventory aisles and organized transshipment workflow, realistic safe logistics."
+    },
+    {
+      "n": 13,
+      "key": "eou",
+      "title": "EOU",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: EOU. Scene: Indian export-oriented garment production floor with sewing stations and neatly folded finished textiles being checked by a quality supervisor, fabric and carton packaging, credible small-to-medium manufacturing scale, natural industrial daylight."
+    },
+    {
+      "n": 14,
+      "key": "aeo",
+      "title": "AEO",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: AEO. Scene: Secure export warehouse access checkpoint with Indian logistics compliance professional scanning a sealed pallet barcode using handheld scanner, intact container seal visible nearby, unobtrusive camera and access gate in background, no official certification symbols."
+    },
+    {
+      "n": 15,
+      "key": "nri-baggage-clearance",
+      "title": "NRI Baggage Clearance",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: NRI Baggage Clearance. Scene: Indian international airport baggage inspection area, returning Indian traveler with two ordinary suitcases and a plain document folder beside a baggage X-ray scanner, calm orderly airport setting, no readable passports, signage, badges or logos."
+    },
+    {
+      "n": 16,
+      "key": "postal-export",
+      "title": "Postal Export Aggregator",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: Postal Export Aggregator. Scene: Realistic Indian postal parcel acceptance counter, postal worker in plain khaki shirt weighing a small unbranded export carton on a digital parcel scale while an Indian artisan presents neatly wrapped textile goods and a plain shipping form; organized red-accent sorting shelves behind, no India Post logo or official branding."
+    },
+    {
+      "n": 17,
+      "key": "e-commerce-export",
+      "title": "E-Commerce Export",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: E-Commerce Export. Scene: Indian small online exporter preparing international orders at a clean packing station, handmade products in unbranded cartons, protective paper packaging, laptop with abstract non-readable storefront blocks, parcel labels without readable personal data."
+    },
+    {
+      "n": 18,
+      "key": "allied-services",
+      "title": "Allied Services",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium institutional website service banner, landscape 3:2, single editorial photograph-like AI illustration. Natural daylight, credible contemporary Indian export-business context, restrained navy/neutral palette, realistic materials and correct practical equipment, balanced composition with clear subject at small display sizes. No text, captions, readable documents, logos, watermarks, flags, official seals, certificates or endorsement marks. No real named people or identifiable clients. Not a collage or infographic. Service: Allied Services. Scene: Indian entrepreneurs consulting an EXIM business adviser at an uncluttered professional desk, plain company-setup folders, calculator, laptop and modest product samples, focus on company registration, compliance advice and export business support; no readable personal or official information."
+    }
+  ]
+}

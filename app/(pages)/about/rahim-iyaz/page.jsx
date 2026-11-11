@@ -1,21 +1,31 @@
 import Image from "next/image";
+import RahimSignature from "@/components/RahimSignature";
+import RahimText from "@/components/RahimText";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 import { MD, ORG_ID, SITE_URL } from "@/lib/content";
-import { MD_LEAD, MD_COUNTRIES, MD_IN_THE_FIELD } from "@/lib/about-data";
+import { MD_LEAD, MD_IN_THE_FIELD } from "@/lib/about-data";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Rahim Iyaz — Managing Director",
   description:
-    "Mr. Rahim Iyaz, Managing Director of PORTMATRIX, is a Government Licensed Customs Broker with experience in foreign trade since 1996.",
+    "Mr. Rahim Iyaz, Managing Director of PORTMATRIX, is an F-Card qualified Customs Broker with experience in foreign trade since 1996.",
   path: "/about/rahim-iyaz",
   image: MD.portrait.src,
 });
 
 const PERSON_ID = `${SITE_URL}/about/rahim-iyaz#person`;
 const linkClass = "font-semibold text-navy underline decoration-navy/30 underline-offset-2 hover:decoration-navy";
+
+// Experience groups and destinations supplied by the user.
+const EXPERIENCE_MARKETS = [
+  { title: "East and Southeast Asia (ESEA)", countries: ["Singapore", "China", "Hong Kong", "Malaysia", "Thailand"] },
+  { title: "Middle East", countries: ["UAE", "Saudi Arabia"] },
+  { title: "SAARC Region", countries: ["India", "Sri Lanka", "Republic of Maldives"] },
+  { title: "Export Destinations", countries: ["United States of America", "Europe"] },
+];
 
 // Splits a field entry into a date label (column) and its remaining text, so
 // the date is shown once. Dated entries carry `date`; the two year-only
@@ -26,8 +36,7 @@ function fieldParts(item) {
   return m ? { label: m[2], text: m[1] } : { label: "", text: item.text };
 }
 
-// PDF p.4 — the four bullets regrouped under Role / Experience / Training
-// roles. Same facts, no additions.
+// PDF p.4 profile with user-approved experience groups and destinations.
 export default function RahimIyazPage() {
   // Person node: jobTitle is the visible "Managing Director" (p.4). worksFor
   // points at the homepage's Organization @id. No sameAs / alumniOf, and the
@@ -62,35 +71,19 @@ export default function RahimIyazPage() {
             sizes="(min-width: 1024px) 420px, 384px"
             className="h-auto w-full rounded-md"
           />
-          {/* PDF p.4 signature/title graphic, drawn from its own luminance
-              mask (the extracted base layer is a flat fill) — not retyped. */}
-          <div
-            role="img"
-            aria-label={`${MD.name} — ${MD.title}`}
-            className="mt-4 aspect-[5/2] w-64"
-            style={{
-              backgroundImage: "url(/images/source/md/rahim-iyaz-signature-base.png)",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-              WebkitMaskImage: "url(/images/source/md/rahim-iyaz-signature-mask.png)",
-              maskImage: "url(/images/source/md/rahim-iyaz-signature-mask.png)",
-              WebkitMaskSize: "contain",
-              maskSize: "contain",
-              WebkitMaskRepeat: "no-repeat",
-              maskRepeat: "no-repeat",
-              maskMode: "luminance",
-            }}
-          />
         </div>
 
         <div className="max-w-2xl">
           <p className="kicker mb-3 text-brandred">{MD.role}</p>
-          <h1 className="h1 text-ink">{MD.name}</h1>
-          <p className="mt-5 text-lg leading-relaxed text-ink">{MD_LEAD}</p>
+          <h1>
+            <span className="sr-only">{MD.name}</span>
+            <RahimSignature className="max-w-[18rem]" sizes="288px" />
+          </h1>
+          <p className="mt-5 text-lg leading-relaxed text-ink"><RahimText>{MD_LEAD}</RahimText></p>
 
           {/* CLIENT_CONFIRMATION_REQUIRED: the source renders this credential two
               ways (p.4: "PPIBAMI (IIFT), CBLR F-Card" vs the p.60 infographic:
-              "FTP-IBAMI (IIFT), F-Card Qualified"). Shown exactly as p.4. */}
+              "FTP-IBAMI (IIFT), F-Card Qualified"). Uses p.4 wording in the user-confirmed order. */}
           <p className="kicker mt-6 text-navy/70">Qualifications</p>
           <p className="mt-1 text-base font-medium leading-relaxed text-ink">{MD.qualifications}</p>
 
@@ -99,7 +92,7 @@ export default function RahimIyazPage() {
               <h2 id="role" className="font-display text-lg font-bold text-ink">Role</h2>
               <ul className="space-y-1.5 text-base leading-relaxed text-ink/85">
                 <li>Managing Director, PORTMATRIX</li>
-                <li>Government Licensed Customs Broker</li>
+                <li>F-Card qualified Customs Broker</li>
               </ul>
             </section>
 
@@ -109,11 +102,18 @@ export default function RahimIyazPage() {
                 <li>Vintage experience in the foreign trade since 1996.</li>
                 <li>
                   Worked extensively in the international markets:
-                  <ul className="mt-2 grid list-[circle] gap-x-8 pl-5 sm:grid-cols-2">
-                    {MD_COUNTRIES.map((c) => (
-                      <li key={c}>{c}</li>
+                  <div className="mt-4 grid gap-x-8 gap-y-5 sm:grid-cols-2">
+                    {EXPERIENCE_MARKETS.map((group) => (
+                      <div key={group.title}>
+                        <h3 className="font-display font-bold text-ink">{group.title}:</h3>
+                        <ul className="mt-2 list-[circle] space-y-1 pl-5">
+                          {group.countries.map((country) => (
+                            <li key={country}>{country}</li>
+                          ))}
+                        </ul>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </li>
                 <li>
                   Having worked with India&rsquo;s largest banking group State Bank of India in Risk Mitigation
@@ -142,10 +142,10 @@ export default function RahimIyazPage() {
                   <li key={item.text + (item.date || "")} className="py-4 sm:grid sm:grid-cols-[9rem_1fr] sm:gap-8">
                     <p className="text-sm font-semibold text-brandred sm:pt-0.5">{label}</p>
                     <p className="mt-1 text-base leading-relaxed text-ink/85 sm:mt-0">
-                      {text}
+                      <RahimText>{text}</RahimText>
                       {" — "}
                       <Link href={item.link.href} className={linkClass}>
-                        {item.link.label}
+                        <RahimText>{item.link.label}</RahimText>
                       </Link>
                     </p>
                   </li>

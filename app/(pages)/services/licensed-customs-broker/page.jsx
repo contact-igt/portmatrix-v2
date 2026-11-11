@@ -29,10 +29,10 @@ export default function LicensedCustomsBrokerPage() {
   };
 
   return (
-    <div className="mx-auto max-w-4xl px-5 py-14 sm:px-8 sm:py-20">
+    <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
-        aside={<IllustrativeFigure image="customs-compliance" className="mx-auto w-full max-w-lg" />}
+        aside={<IllustrativeFigure image="licensed-customs-broker" showCaption={false} className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "Licensed Customs Broker", href: "/services/licensed-customs-broker" }]} />}
         kicker={CUSTOMS_BROKER_PAGE.tagline}
         title="Licensed Customs Broker"

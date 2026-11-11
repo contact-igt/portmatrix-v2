@@ -1,0 +1,150 @@
+{
+  "generatedBanners": 18,
+  "uniqueBanners": 18,
+  "pages": [
+    {
+      "n": 1,
+      "path": "/services/export-handholding",
+      "banner": "/images/illustrative/services-v2/export-handholding.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 2,
+      "path": "/riit",
+      "banner": "/images/illustrative/services-v2/export-training.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 3,
+      "path": "/china-import-sourcing",
+      "banner": "/images/illustrative/services-v2/china-import-sourcing.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 4,
+      "path": "/services/licensed-customs-broker",
+      "banner": "/images/illustrative/services-v2/licensed-customs-broker.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 5,
+      "path": "/services/export-import-clearance",
+      "banner": "/images/illustrative/services-v2/export-import-clearance.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 6,
+      "path": "/services/freight-forwarding-logistics",
+      "banner": "/images/illustrative/services-v2/freight-forwarding-logistics.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 7,
+      "path": "/services/msme-insurance",
+      "banner": "/images/illustrative/services-v2/msme-insurance.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 8,
+      "path": "/services/moowr",
+      "banner": "/images/illustrative/services-v2/moowr.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 9,
+      "path": "/services/advance-authorisation",
+      "banner": "/images/illustrative/services-v2/advance-authorisation.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 10,
+      "path": "/services/epcg",
+      "banner": "/images/illustrative/services-v2/epcg.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 11,
+      "path": "/services/sez",
+      "banner": "/images/illustrative/services-v2/sez.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 12,
+      "path": "/services/ftwz",
+      "banner": "/images/illustrative/services-v2/ftwz.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 13,
+      "path": "/services/eou",
+      "banner": "/images/illustrative/services-v2/eou.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 14,
+      "path": "/services/aeo",
+      "banner": "/images/illustrative/services-v2/aeo.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 15,
+      "path": "/services/nri-baggage-clearance",
+      "banner": "/images/illustrative/services-v2/nri-baggage-clearance.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 16,
+      "path": "/services/postal-export",
+      "banner": "/images/illustrative/services-v2/postal-export.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 17,
+      "path": "/services/e-commerce-export",
+      "banner": "/images/illustrative/services-v2/e-commerce-export.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    },
+    {
+      "n": 18,
+      "path": "/services/allied-services",
+      "banner": "/images/illustrative/services-v2/allied-services.jpg",
+      "pageStatus": 200,
+      "imageStatus": 200,
+      "pass": true
+    }
+  ]
+}

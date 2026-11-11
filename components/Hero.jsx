@@ -2,14 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { HERO, OPERATIONAL_PROOF } from "@/lib/content";
-import { PHASES } from "@/lib/export-handholding-data";
+import ExportCapabilities from "./ExportCapabilities";
 
 // Source-locked homepage hero: the PDF p.3 defining sentence beside ONE
-// authentic operational photograph (the Netherlands 2024 shipment inspection,
-// also the home page's single "inspection" image). The six phases of the
-// PDF's End-to-End Export Facilitation Process (p.7) run as a ruled index
-// under the hero, each linking to its phase page.
-const HERO_PHOTO = OPERATIONAL_PROOF.images.find((i) => i.src.includes("netherlands"));
+// authentic operational photograph (the USA 2025 shipment inspection,
+// also the home page's single "inspection" image). Client-supplied service
+// headings run in the horizontal strip below the hero.
+const HERO_PHOTO = OPERATIONAL_PROOF.images.find((i) => i.src.includes("export-shipment-inspection-usa-2025"));
 
 export default function Hero() {
   return (
@@ -55,42 +54,12 @@ export default function Hero() {
                 className="object-cover"
               />
             </div>
-            <figcaption className="mt-3 text-sm leading-snug text-slatey">{HERO_PHOTO.caption}</figcaption>
+            <figcaption className="mt-3 text-sm leading-snug text-slatey">Hotel supplies shipment to USA in 2025</figcaption>
           </figure>
         )}
       </div>
 
-      <nav aria-labelledby="hero-process" className="mx-auto mt-12 max-w-7xl px-5 pb-12 sm:px-8 lg:mt-16 lg:pb-14">
-        <div className="border-t-2 border-navy">
-          <p
-            id="hero-process"
-            className="flex items-baseline justify-between gap-4 border-b border-hairline py-3.5 text-sm font-semibold uppercase tracking-[0.08em] text-ink"
-          >
-            End-to-End Export Facilitation Process
-            <span className="font-medium normal-case tracking-normal text-slatey">6 phases</span>
-          </p>
-          <ol className="grid sm:grid-cols-2 lg:grid-cols-6">
-            {PHASES.map((p, i) => (
-              <li
-                key={p.slug}
-                className={`border-b border-hairline sm:[&:nth-child(even)]:border-l lg:border-b-0 lg:[&:nth-child(even)]:border-l-0 ${
-                  i > 0 ? "lg:border-l" : ""
-                }`}
-              >
-                <Link
-                  href={`/services/export-handholding/${p.slug}`}
-                  className="group flex h-full min-h-11 items-start gap-3 px-1 py-4 transition-colors duration-150 hover:bg-paper sm:px-4 lg:flex-col lg:gap-2"
-                >
-                  <span className="font-display text-sm font-semibold tabular-nums text-brandred">
-                    {String(p.n).padStart(2, "0")}
-                  </span>
-                  <span className="text-[15px] font-medium leading-snug text-ink group-hover:text-navy">{p.title}</span>
-                </Link>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </nav>
+      <ExportCapabilities />
     </section>
   );
 }

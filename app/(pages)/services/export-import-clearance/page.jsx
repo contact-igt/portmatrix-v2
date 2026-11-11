@@ -1,3 +1,4 @@
+import IllustrativeFigure from "@/components/IllustrativeFigure";
 import { Fragment } from "react";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -88,6 +89,7 @@ export default function ExportImportClearancePage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        aside={<IllustrativeFigure image="export-import-clearance" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "Export Import Clearance", href: "/services/export-import-clearance" }]} />}
         kicker={P.tagline}
         title="Export-Import Clearance"

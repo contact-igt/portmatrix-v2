@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, ArrowRight, ChevronDown } from "lucide-react";
 import Logo from "./Logo";
-import { NAV, SERVICE_GROUPS, CONTACT } from "@/lib/content";
+import { NAV, SERVICE_GROUPS, SERVICES, CONTACT } from "@/lib/content";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -96,7 +96,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-0.5 lg:flex">
+        <nav className="hidden items-center gap-0.5 xl:flex">
           {NAV.map((item) =>
             item.label === "Services" ? (
               <div
@@ -107,7 +107,7 @@ export default function Header() {
                 onBlur={(e) => !e.currentTarget.contains(e.relatedTarget) && setDesktopMenuOpen(false)}
               >
                 <button
-                  className="flex min-h-11 items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-ink/75 transition-colors hover:bg-navy-50 hover:text-navy xl:px-4"
+                  className="flex min-h-11 items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-ink/75 transition-colors hover:bg-navy-50 hover:text-navy 2xl:px-4"
                   onClick={() => setDesktopMenuOpen((v) => !v)}
                   aria-expanded={desktopMenuOpen}
                   aria-controls="services-panel"
@@ -155,7 +155,7 @@ export default function Header() {
                           onClick={() => setDesktopMenuOpen(false)}
                           className="inline-flex min-h-11 items-center gap-1.5 text-[0.9375rem] font-semibold text-navy hover:underline"
                         >
-                          View all 17 services
+                          View all {SERVICES.length} services
                           <ArrowRight className="h-3.5 w-3.5" />
                         </Link>
                       </div>
@@ -168,7 +168,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-ink/75 transition-colors hover:bg-navy-50 hover:text-navy xl:px-4"
+                className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-ink/75 transition-colors hover:bg-navy-50 hover:text-navy 2xl:px-4"
               >
                 {item.label}
               </Link>
@@ -176,7 +176,7 @@ export default function Header() {
           )}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <a
             href={CONTACT.phoneHref}
             className="hidden min-h-11 items-center gap-2 whitespace-nowrap text-sm font-medium text-ink/70 transition-colors hover:text-navy min-[1440px]:flex"
@@ -198,7 +198,7 @@ export default function Header() {
         <button
           ref={toggleBtnRef}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-11 w-11 items-center justify-center rounded-xl text-navy lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-xl text-navy xl:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
@@ -215,7 +215,7 @@ export default function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={closeAll}
-              className="fixed inset-0 z-40 bg-ink/40 lg:hidden"
+              className="fixed inset-0 z-40 bg-ink/40 xl:hidden"
             />
             <motion.aside
               initial={{ x: "100%" }}
@@ -223,7 +223,7 @@ export default function Header() {
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
               ref={drawerRef}
-              className="fixed right-0 top-[68px] z-40 flex h-[calc(100%-68px)] w-[82%] max-w-sm flex-col overflow-y-auto bg-white p-6 shadow-lift lg:hidden"
+              className="fixed right-0 top-[68px] z-40 flex h-[calc(100%-68px)] w-[82%] max-w-sm flex-col overflow-y-auto bg-white p-6 shadow-lift xl:hidden"
               role="dialog"
               aria-modal="true"
               aria-label="Site menu"
@@ -271,7 +271,7 @@ export default function Header() {
                               onClick={closeAll}
                               className="mt-3 flex min-h-11 items-center px-2 py-2 text-[0.9375rem] font-semibold leading-5 text-navy"
                             >
-                              View all 17 services →
+                              View all {SERVICES.length} services →
                             </Link>
                           </motion.div>
                         )}

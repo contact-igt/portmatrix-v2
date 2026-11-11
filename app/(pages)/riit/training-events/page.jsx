@@ -1,3 +1,4 @@
+import RahimText from "@/components/RahimText";
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
 import RelatedServices from "@/components/RelatedServices";
@@ -95,7 +96,7 @@ function EventRow({ event, as: Heading = "h3" }) {
           <time dateTime={event.date}>{event.dateDisplay}</time>
         </p>
         <Heading className="mt-1.5 font-display text-xl font-bold leading-snug text-ink">{event.title}</Heading>
-        <p className="mt-2 max-w-prose text-base leading-relaxed text-slatey">{event.caption}</p>
+        <p className="mt-2 max-w-prose text-base leading-relaxed text-slatey"><RahimText>{event.caption}</RahimText></p>
       </div>
       {showImage && (
         <figure className={`mt-5 md:mt-0 ${portrait ? "max-w-[14rem] md:max-w-none" : ""}`}>

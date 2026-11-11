@@ -1,3 +1,5 @@
+import RahimText from "@/components/RahimText";
+import RahimSignature from "@/components/RahimSignature";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -24,7 +26,7 @@ import {
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
 import TradeNetworkVisual from "@/components/TradeNetworkVisual";
-import { MISSION_TAGLINE_DISPLAY, ALLIED_SERVICES, MD, RIIT, CHINA } from "@/lib/content";
+import { ALLIED_SERVICES, MD, RIIT, CHINA } from "@/lib/content";
 import { CHINA_PAGE } from "@/lib/china-data";
 import { RIIT_PARTNERS, RIIT_PARTNERS_LEAD } from "@/lib/riit-data";
 import {
@@ -85,7 +87,7 @@ const MD_FACTS = [
     label: "Profile",
     body: (
       <ul role="list" className="space-y-1.5 text-base leading-relaxed text-ink/90 sm:text-[1.0625rem]">
-        <li>Government Licensed Customs Broker</li>
+        <li>F-Card qualified Customs Broker</li>
         <li>Experience in the foreign trade since 1996</li>
       </ul>
     ),
@@ -133,11 +135,9 @@ export default function AboutPage() {
         intro={ABOUT_PAGE.intro}
         aside={<TradeNetworkVisual className="mx-auto h-auto w-full max-w-[22rem] lg:ml-auto lg:mr-0 lg:max-w-[27rem]" />}
       />
-      {/* Slogan = PDF p.3 emphasised line. CLIENT_CONFIRMATION_REQUIRED: the V6
-          logo strapline reads "Ease of doing EXIM"; p.3 reads "Excellence in
-          EXIM Compliance". Kept as the PDF text. */}
+      {/* Use the official logo strapline. */}
       <p className="mt-8 max-w-3xl border-l-2 border-brandred pl-4 font-display text-lg font-semibold text-navy">
-        {MISSION_TAGLINE_DISPLAY}
+        PORTMATRIX &mdash; Ease of doing EXIM
       </p>
 
       {/* 2 — what we do: the p.3 core-strength sequence */}
@@ -243,12 +243,12 @@ export default function AboutPage() {
                         {it.display}
                       </time>
                     )}
-                    {it.text}
+                    <RahimText>{it.text}</RahimText>
                     {it.link && (
                       <>
                         {" "}
                         <Link href={it.link.href} className={linkClass}>
-                          {it.link.label}
+                          <RahimText>{it.link.label}</RahimText>
                         </Link>
                       </>
                     )}
@@ -311,7 +311,7 @@ export default function AboutPage() {
             />
           </figure>
           <div className="min-w-0">
-            <h3 className="font-display text-3xl font-bold leading-tight tracking-tight text-ink sm:text-4xl">Mr. {MD.name}</h3>
+            <h3><RahimSignature className="max-w-[22rem]" /></h3>
             <p className="mt-1 flex items-center gap-2 text-lg text-slatey">
               <Briefcase className="h-5 w-5 text-navy" strokeWidth={1.6} aria-hidden="true" />
               {MD.role}
@@ -326,7 +326,7 @@ export default function AboutPage() {
             </dl>
             <p className="mt-5">
               <Link href="/about/rahim-iyaz" className="group inline-flex min-h-11 items-center gap-2 font-display text-lg font-semibold text-navy">
-                <span className="border-b border-navy/30 pb-0.5 group-hover:border-navy">Full profile of {MD.name}</span>
+                <span className="border-b border-navy/30 pb-0.5 group-hover:border-navy">Full profile</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
               </Link>
             </p>
@@ -339,11 +339,11 @@ export default function AboutPage() {
         <div className="grid gap-x-14 gap-y-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
           <div>
             <Image
-              src="/images/source/branding/riit-logo.png"
-              width={412}
-              height={109}
+              src="/images/source/branding/reginal-institute.png"
+              width={512}
+              height={362}
               alt="Regional Institute of International Trade (RIIT) logo"
-              className="mb-6 h-12 w-auto"
+              className="mb-6 h-auto w-48 max-w-full sm:w-56"
             />
             <h2 id="riit-h" className="h2 text-ink">Regional Institute of International Trade (RIIT)</h2>
             <p className="mt-4 max-w-prose text-lg leading-relaxed text-ink/85">{ABOUT_PAGE.riit}</p>
@@ -393,7 +393,7 @@ export default function AboutPage() {
                 sizes="(min-width: 1024px) 480px, 100vw"
                 className="h-auto w-full border border-hairline bg-white"
               />
-              <figcaption className="caption mt-3 leading-relaxed text-slatey">{mou.caption}</figcaption>
+              <figcaption className="caption mt-3 leading-relaxed text-slatey"><RahimText>{mou.caption}</RahimText></figcaption>
             </figure>
           )}
         </div>

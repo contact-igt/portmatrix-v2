@@ -1,3 +1,4 @@
+import IllustrativeFigure from "@/components/IllustrativeFigure";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -37,6 +38,7 @@ export default function EouPage() {
       {/* No separate intro: the source's cover statement is the definition,
           shown once in the definition block below. */}
       <PageIntro
+        aside={<IllustrativeFigure image="eou" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "EOU", href: "/services/eou" }]} />}
         kicker={P.tagline}
         title="Export Oriented Unit (EOU) Registration Support"

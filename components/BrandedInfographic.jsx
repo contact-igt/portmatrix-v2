@@ -2,7 +2,7 @@ import Image from "next/image";
 import ImageCaption from "./ImageCaption";
 
 // A source infographic with ONLY its obsolete PORTMATRIX logo covered by the
-// V6 logo. The original PNG is never edited (CLAUDE.md): the frame renders
+// client-supplied logo. The original PNG is never edited (CLAUDE.md): the frame renders
 // at the image's exact aspect ratio, so the patch can be positioned in
 // percentages of the measured old-logo box (pixels in the source file,
 // docs/FINAL_SOURCE_VISUAL_COVERAGE.md). Nothing else in the artwork —
@@ -10,7 +10,7 @@ import ImageCaption from "./ImageCaption";
 //
 // Dense artwork gets a min width on small screens and scrolls sideways
 // inside its own frame, never the page.
-const V6_RATIO = 954 / 170;
+const LOGO_RATIO = 2172 / 724;
 
 export default function BrandedInfographic({
   src,
@@ -39,9 +39,9 @@ export default function BrandedInfographic({
   const fy = (PAD / h) * 100;
   const feather = `linear-gradient(to right, transparent, #000 ${fx}%, #000 ${100 - fx}%, transparent), linear-gradient(to bottom, transparent, #000 ${fy}%, #000 ${100 - fy}%, transparent)`;
   const pct = (v, total) => `${(v / total) * 100}%`;
-  // V6 fitted inside the patch at its native proportions, left-aligned like
+  // Official artwork fitted inside the patch at its native proportions, left-aligned like
   // the original lockup.
-  const logoH = Math.min(h * 0.86, (w * 0.96) / V6_RATIO);
+  const logoH = Math.min(h * 0.86, (w * 0.96) / LOGO_RATIO);
 
   return (
     <figure className={className}>
@@ -80,7 +80,7 @@ export default function BrandedInfographic({
             )}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/source/branding/portmatrix-logo-v6.svg"
+              src="/images/source/branding/PortMatrix_Logo.png"
               alt=""
               className="relative w-auto max-w-none"
               style={{ height: `${(logoH / h) * 100}%` }}

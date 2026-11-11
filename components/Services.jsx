@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { SERVICES, SERVICE_ONE_LINERS } from "@/lib/content";
 
-// Homepage index of the 17 core services (PDF pp.4–7): number, title and a
+// Homepage service index: number, title and a
 // one-line description. Every row links to its own route. The full group
 // structure and full descriptions live on /services.
 export default function Services() {
@@ -16,7 +16,7 @@ export default function Services() {
             className="group inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-navy"
           >
             <span className="border-b border-navy/30 pb-0.5 transition-colors duration-150 group-hover:border-navy">
-              All 17 core services, grouped
+              All {SERVICES.length} core services, grouped
             </span>
             <ArrowRight className="h-3.5 w-3.5 transition-transform duration-150 group-hover:translate-x-0.5" />
           </Link>
@@ -27,7 +27,7 @@ export default function Services() {
             <li
               key={s.n}
               className={`sm:border-b sm:border-hairline ${i % 2 === 1 ? "sm:border-l" : ""} ${
-                i >= SERVICES.length - 1 ? "sm:border-b-0" : ""
+                i >= SERVICES.length - (SERVICES.length % 2 || 2) ? "sm:border-b-0" : ""
               }`}
             >
               <Link
