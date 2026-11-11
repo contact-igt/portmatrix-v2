@@ -1,0 +1,150 @@
+{
+  "pages": [
+    {
+      "n": 1,
+      "title": "MSME Export Handholding",
+      "path": "/services/export-handholding",
+      "status": 200,
+      "images": 10,
+      "missingAlt": 0
+    },
+    {
+      "n": 2,
+      "title": "Export Training – Research – Consultancy",
+      "path": "/riit",
+      "status": 200,
+      "images": 7,
+      "missingAlt": 0
+    },
+    {
+      "n": 3,
+      "title": "China Import Sourcing (Since 1974)",
+      "path": "/china-import-sourcing",
+      "status": 200,
+      "images": 8,
+      "missingAlt": 0
+    },
+    {
+      "n": 4,
+      "title": "CUSTOMS BROKER SERVICE",
+      "path": "/services/licensed-customs-broker",
+      "status": 200,
+      "images": 4,
+      "missingAlt": 0
+    },
+    {
+      "n": 5,
+      "title": "Export Import Clearance",
+      "path": "/services/export-import-clearance",
+      "status": 200,
+      "images": 6,
+      "missingAlt": 0
+    },
+    {
+      "n": 6,
+      "title": "Freight Forwarding & Logistics",
+      "path": "/services/freight-forwarding-logistics",
+      "status": 200,
+      "images": 4,
+      "missingAlt": 0
+    },
+    {
+      "n": 7,
+      "title": "MSME Insurance Package",
+      "path": "/services/msme-insurance",
+      "status": 200,
+      "images": 4,
+      "missingAlt": 0
+    },
+    {
+      "n": 8,
+      "title": "MOOWR",
+      "path": "/services/moowr",
+      "status": 200,
+      "images": 4,
+      "missingAlt": 0
+    },
+    {
+      "n": 9,
+      "title": "Advance Authorisation Scheme",
+      "path": "/services/advance-authorisation",
+      "status": 200,
+      "images": 4,
+      "missingAlt": 0
+    },
+    {
+      "n": 10,
+      "title": "EPCG Scheme",
+      "path": "/services/epcg",
+      "status": 200,
+      "images": 4,
+      "missingAlt": 0
+    },
+    {
+      "n": 11,
+      "title": "SEZ",
+      "path": "/services/sez",
+      "status": 200,
+      "images": 4,
+      "missingAlt": 0
+    },
+    {
+      "n": 12,
+      "title": "FTWZ",
+      "path": "/services/ftwz",
+      "status": 200,
+      "images": 4,
+      "missingAlt": 0
+    },
+    {
+      "n": 13,
+      "title": "EOU",
+      "path": "/services/eou",
+      "status": 200,
+      "images": 4,
+      "missingAlt": 0
+    },
+    {
+      "n": 14,
+      "title": "AEO",
+      "path": "/services/aeo",
+      "status": 200,
+      "images": 4,
+      "missingAlt": 0
+    },
+    {
+      "n": 15,
+      "title": "NRI Baggage Clearance",
+      "path": "/services/nri-baggage-clearance",
+      "status": 200,
+      "images": 4,
+      "missingAlt": 0
+    },
+    {
+      "n": 16,
+      "title": "Postal Export Aggregator",
+      "path": "/services/postal-export",
+      "status": 200,
+      "images": 4,
+      "missingAlt": 0
+    },
+    {
+      "n": 17,
+      "title": "E-Commerce Export",
+      "path": "/services/e-commerce-export",
+      "status": 200,
+      "images": 4,
+      "missingAlt": 0
+    },
+    {
+      "n": 18,
+      "title": "Allied Services",
+      "path": "/services/allied-services",
+      "status": 200,
+      "images": 6,
+      "missingAlt": 0
+    }
+  ],
+  "uniqueImageAssets": 28,
+  "broken": []
+}

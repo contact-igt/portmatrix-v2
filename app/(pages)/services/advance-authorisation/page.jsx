@@ -43,7 +43,7 @@ export default function AdvanceAuthorisationPage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
-        aside={<IllustrativeFigure image="export-production-inputs" className="mx-auto w-full max-w-lg" />}
+        aside={<IllustrativeFigure image="advance-authorisation" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "Advance Authorisation Scheme", href: "/services/advance-authorisation" }]} />}
         kicker={P.tagline}
         title="Advance Authorisation Scheme"

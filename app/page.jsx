@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import About from "@/components/About";
 import Services from "@/components/Services";
+import PriorityServices from "@/components/PriorityServices";
 import ChinaSourcing from "@/components/ChinaSourcing";
 import OperationalProof from "@/components/OperationalProof";
 import Credibility from "@/components/Credibility";
@@ -25,7 +26,7 @@ const organizationJsonLd = {
   name: CONTACT.companyName,
   alternateName: "PortMatrix",
   url: CONTACT.websiteHref,
-  logo: `${SITE_URL}/images/source/branding/portmatrix-logo-v6.png`,
+  logo: `${SITE_URL}/images/source/branding/PortMatrix_Logo.png`,
   address: {
     "@type": "PostalAddress",
     streetAddress: CONTACT.addressLines.slice(0, 2).join(" ").replace(/,\s*$/, ""),
@@ -71,6 +72,7 @@ export default function Home() {
         <TrustBar />
         <About />
         <Services />
+        <PriorityServices />
         <ChinaSourcing />
         <OperationalProof />
         <Credibility />

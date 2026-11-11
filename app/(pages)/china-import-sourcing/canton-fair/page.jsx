@@ -1,3 +1,4 @@
+import RahimText from "@/components/RahimText";
 import Link from "next/link";
 import Image from "next/image";
 import { Check, ArrowUpRight } from "lucide-react";
@@ -87,7 +88,7 @@ export default function CantonFairPage() {
           <div className="relative aspect-[4/3] w-full overflow-hidden border border-hairline bg-white">
             <Image src={GALLERY[1].src} alt={GALLERY[1].alt} fill sizes="(min-width: 1024px) 480px, 100vw" className="object-cover" />
           </div>
-          <figcaption className="mt-3 text-sm leading-relaxed text-slatey">{GALLERY[1].caption}</figcaption>
+          <figcaption className="mt-3 text-sm leading-relaxed text-slatey"><RahimText>{GALLERY[1].caption}</RahimText></figcaption>
         </figure>
       </div>
 

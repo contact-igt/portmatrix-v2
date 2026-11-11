@@ -9,7 +9,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Core Services — Customs Broking & Export Handholding",
   description:
-    "PORTMATRIX's 17 core services: export handholding, customs broking, China import sourcing, RIIT training, clearance, logistics and trade schemes.",
+    `PORTMATRIX's ${SERVICES.length} core services: export handholding, customs broking, China import sourcing, RIIT training, clearance, logistics, trade schemes and allied services.`,
   path: "/services",
 });
 
@@ -34,8 +34,7 @@ export default function ServicesIndexPage() {
         intro={`PORTMATRIX supports exporters and importers with Customs, DGFT and international trade procedures. Its ${SERVICES.length} core services run from MSME export handholding and customs broking to China import sourcing, RIIT training, trade schemes and logistics.`}
       />
 
-      {/* Services index: four groups, each a ruled list carrying the source's
-          own service numbers. Group labels sit in a left column from md up. */}
+      {/* Number rows in their display order on this page only. */}
       <div className="mt-12 border-t-2 border-ink sm:mt-14">
         {SERVICE_GROUPS.map((group, gi) => (
           <section
@@ -56,7 +55,7 @@ export default function ServicesIndexPage() {
                       className="group flex min-h-11 gap-4 py-4 transition-colors hover:bg-white sm:gap-6 sm:px-3"
                     >
                       <span className="w-8 shrink-0 pt-0.5 font-display text-lg font-semibold tabular-nums text-brandred-600">
-                        {svc ? String(svc.n).padStart(2, "0") : ""}
+                        {String(SERVICE_GROUPS.slice(0, gi).reduce((total, group) => total + group.items.length, 0) + ii + 1).padStart(2, "0")}
                       </span>
                       <span className="min-w-0 flex-1">
                         <span className="block font-display text-lg font-semibold text-ink transition-colors group-hover:text-navy sm:text-xl">

@@ -189,3 +189,31 @@ Client requested more images and distinct hero imagery. Thirteen separate AI-gen
 | `public/images/illustrative/inland-cargo-movement.webp` | Inland cargo movement | / (operational summary) |
 
 Documentary photographs remain on About, leadership, China sourcing, Canton Fair, RIIT programmes/events and media pages. Phase pages retain source process graphics. Contact remains focused on direct contact details.
+
+## Indian export-phase illustrations â€” 11 November 2026
+
+Six client-requested, built-in image_gen illustrations support the six phase summaries on `/services/export-handholding`. These are fictional educational scenes, not documentary evidence of PORTMATRIX people, customers or facilities. Each has an illustration caption and descriptive alt text. Existing documentary photographs, source phase graphics and phase step wording are preserved. Exact prompts are recorded in `docs/EXPORT_PHASE_IMAGE_PROMPTS.md`.
+
+| Asset under `public/images/illustrative/export-phases/` | Phase |
+|---|---|
+| `business-setup.png` | Business Setup and Registration |
+| `pre-export-planning.png` | Pre Export Planning |
+| `buyer-negotiation.png` | Buyer Development and Commercial Negotiations |
+| `pre-shipment.png` | Pre Shipment Procedures |
+| `shipment.png` | Shipment Procedures |
+| `post-shipment.png` | Post Shipment and Realisation Procedures |
+
+## Core-service banner completion — 11 November 2026
+
+All 17 core-service destinations now have an image in their PageIntro. Existing mapped illustrations remain in place. Six missing introductory placements were added using existing assets:
+
+| Route | Existing mapped asset | Treatment |
+|---|---|---|
+| /services/export-import-clearance | customs/hotel-supplies-inspection-netherlands-2024.png (p.30) | Full documentary photograph and existing caption |
+| /riit | riit/riit-inauguration-2023-11-14.png (p.68) | Full documentary photograph and existing caption |
+| /china-import-sourcing | china/rahim-iyaz-china-factory-2015.png (p.21) | Full documentary photograph and existing caption, above existing trade-link fact |
+| /services/nri-baggage-clearance | customs/baggage-clearance-airport-signage-uncredited.png (p.58) | Full source photograph; caption explicitly states that airport and photographer are unidentified |
+| /services/aeo | illustrative/customs-compliance.webp | Reused generic customs-workflow illustration; no accreditation claim |
+| /services/eou | illustrative/sez-industrial-campus.webp | Reused generic industrial-campus illustration; no claim about a specific facility or status |
+
+This completion supersedes the earlier single-placement rule for the two reused illustrative assets. All supporting AI scenes receive a visible AI illustration label. No source images, logos or people have been recreated. Source photographs retain their natural proportions on every screen size.

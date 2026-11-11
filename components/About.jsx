@@ -1,4 +1,5 @@
 import Image from "next/image";
+import RahimSignature from "./RahimSignature";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { MD, MISSION_TAGLINE_DISPLAY } from "@/lib/content";
@@ -6,8 +7,7 @@ import { MD, MISSION_TAGLINE_DISPLAY } from "@/lib/content";
 // Homepage summary only. The full company overview lives on /about and the
 // full Managing Director profile on /about/rahim-iyaz.
 // Summary sentences: PDF p.3 ("We also provide …") and p.86 (Target Audience).
-// MD card: name/role and two of the four bullets on PDF p.4.
-const MD_CARD_BULLETS = [MD.bullets[0], MD.bullets[3]];
+// MD profile points supplied and approved by the user.
 
 export default function About() {
   return (
@@ -52,12 +52,13 @@ export default function About() {
             </div>
             <div className="min-w-0 flex-1">
               <p className="kicker text-brandred">Our MD&rsquo;s Profile</p>
-              <p className="mt-2 font-display text-xl font-bold text-ink">{MD.name}</p>
+              <RahimSignature className="mt-2 max-w-[13rem]" sizes="208px" />
               <p className="text-sm text-slatey">{MD.role}</p>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-[15px] leading-relaxed text-ink/80">
-                {MD_CARD_BULLETS.map((b) => (
-                  <li key={b}>{b}</li>
-                ))}
+                <li><strong>F-Card qualified</strong> Customs Broker with International Trade exposure since <strong>1996</strong>.</li>
+                <li>Worked across <strong>East and Southeast Asia (ESEA), Middle East, SAARC Region</strong> markets.</li>
+                <li>Former Risk Mitigation professional with <strong>State Bank of India</strong> Group.</li>
+                <li>Authorised Export Resource Person for <strong>Ministry of MSME, EDII-TN, TNAPEx, TN Cooperative Society, FIEO &amp; Alagappa University</strong>.</li>
               </ul>
               <p className="mt-4">
                 <Link
@@ -65,7 +66,7 @@ export default function About() {
                   className="group inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-navy"
                 >
                   <span className="border-b border-navy/30 pb-0.5 transition-colors group-hover:border-navy">
-                    Full profile of {MD.name}
+                    Full profile
                   </span>
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </Link>

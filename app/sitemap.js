@@ -32,6 +32,7 @@ const ROUTES = [
   { path: "/services/nri-baggage-clearance" },
   { path: "/services/postal-export" },
   { path: "/services/e-commerce-export" },
+  { path: "/services/allied-services" },
   { path: "/riit" },
   { path: "/riit/courses" },
   { path: "/riit/training-events" },

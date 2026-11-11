@@ -1,3 +1,4 @@
+import RahimText from "./RahimText";
 // Shared documentary-photo caption: rendered below the image, never
 // overlaid/truncated. Names, dates and institutions in these captions are
 // trust evidence — they must stay fully legible, not cropped by a gradient
@@ -5,7 +6,7 @@
 export default function ImageCaption({ children, className = "" }) {
   return (
     <p className={`caption mt-3 border-t border-hairline pt-2.5 text-slatey ${className}`}>
-      {children}
+      <RahimText>{children}</RahimText>
     </p>
   );
 }

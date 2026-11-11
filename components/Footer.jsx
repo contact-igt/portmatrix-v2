@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
+import RahimSignature from "./RahimSignature";
 import { SERVICE_GROUPS, CONTACT } from "@/lib/content";
 
 // Static, server-rendered link groups: every page on the site is reachable
@@ -75,7 +76,11 @@ export default function Footer() {
                 {COMPANY.map((l) => (
                   <li key={l.href}>
                     <Link href={l.href} className={linkClass}>
-                      {l.label}
+                      {l.href === "/about/rahim-iyaz" ? (
+                        <span className="my-2 block rounded-sm bg-white px-2 py-1">
+                          <RahimSignature className="w-[10rem]" sizes="160px" />
+                        </span>
+                      ) : l.label}
                     </Link>
                   </li>
                 ))}

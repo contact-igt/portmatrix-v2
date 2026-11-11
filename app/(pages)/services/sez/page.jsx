@@ -33,7 +33,7 @@ export default function SezPage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
-        aside={<IllustrativeFigure image="sez-industrial-campus" className="mx-auto w-full max-w-lg" />}
+        aside={<IllustrativeFigure image="sez" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "SEZ", href: "/services/sez" }]} />}
         kicker={P.tagline}
         title="Special Economic Zone (SEZ) Registration Support"

@@ -49,7 +49,7 @@ export default function ExportHandholdingHub() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
-        aside={<IllustrativeFigure image="trade-documentation" className="mx-auto w-full max-w-lg" />}
+        aside={<IllustrativeFigure image="export-handholding" showCaption={false} className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "Export Handholding", href: "/services/export-handholding" }]} />}
         kicker="Core service"
         title="MSME Export Handholding"
@@ -115,6 +115,7 @@ export default function ExportHandholdingHub() {
                       View phase
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
                     </Link>
+                    <IllustrativeFigure image={`export-phase-${phase.n}`} className="mt-4 max-w-sm" />
                   </div>
                   <ol className="mt-4 grid border-t border-hairline lg:grid-cols-2 lg:gap-x-8 md:mt-0">
                     {phase.steps.map((step, k) => (

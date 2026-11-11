@@ -46,11 +46,11 @@ export const metadata = {
     locale: "en_IN",
     images: [
       {
-        // PortMatrix Logo V6 on white — the Netherlands inspection photo
+        // Client-supplied PortMatrix logo — the Netherlands inspection photo
         // belongs to Export Import Clearance, not the sitewide share card.
-        url: "/images/source/branding/portmatrix-og-v6.png",
-        width: 1200,
-        height: 630,
+        url: "/images/source/branding/PortMatrix_Logo.png",
+        width: 2172,
+        height: 724,
         alt: "PortMatrix",
       },
     ],
@@ -60,7 +60,7 @@ export const metadata = {
     title: "PORTMATRIX — Customs Broking & Export Handholding",
     description:
       "PORTMATRIX is a Customs Broking and End-to-End Export Handholding company. China Import Sourcing since 1974.",
-    images: ["/images/source/branding/portmatrix-og-v6.png"],
+    images: ["/images/source/branding/PortMatrix_Logo.png"],
   },
   robots: {
     index: true,
@@ -70,7 +70,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#2E3192",
+  themeColor: "#013E7F",
   width: "device-width",
   initialScale: 1,
 };

@@ -1,3 +1,4 @@
+import IllustrativeFigure from "@/components/IllustrativeFigure";
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
 import DefinitionBlock from "@/components/DefinitionBlock";
@@ -57,6 +58,7 @@ export default function AeoPage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        aside={<IllustrativeFigure image="aeo" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "AEO", href: "/services/aeo" }]} />}
         kicker={P.tagline}
         title="Authorised Economic Operator (AEO) Certification"

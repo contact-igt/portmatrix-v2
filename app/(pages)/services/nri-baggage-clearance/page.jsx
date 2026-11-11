@@ -1,3 +1,5 @@
+import ServiceBanner from "@/components/ServiceBanner";
+import IllustrativeFigure from "@/components/IllustrativeFigure";
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
 import ReferenceTable from "@/components/ReferenceTable";
@@ -78,6 +80,7 @@ export default function NriBaggagePage() {
     <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        aside={<IllustrativeFigure image="nri-baggage-clearance" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "NRI Baggage Clearance", href: "/services/nri-baggage-clearance" }]} />}
         kicker={P.tagline}
         title="NRI Baggage Clearance"
@@ -131,6 +134,15 @@ export default function NriBaggagePage() {
           {/* Channels */}
           <section className="mt-14" aria-labelledby="channels">
             <h2 id="channels" className={h2Cls}>Customs channels: Green and Red</h2>
+            <div className="mt-6">
+              <ServiceBanner image={{
+                src: "/images/source/customs/baggage-clearance-airport-signage-uncredited.png",
+                width: 1354,
+                height: 493,
+                alt: "Airport customs Green Channel and Red Channel signage",
+                caption: "Airport customs channels — Source PDF p.58; airport and photographer not identified.",
+              }} />
+            </div>
             <p className={`mt-3 ${proseCls}`}>{P.channels.intro}</p>
             <dl className="mt-5 border-t-2 border-ink">
               {P.channels.list.map((c) => (
