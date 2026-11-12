@@ -22,7 +22,7 @@ function findService(href) {
 
 export default function ServicesIndexPage() {
   return (
-    <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
+    <div className="mx-auto max-w-7xl px-5 pb-14 pt-6 sm:px-8 sm:pb-20 sm:pt-8">
       {/* Intro: built from PDF p.3 (supports exporters and importers with
           Customs, DGFT and international trade procedures) and the Core
           Services list on pp.4–7. No new facts. */}

@@ -38,14 +38,14 @@ export default function RiitPage() {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
+    <div className="mx-auto max-w-7xl px-5 pb-14 pt-6 sm:px-8 sm:pb-20 sm:pt-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* Institutional masthead: client-supplied RIIT mark,
           then the page intro, closed by a heavy rule. */}
       <header className="border-b-2 border-navy pb-10">
         <PageIntro
-          aside={<Image src="/images/source/branding/reginal-institute.png" width={512} height={362} alt="Regional Institute of International Trade (RIIT) logo" sizes="(min-width: 1024px) 512px, 100vw" className="mx-auto h-auto w-full max-w-lg rounded-xl" />}
+          aside={<Image src="/images/source/branding/reginal-institute.png" width={512} height={362} alt="Regional Institute of International Trade (RIIT) logo" sizes="(min-width: 640px) 352px, 90vw" className="mx-auto h-auto w-full max-w-[22rem] rounded-xl" />}
           breadcrumb={<Breadcrumb items={[{ label: "RIIT", href: "/riit" }]} />}
           kicker="Allied concern of PORTMATRIX"
           title="Regional Institute of International Trade (RIIT)"

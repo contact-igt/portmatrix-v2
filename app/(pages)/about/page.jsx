@@ -126,7 +126,7 @@ const MD_FACTS = [
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
+    <div className="mx-auto max-w-7xl px-5 pb-14 pt-6 sm:px-8 sm:pb-20 sm:pt-8">
       {/* 1 — hero: p.3 defining sentence + one decorative (non-documentary) visual */}
       <PageIntro
         breadcrumb={<Breadcrumb items={[{ label: "About", href: "/about" }]} />}

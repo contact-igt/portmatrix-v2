@@ -65,7 +65,7 @@ const FAQS = [
 
 export default function CantonFairPage() {
   return (
-    <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
+    <div className="mx-auto max-w-7xl px-5 pb-14 pt-6 sm:px-8 sm:pb-20 sm:pt-8">
       <PageIntro
         breadcrumb={
           <Breadcrumb items={[{ label: "China Import Sourcing", href: "/china-import-sourcing" }, { label: "Canton Fair", href: "/china-import-sourcing/canton-fair" }]} />

@@ -20,7 +20,7 @@ export default function PageIntro({
   children,
   light = false,
   aside,
-  asideAlign = "end",
+  asideAlign = "start",
   kickerStyle = "auto",
 }) {
   const sentence = kickerStyle === "sentence" || (kickerStyle === "auto" && typeof kicker === "string" && kicker.length > 32);
@@ -32,14 +32,15 @@ export default function PageIntro({
       variants={stagger}
       initial={false}
       animate="show"
-      className={aside ? `grid gap-x-12 gap-y-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] ${asideAlign === "start" ? "lg:items-start" : asideAlign === "center" ? "lg:items-center" : "lg:items-end"}` : "max-w-3xl"}
+      className={aside ? "" : "max-w-3xl"}
     >
-      {breadcrumb && <div className={`-mb-1 ${aside ? "lg:col-span-2" : ""}`}>{breadcrumb}</div>}
+      {breadcrumb && <div className="mb-5 sm:mb-6">{breadcrumb}</div>}
+      <div className={aside ? "grid items-start gap-7 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:gap-10" : ""}>
       <div className="min-w-0 max-w-3xl">
         {kicker && (
           <motion.p
             variants={fadeUp}
-            className={`${sentence ? "kicker-sentence" : "kicker"} mb-4 flex items-start gap-3 ${tone}`}
+            className={`${sentence ? "kicker-sentence" : "kicker"} mb-3 flex items-start gap-3 ${tone}`}
           >
             <span className="mt-[0.7em] h-px w-8 shrink-0 bg-current" aria-hidden="true" />
             <span>{kicker}</span>
@@ -51,7 +52,7 @@ export default function PageIntro({
         {intro && (
           <motion.p
             variants={fadeUp}
-            className={`mt-6 max-w-[62ch] text-[1.0625rem] leading-[1.65] sm:text-lg ${light ? "text-white/80" : "text-slatey"}`}
+            className={`mt-4 max-w-[62ch] text-[1.0625rem] leading-[1.65] sm:text-lg ${light ? "text-white/80" : "text-slatey"}`}
           >
             {intro}
           </motion.p>
@@ -59,10 +60,11 @@ export default function PageIntro({
         {children}
       </div>
       {aside && (
-        <motion.div variants={fadeUp} className="min-w-0 lg:pb-1">
+        <motion.div variants={fadeUp} className={`mx-auto w-full min-w-0 max-w-sm lg:mr-0 lg:max-w-[25rem] ${asideAlign === "center" ? "lg:self-center" : asideAlign === "end" ? "lg:self-end" : ""}`}>
           {aside}
         </motion.div>
       )}
+      </div>
     </motion.div>
   );
 }
