@@ -1,7 +1,7 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, FileText } from "lucide-react";
 import RelatedServices from "@/components/RelatedServices";
 import { MEDIA } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
@@ -78,7 +78,7 @@ export default function MediaPage() {
             </p>
           </div>
           <figure>
-            <a href={scan.src} target="_blank" rel="noopener" className="block" aria-label={`${scan.alt} — open full size`}>
+            <a href={`${scan.pdfHref}#page=2`} target="_blank" rel="noopener" className="block" aria-label={`${scan.alt} — read article PDF`}>
               <Image
                 src={scan.src}
                 unoptimized
@@ -91,8 +91,10 @@ export default function MediaPage() {
             </a>
             <figcaption className="mt-3 text-sm leading-relaxed text-slatey">
               {scan.caption}
-              <a href={scan.src} target="_blank" rel="noopener" className="ml-2 inline-flex min-h-11 items-center font-medium text-navy underline underline-offset-2">
-                Open full size
+              <a href={`${scan.pdfHref}#page=2`} target="_blank" rel="noopener noreferrer" className="ml-2 inline-flex min-h-11 items-center gap-2 font-medium text-navy underline underline-offset-2">
+                <FileText className="h-4 w-4" aria-hidden="true" />
+                Read full article (PDF)
+                <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
               </a>
             </figcaption>
           </figure>

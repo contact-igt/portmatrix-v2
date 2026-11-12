@@ -347,7 +347,7 @@ ESLint was not installed or run, per instruction.
 
 1. **Contact email** — source PDF (p.87) renders it as `md.portmatrix.in` with no `@`. Current homepage displays this exact raw string, non-clickable, with a "(as published — pending confirmation)" note. Not resolved, not guessed.
 2. **MD credential inconsistency** — the source itself renders the MD's IIFT-related qualification two different ways: `PPIBAMI (IIFT), CBLR F-Card` (PDF p.4, used on the homepage) vs. `FTP-IBAMI (IIFT), F-Card Qualified` (PDF p.60 infographic). Homepage uses the p.4 wording; the discrepancy is documented in a code comment, not silently reconciled.
-3. **Primary phone number** — `+91 44 4851 7879` (used on the pre-M1 legacy site) does not appear anywhere in the approved source document. It has been correctly excluded from the current homepage in favor of the source-verified `+91 935 935 2345 / 95857 90909`. Flagged here only to confirm this exclusion remains intentional going into M2.
+3. **Primary phone number** — `+91 44 4851 7879` (used on the pre-M1 legacy site) does not appear anywhere in the approved source document. It has been correctly excluded from the current homepage in favor of the source-verified `935 935 2345 / 95857 90909`. Flagged here only to confirm this exclusion remains intentional going into M2.
 
 ---
 

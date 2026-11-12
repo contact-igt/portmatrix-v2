@@ -173,3 +173,75 @@
  ✓ Compiled in 1315ms (1294 modules)
  ✓ Compiled in 1558ms (1294 modules)
  ✓ Compiled in 2.1s (1294 modules)
+ ○ Compiling /icon.png ...
+ ✓ Compiled /icon.png in 879ms (725 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 1142ms
+ ○ Compiling /services/export-handholding ...
+ ✓ Compiled /services/export-handholding in 629ms (738 modules)
+ ○ Compiling /services/licensed-customs-broker ...
+ ✓ Compiled /services/licensed-customs-broker in 517ms (744 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 95ms
+ ✓ Compiled /services/freight-forwarding-logistics in 433ms (746 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 77ms
+ ✓ Compiled /services/msme-insurance in 327ms (750 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 81ms
+ ✓ Compiled /services/nri-baggage-clearance in 435ms (753 modules)
+ ✓ Compiled /services/allied-services in 367ms (756 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 92ms
+ ○ Compiling /riit ...
+ ✓ Compiled /riit in 537ms (758 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 68ms
+ GET /riit 200 in 307ms
+ GET /icon.png?1181998c4c7bb509 200 in 36ms
+ ✓ Compiled /china-import-sourcing in 461ms (768 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 73ms
+ ✓ Compiled /services/postal-export in 396ms (733 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 89ms
+ ✓ Compiled /services/e-commerce-export in 383ms (733 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 77ms
+ ✓ Compiled /services in 417ms (735 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 72ms
+ ✓ Compiled /services/export-handholding in 323ms (747 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 73ms
+ ✓ Compiled /services/licensed-customs-broker in 406ms (748 modules)
+ ✓ Compiled /services/export-import-clearance in 408ms (751 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 74ms
+ ✓ Compiled /services/freight-forwarding-logistics in 381ms (750 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 81ms
+ GET /icon.png?1181998c4c7bb509 200 in 39ms
+ GET /icon.png?1181998c4c7bb509 200 in 41ms
+ GET /icon.png?1181998c4c7bb509 200 in 38ms
+ ✓ Compiled /services/moowr in 444ms (754 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 83ms
+ ○ Compiling /services/advance-authorisation ...
+ ✓ Compiled /services/advance-authorisation in 573ms (760 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 87ms
+ ✓ Compiled /services/epcg in 432ms (766 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 69ms
+ ○ Compiling /services/sez ...
+ ✓ Compiled /services/sez in 564ms (769 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 111ms
+ GET /icon.png?1181998c4c7bb509 200 in 43ms
+ ✓ Compiled /services/ftwz in 483ms (773 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 81ms
+ ✓ Compiled /services/eou in 487ms (775 modules)
+ ✓ Compiled /services/msme-insurance in 372ms (765 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 94ms
+ ✓ Compiled /services/nri-baggage-clearance in 428ms (770 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 83ms
+ ✓ Compiled /services/allied-services in 487ms (768 modules)
+ ○ Compiling /about ...
+ ✓ Compiled /about in 680ms (782 modules)
+ ✓ Compiled /about/rahim-iyaz in 491ms (771 modules)
+ GET /icon.png?1181998c4c7bb509 200 in 84ms
+ ✓ Compiled in 8.4s (1277 modules)
+ ✓ Compiled in 3.6s (1291 modules)
+ ✓ Compiled in 1135ms (1291 modules)
+ ✓ Compiled in 2s (599 modules)
+ ✓ Compiled in 9.8s (1291 modules)
+ ✓ Compiled in 13.7s (1291 modules)
+ ✓ Compiled in 1633ms (1291 modules)
+ ✓ Compiled in 4.2s (599 modules)
+ ✓ Compiled in 1315ms (599 modules)
+ ✓ Compiled in 6.9s (599 modules)
+ ✓ Compiled in 6.1s (599 modules)
