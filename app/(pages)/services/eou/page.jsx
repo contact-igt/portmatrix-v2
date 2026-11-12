@@ -38,6 +38,7 @@ export default function EouPage() {
       {/* No separate intro: the source's cover statement is the definition,
           shown once in the definition block below. */}
       <PageIntro
+        asideAlign="center"
         aside={<IllustrativeFigure image="eou" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "EOU", href: "/services/eou" }]} />}
         kicker={P.tagline}

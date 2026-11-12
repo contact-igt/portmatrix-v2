@@ -129,7 +129,7 @@ export function RuledList({ items, className = "" }) {
 // The one callout a page is allowed. Brand-red rule, white ground.
 export function Callout({ id, title, children, className = "" }) {
   return (
-    <section aria-labelledby={id} className={`border-l-4 border-brandred bg-white py-6 pl-6 pr-5 sm:py-8 sm:pl-8 sm:pr-8 ${className}`}>
+    <section aria-labelledby={id} className={`rounded-xl border-l-4 border-brandred bg-white py-6 pl-6 pr-5 sm:py-8 sm:pl-8 sm:pr-8 ${className}`}>
       {title && (
         <h2 id={id} className="h3 scroll-mt-24 text-ink">
           {title}

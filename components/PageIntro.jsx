@@ -17,8 +17,10 @@ export default function PageIntro({
   kicker,
   title,
   intro,
+  children,
   light = false,
   aside,
+  asideAlign = "end",
   kickerStyle = "auto",
 }) {
   const sentence = kickerStyle === "sentence" || (kickerStyle === "auto" && typeof kicker === "string" && kicker.length > 32);
@@ -30,10 +32,10 @@ export default function PageIntro({
       variants={stagger}
       initial={false}
       animate="show"
-      className={aside ? "grid gap-x-12 gap-y-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:items-end" : "max-w-3xl"}
+      className={aside ? `grid gap-x-12 gap-y-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] ${asideAlign === "start" ? "lg:items-start" : asideAlign === "center" ? "lg:items-center" : "lg:items-end"}` : "max-w-3xl"}
     >
       {breadcrumb && <div className={`-mb-1 ${aside ? "lg:col-span-2" : ""}`}>{breadcrumb}</div>}
-      <div className="max-w-3xl">
+      <div className="min-w-0 max-w-3xl">
         {kicker && (
           <motion.p
             variants={fadeUp}
@@ -54,6 +56,7 @@ export default function PageIntro({
             {intro}
           </motion.p>
         )}
+        {children}
       </div>
       {aside && (
         <motion.div variants={fadeUp} className="min-w-0 lg:pb-1">

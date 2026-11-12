@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, ArrowRight, ChevronDown } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
 import Logo from "./Logo";
-import { NAV, SERVICE_GROUPS, SERVICES, CONTACT } from "@/lib/content";
+import { NAV, SERVICE_GROUPS, SERVICES } from "@/lib/content";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -177,13 +177,6 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 xl:flex">
-          <a
-            href={CONTACT.phoneHref}
-            className="hidden min-h-11 items-center gap-2 whitespace-nowrap text-sm font-medium text-ink/70 transition-colors hover:text-navy min-[1440px]:flex"
-          >
-            <Phone className="h-4 w-4" />
-            {CONTACT.phoneDisplay}
-          </a>
           <Link
             href="/contact"
             className="group flex min-h-11 items-center gap-1.5 whitespace-nowrap rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy-700"
@@ -292,12 +285,6 @@ export default function Header() {
               </nav>
 
               <div className="mt-auto space-y-3 border-t border-hairline pt-6">
-                <a
-                  href={CONTACT.phoneHref}
-                  className="flex min-h-11 items-center gap-2 text-[0.9375rem] font-medium text-slatey"
-                >
-                  <Phone className="h-4 w-4 text-navy" /> {CONTACT.phoneDisplay}
-                </a>
                 <Link
                   href="/contact"
                   onClick={closeAll}

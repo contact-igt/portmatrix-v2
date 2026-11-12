@@ -132,6 +132,7 @@ export default function ChinaImportSourcingPage() {
         breadcrumb={<Breadcrumb items={[{ label: "China Import Sourcing", href: "/china-import-sourcing" }]} />}
         kicker="The Gateway to China Trade"
         title="China Import Sourcing"
+        asideAlign="start"
         intro={P.serviceIntro}
         aside={
           <div>
@@ -190,7 +191,7 @@ export default function ChinaImportSourcingPage() {
               height={history.height}
               priority
               sizes="(min-width: 1280px) 700px, (min-width: 1024px) 55vw, 100vw"
-              className="h-auto w-full border border-hairline bg-white"
+              className="h-auto w-full rounded-xl border border-hairline bg-white"
             />
             <figcaption className="caption mt-3 max-w-2xl leading-relaxed text-slatey">{P.founderPhotoCaption}</figcaption>
           </figure>
@@ -228,7 +229,7 @@ export default function ChinaImportSourcingPage() {
               width={factory.width}
               height={factory.height}
               sizes="(min-width: 1024px) 440px, 100vw"
-              className="h-auto w-full border border-hairline bg-white"
+              className="h-auto w-full rounded-xl border border-hairline bg-white"
             />
             <figcaption className="caption mt-3 leading-relaxed text-slatey"><RahimText>{P.factoryPhotoCaption}</RahimText></figcaption>
           </figure>

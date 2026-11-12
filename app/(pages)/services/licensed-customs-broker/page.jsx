@@ -32,6 +32,7 @@ export default function LicensedCustomsBrokerPage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        asideAlign="center"
         aside={<IllustrativeFigure image="licensed-customs-broker" showCaption={false} className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "Licensed Customs Broker", href: "/services/licensed-customs-broker" }]} />}
         kicker={CUSTOMS_BROKER_PAGE.tagline}
@@ -49,7 +50,7 @@ export default function LicensedCustomsBrokerPage() {
       />
 
       {/* Regulation 2(d) as a quoted definition — this page's single tinted band */}
-      <section className="-mx-5 mt-14 bg-navy-50/60 px-5 py-10 sm:-mx-8 sm:px-8 sm:py-12" aria-labelledby="definition">
+      <section className="-mx-5 mt-14 rounded-2xl bg-navy-50/60 px-5 py-10 sm:-mx-8 sm:px-8 sm:py-12" aria-labelledby="definition">
         <div className="max-w-3xl">
           <h2 id="definition" className="h3 text-ink">Customs Broker: the Regulation 2(d) definition</h2>
           <blockquote className="relative mt-6 border-l-[3px] border-brandred pl-6 sm:pl-8">

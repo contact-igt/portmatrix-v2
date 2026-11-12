@@ -28,7 +28,7 @@ export default function Credibility() {
 
         {MOU && (
           <figure>
-            <div className="relative aspect-[3/2] w-full overflow-hidden border border-hairline bg-white">
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl border border-hairline bg-white">
               <Image src={MOU.src} alt={MOU.alt} fill sizes="(min-width: 1024px) 600px, 100vw" className="object-cover" />
             </div>
             <figcaption className="mt-3 text-sm leading-snug text-slatey">{MOU.caption}</figcaption>

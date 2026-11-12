@@ -50,6 +50,7 @@ export default function FreightForwardingPage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        asideAlign="center"
         aside={<IllustrativeFigure image="freight-forwarding-logistics" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "Freight Forwarding & Logistics", href: "/services/freight-forwarding-logistics" }]} />}
         kicker={P.tagline}
@@ -101,7 +102,7 @@ export default function FreightForwardingPage() {
       </section>
 
       {/* Workflow line: horizontal from xl, the page's single tinted band */}
-      <section className="-mx-5 mt-14 bg-navy-50/60 px-5 py-12 sm:-mx-8 sm:px-8" aria-labelledby="workflow">
+      <section className="-mx-5 mt-14 rounded-2xl bg-navy-50/60 px-5 py-12 sm:-mx-8 sm:px-8" aria-labelledby="workflow">
         <h2 id="workflow" className="h3 text-ink">Freight Forwarding Workflow</h2>
         <ol className="mt-8 grid gap-x-6 gap-y-0 sm:grid-cols-2 lg:grid-cols-4 lg:gap-y-8 xl:grid-cols-8 xl:gap-x-4">
           {P.workflow.map((step, i) => (

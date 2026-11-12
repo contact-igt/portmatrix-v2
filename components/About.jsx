@@ -13,14 +13,17 @@ export default function About() {
   return (
     <section id="about" className="relative scroll-mt-20 bg-white py-14 sm:py-20 lg:py-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <h2 className="h2 max-w-2xl text-ink">About PORTMATRIX</h2>
-        <p className="mt-3 font-display text-lg font-semibold text-navy">{MISSION_TAGLINE_DISPLAY}</p>
-
-        <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,31.25rem)] lg:gap-16">
-          <div>
-            <p className="max-w-2xl text-base leading-relaxed text-slatey">
+        <div className="grid items-start gap-10 border-t-2 border-navy pt-7 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-12">
+          <div className="min-w-0">
+            <p className="kicker text-brandred">Company &amp; leadership</p>
+            <h2 className="h2 mt-3 max-w-2xl text-ink">About PORTMATRIX</h2>
+            <p className="mt-3 font-display text-lg font-semibold text-navy">{MISSION_TAGLINE_DISPLAY}</p>
+            <p className="mt-7 max-w-2xl text-base leading-relaxed text-slatey">
               PORTMATRIX also provides DGFT consultancy, Allied Acts inputs, EXIM analytics, market
-              intelligence, RTA/FTA advisory and export packaging guidance. Its target audience is MNC /
+              intelligence, RTA/FTA advisory and export packaging guidance.
+            </p>
+            <p className="mt-5 max-w-2xl border-l-2 border-brandred pl-5 text-base leading-relaxed text-slatey">
+              Its target audience is MNC /
               corporate clientele, MSME manufacturers, and merchant exporters and importers.
             </p>
             <p className="mt-6">
@@ -36,31 +39,34 @@ export default function About() {
             </p>
           </div>
 
-          {/* MD card — compact; links to the full profile */}
-          <div className="flex flex-col gap-6 border-t-2 border-navy pt-5 min-[769px]:flex-row min-[769px]:items-start min-[769px]:gap-7">
+          {/* Portrait and identity above a full-width profile summary. */}
+          <div className="grid min-w-0 gap-x-6 gap-y-6 rounded-2xl bg-paper p-5 sm:grid-cols-[10rem_minmax(0,1fr)] sm:p-7">
             {/* Natural 853x1280 source portrait: no crop, no forced box. */}
-            <div className="w-full max-w-[13.75rem] shrink-0 min-[769px]:w-[12.5rem]">
+            <div className="w-full max-w-[10rem]">
               <Image
                 src={MD.portrait.src}
                 alt={MD.portrait.alt}
                 width={MD.portrait.width}
                 height={MD.portrait.height}
-                sizes="(min-width: 769px) 200px, 220px"
+                sizes="160px"
+                unoptimized
                 quality={90}
-                className="h-auto w-full rounded-md"
+                className="h-auto w-full rounded-xl"
               />
             </div>
             <div className="min-w-0 flex-1">
               <p className="kicker text-brandred">Our MD&rsquo;s Profile</p>
-              <RahimSignature className="mt-2 max-w-[13rem]" sizes="208px" />
-              <p className="text-sm text-slatey">{MD.role}</p>
-              <ul className="mt-3 list-disc space-y-2 pl-5 text-[15px] leading-relaxed text-ink/80">
+              <RahimSignature className="mt-3 max-w-[18rem]" sizes="(max-width: 639px) calc(100vw - 80px), 288px" />
+              <p className="mt-4 text-sm font-medium leading-relaxed text-ink">{MD.qualifications}</p>
+              <p className="mt-2 text-sm text-slatey">{MD.role}</p>
+            </div>
+              <ul className="grid gap-5 border-t border-hairline pt-6 text-sm leading-relaxed text-ink/80 sm:col-span-2 sm:grid-cols-2 [&>li]:border-l [&>li]:border-navy/20 [&>li]:pl-4">
                 <li><strong>F-Card qualified</strong> Customs Broker with International Trade exposure since <strong>1996</strong>.</li>
                 <li>Worked across <strong>East and Southeast Asia (ESEA), Middle East, SAARC Region</strong> markets.</li>
                 <li>Former Risk Mitigation professional with <strong>State Bank of India</strong> Group.</li>
                 <li>Authorised Export Resource Person for <strong>Ministry of MSME, EDII-TN, TNAPEx, TN Cooperative Society, FIEO &amp; Alagappa University</strong>.</li>
               </ul>
-              <p className="mt-4">
+              <p className="sm:col-span-2">
                 <Link
                   href="/about/rahim-iyaz"
                   className="group inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-navy"
@@ -71,7 +77,6 @@ export default function About() {
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </Link>
               </p>
-            </div>
           </div>
         </div>
       </div>

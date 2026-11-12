@@ -14,7 +14,7 @@ export default function IllustrativeFigure({ image, className = "", showCaption 
         width={asset.width ?? 1536}
         height={asset.height ?? 1024}
         sizes="(min-width: 1280px) 480px, (min-width: 1024px) 40vw, (min-width: 640px) 60vw, 100vw"
-        className="h-auto w-full border border-hairline object-cover"
+        className="h-auto w-full rounded-xl border border-hairline object-cover"
       />
       {showCaption && <figcaption className="caption mt-3 border-t border-hairline pt-2.5 text-slatey">
         {asset.caption.startsWith("AI illustration") ? asset.caption : `AI illustration · ${asset.caption}`}

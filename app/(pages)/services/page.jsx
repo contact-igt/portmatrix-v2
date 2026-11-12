@@ -27,6 +27,7 @@ export default function ServicesIndexPage() {
           Customs, DGFT and international trade procedures) and the Core
           Services list on pp.4–7. No new facts. */}
       <PageIntro
+        asideAlign="center"
         aside={<IllustrativeFigure image="trade-services-overview" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }]} />}
         kicker={`${SERVICES.length} core services`}
@@ -75,7 +76,7 @@ export default function ServicesIndexPage() {
 
       {/* PDF p.86 — Target Audience and Key Strengths, verbatim lists.
           This is the page's single tinted band. */}
-      <div className="-mx-5 mt-14 bg-navy-50/60 px-5 py-12 sm:-mx-8 sm:px-8 sm:py-14">
+      <div className="-mx-5 mt-14 rounded-2xl bg-navy-50/60 px-5 py-12 sm:-mx-8 sm:px-8 sm:py-14">
         <div className="grid gap-10 md:grid-cols-2 md:gap-16">
           <section aria-labelledby="who-we-serve">
             <h2 id="who-we-serve" className="h3 text-ink">Who we serve</h2>

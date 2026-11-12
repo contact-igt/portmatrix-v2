@@ -1,0 +1,1073 @@
+[
+  {
+    "route": "",
+    "width": 1440,
+    "title": "Core Services",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 208,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 260.046875,
+      "w": 660.171875,
+      "h": 239.359375
+    }
+  },
+  {
+    "route": "advance-authorisation",
+    "width": 1440,
+    "title": "Advance Authorisation Scheme",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 208,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 252.765625,
+      "w": 660.171875,
+      "h": 253.9375
+    }
+  },
+  {
+    "route": "aeo",
+    "width": 1440,
+    "title": "Authorised Economic Operator (AEO) Certification",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 225.46875,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 208,
+      "w": 660.171875,
+      "h": 378.40625
+    }
+  },
+  {
+    "route": "allied-services",
+    "width": 1440,
+    "title": "Allied Services",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 208,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 288.046875,
+      "w": 660.171875,
+      "h": 183.359375
+    }
+  },
+  {
+    "route": "e-commerce-export",
+    "width": 1440,
+    "title": "E-Commerce Export",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 208,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 274.046875,
+      "w": 660.171875,
+      "h": 211.359375
+    }
+  },
+  {
+    "route": "eou",
+    "width": 1440,
+    "title": "Export Oriented Unit (EOU) Registration Support",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 208,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 259.578125,
+      "w": 660.171875,
+      "h": 240.296875
+    }
+  },
+  {
+    "route": "epcg",
+    "width": 1440,
+    "title": "Export Promotion Capital Goods (EPCG) Scheme",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 211.46875,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 208,
+      "w": 660.171875,
+      "h": 350.40625
+    }
+  },
+  {
+    "route": "export-handholding",
+    "width": 1440,
+    "title": "MSME Export Handholding",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 208,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 253.8125,
+      "w": 660.171875,
+      "h": 251.828125
+    }
+  },
+  {
+    "route": "export-import-clearance",
+    "width": 1440,
+    "title": "Export-Import Clearance",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 208,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 210.765625,
+      "w": 660.171875,
+      "h": 337.9375
+    }
+  },
+  {
+    "route": "freight-forwarding-logistics",
+    "width": 1440,
+    "title": "Freight Forwarding & Logistics",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 208,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 224.765625,
+      "w": 660.171875,
+      "h": 309.9375
+    }
+  },
+  {
+    "route": "ftwz",
+    "width": 1440,
+    "title": "Free Trade Warehousing Zone (FTWZ)",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 210.40625,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 208,
+      "w": 660.171875,
+      "h": 348.296875
+    }
+  },
+  {
+    "route": "licensed-customs-broker",
+    "width": 1440,
+    "title": "Licensed Customs Broker",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 208,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 238.765625,
+      "w": 660.171875,
+      "h": 281.9375
+    }
+  },
+  {
+    "route": "moowr",
+    "width": 1440,
+    "title": "MOOWR Scheme (Section 65 Warehousing Unit)",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 225.46875,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 208,
+      "w": 660.171875,
+      "h": 378.40625
+    }
+  },
+  {
+    "route": "msme-insurance",
+    "width": 1440,
+    "title": "MSME Insurance Package",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 208,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 253.8125,
+      "w": 660.171875,
+      "h": 251.828125
+    }
+  },
+  {
+    "route": "nri-baggage-clearance",
+    "width": 1440,
+    "title": "NRI Baggage Clearance",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 811.8125,
+        "y": 237.796875,
+        "w": 452.171875,
+        "h": 302.34375
+      }
+    },
+    "text": {
+      "x": 176,
+      "y": 208,
+      "w": 587.8125,
+      "h": 365.9375
+    }
+  },
+  {
+    "route": "postal-export",
+    "width": 1440,
+    "title": "Postal Export Aggregator",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 208,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 218.1875,
+      "w": 660.171875,
+      "h": 323.078125
+    }
+  },
+  {
+    "route": "sez",
+    "width": 1440,
+    "title": "Special Economic Zone (SEZ) Registration Support",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 820.171875,
+        "y": 224.40625,
+        "w": 507.828125,
+        "h": 339.46875
+      }
+    },
+    "text": {
+      "x": 112,
+      "y": 208,
+      "w": 660.171875,
+      "h": 376.296875
+    }
+  },
+  {
+    "route": "",
+    "width": 768,
+    "title": "Core Services",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 451.546875,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 211.546875
+    }
+  },
+  {
+    "route": "advance-authorisation",
+    "width": 768,
+    "title": "Advance Authorisation Scheme",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 397.65625,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 157.65625
+    }
+  },
+  {
+    "route": "aeo",
+    "width": 768,
+    "title": "Authorised Economic Operator (AEO) Certification",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 494.3125,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 254.3125
+    }
+  },
+  {
+    "route": "allied-services",
+    "width": 768,
+    "title": "Allied Services",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 395.546875,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 155.546875
+    }
+  },
+  {
+    "route": "e-commerce-export",
+    "width": 768,
+    "title": "E-Commerce Export",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 423.546875,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 183.546875
+    }
+  },
+  {
+    "route": "eou",
+    "width": 768,
+    "title": "Export Oriented Unit (EOU) Registration Support",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 356.203125,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 116.203125
+    }
+  },
+  {
+    "route": "epcg",
+    "width": 768,
+    "title": "Export Promotion Capital Goods (EPCG) Scheme",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 466.3125,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 226.3125
+    }
+  },
+  {
+    "route": "export-handholding",
+    "width": 768,
+    "title": "MSME Export Handholding",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 395.546875,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 155.546875
+    }
+  },
+  {
+    "route": "export-import-clearance",
+    "width": 768,
+    "title": "Export-Import Clearance",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 453.65625,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 213.65625
+    }
+  },
+  {
+    "route": "freight-forwarding-logistics",
+    "width": 768,
+    "title": "Freight Forwarding & Logistics",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 425.65625,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 185.65625
+    }
+  },
+  {
+    "route": "ftwz",
+    "width": 768,
+    "title": "Free Trade Warehousing Zone (FTWZ)",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 423.546875,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 183.546875
+    }
+  },
+  {
+    "route": "licensed-customs-broker",
+    "width": 768,
+    "title": "Licensed Customs Broker",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 425.65625,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 185.65625
+    }
+  },
+  {
+    "route": "moowr",
+    "width": 768,
+    "title": "MOOWR Scheme (Section 65 Warehousing Unit)",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 494.3125,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 254.3125
+    }
+  },
+  {
+    "route": "msme-insurance",
+    "width": 768,
+    "title": "MSME Insurance Package",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 395.546875,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 155.546875
+    }
+  },
+  {
+    "route": "nri-baggage-clearance",
+    "width": 768,
+    "title": "NRI Baggage Clearance",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 481.65625,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 241.65625
+    }
+  },
+  {
+    "route": "postal-export",
+    "width": 768,
+    "title": "Postal Export Aggregator",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 466.796875,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 226.796875
+    }
+  },
+  {
+    "route": "sez",
+    "width": 768,
+    "title": "Special Economic Zone (SEZ) Registration Support",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 128,
+        "y": 464.203125,
+        "w": 512,
+        "h": 342.265625
+      }
+    },
+    "text": {
+      "x": 32,
+      "y": 208,
+      "w": 704,
+      "h": 224.203125
+    }
+  },
+  {
+    "route": "",
+    "width": 390,
+    "title": "Core Services",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 511.875,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 184,
+      "w": 350,
+      "h": 295.875
+    }
+  },
+  {
+    "route": "advance-authorisation",
+    "width": 390,
+    "title": "Advance Authorisation Scheme",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 555.15625,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 228,
+      "w": 350,
+      "h": 295.15625
+    }
+  },
+  {
+    "route": "aeo",
+    "width": 390,
+    "title": "Authorised Economic Operator (AEO) Certification",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 588.25,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 184,
+      "w": 350,
+      "h": 372.25
+    }
+  },
+  {
+    "route": "allied-services",
+    "width": 390,
+    "title": "Allied Services",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 399.6875,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 184,
+      "w": 350,
+      "h": 183.6875
+    }
+  },
+  {
+    "route": "e-commerce-export",
+    "width": 390,
+    "title": "E-Commerce Export",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 455.78125,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 184,
+      "w": 350,
+      "h": 239.78125
+    }
+  },
+  {
+    "route": "eou",
+    "width": 390,
+    "title": "Export Oriented Unit (EOU) Registration Support",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 432.40625,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 184,
+      "w": 350,
+      "h": 216.40625
+    }
+  },
+  {
+    "route": "epcg",
+    "width": 390,
+    "title": "Export Promotion Capital Goods (EPCG) Scheme",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 567.25,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 184,
+      "w": 350,
+      "h": 351.25
+    }
+  },
+  {
+    "route": "export-handholding",
+    "width": 390,
+    "title": "MSME Export Handholding",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 468.390625,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 184,
+      "w": 350,
+      "h": 252.390625
+    }
+  },
+  {
+    "route": "export-import-clearance",
+    "width": 390,
+    "title": "Export-Import Clearance",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 603.6875,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 184,
+      "w": 350,
+      "h": 387.6875
+    }
+  },
+  {
+    "route": "freight-forwarding-logistics",
+    "width": 390,
+    "title": "Freight Forwarding & Logistics",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 598.640625,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 228,
+      "w": 350,
+      "h": 338.640625
+    }
+  },
+  {
+    "route": "ftwz",
+    "width": 390,
+    "title": "Free Trade Warehousing Zone (FTWZ)",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 537.09375,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 184,
+      "w": 350,
+      "h": 321.09375
+    }
+  },
+  {
+    "route": "licensed-customs-broker",
+    "width": 390,
+    "title": "Licensed Customs Broker",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 498.546875,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 184,
+      "w": 350,
+      "h": 282.546875
+    }
+  },
+  {
+    "route": "moowr",
+    "width": 390,
+    "title": "MOOWR Scheme (Section 65 Warehousing Unit)",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 616.296875,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 184,
+      "w": 350,
+      "h": 400.296875
+    }
+  },
+  {
+    "route": "msme-insurance",
+    "width": 390,
+    "title": "MSME Insurance Package",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 440.34375,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 184,
+      "w": 350,
+      "h": 224.34375
+    }
+  },
+  {
+    "route": "nri-baggage-clearance",
+    "width": 390,
+    "title": "NRI Baggage Clearance",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 610.734375,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 184,
+      "w": 350,
+      "h": 394.734375
+    }
+  },
+  {
+    "route": "postal-export",
+    "width": 390,
+    "title": "Postal Export Aggregator",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 588.390625,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 184,
+      "w": 350,
+      "h": 372.390625
+    }
+  },
+  {
+    "route": "sez",
+    "width": 390,
+    "title": "Special Economic Zone (SEZ) Registration Support",
+    "overflow": false,
+    "image": {
+      "loaded": true,
+      "box": {
+        "x": 20,
+        "y": 605.796875,
+        "w": 350,
+        "h": 234.171875
+      }
+    },
+    "text": {
+      "x": 20,
+      "y": 184,
+      "w": 350,
+      "h": 389.796875
+    }
+  }
+]

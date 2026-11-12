@@ -45,7 +45,7 @@ export default function BrandedInfographic({
 
   return (
     <figure className={className}>
-      <div className="overflow-x-auto border border-hairline bg-white">
+      <div className="overflow-x-auto rounded-xl border border-hairline bg-white">
         <div
           className="relative w-full"
           style={{ aspectRatio: `${width} / ${height}`, minWidth: `min(${minWidth}px, ${width}px)` }}

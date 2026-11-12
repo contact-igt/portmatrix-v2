@@ -89,6 +89,7 @@ export default function ExportImportClearancePage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        asideAlign="center"
         aside={<IllustrativeFigure image="export-import-clearance" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "Export Import Clearance", href: "/services/export-import-clearance" }]} />}
         kicker={P.tagline}
@@ -142,7 +143,7 @@ export default function ExportImportClearancePage() {
         </ol>
       </section>
 
-      {/* Import example (the page's single callout) beside genuine operational evidence */}
+      {/* Import example with clearly labelled AI workflow illustrations. */}
       <div className="mt-16 grid gap-10 lg:grid-cols-[1fr_22rem] lg:gap-14 xl:grid-cols-[1fr_26rem]">
         <section aria-labelledby="import-workflow">
           <Callout tone="example" className="!my-0 !max-w-none">
@@ -154,15 +155,14 @@ export default function ExportImportClearancePage() {
 
         <div className="grid content-start gap-8 sm:grid-cols-2 lg:grid-cols-1">
           <EvidenceFigure
-            src="/images/source/customs/hotel-supplies-inspection-netherlands-2024.png"
-            alt="Product inspection of a hotel supplies shipment to the Netherlands, 2024"
-            caption="Product inspection of Hotel supplies shipment to Netherlands in 2024"
+            src="/images/illustrative/import-machinery-inspection.png"
+            alt="AI illustration of a crated machine component with inspection documents and scanner"
+            caption="AI illustration · Machinery inspection and document review"
             sizes="(min-width: 1280px) 416px, (min-width: 1024px) 352px, (min-width: 640px) 45vw, 100vw"
           />
           <EvidenceFigure
-            src="/images/source/customs/export-shipment-inspection-usa-2025.png"
-            alt="Inspection of an export shipment to the USA, 2025"
-            caption="Inspection of export shipment to USA in 2025"
+            src="/images/illustrative/import-cargo-delivery.png"
+            alt="AI illustration of a freight truck and palletised cartons at a warehouse loading dock"
             sizes="(min-width: 1280px) 416px, (min-width: 1024px) 352px, (min-width: 640px) 45vw, 100vw"
           />
         </div>

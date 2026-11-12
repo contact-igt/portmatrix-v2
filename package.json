@@ -2,7 +2,7 @@
   "name": "portmatrix-website",
   "version": "1.0.0",
   "private": true,
-  "description": "PORTMATRIX Logistics — Excellence in Compliance. Official website homepage.",
+  "description": "PORTMATRIX Logistics — Ease of doing EXIM. Official website homepage.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

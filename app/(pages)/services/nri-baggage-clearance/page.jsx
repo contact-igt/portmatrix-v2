@@ -80,6 +80,7 @@ export default function NriBaggagePage() {
     <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        asideAlign="center"
         aside={<IllustrativeFigure image="nri-baggage-clearance" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "NRI Baggage Clearance", href: "/services/nri-baggage-clearance" }]} />}
         kicker={P.tagline}
@@ -90,7 +91,7 @@ export default function NriBaggagePage() {
       <HowPortmatrixHelps>{P.serviceIntro}</HowPortmatrixHelps>
 
       {/* Headline allowance figures: the page's single tinted band */}
-      <section className="-mx-5 mt-10 bg-navy-50/60 px-5 py-8 sm:-mx-8 sm:px-8" aria-label="Headline allowance figures">
+      <section className="-mx-5 mt-10 rounded-2xl bg-navy-50/60 px-5 py-8 sm:-mx-8 sm:px-8" aria-label="Headline allowance figures">
         <p className="kicker text-slatey">Headline allowance figures</p>
         <div className="mt-4 grid gap-8 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-x-10">
           <div>

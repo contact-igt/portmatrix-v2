@@ -86,7 +86,7 @@ function EventRow({ event, as: Heading = "h3" }) {
       width={event.width}
       height={event.height}
       sizes="(min-width: 1024px) 288px, 100vw"
-      className="h-auto w-full border border-hairline bg-white"
+      className="h-auto w-full rounded-xl border border-hairline bg-white"
     />
   );
   return (
