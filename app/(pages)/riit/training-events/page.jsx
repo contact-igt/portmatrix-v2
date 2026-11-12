@@ -122,7 +122,7 @@ function EventRow({ event, as: Heading = "h3" }) {
 
 export default function TrainingEventsPage() {
   return (
-    <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
+    <div className="mx-auto max-w-6xl px-5 pb-14 pt-6 sm:px-8 sm:pb-20 sm:pt-8">
       <PageIntro
         breadcrumb={<Breadcrumb items={[{ label: "RIIT", href: "/riit" }, { label: "Training Events", href: "/riit/training-events" }]} />}
         kicker={`${TRAINING_EVENTS.length} documented events · 2020–2026`}

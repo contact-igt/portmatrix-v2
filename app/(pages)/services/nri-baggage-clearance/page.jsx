@@ -77,7 +77,7 @@ export default function NriBaggagePage() {
   const jewelleryCondition = "A resident or tourist of Indian origin who has been residing abroad for more than one year.";
 
   return (
-    <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
+    <div className="mx-auto max-w-6xl px-5 pb-14 pt-6 sm:px-8 sm:pb-20 sm:pt-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
         asideAlign="center"

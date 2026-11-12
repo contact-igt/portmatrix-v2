@@ -32,7 +32,7 @@ const YOUTUBE_ID = "K28p2YTy2OI";
 export default function MediaPage() {
   const scan = MEDIA.items[0];
   return (
-    <div className="mx-auto max-w-5xl px-5 py-14 sm:px-8 sm:py-20">
+    <div className="mx-auto max-w-5xl px-5 pb-14 pt-6 sm:px-8 sm:pb-20 sm:pt-8">
       <PageIntro
         breadcrumb={<Breadcrumb items={[{ label: "Media", href: "/media" }]} />}
         kicker="Press & media"
