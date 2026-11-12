@@ -1,4 +1,3 @@
-import RahimText from "./RahimText";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
@@ -36,10 +35,10 @@ export default function Breadcrumb({ items }) {
             <span key={item.href} className="flex items-center">
               {i > 0 && <ChevronRight className="mx-1 h-3.5 w-3.5 shrink-0 text-slatey/70" aria-hidden="true" />}
               {isLast ? (
-                <span className="inline-flex min-h-11 items-center font-medium text-ink" aria-current="page"><RahimText>{item.label}</RahimText></span>
+                <span className="inline-flex min-h-11 items-center font-medium text-ink" aria-current="page">{item.label}</span>
               ) : (
                 <Link href={item.href} className="inline-flex min-h-11 items-center px-1 hover:text-navy hover:underline">
-                  <RahimText>{item.label}</RahimText>
+                  {item.label}
                 </Link>
               )}
             </span>

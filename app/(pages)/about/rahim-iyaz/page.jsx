@@ -79,7 +79,7 @@ export default function RahimIyazPage() {
             <span className="sr-only">{MD.name}</span>
             <RahimSignature className="max-w-[18rem]" sizes="288px" />
           </h1>
-          <p className="mt-5 text-lg leading-relaxed text-ink"><RahimText>{MD_LEAD}</RahimText></p>
+          <p className="mt-5 text-lg leading-relaxed text-ink">{MD_LEAD}</p>
 
           {/* CLIENT_CONFIRMATION_REQUIRED: the source renders this credential two
               ways (p.4: "PPIBAMI (IIFT), CBLR F-Card" vs the p.60 infographic:
