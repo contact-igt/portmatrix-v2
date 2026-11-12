@@ -47,9 +47,9 @@ export default function AlliedServicesPage() {
           className="h-auto max-h-96 w-full object-cover object-top sm:h-full sm:max-h-none"
         />
         <div className="self-center px-6 py-9 sm:p-9 lg:p-12">
-          <p className="text-sm font-medium text-white/75"><RahimText className="rounded bg-white px-1">{MD.name}</RahimText> · {MD.role}</p>
+          <p className="text-sm font-medium text-white/75"><RahimText variant="white">{MD.name}</RahimText> · {MD.role}</p>
           <h2 id="md-appointment" className="mt-3 font-display text-2xl font-bold leading-tight sm:text-3xl">Arrange a meeting with our Managing Director</h2>
-          <p className="mt-4 max-w-lg text-base leading-relaxed text-white/80"><RahimText className="rounded bg-white px-1">{`Discuss your EXIM company setup, compliance or consulting needs with Mr. ${MD.name}.`}</RahimText></p>
+          <p className="mt-4 max-w-lg text-base leading-relaxed text-white/80"><RahimText variant="white">{`Discuss your EXIM company setup, compliance or consulting needs with Mr. ${MD.name}.`}</RahimText></p>
           <p className="mt-3 max-w-lg text-sm leading-relaxed text-white/70">F-Card qualified Customs Broker with experience in foreign trade since 1996.</p>
           <p className="mt-6 text-sm text-white/75">For appointments, call</p>
           <a href="tel:+919444668816" className="mt-1 inline-block text-2xl font-semibold tabular-nums underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">9444 6688 16</a>

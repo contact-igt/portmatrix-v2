@@ -1,6 +1,6 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, FileText } from "lucide-react";
 import { MEDIA } from "@/lib/content";
 
 export default function MediaStrip() {
@@ -36,15 +36,16 @@ export default function MediaStrip() {
           </div>
           <div className="min-w-0 border-t border-hairline pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slatey">In print</h3>
-            <Link href="/media#press-coverage" className="group block">
-              <div className="overflow-hidden rounded-xl border border-hairline bg-paper">
-                <Image src={article.src} alt={article.alt} width={article.width} height={article.height} unoptimized className="h-auto w-full" />
+            <a href={`${article.pdfHref}#page=2`} target="_blank" rel="noopener noreferrer" className="group block rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy" aria-label="Read Nanayam Vikatan article PDF (opens in a new tab)">
+              <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-xl border border-hairline bg-paper p-3 sm:p-4">
+                <Image src={article.src} alt={article.alt} width={article.width} height={article.height} unoptimized sizes="(min-width: 1024px) 384px, (min-width: 640px) 600px, 100vw" className="h-full w-auto max-w-full object-contain shadow-sm transition-transform duration-300 group-hover:scale-[1.02] motion-reduce:transform-none" />
               </div>
               <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-brandred"><time dateTime="2024-02-04">04 February 2024</time></p>
-              <p className="mt-2 font-display text-xl font-semibold text-ink">Nanayam Vikatan</p>
+              <h4 className="mt-2 font-display text-xl font-semibold text-ink">Nanayam Vikatan</h4>
+              <p className="mt-1 text-xs font-medium uppercase tracking-wide text-slatey">Tamil magazine &middot; PDF &middot; {article.pageCount} pages</p>
               <p className="mt-2 text-sm leading-relaxed text-slatey">{article.caption}</p>
-              <span className="mt-3 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-navy group-hover:underline">Read press coverage <ArrowRight className="h-4 w-4" aria-hidden="true" /></span>
-            </Link>
+              <span className="mt-3 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-navy group-hover:underline"><FileText className="h-4 w-4" aria-hidden="true" />Read full article (PDF) <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></span>
+            </a>
           </div>
         </div>
       </div>

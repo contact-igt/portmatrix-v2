@@ -91,14 +91,14 @@ The task instructs: do not resolve these; flag for client confirmation only.
 
 | Field | Current website (`components/ContactCTA.jsx`, `Header.jsx`, `Footer.jsx`) | Approved source (p. 87) | Status |
 |---|---|---|---|
-| Primary phone | **+91 44 4851 7879** (landline, shown in Header, ContactCTA, Footer — the most prominent number on the site) | **Not present anywhere in the source's contact block or anywhere else in the 87-page text.** Source's only listed contact number is "+91 935 935 2345 / 95857 90909" | `CLIENT_CONFIRMATION_REQUIRED` — the site's single most prominent phone number has no basis in the source document at all |
-| Secondary phone | +91 935 935 2345 · 95857 90909 (shown, but secondary to the landline) | +91 935 935 2345 / 95857 90909 | **EXACT** match to source, but the current site treats it as secondary rather than primary |
+| Primary phone | **+91 44 4851 7879** (landline, shown in Header, ContactCTA, Footer — the most prominent number on the site) | **Not present anywhere in the source's contact block or anywhere else in the 87-page text.** Source's only listed contact number is "935 935 2345 / 95857 90909" | `CLIENT_CONFIRMATION_REQUIRED` — the site's single most prominent phone number has no basis in the source document at all |
+| Secondary phone | 935 935 2345 · 95857 90909 (shown, but secondary to the landline) |  935 2345 / 95857 90909 | **EXACT** match to source, but the current site treats it as secondary rather than primary |
 | Email | **info@portmatrix.in** | **"md.portmatrix.in"** (source text as extracted — no `@` symbol; not a well-formed email address as written) | `CLIENT_CONFIRMATION_REQUIRED` — source's own text may contain a typo (missing `@`, e.g. intended as `md@portmatrix.in`), or the intended address may genuinely differ from the current site's `info@portmatrix.in`. **Do not invent or auto-correct this — confirm with the client which is correct.** |
 | Website | www.portmatrix.in | www.portmatrix.in | **EXACT** |
 | Address | "Wavoo Mansion Annex, No. 105-B, I Floor, 58/39 Rajaji Salai, Chennai 600 001, Tamil Nadu" | "Wavoo Mansion Annex - 105-B - I Floor, No. 58/39, Rajaji Salai **North Beach Road**, Chennai: 600 001, Tamil Nadu, India." | **PARTIAL** — same building/unit/pincode, but the source includes "North Beach Road" as an additional street-name qualifier that the current site omits. Low risk, but worth aligning exactly since this is a physical business address used for trust/legitimacy. |
 
 **Summary — items marked `CLIENT_CONFIRMATION_REQUIRED`:**
-1. Whether `+91 44 4851 7879` is a real, currently-active PORTMATRIX number that should be retained (it has zero support in the source document), or should be dropped in favor of the source's `+91 935 935 2345 / 95857 90909`.
+1. Whether `+91 44 4851 7879` is a real, currently-active PORTMATRIX number that should be retained (it has zero support in the source document), or should be dropped in favor of the source's `935 935 2345 / 95857 90909`.
 2. Whether the correct email is `info@portmatrix.in` (current site) or something derived from `md.portmatrix.in` (source) — and if the latter, what the intended address actually is (the source string is not a valid email as written).
 
 ## 8. Footer content (`components/Footer.jsx`)
