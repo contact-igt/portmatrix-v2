@@ -46,7 +46,7 @@ export default function ChinaSourcing() {
 
           <div className="grid content-start gap-8 border-t border-white/15 pt-8 sm:grid-cols-[13rem_minmax(0,1fr)] sm:gap-10 lg:border-t-0 lg:pt-0">
           <figure className="mx-auto w-full max-w-[13rem] sm:mx-0">
-            <div className="relative aspect-[3/4] w-full overflow-hidden">
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl">
               <Image
                 src={CHINA.images.cantonFair.src}
                 alt={CHINA.images.cantonFair.alt}

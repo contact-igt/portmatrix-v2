@@ -49,6 +49,7 @@ export default function ExportHandholdingHub() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        asideAlign="center"
         aside={<IllustrativeFigure image="export-handholding" showCaption={false} className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "Export Handholding", href: "/services/export-handholding" }]} />}
         kicker="Core service"
@@ -78,7 +79,7 @@ export default function ExportHandholdingHub() {
       </section>
 
       {/* The phase spine: one numbered rail, icon nodes joined by a rule. */}
-      <section className="mt-16 border border-hairline bg-white p-6 sm:p-10" aria-labelledby="phases-heading">
+      <section className="mt-16 rounded-2xl border border-hairline bg-white p-6 sm:p-10" aria-labelledby="phases-heading">
         <h2 id="phases-heading" className="h3 scroll-mt-24 text-ink">The six phases of export handholding</h2>
         <ol className="mt-8 sm:mt-10">
           {PHASES.map((phase, i) => {

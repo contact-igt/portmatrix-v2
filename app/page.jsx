@@ -2,10 +2,8 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import About from "@/components/About";
-import Services from "@/components/Services";
 import PriorityServices from "@/components/PriorityServices";
 import ChinaSourcing from "@/components/ChinaSourcing";
-import OperationalProof from "@/components/OperationalProof";
 import Credibility from "@/components/Credibility";
 import MediaStrip from "@/components/MediaStrip";
 import ContactCTA from "@/components/ContactCTA";
@@ -71,10 +69,8 @@ export default function Home() {
         <Hero />
         <TrustBar />
         <About />
-        <Services />
         <PriorityServices />
         <ChinaSourcing />
-        <OperationalProof />
         <Credibility />
         <MediaStrip />
         <ContactCTA />

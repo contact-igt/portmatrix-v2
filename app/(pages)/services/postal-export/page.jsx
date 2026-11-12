@@ -1,4 +1,3 @@
-import ServiceBanner from "@/components/ServiceBanner";
 import IllustrativeFigure from "@/components/IllustrativeFigure";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -7,7 +6,6 @@ import Faq from "@/components/Faq";
 import RelatedServices from "@/components/RelatedServices";
 import { Check } from "lucide-react";
 import { POSTAL_EXPORT_PAGE as P } from "@/lib/individual-export-data";
-import { TRAINING_EVENTS } from "@/lib/riit-data";
 import { buildMetadata } from "@/lib/seo";
 
 // "Aggregator" and the image's "No value limit" are client-confirmation items:
@@ -21,7 +19,6 @@ export const metadata = buildMetadata({
 });
 
 const linkCls = "text-navy underline underline-offset-2 hover:text-brandred";
-const INDIA_POST_PHOTO = TRAINING_EVENTS.find((event) => event.src.endsWith("india-post-training-2024-01-25.png"));
 
 export default function PostalExportPage() {
   const jsonLd = {
@@ -36,18 +33,15 @@ export default function PostalExportPage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        asideAlign="center"
         aside={<IllustrativeFigure image="postal-export" showCaption={false} className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "Postal Export Aggregator", href: "/services/postal-export" }]} />}
         kicker="Foreign Trade Policy 2023"
         title="Postal Export Aggregator"
         intro={P.definition}
-      />
-      <p className="mt-4 max-w-prose text-base leading-relaxed text-ink/85 sm:text-[1.0625rem]">{P.intro}</p>
-
-      <section aria-labelledby="india-post-training" className="mt-12 border-t border-hairline pt-8">
-        <h2 id="india-post-training" className="h3 mb-6 text-ink">India Post training</h2>
-        <ServiceBanner image={INDIA_POST_PHOTO} />
-      </section>
+      >
+        <p className="mt-4 max-w-prose text-base leading-relaxed text-ink/85 sm:text-[1.0625rem]">{P.intro}</p>
+      </PageIntro>
 
       {/* The p.64 postal infographic is intentionally not rendered (India Post marks
           imply endorsement; claims inside it are not in the source text). */}

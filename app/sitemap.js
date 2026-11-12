@@ -37,6 +37,7 @@ const ROUTES = [
   { path: "/riit/courses" },
   { path: "/riit/training-events" },
   { path: "/media" },
+  { path: "/gallery" },
   { path: "/contact" },
 ];
 

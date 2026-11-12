@@ -40,6 +40,7 @@ export default function MsmeInsurancePage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        asideAlign="center"
         aside={<IllustrativeFigure image="msme-insurance" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "MSME Insurance Package", href: "/services/msme-insurance" }]} />}
         kicker={P.tagline}
@@ -123,7 +124,7 @@ export default function MsmeInsurancePage() {
       </div>
 
       {/* Cover by risk: reference look-up, the page's single tinted band */}
-      <section className="-mx-5 mt-14 bg-navy-50/60 px-5 py-12 sm:-mx-8 sm:px-8" aria-labelledby="cover-by-risk">
+      <section className="-mx-5 mt-14 rounded-2xl bg-navy-50/60 px-5 py-12 sm:-mx-8 sm:px-8" aria-labelledby="cover-by-risk">
         <h2 id="cover-by-risk" className="h3 scroll-mt-24 text-ink">Cover by risk</h2>
         <p className="mt-3 max-w-3xl text-base leading-relaxed text-ink/85">
           A quick look-up of what each product above is defined as protecting against. Each product name links to its definition.

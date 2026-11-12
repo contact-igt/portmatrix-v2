@@ -46,7 +46,7 @@ export default function MediaPage() {
       {/* PDF p.83 */}
       <section aria-labelledby="interview-video" className="mt-12 border-t-2 border-navy pt-8">
         <h2 id="interview-video" className="h2 text-ink">Interview video</h2>
-        <div className="relative mt-6 aspect-video w-full max-w-4xl overflow-hidden border border-hairline bg-paper">
+        <div className="relative mt-6 aspect-video w-full max-w-4xl overflow-hidden rounded-xl border border-hairline bg-paper">
           <iframe
             src={`https://www.youtube.com/embed/${YOUTUBE_ID}`}
             title="Interview video on YouTube"
@@ -81,11 +81,12 @@ export default function MediaPage() {
             <a href={scan.src} target="_blank" rel="noopener" className="block" aria-label={`${scan.alt} — open full size`}>
               <Image
                 src={scan.src}
+                unoptimized
                 alt={scan.alt}
                 width={scan.width}
                 height={scan.height}
                 sizes="(min-width: 768px) 384px, 100vw"
-                className="h-auto w-full border border-hairline bg-white"
+                className="h-auto w-full rounded-xl border border-hairline bg-white"
               />
             </a>
             <figcaption className="mt-3 text-sm leading-relaxed text-slatey">

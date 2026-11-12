@@ -40,7 +40,7 @@ export default function ContactPage() {
 
       {/* Phone first, then the registered office, website and email, as
           ruled rows (label | value). No imagery. */}
-      <div className="mt-10 border-t-2 border-navy">
+      <div className="mt-10 overflow-hidden rounded-2xl border border-hairline border-t-2 border-t-navy bg-white px-5 sm:px-8">
         <section aria-labelledby="contact-phone" className="grid gap-3 border-b border-hairline py-8 sm:grid-cols-[11rem_1fr] sm:gap-8">
           <h2 id="contact-phone" className="flex items-center gap-2.5 text-sm font-semibold uppercase tracking-wide text-slatey">
             <Phone className="h-4 w-4 text-navy" aria-hidden="true" />
@@ -98,7 +98,7 @@ export default function ContactPage() {
           </a>
         </section>
 
-        <section aria-labelledby="contact-email" className="grid gap-3 border-b border-hairline py-6 sm:grid-cols-[11rem_1fr] sm:gap-8">
+        <section aria-labelledby="contact-email" className="grid gap-3 py-6 sm:grid-cols-[11rem_1fr] sm:gap-8">
           <h2 id="contact-email" className="flex items-center gap-2.5 text-sm font-semibold uppercase tracking-wide text-slatey">
             <Mail className="h-4 w-4 text-navy" aria-hidden="true" />
             Email

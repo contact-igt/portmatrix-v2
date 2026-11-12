@@ -11,7 +11,7 @@ export default function ServiceBanner({ image }) {
         width={image.width}
         height={image.height}
         sizes="(min-width: 1024px) 40vw, (min-width: 640px) 60vw, 100vw"
-        className="h-auto w-full border border-hairline"
+        className="h-auto w-full rounded-xl border border-hairline"
       />
       <ImageCaption>{image.caption}</ImageCaption>
     </figure>

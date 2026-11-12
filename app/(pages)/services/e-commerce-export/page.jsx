@@ -35,6 +35,7 @@ export default function EcommerceExportPage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        asideAlign="center"
         aside={<IllustrativeFigure image="e-commerce-export" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "E-Commerce Export", href: "/services/e-commerce-export" }]} />}
         kicker="E-Commerce Export Training"
@@ -50,7 +51,7 @@ export default function EcommerceExportPage() {
       />
 
       {/* Process flow leads: horizontal numbered line, the page's single tinted band */}
-      <section className="-mx-5 mt-14 bg-navy-50/60 px-5 py-12 sm:-mx-8 sm:px-8" aria-labelledby="process-flow">
+      <section className="-mx-5 mt-14 rounded-2xl bg-navy-50/60 px-5 py-12 sm:-mx-8 sm:px-8" aria-labelledby="process-flow">
         <h2 id="process-flow" className="h3 text-ink">E-commerce export process flow</h2>
         <ol className="mt-8 grid gap-x-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-y-8">
           {P.processFlow.map((step, i) => (

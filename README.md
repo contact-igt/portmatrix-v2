@@ -4,7 +4,7 @@ A production-ready **Next.js 14 (App Router)** homepage for PORTMATRIX Logistics
 built with **Tailwind CSS**, **Framer Motion** animations, and **lucide-react** icons.
 Fully mobile responsive, with reduced-motion and keyboard-focus support.
 
-> **Excellence in Compliance** — Govt. Licensed Customs Broker, Chennai.
+> **Ease of doing EXIM** — Govt. Licensed Customs Broker, Chennai.
 
 ---
 

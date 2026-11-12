@@ -69,7 +69,7 @@ export default function RahimIyazPage() {
             priority
             quality={90}
             sizes="(min-width: 1024px) 420px, 384px"
-            className="h-auto w-full rounded-md"
+            className="h-auto w-full rounded-xl"
           />
         </div>
 

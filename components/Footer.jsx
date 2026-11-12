@@ -11,6 +11,7 @@ const COMPANY = [
   { label: "China Import Sourcing", href: "/china-import-sourcing" },
   { label: "Canton Fair", href: "/china-import-sourcing/canton-fair" },
   { label: "Media & Press", href: "/media" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
 

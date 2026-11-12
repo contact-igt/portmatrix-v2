@@ -45,7 +45,7 @@ export default function RiitPage() {
           then the page intro, closed by a heavy rule. */}
       <header className="border-b-2 border-navy pb-10">
         <PageIntro
-          aside={<Image src="/images/source/branding/reginal-institute.png" width={512} height={362} alt="Regional Institute of International Trade (RIIT) logo" sizes="(min-width: 1024px) 512px, 100vw" className="mx-auto h-auto w-full max-w-lg" />}
+          aside={<Image src="/images/source/branding/reginal-institute.png" width={512} height={362} alt="Regional Institute of International Trade (RIIT) logo" sizes="(min-width: 1024px) 512px, 100vw" className="mx-auto h-auto w-full max-w-lg rounded-xl" />}
           breadcrumb={<Breadcrumb items={[{ label: "RIIT", href: "/riit" }]} />}
           kicker="Allied concern of PORTMATRIX"
           title="Regional Institute of International Trade (RIIT)"
@@ -105,7 +105,7 @@ export default function RiitPage() {
                   <p className="max-w-prose text-lg leading-relaxed text-ink/85">{m.text}</p>
                   {photo && (
                     <figure>
-                      <div className={`relative w-full overflow-hidden border border-hairline bg-white ${photo.width / photo.height > 1.4 ? "aspect-[3/2]" : "aspect-[4/3]"}`}>
+                      <div className={`relative w-full overflow-hidden rounded-xl border border-hairline bg-white ${photo.width / photo.height > 1.4 ? "aspect-[3/2]" : "aspect-[4/3]"}`}>
                         <Image src={photo.src} alt={photo.alt} fill sizes="(min-width: 1024px) 416px, 100vw" className="object-cover" />
                       </div>
                       <figcaption className="mt-3 text-sm leading-relaxed text-slatey"><RahimText>{photo.caption}</RahimText></figcaption>

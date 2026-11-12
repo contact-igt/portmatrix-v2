@@ -58,6 +58,7 @@ export default function AeoPage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        asideAlign="center"
         aside={<IllustrativeFigure image="aeo" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "AEO", href: "/services/aeo" }]} />}
         kicker={P.tagline}
@@ -96,7 +97,7 @@ export default function AeoPage() {
             ))}
           </ol>
           <ul className="mt-3 lg:mt-0">
-            <li className="flex flex-col border-t-4 border-brandred bg-white p-5 sm:p-6 lg:min-h-[13rem]">
+            <li className="flex flex-col rounded-xl border-t-4 border-brandred bg-white p-5 sm:p-6 lg:min-h-[13rem]">
               <p className="font-display text-3xl font-bold leading-none text-ink">{logistics[0]}</p>
               <dl className="mt-5 space-y-3.5">
                 {headers.slice(1).map((h, k) => (

@@ -1,4 +1,3 @@
-import RahimText from "@/components/RahimText";
 import RahimSignature from "@/components/RahimSignature";
 import Image from "next/image";
 import Link from "next/link";
@@ -243,12 +242,12 @@ export default function AboutPage() {
                         {it.display}
                       </time>
                     )}
-                    <RahimText>{it.text}</RahimText>
+                    {it.text}
                     {it.link && (
                       <>
                         {" "}
                         <Link href={it.link.href} className={linkClass}>
-                          <RahimText>{it.link.label}</RahimText>
+                          {it.link.label}
                         </Link>
                       </>
                     )}
@@ -272,7 +271,7 @@ export default function AboutPage() {
                         width={history.width}
                         height={history.height}
                         sizes="(min-width: 1280px) 600px, (min-width: 1024px) 48vw, 100vw"
-                        className="h-auto w-full border border-hairline bg-white"
+                        className="h-auto w-full rounded-xl border border-hairline bg-white"
                       />
                       <figcaption className="caption mt-3 max-w-xl leading-relaxed text-slatey">{CHINA_PAGE.founderPhotoCaption}</figcaption>
                     </figure>
@@ -307,7 +306,7 @@ export default function AboutPage() {
               height={MD.portrait.height}
               sizes="260px"
               quality={90}
-              className="h-auto w-full rounded-md"
+              className="h-auto w-full rounded-xl"
             />
           </figure>
           <div className="min-w-0">
@@ -391,9 +390,9 @@ export default function AboutPage() {
                 width={mou.width}
                 height={mou.height}
                 sizes="(min-width: 1024px) 480px, 100vw"
-                className="h-auto w-full border border-hairline bg-white"
+                className="h-auto w-full rounded-xl border border-hairline bg-white"
               />
-              <figcaption className="caption mt-3 leading-relaxed text-slatey"><RahimText>{mou.caption}</RahimText></figcaption>
+              <figcaption className="caption mt-3 leading-relaxed text-slatey">{mou.caption}</figcaption>
             </figure>
           )}
         </div>

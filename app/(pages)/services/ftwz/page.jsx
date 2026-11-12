@@ -41,6 +41,7 @@ export default function FtwzPage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        asideAlign="center"
         aside={<IllustrativeFigure image="ftwz" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "FTWZ", href: "/services/ftwz" }]} />}
         kicker={P.tagline}
@@ -109,7 +110,7 @@ export default function FtwzPage() {
             </p>
             <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:max-w-3xl">
               {P.workflowOutcomes.map((o) => (
-                <li key={o.label} className="border-l-4 border-navy bg-white py-3 pl-4 pr-3 text-base leading-relaxed text-ink/85">
+                <li key={o.label} className="rounded-xl border-l-4 border-navy bg-white py-3 pl-4 pr-3 text-base leading-relaxed text-ink/85">
                   <span className="font-semibold text-ink">{o.label}</span> → {o.result}
                 </li>
               ))}

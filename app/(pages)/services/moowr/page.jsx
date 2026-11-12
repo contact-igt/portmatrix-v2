@@ -35,6 +35,7 @@ export default function MoowrPage() {
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
+        asideAlign="center"
         aside={<IllustrativeFigure image="moowr" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "MOOWR", href: "/services/moowr" }]} />}
         kicker={MOOWR_PAGE.expansion}
@@ -76,7 +77,7 @@ export default function MoowrPage() {
 
       <div className="mt-14 grid gap-x-16 gap-y-12 lg:grid-cols-2">
         {/* Legal basis: the page's one tinted band, set apart from the benefits. */}
-        <section aria-labelledby="moowr-legal" className="border-t-4 border-navy bg-navy-50 p-6 sm:p-8 lg:self-start">
+        <section aria-labelledby="moowr-legal" className="rounded-2xl border-t-4 border-navy bg-navy-50 p-6 sm:p-8 lg:self-start">
           <Scale className="h-6 w-6 text-navy" aria-hidden="true" />
           <h2 id="moowr-legal" className="h3 mt-3 scroll-mt-24 text-ink">Legal basis: Section 65 of the Customs Act 1962</h2>
           <p className="mt-4 text-base leading-relaxed text-ink/85 sm:text-[1.0625rem]">{legalBasis.lead}</p>
@@ -111,7 +112,7 @@ export default function MoowrPage() {
             </p>
             <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:max-w-3xl">
               {flowOutcomes.map((o) => (
-                <li key={o.label} className="border-l-4 border-navy bg-white py-3 pl-4 pr-3 text-base leading-relaxed text-ink/85">
+                <li key={o.label} className="rounded-xl border-l-4 border-navy bg-white py-3 pl-4 pr-3 text-base leading-relaxed text-ink/85">
                   <span className="font-semibold text-ink">{o.label}</span> → {o.result}
                 </li>
               ))}

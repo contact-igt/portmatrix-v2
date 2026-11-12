@@ -17,9 +17,9 @@ export default function PriorityServices() {
   return (
     <section aria-labelledby="priority-services-heading" className="border-y border-hairline bg-white py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-5 border-t-2 border-navy pt-6 lg:grid-cols-[1fr_3fr] lg:gap-12">
-          <p className="kicker flex items-center gap-3 text-brandred"><span className="h-px w-7 bg-current" aria-hidden="true" />Priority services</p>
+        <div className="grid gap-5 border-t-2 border-navy pt-6">
           <h2 id="priority-services-heading" className="max-w-3xl font-display text-3xl font-bold leading-tight text-ink sm:text-4xl lg:text-[2.5rem]">Export–Import Training &amp; Practical Skill Development</h2>
+          <p className="kicker flex items-center gap-3 text-brandred"><span className="h-px w-7 bg-current" aria-hidden="true" />Priority services</p>
         </div>
         <div className="mt-9 overflow-hidden rounded-xl border border-hairline sm:mt-12">
           <div aria-hidden="true" className="hidden grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] gap-10 bg-navy px-7 py-4 text-xs font-semibold uppercase tracking-[0.12em] text-white md:grid">

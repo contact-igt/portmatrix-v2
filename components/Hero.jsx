@@ -44,7 +44,7 @@ export default function Hero() {
 
         {HERO_PHOTO && (
           <figure className="mx-auto w-full max-w-xl lg:max-w-none">
-            <div className="relative aspect-[4/3] w-full overflow-hidden border border-hairline bg-paper">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-hairline bg-paper">
               <Image
                 src={HERO_PHOTO.src}
                 alt={HERO_PHOTO.alt}

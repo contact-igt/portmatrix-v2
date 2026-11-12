@@ -3,7 +3,7 @@ const LOGO_SRC = "/images/source/branding/PortMatrix_Logo.png";
 
 export default function Logo({ variant = "dark", className = "", priority = false }) {
   return (
-    <div className={`inline-flex shrink-0 items-center ${variant === "light" ? "bg-white px-4" : "h-11"} ${className}`}>
+    <div className={`inline-flex shrink-0 items-center ${variant === "light" ? "overflow-hidden rounded-xl bg-white px-4" : "h-11"} ${className}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={LOGO_SRC}

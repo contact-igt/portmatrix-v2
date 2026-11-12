@@ -2,6 +2,15 @@ import { ShieldCheck, ChartNoAxesCombined, Handshake, ClipboardCheck, Ship, Grad
 
 const ICONS = [ShieldCheck, ChartNoAxesCombined, Handshake, ClipboardCheck, Ship, GraduationCap];
 
+const COLORS = [
+  { background: "#eef4fb", accent: "#164e87" },
+  { background: "#edf6f1", accent: "#246448" },
+  { background: "#fbf3e8", accent: "#85551b" },
+  { background: "#f2eff9", accent: "#634490" },
+  { background: "#eaf5f6", accent: "#20646c" },
+  { background: "#fbeef0", accent: "#963e50" },
+];
+
 const HEADINGS = [
   "Customs Clearance & Regulatory Compliance",
   "Export Planning & Market Intelligence",
@@ -25,13 +34,13 @@ export default function ExportCapabilities() {
                 {HEADINGS.map((heading, index) => {
                   const Icon = ICONS[index];
                   return (
-                    <li key={heading} className="flex w-80 shrink-0 items-start gap-5 border-r border-hairline px-6 py-3 sm:w-[23rem] sm:px-8">
-                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-navy/5 text-navy">
+                    <li key={heading} style={{ backgroundColor: COLORS[index].background, color: COLORS[index].accent }} className="flex w-80 shrink-0 items-start gap-5 border-r border-white px-6 py-5 sm:w-[23rem] sm:px-8">
+                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/70">
                         <Icon className="h-6 w-6" strokeWidth={1.5} aria-hidden="true" />
                       </span>
                       <div className="min-w-0">
-                        <span className="inline-flex min-w-10 items-center justify-center rounded-full border border-brandred/20 bg-brandred/5 px-2.5 py-1 font-display text-xs font-bold tabular-nums tracking-wider text-brandred">{String(index + 1).padStart(2, "0")}</span>
-                        <p className="mt-2 font-display text-[17px] font-bold leading-snug text-navy">{heading}</p>
+                        <span className="inline-flex min-w-10 items-center justify-center rounded-full border border-current bg-white/60 px-2.5 py-1 font-display text-xs font-bold tabular-nums tracking-wider">{String(index + 1).padStart(2, "0")}</span>
+                        <p className="mt-2 font-display text-[17px] font-bold leading-snug">{heading}</p>
                       </div>
                     </li>
                   );

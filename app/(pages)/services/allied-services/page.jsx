@@ -18,6 +18,7 @@ export default function AlliedServicesPage() {
   return (
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
       <PageIntro
+        asideAlign="center"
         aside={<IllustrativeFigure image="allied-services" className="mx-auto w-full max-w-lg" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "Allied Services", href: "/services/allied-services" }]} />}
         kicker="Service 18"

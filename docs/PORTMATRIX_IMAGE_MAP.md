@@ -203,7 +203,7 @@ Six client-requested, built-in image_gen illustrations support the six phase sum
 | `shipment.png` | Shipment Procedures |
 | `post-shipment.png` | Post Shipment and Realisation Procedures |
 
-## Core-service banner completion — 11 November 2026
+## Core-service banner completion ï¿½ 11 November 2026
 
 All 17 core-service destinations now have an image in their PageIntro. Existing mapped illustrations remain in place. Six missing introductory placements were added using existing assets:
 
@@ -217,3 +217,8 @@ All 17 core-service destinations now have an image in their PageIntro. Existing 
 | /services/eou | illustrative/sez-industrial-campus.webp | Reused generic industrial-campus illustration; no claim about a specific facility or status |
 
 This completion supersedes the earlier single-placement rule for the two reused illustrative assets. All supporting AI scenes receive a visible AI illustration label. No source images, logos or people have been recreated. Source photographs retain their natural proportions on every screen size.
+
+## Import workflow illustrations â€” client requested, 12 November 2026
+- `/images/illustrative/import-machinery-inspection.png`: AI-generated generic machinery inspection and document review scene. Used on `/services/export-import-clearance`; labelled AI illustration.
+- `/images/illustrative/import-cargo-delivery.png`: AI-generated generic cargo transport and warehouse delivery scene. Used on the same page; labelled AI illustration.
+- Replaces the two displayed workflow photos only. Original Netherlands 2024 and USA 2025 source files are preserved; their factual captions are not applied to generated artwork. No real shipment, company facility, or person is claimed.

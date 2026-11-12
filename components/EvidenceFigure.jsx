@@ -6,13 +6,13 @@ import ImageCaption from "./ImageCaption";
 // that isn't in the source. `illustrative` labels stock/AI-sourced images
 // so they're never mistaken for real PORTMATRIX evidence.
 const VARIANTS = {
-  documentary: { aspect: "aspect-[4/3]", frame: "overflow-hidden rounded-md border border-hairline bg-white", image: "object-cover" },
-  portrait: { aspect: "aspect-[4/5]", frame: "overflow-hidden rounded-md border border-hairline bg-white", image: "object-cover" },
-  infographic: { aspect: "", frame: "overflow-hidden border border-hairline bg-white p-2", image: "object-contain" },
-  "source-illustration": { aspect: "aspect-[16/10]", frame: "overflow-hidden border border-hairline bg-mist p-2", image: "object-contain" },
-  "document-scan": { aspect: "", frame: "min-h-[16rem] overflow-hidden border border-hairline bg-white p-3", image: "object-contain" },
-  "wide-evidence": { aspect: "aspect-[16/9]", frame: "overflow-hidden rounded-md border border-hairline bg-white", image: "object-cover" },
-  "contained-graphic": { aspect: "", frame: "min-h-[14rem] overflow-hidden border border-hairline bg-white p-2", image: "object-contain" },
+  documentary: { aspect: "aspect-[4/3]", frame: "overflow-hidden rounded-xl border border-hairline bg-white", image: "object-cover" },
+  portrait: { aspect: "aspect-[4/5]", frame: "overflow-hidden rounded-xl border border-hairline bg-white", image: "object-cover" },
+  infographic: { aspect: "", frame: "overflow-hidden rounded-xl border border-hairline bg-white p-2", image: "object-contain" },
+  "source-illustration": { aspect: "aspect-[16/10]", frame: "overflow-hidden rounded-xl border border-hairline bg-mist p-2", image: "object-contain" },
+  "document-scan": { aspect: "", frame: "min-h-[16rem] overflow-hidden rounded-xl border border-hairline bg-white p-3", image: "object-contain" },
+  "wide-evidence": { aspect: "aspect-[16/9]", frame: "overflow-hidden rounded-xl border border-hairline bg-white", image: "object-cover" },
+  "contained-graphic": { aspect: "", frame: "min-h-[14rem] overflow-hidden rounded-xl border border-hairline bg-white p-2", image: "object-contain" },
 };
 
 export default function EvidenceFigure({
@@ -30,7 +30,7 @@ export default function EvidenceFigure({
   const treatment = VARIANTS[variant] || VARIANTS.documentary;
   const frame = (
     <div className={`relative w-full ${treatment.frame} ${aspect || treatment.aspect}`}>
-      <Image src={src} alt={alt} fill priority={priority} sizes={sizes} className={treatment.image} />
+      <Image src={src} alt={alt} fill unoptimized priority={priority} sizes={sizes} className={treatment.image} />
     </div>
   );
   return (
@@ -42,11 +42,11 @@ export default function EvidenceFigure({
       ) : (
         frame
       )}
-      <ImageCaption>
+      {(caption || illustrative || zoom) && <ImageCaption>
         {caption}
         {illustrative && <span className="ml-1.5">(illustrative)</span>}
         {zoom && <a href={src} target="_blank" rel="noopener" className="-my-3 ml-2 inline-block py-3 font-medium text-navy underline underline-offset-2">Open full size</a>}
-      </ImageCaption>
+      </ImageCaption>}
     </figure>
   );
 }

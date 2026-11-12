@@ -6,6 +6,7 @@ export default function RahimSignature({ className = "", sizes = "(max-width: 64
     <span className={`relative block aspect-[1008/316] w-full overflow-hidden ${className}`}>
       <Image
         src="/images/source/branding/rahim-new.png"
+        unoptimized
         alt="Rahim Iyaz — Customs Law Practitioner"
         width={2048}
         height={1152}

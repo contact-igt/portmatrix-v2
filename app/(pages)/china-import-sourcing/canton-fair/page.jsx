@@ -79,13 +79,13 @@ export default function CantonFairPage() {
           Each photo at its true ratio; captions as readable text. */}
       <div className="mt-10 grid items-start gap-8 sm:grid-cols-[minmax(0,15rem)_minmax(0,1fr)] lg:grid-cols-[minmax(0,17rem)_minmax(0,30rem)] lg:gap-12">
         <figure>
-          <div className="relative aspect-[3/4] w-full overflow-hidden border border-hairline bg-white">
+          <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl border border-hairline bg-white">
             <Image src={GALLERY[0].src} alt={GALLERY[0].alt} fill priority sizes="(min-width: 1024px) 272px, 240px" className="object-cover" />
           </div>
           <figcaption className="mt-3 text-sm leading-relaxed text-slatey">{GALLERY[0].caption}</figcaption>
         </figure>
         <figure>
-          <div className="relative aspect-[4/3] w-full overflow-hidden border border-hairline bg-white">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-hairline bg-white">
             <Image src={GALLERY[1].src} alt={GALLERY[1].alt} fill sizes="(min-width: 1024px) 480px, 100vw" className="object-cover" />
           </div>
           <figcaption className="mt-3 text-sm leading-relaxed text-slatey"><RahimText>{GALLERY[1].caption}</RahimText></figcaption>
