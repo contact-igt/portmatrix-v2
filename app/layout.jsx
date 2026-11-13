@@ -1,20 +1,20 @@
-import { Manrope, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import MotionRoot from "@/components/MotionRoot";
 
 // Exactly two font families sitewide: Manrope for editorial hierarchy,
 // Inter for body copy and utility UI. The official logo remains its own
 // approved image asset and is never typeset or approximated by these fonts.
-const display = Manrope({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
+const display = localFont({
+  src: "../public/fonts/manrope-latin.woff2",
+  weight: "500 700",
   variable: "--font-display",
   display: "swap",
 });
 
-const body = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const body = localFont({
+  src: "../public/fonts/inter-latin.woff2",
+  weight: "400 700",
   variable: "--font-body",
   display: "swap",
 });
