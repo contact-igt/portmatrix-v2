@@ -22,13 +22,13 @@ const RIIT_LINKS = [
 
 const linkClass =
   "inline-flex min-h-11 items-center text-[0.9375rem] text-white/75 transition-colors hover:text-white";
-const labelClass = "text-sm font-semibold uppercase tracking-[0.12em] text-white/75";
+const labelClass = "text-sm font-semibold uppercase tracking-[0.12em] text-white";
 
 export default function Footer() {
   const services = SERVICE_GROUPS.flatMap((g) => g.items);
 
   return (
-    <footer className="relative overflow-hidden bg-ink text-white">
+    <footer className="relative overflow-hidden bg-navy text-white">
       <div className="relative mx-auto max-w-7xl px-5 py-10 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1.6fr_1fr]">
           <div>
@@ -97,7 +97,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col items-start justify-between gap-2 border-t border-white/10 pt-5 text-sm text-white/75 sm:flex-row sm:items-center">
+        <div className="mt-8 flex flex-col items-start justify-between gap-2 border-t border-white/20 pt-5 text-sm text-white/75 sm:flex-row sm:items-center">
           <p>
             © {new Date().getFullYear()} {CONTACT.companyName} All rights reserved. · CIN: {CONTACT.cin}
           </p>

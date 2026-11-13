@@ -50,7 +50,8 @@ export default function ExportHandholdingHub() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
         asideAlign="center"
-        aside={<IllustrativeFigure image="export-handholding" showCaption={false} className="mx-auto w-full max-w-lg" />}
+        asideClassName="max-w-3xl"
+        aside={<IllustrativeFigure image="export-handholding" showCaption={false} className="w-full" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "Export Handholding", href: "/services/export-handholding" }]} />}
         kicker="Core service"
         title="MSME Export Handholding"

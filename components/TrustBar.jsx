@@ -14,9 +14,9 @@ export default function TrustBar() {
         <motion.div
           variants={stagger}
           {...inView}
-          className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16"
+          className="grid gap-8 lg:grid-cols-2 lg:gap-0"
         >
-          <div className="flex divide-x divide-hairline">
+          <div className="grid grid-cols-2 divide-x divide-hairline">
             {TRUST_FACTS.map((s, i) => (
               <motion.div
                 key={s.label}
@@ -37,11 +37,11 @@ export default function TrustBar() {
 
           <motion.ul
             variants={fadeUp}
-            className="flex flex-col gap-x-8 gap-y-2 text-sm font-medium text-ink/75 sm:flex-row sm:flex-wrap"
+            className="grid grid-cols-2 divide-x divide-hairline text-sm font-medium text-ink/75 lg:border-l lg:border-hairline"
           >
             {TRUST_BADGES.map((b) => (
-              <li key={b} className="flex items-baseline gap-2 leading-snug">
-                <span className="mt-[3px] h-1 w-1 shrink-0 rounded-full bg-brandred" />
+              <li key={b} className="flex items-start gap-2 pr-8 leading-snug even:pl-8 even:pr-0 sm:pr-12 sm:even:pl-12 lg:pl-12 lg:pr-8">
+                <span aria-hidden="true" className="mt-[0.55em] h-1 w-1 shrink-0 rounded-full bg-brandred" />
                 <span className="max-w-xs">{b}</span>
               </li>
             ))}
@@ -49,12 +49,12 @@ export default function TrustBar() {
         </motion.div>
       </div>
 
-      <div className="border-t border-hairline/70 bg-paper py-4">
+      <div className="border-t-4 border-brandred bg-navy py-7 sm:py-8">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <p className="text-sm font-semibold uppercase tracking-wide text-slatey">
+          <p className="font-display text-base font-bold uppercase tracking-wide text-white sm:text-lg">
             RIIT — export training partner of
           </p>
-          <ul className="mt-2 flex flex-wrap gap-x-6 gap-y-1 text-sm text-ink/80">
+          <ul className="mt-4 flex flex-wrap gap-x-7 gap-y-3 text-sm font-medium leading-relaxed text-white sm:text-base">
             {RIIT_PARTNERS.map((p) => (
               <li key={p}>{p}</li>
             ))}

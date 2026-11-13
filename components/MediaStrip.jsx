@@ -29,7 +29,7 @@ export default function MediaStrip() {
                   <a href={video.url} target="_blank" rel="noopener noreferrer" className="mt-3 flex min-h-11 items-center justify-between gap-3 border-b border-hairline pb-3 font-display text-lg font-semibold text-navy hover:underline">
                     {video.title}<ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden="true" />
                   </a>
-                  <p className="mt-2 text-sm text-slatey"><time dateTime={video.date}>{video.dateDisplay}</time> ? Doordarshan National Television</p>
+                  <p className="mt-2 text-sm text-slatey"><time dateTime={video.date}>{video.dateDisplay}</time> Doordarshan National Television</p>
                 </li>
               ))}
             </ul>

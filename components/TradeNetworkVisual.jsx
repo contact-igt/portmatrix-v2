@@ -64,7 +64,7 @@ export default function TradeNetworkVisual({ className = "" }) {
         strokeDasharray="2 7"
       />
       {/* graticule */}
-      <circle cx={CX} cy={CY} r={R} fill="#F0F5FA" fillOpacity="0.7" stroke="#013E7F" strokeOpacity="0.5" strokeWidth="1.25" />
+      <circle cx={CX} cy={CY} r={R} fill="#F5F5F5" fillOpacity="0.7" stroke="#013E7F" strokeOpacity="0.5" strokeWidth="1.25" />
       {meridians.map((k) => (
         <ellipse key={k} cx={CX} cy={CY} rx={R * k} ry={R} fill="none" stroke="#013E7F" strokeOpacity="0.2" strokeWidth="1" />
       ))}
@@ -94,11 +94,11 @@ export default function TradeNetworkVisual({ className = "" }) {
       {nodes.map(([x, y], i) => (
         <g key={i}>
           <circle cx={x} cy={y} r="9" fill="#ffffff" stroke="#013E7F" strokeWidth="1.5" />
-          <circle cx={x} cy={y} r="3.5" fill={i === 0 || i === 3 ? "#E30007" : "#013E7F"} />
+          <circle cx={x} cy={y} r="3.5" fill={i === 0 || i === 3 ? "#ED1C24" : "#013E7F"} />
         </g>
       ))}
       {/* a node travelling on the outer lane */}
-      <circle cx="560" cy="150" r="5" fill="#E30007" />
+      <circle cx="560" cy="150" r="5" fill="#ED1C24" />
       <circle cx="82" cy="352" r="4" fill="#013E7F" fillOpacity="0.6" />
     </svg>
   );

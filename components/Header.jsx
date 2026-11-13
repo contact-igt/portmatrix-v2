@@ -83,7 +83,7 @@ export default function Header() {
       // shrink them to the 68px bar once the page is scrolled.
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-150 ${
         scrolled || open
-          ? "bg-white shadow-[0_1px_0_rgba(226,230,242,1)]"
+          ? "bg-white shadow-[0_1px_0_rgba(229,229,229,1)]"
           : "bg-transparent"
       }`}
     >

@@ -24,7 +24,6 @@ import {
 } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
-import ImageCaption from "@/components/ImageCaption";
 import { ALLIED_SERVICES, MD, RIIT, CHINA } from "@/lib/content";
 import { CHINA_PAGE } from "@/lib/china-data";
 import { RIIT_PARTNERS, RIIT_PARTNERS_LEAD } from "@/lib/riit-data";
@@ -67,7 +66,13 @@ const CLUSTER_ICONS = { gavel: Gavel, chart: LineChart, radar: Radar, compass: C
 
 const history = CHINA.images.history;
 const mou = RIIT.featured.find((f) => f.src.includes("alagappa"));
-const aboutImage = mou;
+// Client-selected About banner; retain the MoU photograph in the RIIT section.
+const aboutImage = {
+  src: "/images/source/branding/image3.png",
+  alt: "PORTMATRIX illustration of international trade, a container port, aircraft and logistics services",
+  width: 512,
+  height: 256,
+};
 const qualifications = MD.qualifications.split(", ");
 
 const MD_FACTS = [
@@ -129,11 +134,12 @@ const MD_FACTS = [
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-7xl px-5 pb-14 pt-4 sm:px-8 sm:pb-20 sm:pt-6">
-      {/* 1 — hero: p.3 defining sentence + genuine Alagappa University–RIIT MoU photograph (p.77). */}
+      {/* 1 ? source introduction with the client-selected branded illustration. */}
       <PageIntro
         breadcrumb={<Breadcrumb items={[{ label: "About", href: "/about" }]} />}
         title="About PORTMATRIX"
         intro={ABOUT_PAGE.intro}
+        asideClassName="max-w-full sm:max-w-[34rem] lg:max-w-none"
         aside={
           <figure>
             <Image
@@ -141,12 +147,11 @@ export default function AboutPage() {
               alt={aboutImage.alt}
               width={aboutImage.width}
               height={aboutImage.height}
-              sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) 384px, 400px"
+              sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) 544px, 512px"
               priority
               unoptimized
               className="h-auto w-full rounded-xl"
             />
-            <ImageCaption>{aboutImage.caption}</ImageCaption>
           </figure>
         }
       />

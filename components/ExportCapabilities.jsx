@@ -1,14 +1,17 @@
-import { ShieldCheck, ChartNoAxesCombined, Handshake, ClipboardCheck, Ship, GraduationCap } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { ShieldCheck, ChartNoAxesCombined, Handshake, ClipboardCheck, Ship, GraduationCap, ChevronDown } from "lucide-react";
 
 const ICONS = [ShieldCheck, ChartNoAxesCombined, Handshake, ClipboardCheck, Ship, GraduationCap];
 
 const COLORS = [
-  { background: "#eef4fb", accent: "#164e87" },
-  { background: "#edf6f1", accent: "#246448" },
-  { background: "#fbf3e8", accent: "#85551b" },
-  { background: "#f2eff9", accent: "#634490" },
-  { background: "#eaf5f6", accent: "#20646c" },
-  { background: "#fbeef0", accent: "#963e50" },
+  { background: "#DBEAFE", accent: "#013E7F" },
+  { background: "#BBF7D0", accent: "#246448" },
+  { background: "#FDE68A", accent: "#85551b" },
+  { background: "#DDD6FE", accent: "#634490" },
+  { background: "#A5F3FC", accent: "#20646c" },
+  { background: "#FECDD3", accent: "#9F1239" },
 ];
 
 const HEADINGS = [
@@ -54,6 +57,7 @@ const SERVICES = [
 ];
 
 export default function ExportCapabilities() {
+  const [active, setActive] = useState(null);
   return (
     <section aria-labelledby="hero-process" className="mx-auto mt-12 max-w-7xl px-5 pb-12 sm:px-8 lg:mt-16 lg:pb-14">
       <div className="border-t-2 border-navy">
@@ -61,31 +65,42 @@ export default function ExportCapabilities() {
           <h2 id="hero-process" className="text-sm font-semibold uppercase tracking-[0.08em] text-ink">End-to-End Export  Import Facilitation Process</h2>
           <p className="mt-2 text-sm text-slatey">Support across six export import service areas.</p>
         </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
+        <div className="flex gap-3 overflow-x-auto pb-4" aria-label="Export import service areas">
           {HEADINGS.map((heading, index) => {
             const Icon = ICONS[index];
+            const expanded = active === index;
             return (
-              <article key={heading} className="relative flex min-w-0 flex-col overflow-hidden rounded-[20px] border border-hairline bg-white shadow-[0_2px_8px_rgba(15,35,60,0.03)]" style={{ color: COLORS[index].accent }}>
-                <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-10 rounded-[inherit] border-t-4 border-current" />
-                <div className="relative border-b border-hairline px-6 pb-6 pt-6 sm:px-7" style={{ backgroundColor: COLORS[index].background }}>
-                  <div className="mb-5 flex items-center justify-between gap-4">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-white bg-white/80 shadow-[0_2px_4px_rgba(15,35,60,0.03)]">
-                    <Icon className="h-6 w-6" strokeWidth={1.5} aria-hidden="true" />
+              <h3 key={heading} className="flex w-56 shrink-0 lg:w-auto lg:min-w-0 lg:flex-1">
+                <button type="button" id={`export-area-${index}`} aria-expanded={expanded} aria-controls={`export-module-${index}`}
+                  onClick={() => setActive(expanded ? null : index)}
+                  className="flex w-full flex-col gap-4 rounded-xl border-t-4 border-current p-5 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy"
+                  style={{ backgroundColor: COLORS[index].background, color: COLORS[index].accent }}>
+                  <span className="flex w-full items-center justify-between" aria-hidden="true">
+                    <Icon className="h-5 w-5" strokeWidth={1.5} />
+                    <span className="text-sm font-semibold tabular-nums">{String(index + 1).padStart(2, "0")}</span>
                   </span>
-                    <span className="font-display text-[32px] font-medium leading-none tabular-nums tracking-[-0.05em] opacity-30">{String(index + 1).padStart(2, "0")}</span>
-                  </div>
-                  <h3 className="max-w-[26ch] font-display text-lg font-bold leading-[1.4] tracking-[-0.02em] sm:min-h-[3.15rem]">{heading}</h3>
-                </div>
-                <div className="flex flex-1 flex-col px-6 pb-5 pt-2 sm:px-7">
-                  <ul className="divide-y divide-hairline text-sm leading-[1.65] text-ink/85">
-                    {SERVICES[index].map((service) => <li key={service} className="flex items-start gap-3 py-3.5 first:pt-4 last:pb-1"><span aria-hidden="true" className="mt-[0.55rem] h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: COLORS[index].accent }} /><span>{service}</span></li>)}
-                  </ul>
-                  {index === 5 && <a href="/riit" className="mb-1 mt-6 inline-flex min-h-11 items-center gap-2 self-start rounded-lg border border-hairline px-4 text-sm font-semibold transition-colors hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy">Explore RIIT training →</a>}
-                </div>
-              </article>
+                  <span className="font-display text-base font-bold leading-snug">{heading}</span>
+                  <ChevronDown aria-hidden="true" className={`mt-auto h-5 w-5 ${expanded ? "rotate-180" : ""}`} />
+                </button>
+              </h3>
             );
           })}
         </div>
+        {HEADINGS.map((heading, index) => (
+          <div key={heading} id={`export-module-${index}`} role="region" aria-labelledby={`export-area-${index}`} hidden={active !== index}
+            className="mt-2 rounded-xl border border-hairline border-l-4 bg-white p-6 sm:p-8" style={{ borderLeftColor: COLORS[index].accent }}>
+            <h4 className="font-display text-lg font-bold" style={{ color: COLORS[index].accent }}>{heading}</h4>
+            <ul className="mt-4 divide-y divide-hairline text-sm leading-relaxed text-ink">
+              {SERVICES[index].map((service) => (
+                <li key={service} className="flex items-start gap-3 py-3">
+                  <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: COLORS[index].accent }} />
+                  <span>{service}</span>
+                </li>
+              ))}
+            </ul>
+            {index === 5 && <a href="/riit" className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-navy underline underline-offset-4">Explore RIIT training &rarr;</a>}
+          </div>
+        ))}
       </div>
     </section>
   );

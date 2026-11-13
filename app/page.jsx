@@ -4,6 +4,7 @@ import TrustBar from "@/components/TrustBar";
 import About from "@/components/About";
 import PriorityServices from "@/components/PriorityServices";
 import ChinaSourcing from "@/components/ChinaSourcing";
+import InsuranceAssociation from "@/components/InsuranceAssociation";
 import Credibility from "@/components/Credibility";
 import MediaStrip from "@/components/MediaStrip";
 import ContactCTA from "@/components/ContactCTA";
@@ -71,6 +72,7 @@ export default function Home() {
         <About />
         <PriorityServices />
         <ChinaSourcing />
+        <InsuranceAssociation />
         <Credibility />
         <MediaStrip />
         <ContactCTA />

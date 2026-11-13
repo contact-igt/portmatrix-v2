@@ -41,7 +41,8 @@ export default function MsmeInsurancePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
         asideAlign="center"
-        aside={<IllustrativeFigure image="msme-insurance" className="mx-auto w-full max-w-lg" />}
+        asideClassName="max-w-full sm:max-w-[34rem] lg:max-w-none"
+        aside={<IllustrativeFigure image="msme-insurance" className="mx-auto w-full" />}
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "MSME Insurance Package", href: "/services/msme-insurance" }]} />}
         kicker={P.tagline}
         title="MSME Insurance Package"

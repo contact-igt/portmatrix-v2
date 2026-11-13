@@ -103,7 +103,7 @@ export default function FreightForwardingPage() {
 
       {/* Workflow line: horizontal from xl, the page's single tinted band */}
       <section className="-mx-5 mt-14 rounded-2xl bg-navy-50/60 px-5 py-12 sm:-mx-8 sm:px-8" aria-labelledby="workflow">
-        <h2 id="workflow" className="h3 text-ink">Freight Forwarding Workflow</h2>
+          <h2 id="workflow" className="h3 text-ink">End to End Supply Chain Solutions</h2>
         <ol className="mt-8 grid gap-x-6 gap-y-0 sm:grid-cols-2 lg:grid-cols-4 lg:gap-y-8 xl:grid-cols-8 xl:gap-x-4">
           {P.workflow.map((step, i) => (
             <li key={step} className="relative flex gap-4 border-t border-navy/20 py-4 sm:flex-col sm:gap-2 sm:border-t-2 sm:border-navy sm:pt-4">
