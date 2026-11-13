@@ -45,7 +45,12 @@ export default function RiitPage() {
           then the page intro, closed by a heavy rule. */}
       <header className="border-b-2 border-navy pb-10">
         <PageIntro
-          aside={<Image src="/images/source/branding/reginal-institute.png" width={512} height={362} alt="Regional Institute of International Trade (RIIT) logo" sizes="(min-width: 640px) 352px, 90vw" className="mx-auto h-auto w-full max-w-[22rem] rounded-xl" />}
+          asideClassName="max-w-lg lg:max-w-none"
+          aside={
+            <div className="flex aspect-[3/2] w-full items-center justify-center overflow-hidden rounded-xl bg-[#005aab]">
+              <Image src="/images/source/branding/reginal-institute.png" width={512} height={362} alt="Regional Institute of International Trade (RIIT) logo" sizes="(min-width: 1280px) 665px, (min-width: 1024px) 55vw, (min-width: 640px) 690px, 125vw" className="h-auto w-full scale-[1.3]" />
+            </div>
+          }
           breadcrumb={<Breadcrumb items={[{ label: "RIIT", href: "/riit" }]} />}
           kicker="Allied concern of PORTMATRIX"
           title="Regional Institute of International Trade (RIIT)"

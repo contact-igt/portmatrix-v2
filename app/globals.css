@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --paper: #f6f7fc;
+  --paper: #f7f7f7;
   --section-space: clamp(3.5rem, 6vw, 5.5rem);
   --content-space: clamp(2.5rem, 4vw, 4rem);
 }
@@ -19,7 +19,7 @@ html {
 
 body {
   background-color: var(--paper);
-  color: #0d102e;
+  color: #202020;
 }
 
 /* Blueprint grid backdrop — the "matrix" signature */
@@ -72,7 +72,7 @@ body {
   font-weight: 700;
   letter-spacing: -0.035em;
   line-height: 1.07;
-  font-size: clamp(2.375rem, 4.5vw, 4rem);
+  font-size: clamp(2.125rem, 4vw, 3.625rem);
 }
 .h2 {
   font-family: var(--font-display);
@@ -114,7 +114,7 @@ body {
   max-width: 68ch;
   font-size: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
   line-height: 1.68;
-  color: #5b6178;
+  color: #616161;
 }
 .article-body p + p,
 .article-body ul + p,
@@ -140,7 +140,7 @@ body {
 }
 
 .section-rule {
-  border-top: 1px solid #e2e6f2;
+  border-top: 1px solid #e5e5e5;
   padding-top: var(--content-space);
 }
 
@@ -148,7 +148,7 @@ body {
    parent is a centred container (shadow + clip-path extend the tint past the
    container without causing horizontal scroll). Flat colour, no gradient. */
 .band {
-  --band-bg: #ebeef7;
+  --band-bg: #eeeeee;
   position: relative;
   background-color: var(--band-bg);
   box-shadow: 0 0 0 100vmax var(--band-bg);
@@ -196,7 +196,7 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c7cce6;
+  background: #cccccc;
   border-radius: 999px;
   border: 2px solid var(--paper);
 }
@@ -223,7 +223,7 @@ body {
 /* The supplied logo red has sufficient contrast for small labels on white. */
 .kicker.text-brandred,
 .kicker-sentence.text-brandred {
-  color: #E30007;
+  color: #ED1C24;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -243,15 +243,15 @@ body {
   margin-top: 0.75rem;
 }
 
-/* Client's China trade palette stays scoped to China content. */
+/* China content uses the same logo red as the rest of the site. */
 .china-theme .text-navy,
-.china-theme .text-brandred { color: #B5101B; }
-.china-theme .border-navy { border-color: #E01422; }
-.china-theme .bg-brandred { background-color: #E01422; }
+.china-theme .text-brandred { color: #ED1C24; }
+.china-theme .border-navy { border-color: #ED1C24; }
+.china-theme .bg-brandred { background-color: #ED1C24; }
 .china-feature { color: #fff; }
 .china-intro {
   border-radius: 1rem;
-  background-color: #E01422;
+  background-color: #ED1C24;
   padding: clamp(1.5rem, 4vw, 3rem);
 }
 .china-intro :is(h1, p, a, span),

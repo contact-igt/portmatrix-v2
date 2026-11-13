@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
+import IllustrativeFigure from "@/components/IllustrativeFigure";
 import Faq from "@/components/Faq";
 import { buildMetadata } from "@/lib/seo";
 import RelatedServices from "@/components/RelatedServices";
@@ -45,6 +46,8 @@ export default function PhasePage({ params }) {
   return (
     <div className="mx-auto max-w-7xl px-5 pb-14 pt-6 sm:px-8 sm:pb-20 sm:pt-8">
       <PageIntro
+        asideAlign="center"
+        aside={<IllustrativeFigure image={`export-phase-${phase.n}`} className="mx-auto w-full max-w-lg" />}
         breadcrumb={
           <Breadcrumb
             items={[

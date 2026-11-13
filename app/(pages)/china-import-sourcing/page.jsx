@@ -332,7 +332,7 @@ export default function ChinaImportSourcingPage() {
         id="canton-fair"
         aria-labelledby="canton-fair-h"
         className="china-feature band bg-china-red text-white"
-        style={{ "--band-bg": "#E01422" }}
+        style={{ "--band-bg": "#ED1C24" }}
       >
         <div className="grid gap-x-16 gap-y-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-end">
           <div>

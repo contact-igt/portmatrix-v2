@@ -7,7 +7,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { fadeUp, stagger, inView } from "@/lib/animations";
 import { CHINA } from "@/lib/content";
 
-// Home summary of China Import Sourcing. One authentic image: Canton Fair 2025.
+// Home summary with client-supplied China import sourcing artwork.
 // The 1974 Hong Kong delegation photo is NOT repeated here (it lives on /about,
 // in the journey, and on /china-import-sourcing, in the full China history);
 // the history stays as text above. The 2015 factory photo is on
@@ -42,35 +42,7 @@ export default function ChinaSourcing() {
                 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
               </Link>
             </div>
-          </div>
-
-          <div className="grid content-start gap-8 border-t border-white/15 pt-8 sm:grid-cols-[13rem_minmax(0,1fr)] sm:gap-10 lg:border-t-0 lg:pt-0">
-          <figure className="mx-auto w-full max-w-[13rem] sm:mx-0">
-            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl">
-              <Image
-                src={CHINA.images.cantonFair.src}
-                alt={CHINA.images.cantonFair.alt}
-                fill
-                sizes="208px"
-                className="object-cover"
-              />
-            </div>
-            <figcaption className="mt-2.5 text-sm leading-snug text-white/95">{CHINA.images.cantonFair.caption}</figcaption>
-          </figure>
-
-          <motion.ul
-            variants={stagger}
-            {...inView}
-            className="grid content-start gap-y-4"
-          >
-            {CHINA.points.map((p) => (
-              <motion.li key={p} variants={fadeUp} className="flex items-start gap-3 border-b border-white/10 pb-4">
-                <Check className="mt-1 h-4 w-4 shrink-0 text-china-yellow" aria-hidden="true" />
-                <span className="text-base text-white/90">{p}</span>
-              </motion.li>
-            ))}
-          </motion.ul>
-          <div className="border-t border-white/20 pt-6 sm:col-span-2">
+          <div className="mt-8 border-t border-white/20 pt-6">
             <p className="text-base leading-relaxed text-white/95">Explore our experience in China trade since 1974</p>
             <Link
               href="/china-import-sourcing#trade-link"
@@ -81,8 +53,37 @@ export default function ChinaSourcing() {
             </Link>
           </div>
           </div>
+
+          <div className="grid content-start gap-8 border-t border-white/15 pt-8 sm:grid-cols-2 sm:gap-10 lg:border-t-0 lg:pt-0">
+          <figure className="mx-auto w-full sm:col-span-2">
+            <Image
+              src="/images/source/branding/image2.png"
+              alt="China import sourcing illustration with cargo containers, a ship, an aircraft and the Shanghai skyline"
+              width={512}
+              height={262}
+              sizes="(min-width: 1280px) 590px, (min-width: 1024px) 45vw, 100vw"
+              className="h-auto w-full rounded-xl"
+            />
+          </figure>
+          <motion.ul
+            variants={stagger}
+            {...inView}
+            className="grid content-start gap-x-6 gap-y-4 sm:col-span-2 sm:grid-cols-2"
+          >
+            {CHINA.points.map((p) => (
+              <motion.li key={p} variants={fadeUp} className="flex items-start gap-3 border-b border-white/10 pb-4">
+                <Check className="mt-1 h-4 w-4 shrink-0 text-china-yellow" aria-hidden="true" />
+                <span className="text-base text-white/90">{p}</span>
+              </motion.li>
+            ))}
+          </motion.ul>
+
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
+
+

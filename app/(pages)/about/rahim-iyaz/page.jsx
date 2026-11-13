@@ -6,6 +6,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 import { MD, ORG_ID, SITE_URL } from "@/lib/content";
 import { MD_LEAD, MD_IN_THE_FIELD } from "@/lib/about-data";
+import { TRAINING_EVENTS } from "@/lib/riit-data";
+import ImageCaption from "@/components/ImageCaption";
 import { newestFirst } from "@/lib/date-order";
 import { buildMetadata } from "@/lib/seo";
 
@@ -18,6 +20,7 @@ export const metadata = buildMetadata({
 });
 
 const PERSON_ID = `${SITE_URL}/about/rahim-iyaz#person`;
+const seminar = TRAINING_EVENTS.find((event) => event.date === "2026-08-18");
 const linkClass = "font-semibold text-navy underline decoration-navy/30 underline-offset-2 hover:decoration-navy";
 
 function WhatsAppIcon(props) {
@@ -175,13 +178,21 @@ export default function RahimIyazPage() {
                 return (
                   <li key={item.text + (item.date || "")} className="py-4 sm:grid sm:grid-cols-[9rem_1fr] sm:gap-8">
                     <p className="text-sm font-semibold text-brandred sm:pt-0.5">{label}</p>
-                    <p className="mt-1 text-base leading-relaxed text-ink/85 sm:mt-0">
+                    <div className="mt-1 text-base leading-relaxed text-ink/85 sm:mt-0">
+                    <p>
                       {text}
                       {" — "}
                       <Link href={item.link.href} className={linkClass}>
                         {item.link.label}
                       </Link>
                     </p>
+                    {item.seminar && (
+                      <figure className="mt-4">
+                        <Image src={seminar.src} alt={seminar.alt} width={seminar.width} height={seminar.height} sizes="(min-width: 1024px) 760px, (min-width: 640px) 70vw, 100vw" className="h-auto w-full rounded-xl" />
+                        <ImageCaption>{seminar.caption}</ImageCaption>
+                      </figure>
+                    )}
+                    </div>
                   </li>
                 );
               })}

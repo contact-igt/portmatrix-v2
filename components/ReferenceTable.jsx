@@ -50,7 +50,7 @@ export default function ReferenceTable({
                   key={`${j}-${h}`}
                   scope="col"
                   className={`${pad} ${headStick} border-b border-t-2 border-b-ink/25 border-t-ink bg-white text-left align-bottom font-semibold text-ink ${
-                    j === 0 ? "sticky left-0 z-30 shadow-[1px_0_0_#e2e6f2]" : ""
+                    j === 0 ? "sticky left-0 z-30 shadow-[1px_0_0_#e5e5e5]" : ""
                   }`}
                 >
                   {h}
@@ -66,7 +66,7 @@ export default function ReferenceTable({
                     <th
                       key={j}
                       scope="row"
-                      className={`${pad} sticky left-0 z-10 bg-white text-left align-top font-semibold text-ink shadow-[1px_0_0_#e2e6f2]`}
+                      className={`${pad} sticky left-0 z-10 bg-white text-left align-top font-semibold text-ink shadow-[1px_0_0_#e5e5e5]`}
                     >
                       {cell}
                     </th>

@@ -252,3 +252,25 @@ Added the approved PDF p.25 Canton Fair 2014 photograph below the factory visit 
 Supersedes the two-photo layout above. Removed the secondary figure and changed the primary hero to the genuine Canton Fair 2014 photograph (PDF p.25), preserving the gallery source caption, alt text and natural 4:3 proportions. The factory visit no longer appears in the homepage hero.
 ## About hero image update
 The /about opening uses the genuine PDF p.77 photograph, public/images/source/events/alagappa-university-mou-2022-10-31.png (1280 x 853), with the existing Alagappa University-RIIT MoU caption. This supersedes the opening image in the older About inventory. No AI illustration appears in this banner.
+
+
+## Homepage hero ? client-supplied artwork, 13 November 2026
+
+At the client?s explicit request, the homepage hero now uses `branding/image1.png`, the exact artwork shown in their reference screenshot. Supersedes the Canton Fair hero placement above. Supplied PNG: 512?256; rendered in its full 2:1 proportions without cropping or modifying the embedded logo. This is illustrative branded artwork, not evidence of actual premises or operations. The original documentary photograph remains in the gallery. Other newly supplied image assets have not been assigned to pages by this change.
+
+### Client correction ? About opening image
+The About page opening uses `/images/source/branding/image3.png` (512?256), the client-selected branded trade illustration, in its full proportions. It replaces the introductory MoU photograph and its event caption. The genuine Alagappa University?RIIT MoU photograph remains in the RIIT section. The illustration is not evidence of actual premises or operations.
+
+## Export handholding client artwork - 13 November 2026
+Client-selected existing assets replace the hub banner (`branding/image4.png`, 512 x 256), Phase 1 illustration (`branding/image5.png`, 512 x 262), and Phase 2 illustration (`branding/image6.png`, 512 x 262). Phase 1 and 2 images appear in both the hub summaries and their detail-page openings. These are branded illustrations, not documentary evidence of people or facilities. Full proportions and embedded logos are preserved. Supersedes the previous generated artwork placements for these three images only.
+
+Phase 3: Client-selected branding/image7.png (512 x 261) replaces the buyer-negotiation illustration on the overview and Phase 3 detail page. Natural proportions and embedded logo preserved; illustrative artwork, not documentary evidence.
+
+### Client-supplied China sourcing artwork
+The homepage displays branding/image2.png in place of the Canton Fair photograph inside the red China Import Sourcing section, as clarified by the client. The separate image below the section was removed. The supplied illustration retains its original 512x262 proportions and has no documentary photo caption.
+
+
+
+### MSME insurance banner replacement
+At the client's request, /services/msme-insurance uses branding/image11.png in its introductory banner. The supplied PORTMATRIX and Assure Bharat marine cargo and trade credit insurance artwork is displayed intact at its original 512x262 proportions.
+

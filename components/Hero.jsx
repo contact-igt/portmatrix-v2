@@ -1,24 +1,20 @@
 import Image from "next/image";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { HERO } from "@/lib/content";
-import { GALLERY_SECTIONS } from "@/lib/gallery-data";
 import ExportCapabilities from "./ExportCapabilities";
-
-// Genuine Canton Fair photograph, approved PDF p.25; reuse source metadata.
-const HERO_PHOTO = GALLERY_SECTIONS.find((section) => section.id === "china").images.find((image) => image.src.includes("rahim-iyaz-riaz-malik-canton-fair-2014"));
 
 export default function Hero() {
   return (
     <section id="top" className="relative border-b border-hairline bg-white pt-28 sm:pt-32 lg:pt-36">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-16">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[1fr_1.08fr] lg:items-end lg:gap-10">
         <div>
           <p className="kicker flex items-center gap-2.5 text-navy">
             <span className="h-px w-8 bg-brandred" />
             {HERO.kicker}
           </p>
           <h1 className="h1 mt-5 max-w-2xl text-ink">{HERO.heading}</h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink">{HERO.body}</p>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-slatey">{HERO.coreStrength}</p>
+          <p className="mt-6 text-base font-normal leading-relaxed text-slatey">{HERO.body}</p>
+
           <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-2">
             <a
               href="#contact"
@@ -40,19 +36,21 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mx-auto w-full max-w-xl lg:max-w-none">
+
+        <div className="mx-auto w-full max-w-3xl">
           <figure>
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-hairline bg-paper">
+            <div className="relative aspect-[2/1] w-full overflow-hidden rounded-xl border border-hairline bg-paper">
               <Image
-                src={HERO_PHOTO.src}
-                alt={HERO_PHOTO.alt}
+                src="/images/source/branding/image1.png"
+                alt="PORTMATRIX illustration of a port-facing logistics workspace with a ship, globe and digital trade map"
                 fill
                 priority
-                sizes="(min-width: 1024px) 560px, 100vw"
-                className="object-cover"
+                sizes="(min-width: 1280px) 611px, (min-width: 1024px) 49vw, 100vw"
+                className="object-contain"
               />
             </div>
           </figure>
+          <p className="mt-6 text-base font-normal leading-relaxed text-slatey">{HERO.coreStrength}</p>
         </div>
       </div>
 
@@ -60,3 +58,5 @@ export default function Hero() {
     </section>
   );
 }
+
+
