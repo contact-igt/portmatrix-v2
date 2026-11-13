@@ -9,25 +9,13 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Media and Press",
   description:
-    "An interview video on YouTube and our MD's China Import article in the Nanayam Vikatan Tamil magazine, 04 February 2024.",
+    "The 24 May 2024 Doordarshan National Television interview and our MD's China Import article in the Nanayam Vikatan Tamil magazine, 04 February 2024.",
   path: "/media",
   image: MEDIA.items[0].src,
 });
 
-// The source's own video ID, extracted from the verified YouTube link in
-// lib/content.js — embedded (per the Image Map's recommendation) rather
-// than reusing the PDF's static frame-grab screenshots.
+// Existing source video retained for playback; broadcast details supplied by the client.
 const YOUTUBE_ID = "K28p2YTy2OI";
-
-// CLIENT_CONFIRMATION_REQUIRED: the PDF (pp.83-84) gives only an
-// "Interview YOUTUBE Link" and "Our MD's China Import Article in NANAYAM
-// VIKATAN Tamil Magazine on 04 February, 2024". An English summary, the
-// interview date and channel/interviewer, and the article's topic detail are
-// not in the PDF, so none is written here.
-//
-// No VideoObject JSON-LD: Google's required `uploadDate` (and a source-backed
-// description) are not in the PDF, so structured data would have to be
-// invented. Add it only when the client supplies title/date/channel.
 
 export default function MediaPage() {
   const scan = MEDIA.items[0];
@@ -37,7 +25,7 @@ export default function MediaPage() {
         breadcrumb={<Breadcrumb items={[{ label: "Media", href: "/media" }]} />}
         kicker="Press & media"
         title="Media & Press"
-        intro="PORTMATRIX in the media: an interview video on YouTube, and our MD's China Import article in the Nanayam Vikatan Tamil magazine on 04 February 2024."
+        intro="PORTMATRIX in the media: a Doordarshan National Television interview on 24 May 2024, and our MD's China Import article in the Nanayam Vikatan Tamil magazine on 04 February 2024."
       />
 
       {/* Editorial archive: the lead video, then press coverage as a dated
@@ -45,11 +33,12 @@ export default function MediaPage() {
           not shown — they duplicate the embedded video. */}
       {/* PDF p.83 */}
       <section aria-labelledby="interview-video" className="mt-12 border-t-2 border-navy pt-8">
-        <h2 id="interview-video" className="h2 text-ink">Interview video</h2>
+        <h2 id="interview-video" className="h2 text-ink">Doordarshan National Television interview</h2>
+        <p className="mt-3 text-sm font-semibold text-brandred"><time dateTime="2024-05-24">24 May 2024</time></p>
         <div className="relative mt-6 aspect-video w-full max-w-4xl overflow-hidden rounded-xl border border-hairline bg-paper">
           <iframe
             src={`https://www.youtube.com/embed/${YOUTUBE_ID}`}
-            title="Interview video on YouTube"
+            title="Doordarshan National Television interview ? 24 May 2024"
             className="absolute inset-0 h-full w-full"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -58,7 +47,7 @@ export default function MediaPage() {
         </div>
         <p className="mt-2">
           <a href={MEDIA.videoUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-1.5 text-base font-semibold text-navy underline underline-offset-2 hover:text-ink">
-            Watch the interview on YouTube
+            Watch the Doordarshan interview
             <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
           </a>
         </p>

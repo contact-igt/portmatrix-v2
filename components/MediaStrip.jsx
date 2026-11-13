@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, FileText } from "lucide-react";
 import { MEDIA } from "@/lib/content";
@@ -29,7 +29,7 @@ export default function MediaStrip() {
                   <a href={video.url} target="_blank" rel="noopener noreferrer" className="mt-3 flex min-h-11 items-center justify-between gap-3 border-b border-hairline pb-3 font-display text-lg font-semibold text-navy hover:underline">
                     {video.title}<ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden="true" />
                   </a>
-                  <p className="mt-2 text-sm text-slatey">Watch on YouTube</p>
+                  <p className="mt-2 text-sm text-slatey"><time dateTime={video.date}>{video.dateDisplay}</time> ? Doordarshan National Television</p>
                 </li>
               ))}
             </ul>
@@ -37,8 +37,8 @@ export default function MediaStrip() {
           <div className="min-w-0 border-t border-hairline pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slatey">In print</h3>
             <a href={`${article.pdfHref}#page=2`} target="_blank" rel="noopener noreferrer" className="group block rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy" aria-label="Read Nanayam Vikatan article PDF (opens in a new tab)">
-              <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-xl border border-hairline bg-paper p-3 sm:p-4">
-                <Image src={article.src} alt={article.alt} width={article.width} height={article.height} unoptimized sizes="(min-width: 1024px) 384px, (min-width: 640px) 600px, 100vw" className="h-full w-auto max-w-full object-contain shadow-sm transition-transform duration-300 group-hover:scale-[1.02] motion-reduce:transform-none" />
+              <div className="overflow-hidden rounded-xl border border-hairline bg-paper">
+                <Image src={article.src} alt={article.alt} width={article.width} height={article.height} unoptimized sizes="(min-width: 1024px) 384px, (min-width: 640px) 600px, 100vw" className="block h-auto w-full" />
               </div>
               <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-brandred"><time dateTime="2024-02-04">04 February 2024</time></p>
               <h4 className="mt-2 font-display text-xl font-semibold text-ink">Nanayam Vikatan</h4>

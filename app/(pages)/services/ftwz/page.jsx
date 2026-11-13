@@ -27,7 +27,7 @@ export default function FtwzPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Free Trade Warehousing Zone (FTWZ)",
-    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
+    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Private Limited" },
     description: FTWZ_PAGE.definitionText,
   };
   const P = FTWZ_PAGE;

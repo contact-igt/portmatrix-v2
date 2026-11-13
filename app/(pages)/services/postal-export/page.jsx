@@ -25,7 +25,7 @@ export default function PostalExportPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Postal Export through Dak Ghar Niryat Kendras",
-    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
+    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Private Limited" },
     description: P.definition,
   };
 

@@ -21,6 +21,7 @@ export default function PageIntro({
   light = false,
   aside,
   asideAlign = "start",
+  asideClassName = "max-w-sm lg:max-w-[25rem]",
   kickerStyle = "auto",
 }) {
   const sentence = kickerStyle === "sentence" || (kickerStyle === "auto" && typeof kicker === "string" && kicker.length > 32);
@@ -60,7 +61,7 @@ export default function PageIntro({
         {children}
       </div>
       {aside && (
-        <motion.div variants={fadeUp} className={`mx-auto w-full min-w-0 max-w-sm lg:mr-0 lg:max-w-[25rem] ${asideAlign === "center" ? "lg:self-center" : asideAlign === "end" ? "lg:self-end" : ""}`}>
+        <motion.div variants={fadeUp} className={`mx-auto w-full min-w-0 lg:mr-0 ${asideClassName} ${asideAlign === "center" ? "lg:self-center" : asideAlign === "end" ? "lg:self-end" : ""}`}>
           {aside}
         </motion.div>
       )}

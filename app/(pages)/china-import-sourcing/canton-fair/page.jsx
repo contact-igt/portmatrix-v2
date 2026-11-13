@@ -1,4 +1,3 @@
-import RahimText from "@/components/RahimText";
 import Link from "next/link";
 import Image from "next/image";
 import { Check, ArrowUpRight } from "lucide-react";
@@ -65,7 +64,8 @@ const FAQS = [
 
 export default function CantonFairPage() {
   return (
-    <div className="mx-auto max-w-7xl px-5 pb-14 pt-6 sm:px-8 sm:pb-20 sm:pt-8">
+    <div className="china-theme mx-auto max-w-7xl px-5 pb-14 pt-6 sm:px-8 sm:pb-20 sm:pt-8">
+      <div className="china-feature china-intro">
       <PageIntro
         breadcrumb={
           <Breadcrumb items={[{ label: "China Import Sourcing", href: "/china-import-sourcing" }, { label: "Canton Fair", href: "/china-import-sourcing/canton-fair" }]} />
@@ -74,6 +74,7 @@ export default function CantonFairPage() {
         title="China Canton Fair Services"
         intro={CANTON_FAIR_PAGE.intro}
       />
+      </div>
 
       {/* Evidence strip — documented presence at Canton Fair, 2014 and 2025.
           Each photo at its true ratio; captions as readable text. */}
@@ -88,7 +89,7 @@ export default function CantonFairPage() {
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-hairline bg-white">
             <Image src={GALLERY[1].src} alt={GALLERY[1].alt} fill sizes="(min-width: 1024px) 480px, 100vw" className="object-cover" />
           </div>
-          <figcaption className="mt-3 text-sm leading-relaxed text-slatey"><RahimText>{GALLERY[1].caption}</RahimText></figcaption>
+          <figcaption className="mt-3 text-sm leading-relaxed text-slatey">{GALLERY[1].caption}</figcaption>
         </figure>
       </div>
 

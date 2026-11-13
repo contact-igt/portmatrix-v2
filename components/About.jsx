@@ -1,7 +1,7 @@
 import Image from "next/image";
 import RahimSignature from "./RahimSignature";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { MD, MISSION_TAGLINE_DISPLAY } from "@/lib/content";
 
 // Homepage summary only. The full company overview lives on /about and the
@@ -66,7 +66,17 @@ export default function About() {
                 <li>Former Risk Mitigation professional with <strong>State Bank of India</strong> Group.</li>
                 <li>Authorised Export Resource Person for <strong>Ministry of MSME, EDII-TN, TNAPEx, TN Cooperative Society, FIEO &amp; Alagappa University</strong>.</li>
               </ul>
-              <p className="sm:col-span-2">
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 sm:col-span-2">
+                <a
+                  href={`https://wa.me/919359352345?text=${encodeURIComponent("Hello, I would like to request an appointment with Mr. Rahim Iyaz. Please share his availability.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-full bg-navy px-5 py-3 text-sm font-semibold text-white transition-colors duration-150 hover:bg-navy-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy"
+                >
+                  <MessageCircle className="h-4 w-4 shrink-0" aria-hidden="true" />
+                  Request an appointment
+                  <ArrowRight className="h-4 w-4 shrink-0" aria-hidden="true" />
+                </a>
                 <Link
                   href="/about/rahim-iyaz"
                   className="group inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-navy"
@@ -76,7 +86,7 @@ export default function About() {
                   </span>
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </Link>
-              </p>
+              </div>
           </div>
         </div>
       </div>

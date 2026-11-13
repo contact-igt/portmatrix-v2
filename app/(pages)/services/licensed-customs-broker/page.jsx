@@ -22,7 +22,7 @@ export default function LicensedCustomsBrokerPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Licensed Customs Broker",
-    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
+    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Private Limited" },
     // p.27 "Pan India"
     areaServed: { "@type": "Country", name: "India" },
     description: CUSTOMS_BROKER_PAGE.intro,

@@ -1,4 +1,4 @@
-import IllustrativeFigure from "@/components/IllustrativeFigure";
+import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
 import DefinitionBlock from "@/components/DefinitionBlock";
@@ -47,7 +47,7 @@ export default function AeoPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Authorised Economic Operator (AEO) Certification",
-    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
+    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Private Limited" },
     description: `${P.whatIsAeo} ${P.definition}`,
   };
   const { headers, rows } = P.categoriesTable;
@@ -59,7 +59,22 @@ export default function AeoPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageIntro
         asideAlign="center"
-        aside={<IllustrativeFigure image="aeo" className="mx-auto w-full max-w-lg" />}
+        asideClassName="max-w-xl lg:max-w-none"
+        aside={
+          <figure className="mx-auto w-full">
+            <Image
+              src="/images/source/branding/aeo.webp"
+              alt="AEO Indian Customs programme logo"
+              width={1199}
+              height={476}
+              sizes="(min-width: 1280px) 520px, (min-width: 1024px) 42vw, (min-width: 640px) 576px, calc(100vw - 40px)"
+              className="h-auto w-full rounded-2xl object-contain"
+            />
+            <figcaption className="caption mt-3 text-slatey">
+              Source: <a href="https://aeoindia.gov.in/" className="underline underline-offset-4 hover:text-navy">AEO India — Indian Customs</a>
+            </figcaption>
+          </figure>
+        }
         breadcrumb={<Breadcrumb items={[{ label: "Services", href: "/services" }, { label: "AEO", href: "/services/aeo" }]} />}
         kicker={P.tagline}
         title="Authorised Economic Operator (AEO) Certification"

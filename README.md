@@ -1,6 +1,6 @@
 # PORTMATRIX Logistics — Website (Homepage)
 
-A production-ready **Next.js 14 (App Router)** homepage for PORTMATRIX Logistics Pvt. Ltd.,
+A production-ready **Next.js 14 (App Router)** homepage for PORTMATRIX Logistics Private Limited,
 built with **Tailwind CSS**, **Framer Motion** animations, and **lucide-react** icons.
 Fully mobile responsive, with reduced-motion and keyboard-focus support.
 

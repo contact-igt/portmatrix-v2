@@ -74,7 +74,7 @@ export default function ExportImportClearancePage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Export Import Clearance",
-    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
+    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Private Limited" },
     description: P.serviceIntro,
   };
 

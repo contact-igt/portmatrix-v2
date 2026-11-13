@@ -27,7 +27,7 @@ export default function EouPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Export Oriented Unit (EOU) Registration Support",
-    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
+    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Private Limited" },
     description: EOU_PAGE.definition,
   };
   const P = EOU_PAGE;

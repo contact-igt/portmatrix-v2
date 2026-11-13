@@ -58,8 +58,8 @@ export default function ExportCapabilities() {
     <section aria-labelledby="hero-process" className="mx-auto mt-12 max-w-7xl px-5 pb-12 sm:px-8 lg:mt-16 lg:pb-14">
       <div className="border-t-2 border-navy">
         <div className="py-6 sm:py-8">
-          <h2 id="hero-process" className="text-sm font-semibold uppercase tracking-[0.08em] text-ink">End-to-End Export Facilitation Process</h2>
-          <p className="mt-2 text-sm text-slatey">Support across six export service areas.</p>
+          <h2 id="hero-process" className="text-sm font-semibold uppercase tracking-[0.08em] text-ink">End-to-End Export  Import Facilitation Process</h2>
+          <p className="mt-2 text-sm text-slatey">Support across six export import service areas.</p>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
           {HEADINGS.map((heading, index) => {

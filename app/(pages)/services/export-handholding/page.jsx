@@ -40,7 +40,7 @@ export default function ExportHandholdingHub() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "MSME Export Handholding",
-    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
+    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Private Limited" },
     description: EXPORT_HANDHOLDING_HUB.intro,
   };
   const lastPhase = PHASES.length - 1;
