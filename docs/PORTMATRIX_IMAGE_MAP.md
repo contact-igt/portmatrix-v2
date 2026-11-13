@@ -222,3 +222,33 @@ This completion supersedes the earlier single-placement rule for the two reused 
 - `/images/illustrative/import-machinery-inspection.png`: AI-generated generic machinery inspection and document review scene. Used on `/services/export-import-clearance`; labelled AI illustration.
 - `/images/illustrative/import-cargo-delivery.png`: AI-generated generic cargo transport and warehouse delivery scene. Used on the same page; labelled AI illustration.
 - Replaces the two displayed workflow photos only. Original Netherlands 2024 and USA 2025 source files are preserved; their factual captions are not applied to generated artwork. No real shipment, company facility, or person is claimed.
+
+## About hero photograph — 13 November 2026
+
+The /about PageIntro now uses the existing p.4 studio portrait (md/rahim-iyaz-portrait.png), with its original natural proportions and the caption Rahim Iyaz — Managing Director. It replaces the decorative TradeNetworkVisual globe. The existing Leadership portrait remains in place; no new asset or claim was added.
+
+## China sourcing banner — 13 November 2026
+
+At the client's request, /china-import-sourcing now shows china/rahim-iyaz-riaz-malik-canton-fair-2014.png (PDF p.25) in its introductory banner. The exact photograph was matched visually to the supplied reference and reuses gallery metadata and the approved caption. Natural 960x720 proportions are preserved. Its existing gallery placement remains.
+
+
+## Homepage hero replacement — 13 November 2026
+
+The homepage hero now uses existing illustrative/export-logistics.webp (container vessel and port) instead of either shipment inspection photograph. Caption: AI illustration · Export logistics. Generic supporting imagery; no PORTMATRIX shipment or facility is claimed. Original documentary assets remain preserved.
+
+
+## Homepage genuine photo correction — 13 November 2026
+
+Supersedes the homepage AI illustration replacement above. At the client's request, the homepage hero uses the genuine p.21 China factory visit photograph (china/rahim-iyaz-china-factory-2015.png), reusing CHINA.images.factory metadata and its factual caption. Full 4:3 proportions are preserved. Neither shipment inspection photograph nor AI imagery is used in this hero.
+
+
+## Homepage second genuine photograph — 13 November 2026
+
+Added the approved PDF p.25 Canton Fair 2014 photograph below the factory visit in the homepage hero. Reuses GALLERY_SECTIONS china image metadata and its exact caption. Natural proportions retained, with a link to the full photograph. No generated imagery or invented identities added.
+
+
+## Homepage single-photo revision — 13 November 2026
+
+Supersedes the two-photo layout above. Removed the secondary figure and changed the primary hero to the genuine Canton Fair 2014 photograph (PDF p.25), preserving the gallery source caption, alt text and natural 4:3 proportions. The factory visit no longer appears in the homepage hero.
+## About hero image update
+The /about opening uses the genuine PDF p.77 photograph, public/images/source/events/alagappa-university-mou-2022-10-31.png (1280 x 853), with the existing Alagappa University-RIIT MoU caption. This supersedes the opening image in the older About inventory. No AI illustration appears in this banner.

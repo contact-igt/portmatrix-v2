@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Contact Us — Registered Office in Chennai",
   description:
-    "Phone numbers, website and registered office address of PORTMATRIX Logistics Pvt. Ltd., Wavoo Mansion Annex, Rajaji Salai, Chennai, Tamil Nadu.",
+    "Phone numbers, website and registered office address of PORTMATRIX Logistics Private Limited, Wavoo Mansion Annex, Rajaji Salai, Chennai, Tamil Nadu.",
   path: "/contact",
 });
 

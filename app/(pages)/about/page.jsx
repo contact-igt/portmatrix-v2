@@ -24,7 +24,7 @@ import {
 } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
-import TradeNetworkVisual from "@/components/TradeNetworkVisual";
+import ImageCaption from "@/components/ImageCaption";
 import { ALLIED_SERVICES, MD, RIIT, CHINA } from "@/lib/content";
 import { CHINA_PAGE } from "@/lib/china-data";
 import { RIIT_PARTNERS, RIIT_PARTNERS_LEAD } from "@/lib/riit-data";
@@ -36,6 +36,7 @@ import {
   MD_COUNTRIES,
 } from "@/lib/about-data";
 import { buildMetadata } from "@/lib/seo";
+import { newestFirst } from "@/lib/date-order";
 
 // absoluteTitle: the title already names the brand, so the "| PORTMATRIX"
 // suffix is not appended.
@@ -43,7 +44,7 @@ export const metadata = buildMetadata({
   title: "About PORTMATRIX — Customs Broking and Export Handholding",
   absoluteTitle: true,
   description:
-    "About PORTMATRIX Logistics Pvt. Ltd.: customs broking and end-to-end export handholding, EXIM market intelligence, and its allied institute RIIT.",
+    "About PORTMATRIX Logistics Private Limited: customs broking and end-to-end export handholding, EXIM market intelligence, and its allied institute RIIT.",
   path: "/about",
 });
 
@@ -66,6 +67,7 @@ const CLUSTER_ICONS = { gavel: Gavel, chart: LineChart, radar: Radar, compass: C
 
 const history = CHINA.images.history;
 const mou = RIIT.featured.find((f) => f.src.includes("alagappa"));
+const aboutImage = mou;
 const qualifications = MD.qualifications.split(", ");
 
 const MD_FACTS = [
@@ -127,12 +129,26 @@ const MD_FACTS = [
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-7xl px-5 pb-14 pt-4 sm:px-8 sm:pb-20 sm:pt-6">
-      {/* 1 — hero: p.3 defining sentence + one decorative (non-documentary) visual */}
+      {/* 1 — hero: p.3 defining sentence + genuine Alagappa University–RIIT MoU photograph (p.77). */}
       <PageIntro
         breadcrumb={<Breadcrumb items={[{ label: "About", href: "/about" }]} />}
         title="About PORTMATRIX"
         intro={ABOUT_PAGE.intro}
-        aside={<TradeNetworkVisual className="mx-auto h-auto w-full max-w-[18rem] lg:ml-auto lg:mr-0 lg:max-w-[20rem]" />}
+        aside={
+          <figure>
+            <Image
+              src={aboutImage.src}
+              alt={aboutImage.alt}
+              width={aboutImage.width}
+              height={aboutImage.height}
+              sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) 384px, 400px"
+              priority
+              unoptimized
+              className="h-auto w-full rounded-xl"
+            />
+            <ImageCaption>{aboutImage.caption}</ImageCaption>
+          </figure>
+        }
       />
       {/* Use the official logo strapline. */}
       <p className="mt-5 max-w-3xl border-l-2 border-brandred pl-4 font-display text-lg font-semibold text-navy">
@@ -226,7 +242,7 @@ export default function AboutPage() {
       <section id="journey" aria-labelledby="journey-h" className={sectionRule}>
         <h2 id="journey-h" className="h2 text-ink">Our journey</h2>
         <ol role="list" className="mt-10 border-l-2 border-hairline">
-          {ABOUT_JOURNEY.map((e) => {
+          {[...ABOUT_JOURNEY].sort((a, b) => Number(b.year) - Number(a.year)).map((e) => {
             const head = (
               <div>
                 <p className="font-display text-4xl font-bold leading-none tracking-tight text-navy sm:text-5xl">{e.year}</p>
@@ -235,7 +251,7 @@ export default function AboutPage() {
             );
             const items = (
               <ul role="list" className={`space-y-4 ${e.figure ? "mt-6" : ""}`}>
-                {e.items.map((it) => (
+                {[...e.items].sort(newestFirst).map((it) => (
                   <li key={it.text} className="max-w-prose text-base leading-relaxed text-ink/90 sm:text-[1.0625rem]">
                     {it.date && (
                       <time dateTime={it.date} className="mr-2 text-[0.9375rem] font-semibold text-brandred-600">
@@ -428,7 +444,7 @@ export default function AboutPage() {
           ))}
         </ul>
         <p className="mt-6 max-w-prose text-base leading-relaxed text-slatey">
-          Registered Office: PORTMATRIX Logistics Pvt. Ltd., Chennai, Tamil Nadu, India.{" "}
+          Registered Office: PORTMATRIX Logistics Private Limited, Chennai, Tamil Nadu, India.{" "}
           <Link href="/contact" className={linkClass}>
             Contact details
           </Link>

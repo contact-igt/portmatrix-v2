@@ -1,14 +1,11 @@
-import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import { HERO, OPERATIONAL_PROOF } from "@/lib/content";
+import { ArrowRight, MessageCircle } from "lucide-react";
+import { HERO } from "@/lib/content";
+import { GALLERY_SECTIONS } from "@/lib/gallery-data";
 import ExportCapabilities from "./ExportCapabilities";
 
-// Source-locked homepage hero: the PDF p.3 defining sentence beside ONE
-// authentic operational photograph (the USA 2025 shipment inspection,
-// also the home page's single "inspection" image). Client-supplied service
-// headings run in the horizontal strip below the hero.
-const HERO_PHOTO = OPERATIONAL_PROOF.images.find((i) => i.src.includes("export-shipment-inspection-usa-2025"));
+// Genuine Canton Fair photograph, approved PDF p.25; reuse source metadata.
+const HERO_PHOTO = GALLERY_SECTIONS.find((section) => section.id === "china").images.find((image) => image.src.includes("rahim-iyaz-riaz-malik-canton-fair-2014"));
 
 export default function Hero() {
   return (
@@ -30,20 +27,21 @@ export default function Hero() {
               Get in touch
               <ArrowRight className="h-4 w-4 transition-transform duration-150 group-hover:translate-x-0.5" aria-hidden="true" />
             </a>
-            <Link
-              href="/services/export-handholding"
-              className="group inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-navy"
-            >
-              <span className="border-b border-navy/30 pb-0.5 transition-colors duration-150 group-hover:border-navy">
-                Explore Export Handholding
-              </span>
-              <ArrowRight className="h-3.5 w-3.5 transition-transform duration-150 group-hover:translate-x-0.5" aria-hidden="true" />
-            </Link>
+          <a
+            href={`https://wa.me/919359352345?text=${encodeURIComponent("Hello, I would like to request an appointment with Mr. Rahim Iyaz. Please share his availability.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-11 items-center gap-2 rounded-full border border-navy px-5 py-3 text-sm font-semibold text-navy transition-colors duration-150 hover:bg-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy"
+          >
+            <MessageCircle className="h-4 w-4 shrink-0" aria-hidden="true" />
+            Request an MD appointment
+            <ArrowRight className="h-4 w-4 shrink-0" aria-hidden="true" />
+          </a>
           </div>
         </div>
 
-        {HERO_PHOTO && (
-          <figure className="mx-auto w-full max-w-xl lg:max-w-none">
+        <div className="mx-auto w-full max-w-xl lg:max-w-none">
+          <figure>
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-hairline bg-paper">
               <Image
                 src={HERO_PHOTO.src}
@@ -54,9 +52,8 @@ export default function Hero() {
                 className="object-cover"
               />
             </div>
-            <figcaption className="mt-3 text-sm leading-snug text-slatey">Hotel supplies shipment to USA in 2025</figcaption>
           </figure>
-        )}
+        </div>
       </div>
 
       <ExportCapabilities />

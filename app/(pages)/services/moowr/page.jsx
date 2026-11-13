@@ -26,7 +26,7 @@ export default function MoowrPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "MOOWR Scheme (Section 65 Warehousing Unit)",
-    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
+    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Private Limited" },
     description: MOOWR_PAGE.definition,
   };
   const { legalBasis, flowSteps, flowOutcomes, eligibility, compliance } = MOOWR_PAGE;

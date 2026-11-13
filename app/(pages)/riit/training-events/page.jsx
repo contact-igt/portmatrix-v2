@@ -1,23 +1,18 @@
-import RahimText from "@/components/RahimText";
 import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
 import RelatedServices from "@/components/RelatedServices";
 import Image from "next/image";
 import { TRAINING_EVENTS } from "@/lib/riit-data";
+import { newestFirst } from "@/lib/date-order";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "RIIT Training Events 2020–2026",
   description:
-    "RIIT training programmes, sessions and events from 2 August 2020 to 2026, listed by year, including the Alagappa University MoU and the MSME MDP sessions.",
+    "RIIT training programmes, sessions and events from 2 August 2020 to 18 August 2026, listed newest first, including the Alagappa University MoU and the MSME MDP sessions.",
   path: "/riit/training-events",
   image: TRAINING_EVENTS.find((e) => e.flagship && e.title.includes("Alagappa")).src,
 });
-
-// Chronological sort key. Full dates sort as-is; month-only entries
-// ("2023-11") sort after the dated events of that month; year-only entries
-// ("2025") sort after everything dated in that year.
-const sortKey = (e) => (e.date.length === 10 ? e.date : e.date.length === 7 ? `${e.date}-99` : `${e.date}-99-99`);
 
 // The November 2023 sessions and the 28 Nov certificate belong together.
 const MDP_GROUP = {
@@ -34,11 +29,11 @@ const MDP_GROUP = {
   ]),
 };
 
-const sorted = [...TRAINING_EVENTS].sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
+const sorted = [...TRAINING_EVENTS].sort(newestFirst);
 const years = [...new Set(sorted.map((e) => e.date.slice(0, 4)))];
 
 // Per year: a flat list of entries, where the MDP programme appears once, as
-// a group, at the position of its earliest event.
+// a group, at the position of its latest dated event.
 function entriesFor(year) {
   const out = [];
   let groupDone = false;
@@ -61,6 +56,7 @@ function entriesFor(year) {
 // photo, the certificate hand-off photo and the Postal / FSSAI / ECGC / EIA
 // session photos are among the ones not shown.
 const EVIDENCE_SRC = new Set([
+  "/images/source/branding/image10.jpeg",
   "/images/source/events/alagappa-university-mou-2022-10-31.png",
   "/images/source/riit/fieo-training-sakthivel-unnikrishnan-2022-12-20.png",
   "/images/source/riit/fieo-women-entrepreneurs-training-2023-02-09-speaker.png",
@@ -96,7 +92,7 @@ function EventRow({ event, as: Heading = "h3" }) {
           <time dateTime={event.date}>{event.dateDisplay}</time>
         </p>
         <Heading className="mt-1.5 font-display text-xl font-bold leading-snug text-ink">{event.title}</Heading>
-        <p className="mt-2 max-w-prose text-base leading-relaxed text-slatey"><RahimText>{event.caption}</RahimText></p>
+        <p className="mt-2 max-w-prose text-base leading-relaxed text-slatey">{event.caption}</p>
       </div>
       {showImage && (
         <figure className={`mt-5 md:mt-0 ${portrait ? "max-w-[14rem] md:max-w-none" : ""}`}>
@@ -127,7 +123,7 @@ export default function TrainingEventsPage() {
         breadcrumb={<Breadcrumb items={[{ label: "RIIT", href: "/riit" }, { label: "Training Events", href: "/riit/training-events" }]} />}
         kicker={`${TRAINING_EVENTS.length} documented events · 2020–2026`}
         title="RIIT Training Events 2020–2026"
-        intro="Training programmes, sessions and events held by RIIT and its partners, from the first export training on 2 August 2020 to a session on Agricultural Export Procedures in 2026, listed by year."
+        intro="Training programmes, sessions and events held by RIIT and its partners, from the first export training on 2 August 2020 to the MSME & IIT Madras Seminar on 18 August 2026, listed newest first by year and month."
       />
 
       <nav aria-label="On this page" className="mt-8 border-y border-hairline">
@@ -149,7 +145,7 @@ export default function TrainingEventsPage() {
           <ol className="divide-y divide-hairline lg:border-l lg:border-hairline lg:pl-10">
             {entriesFor(year).map((entry) =>
               entry.event ? (
-                <EventRow key={entry.event.src} event={entry.event} />
+                <EventRow key={entry.event.src || entry.event.title} event={entry.event} />
               ) : (
                 <li key={entry.group.id} className="py-8">
                   <h3 id={entry.group.id} className="font-display text-2xl font-bold leading-snug text-ink">

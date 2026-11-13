@@ -22,7 +22,7 @@ export default function EpcgPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Export Promotion Capital Goods (EPCG) Scheme",
-    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
+    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Private Limited" },
     description: EPCG_PAGE.definition,
   };
   const P = EPCG_PAGE;

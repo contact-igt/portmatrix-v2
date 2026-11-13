@@ -35,6 +35,7 @@ module.exports = {
           800: "#710004",
           900: "#480002",
         },
+        china: { red: "#E01422", yellow: "#FFDE00", "yellow-hover": "#FFE94D" },
         ink: "#0D102E",
         paper: "#F6F7FC",
         mist: "#EBEEF7",

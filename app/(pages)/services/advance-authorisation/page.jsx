@@ -26,7 +26,7 @@ export default function AdvanceAuthorisationPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Advance Authorisation Scheme",
-    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
+    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Private Limited" },
     description: ADVANCE_AUTHORISATION_PAGE.definition,
   };
   const P = ADVANCE_AUTHORISATION_PAGE;

@@ -32,7 +32,7 @@ export default function FreightForwardingPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Freight Forwarding & Logistics",
-    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
+    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Private Limited" },
     description: P.definition,
   };
 

@@ -1,4 +1,3 @@
-import RahimText from "@/components/RahimText";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -8,6 +7,7 @@ import RelatedServices from "@/components/RelatedServices";
 import { RIIT } from "@/lib/content";
 import { RIIT_HUB, RIIT_PARTNERS, RIIT_PARTNERS_LEAD, RIIT_SERVES, RIIT_DOES, RIIT_MILESTONES } from "@/lib/riit-data";
 import { buildMetadata } from "@/lib/seo";
+import { newestFirst } from "@/lib/date-order";
 
 export const metadata = buildMetadata({
   title: "Regional Institute of International Trade (RIIT)",
@@ -93,7 +93,7 @@ export default function RiitPage() {
       <section aria-labelledby="riit-milestones" className="mt-16 border-t border-hairline pt-10">
         <h2 id="riit-milestones" className="h2 text-ink">Milestones</h2>
         <ol className="mt-8 border-l-2 border-hairline">
-          {RIIT_MILESTONES.map((m) => {
+          {[...RIIT_MILESTONES].sort(newestFirst).map((m) => {
             const photo = MILESTONE_PHOTOS[m.date];
             return (
               <li key={m.date} className="relative pb-12 pl-6 last:pb-0 sm:pl-10">
@@ -108,7 +108,7 @@ export default function RiitPage() {
                       <div className={`relative w-full overflow-hidden rounded-xl border border-hairline bg-white ${photo.width / photo.height > 1.4 ? "aspect-[3/2]" : "aspect-[4/3]"}`}>
                         <Image src={photo.src} alt={photo.alt} fill sizes="(min-width: 1024px) 416px, 100vw" className="object-cover" />
                       </div>
-                      <figcaption className="mt-3 text-sm leading-relaxed text-slatey"><RahimText>{photo.caption}</RahimText></figcaption>
+                      <figcaption className="mt-3 text-sm leading-relaxed text-slatey">{photo.caption}</figcaption>
                     </figure>
                   )}
                 </div>
@@ -134,7 +134,7 @@ export default function RiitPage() {
             <Link href="/riit/training-events" className="group flex min-h-11 items-center justify-between gap-6 py-4">
               <span className="text-base leading-relaxed text-slatey">
                 <span className="font-display text-lg font-semibold text-ink group-hover:text-navy">Training Events</span>
-                {" — "}training programmes and events, 2 August 2020 – 13 May 2026.
+                {" — "}training programmes and events, 2 August 2020 – 18 August 2026.
               </span>
               <ArrowRight className="h-4 w-4 shrink-0 text-navy/50 group-hover:text-navy" aria-hidden="true" />
             </Link>

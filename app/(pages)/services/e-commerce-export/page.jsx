@@ -25,7 +25,7 @@ export default function EcommerceExportPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "E-Commerce Export",
-    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
+    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Private Limited" },
     description: P.intro,
   };
 

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "home",
+    "width": 1440,
+    "overflow": false,
+    "band": "rgb(224, 20, 34)",
+    "button": "rgb(255, 222, 0)",
+    "brokenImages": []
+  },
+  {
+    "name": "sourcing",
+    "width": 1440,
+    "overflow": false,
+    "band": "rgb(224, 20, 34)",
+    "button": null,
+    "brokenImages": []
+  },
+  {
+    "name": "canton",
+    "width": 1440,
+    "overflow": false,
+    "band": "rgb(224, 20, 34)",
+    "button": null,
+    "brokenImages": []
+  },
+  {
+    "name": "home",
+    "width": 768,
+    "overflow": false,
+    "band": "rgb(224, 20, 34)",
+    "button": "rgb(255, 222, 0)",
+    "brokenImages": []
+  },
+  {
+    "name": "sourcing",
+    "width": 768,
+    "overflow": false,
+    "band": "rgb(224, 20, 34)",
+    "button": null,
+    "brokenImages": []
+  },
+  {
+    "name": "canton",
+    "width": 768,
+    "overflow": false,
+    "band": "rgb(224, 20, 34)",
+    "button": null,
+    "brokenImages": []
+  },
+  {
+    "name": "home",
+    "width": 390,
+    "overflow": false,
+    "band": "rgb(224, 20, 34)",
+    "button": "rgb(255, 222, 0)",
+    "brokenImages": []
+  },
+  {
+    "name": "sourcing",
+    "width": 390,
+    "overflow": false,
+    "band": "rgb(224, 20, 34)",
+    "button": null,
+    "brokenImages": []
+  },
+  {
+    "name": "canton",
+    "width": 390,
+    "overflow": false,
+    "band": "rgb(224, 20, 34)",
+    "button": null,
+    "brokenImages": []
+  }
+]

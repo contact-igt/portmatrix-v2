@@ -242,3 +242,22 @@ body {
 .article-body :is(h2, h3) + * {
   margin-top: 0.75rem;
 }
+
+/* Client's China trade palette stays scoped to China content. */
+.china-theme .text-navy,
+.china-theme .text-brandred { color: #B5101B; }
+.china-theme .border-navy { border-color: #E01422; }
+.china-theme .bg-brandred { background-color: #E01422; }
+.china-feature { color: #fff; }
+.china-intro {
+  border-radius: 1rem;
+  background-color: #E01422;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+.china-intro :is(h1, p, a, span),
+.china-intro .text-navy { color: #fff; }
+.china-intro :is(.kicker, .kicker-sentence),
+.china-intro :is(.kicker, .kicker-sentence) span { color: #FFDE00; }
+.china-intro :is(.border-ink, [class*="border-navy/"]) { border-color: rgb(255 255 255 / 40%); }
+.china-feature :focus-visible { outline-color: #FFDE00; }
+.china-feature a.bg-china-yellow:focus-visible { outline-color: #fff; }

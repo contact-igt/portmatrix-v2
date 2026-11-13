@@ -24,7 +24,7 @@ export default function MsmeInsurancePage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "MSME Insurance Package",
-    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
+    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Private Limited" },
     description: P.intro,
   };
 

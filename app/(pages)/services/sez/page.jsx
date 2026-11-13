@@ -24,7 +24,7 @@ export default function SezPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Special Economic Zone (SEZ) Registration Support",
-    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
+    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Private Limited" },
     description: SEZ_PAGE.definition,
   };
   const P = SEZ_PAGE;

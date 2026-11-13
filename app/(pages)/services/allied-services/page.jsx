@@ -48,7 +48,7 @@ export default function AlliedServicesPage() {
         />
         <div className="self-center px-6 py-9 sm:p-9 lg:p-12">
           <div className="flex flex-col items-start gap-2">
-            <RahimSignature variant="white" className="max-w-[14rem] -translate-x-[6.45%] sm:max-w-[18rem]" sizes="(min-width: 640px) 288px, 224px" />
+            <RahimSignature variant="white" className="max-w-[18rem]" sizes="(max-width: 639px) calc(100vw - 88px), 288px" />
             <p className="text-sm font-medium text-white/75">{MD.role}</p>
           </div>
           <h2 id="md-appointment" className="mt-3 font-display text-2xl font-bold leading-tight sm:text-3xl">Arrange a meeting with our Managing Director</h2>

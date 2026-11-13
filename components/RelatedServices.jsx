@@ -1,5 +1,4 @@
 import Link from "next/link";
-import RahimSignature from "./RahimSignature";
 import { ArrowRight } from "lucide-react";
 
 // Contextual cross-links only — every usage passes an explicit, source-
@@ -18,14 +17,7 @@ export default function RelatedServices({ title = "Related", items }) {
               href={item.href}
               className="group flex min-h-12 items-center justify-between gap-3 py-3 transition-colors hover:text-navy"
             >
-              {item.href === "/about/rahim-iyaz" ? (
-                <span className="min-w-0 flex-1">
-                  <RahimSignature className="max-w-[13rem]" sizes="208px" />
-                  <span className="mt-1 block text-sm text-slatey">Managing Director</span>
-                </span>
-              ) : (
-                <span className="text-base font-semibold text-ink group-hover:text-navy">{item.title}</span>
-              )}
+              <span className="text-base font-semibold text-ink group-hover:text-navy">{item.title}</span>
               <ArrowRight
                 className="h-4 w-4 shrink-0 text-slatey transition-transform group-hover:translate-x-0.5 group-hover:text-navy"
                 aria-hidden="true"

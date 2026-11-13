@@ -1,5 +1,3 @@
-import IllustrativeFigure from "@/components/IllustrativeFigure";
-import RahimText from "@/components/RahimText";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -25,6 +23,7 @@ import StatStrip from "@/components/StatStrip";
 import RelatedServices from "@/components/RelatedServices";
 import Faq from "@/components/Faq";
 import { CHINA } from "@/lib/content";
+import { GALLERY_SECTIONS } from "@/lib/gallery-data";
 import { CHINA_PAGE as P } from "@/lib/china-data";
 import { buildMetadata } from "@/lib/seo";
 
@@ -119,15 +118,19 @@ export default function ChinaImportSourcingPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "China Import Sourcing",
-    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Pvt. Ltd." },
+    provider: { "@type": "Organization", name: "PORTMATRIX Logistics Private Limited" },
     description: P.serviceIntro,
   };
   const history = CHINA.images.history;
   const factory = CHINA.images.factory;
+  const sourcingPhoto = GALLERY_SECTIONS.find((section) => section.id === "china").images.find(
+    (photo) => photo.src.endsWith("rahim-iyaz-riaz-malik-canton-fair-2014.png")
+  );
 
   return (
-    <div className="mx-auto max-w-7xl px-5 pb-14 pt-6 sm:px-8 sm:pb-20 sm:pt-8">
+    <div className="china-theme mx-auto max-w-7xl px-5 pb-14 pt-6 sm:px-8 sm:pb-20 sm:pt-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <div className="china-feature china-intro">
       <PageIntro
         breadcrumb={<Breadcrumb items={[{ label: "China Import Sourcing", href: "/china-import-sourcing" }]} />}
         kicker="The Gateway to China Trade"
@@ -136,20 +139,33 @@ export default function ChinaImportSourcingPage() {
         intro={P.serviceIntro}
         aside={
           <div>
-            <IllustrativeFigure image="china-import-sourcing" className="mx-auto w-full max-w-lg" />
-            <div className="mt-5 border-t-2 border-ink pt-4">
-            <p className="font-display text-xl font-semibold leading-snug text-ink sm:text-2xl">{P.experienceLine}</p>
-            <a
-              href="#trade-link"
-              className="group mt-2 inline-flex min-h-11 items-center gap-1.5 text-[0.9375rem] font-semibold text-navy"
-            >
-              <span className="border-b border-navy/30 pb-0.5 group-hover:border-navy">Our trade link with Hong Kong and China</span>
-              <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-            </a>
-            </div>
+            <figure className="mx-auto w-full max-w-lg">
+              <Image
+                src={sourcingPhoto.src}
+                alt={sourcingPhoto.alt}
+                width={sourcingPhoto.width}
+                height={sourcingPhoto.height}
+                sizes="(min-width: 1024px) 400px, (min-width: 640px) 384px, 100vw"
+                priority
+                className="h-auto w-full rounded-xl border border-hairline"
+              />
+              <figcaption className="caption mt-3 leading-relaxed">{sourcingPhoto.caption}</figcaption>
+            </figure>
           </div>
         }
-      />
+      >
+        <div className="mt-8 border-t-2 border-ink pt-5 sm:mt-10">
+          <p className="max-w-lg font-display text-xl font-semibold leading-snug text-ink sm:text-2xl">{P.experienceLine}</p>
+          <a
+            href="#trade-link"
+            className="group mt-3 inline-flex min-h-11 items-center gap-1.5 text-[0.9375rem] font-semibold text-navy"
+          >
+            <span className="border-b border-navy/30 pb-0.5 group-hover:border-navy">Our trade link with Hong Kong and China</span>
+            <ArrowRight className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+          </a>
+        </div>
+      </PageIntro>
+      </div>
 
       <div className="mt-10">
         <PageNav items={NAV_ITEMS} />
@@ -231,7 +247,7 @@ export default function ChinaImportSourcingPage() {
               sizes="(min-width: 1024px) 440px, 100vw"
               className="h-auto w-full rounded-xl border border-hairline bg-white"
             />
-            <figcaption className="caption mt-3 leading-relaxed text-slatey"><RahimText>{P.factoryPhotoCaption}</RahimText></figcaption>
+            <figcaption className="caption mt-3 leading-relaxed text-slatey">{P.factoryPhotoCaption}</figcaption>
           </figure>
           <div className="divide-y divide-hairline border-y border-hairline">
             {P.importWithEase.map((item) => (
@@ -315,8 +331,8 @@ export default function ChinaImportSourcingPage() {
       <section
         id="canton-fair"
         aria-labelledby="canton-fair-h"
-        className="band bg-ink text-white"
-        style={{ "--band-bg": "#0D102E" }}
+        className="china-feature band bg-china-red text-white"
+        style={{ "--band-bg": "#E01422" }}
       >
         <div className="grid gap-x-16 gap-y-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-end">
           <div>
@@ -324,7 +340,7 @@ export default function ChinaImportSourcingPage() {
             <p className="mt-4 max-w-[58ch] text-[1.0625rem] leading-[1.65] text-white/85 sm:text-lg">{P.cantonTeaser.text}</p>
             <Link
               href="/china-import-sourcing/canton-fair"
-              className="group mt-7 inline-flex min-h-11 items-center gap-2 rounded-full bg-white px-6 py-3 text-[0.9375rem] font-semibold text-ink transition-colors hover:bg-navy-50"
+              className="group mt-7 inline-flex min-h-11 items-center gap-2 rounded-full bg-china-yellow px-6 py-3 text-[0.9375rem] font-semibold text-ink transition-colors hover:bg-china-yellow-hover"
             >
               {P.cantonTeaser.cta}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
