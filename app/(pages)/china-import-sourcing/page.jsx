@@ -22,6 +22,7 @@ import ProcessFlow from "@/components/ProcessFlow";
 import StatStrip from "@/components/StatStrip";
 import RelatedServices from "@/components/RelatedServices";
 import Faq from "@/components/Faq";
+import ChinaChannelPartner from "@/components/ChinaChannelPartner";
 import { CHINA } from "@/lib/content";
 import { GALLERY_SECTIONS } from "@/lib/gallery-data";
 import { CHINA_PAGE as P } from "@/lib/china-data";
@@ -350,6 +351,7 @@ export default function ChinaImportSourcingPage() {
         </div>
       </section>
 
+      <ChinaChannelPartner />
       <Faq items={FAQS} />
 
       <div className="mt-14">

@@ -5,6 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import PageIntro from "@/components/PageIntro";
 import RelatedServices from "@/components/RelatedServices";
 import Faq from "@/components/Faq";
+import ChinaChannelPartner from "@/components/ChinaChannelPartner";
 import { CANTON_FAIR_PAGE } from "@/lib/china-data";
 import { buildMetadata } from "@/lib/seo";
 
@@ -181,6 +182,7 @@ export default function CantonFairPage() {
         </section>
       </div>
 
+      <ChinaChannelPartner />
       <Faq items={FAQS} />
 
       <div className="mt-14">

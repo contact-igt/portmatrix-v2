@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import MotionRoot from "@/components/MotionRoot";
+import { DEFAULT_IMAGE } from "@/lib/seo";
 
 // Exactly two font families sitewide: Manrope for editorial hierarchy,
 // Inter for body copy and utility UI. The official logo remains its own
@@ -19,13 +20,7 @@ const body = localFont({
   display: "swap",
 });
 
-// Canonical strategy: every page's canonical is derived from metadataBase +
-// its own route via Next's automatic resolution — no page below sets an
-// explicit `alternates.canonical` unless it needs to diverge from its own
-// URL. Domain matches the verified source contact URL (docs/source/
-// PORTMATRIX_SOURCE_TEXT.txt, p.87: "Website: www.portmatrix.in"). This
-// module implements the foundation only; no page beyond `/` exists yet, and
-// nothing here is deployed — see docs/SEO_AEO_GEO_ARCHITECTURE.md.
+// Canonicals use the official domain; share images use the deployment origin.
 const SITE_URL = "https://www.portmatrix.in";
 
 export const metadata = {
@@ -44,23 +39,14 @@ export const metadata = {
     url: SITE_URL,
     siteName: "PORTMATRIX",
     locale: "en_IN",
-    images: [
-      {
-        // Client-supplied PortMatrix logo — the Netherlands inspection photo
-        // belongs to Export Import Clearance, not the sitewide share card.
-        url: "/images/source/branding/PortMatrix_Logo.png",
-        width: 2172,
-        height: 724,
-        alt: "PortMatrix",
-      },
-    ],
+    images: [DEFAULT_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "PORTMATRIX — Customs Broking & Export Handholding",
     description:
       "PORTMATRIX is a Customs Broking and End-to-End Export Handholding company. China Import Sourcing since 1974.",
-    images: ["/images/source/branding/PortMatrix_Logo.png"],
+    images: [DEFAULT_IMAGE.url],
   },
   robots: {
     index: true,
