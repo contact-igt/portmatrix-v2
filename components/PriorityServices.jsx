@@ -5,7 +5,7 @@ const ROWS = [
   ["HS Code & Policy Advisory", "Reduces classification and policy-related risks"],
   ["FTA / CEPA & Rules of Origin (CAROTAR 2020)", "Helps exporters access eligible tariff benefits"],
   ["DGFT Authorisations & Incentives", "Supports duty savings and export benefits"],
-  ["EXIM Compliance & Landed Costing", "Helps exporters / importers calculate actual import costs"],
+  ["EXIM Compliance & Landed Costing", "Helps exporters / importers calculate actual costs"],
   ["Buyer Verification & ECGC", "Helps reduce payment and credit risks"],
   ["Export Handholding for MSMEs / FPOs", "Creates recurring consultancy opportunities"],
   ["e-BRC & FEMA Compliance", "Supports post-shipment regulatory closure"],

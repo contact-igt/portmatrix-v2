@@ -38,12 +38,12 @@ export default function InsuranceAssociation() {
           <p className="kicker text-brandred">Insurance association</p>
           <h2 id="insurance-heading" className="h2 mt-3 max-w-3xl text-ink">PORTMATRIX in Association with Assure Bharat</h2>
         </div>
-        <div className="mt-8 grid items-start gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-14">
+        <div className="mt-8 grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
           <div>
             <p className="max-w-xl text-base leading-relaxed text-slatey sm:text-lg">
               Comprehensive insurance solutions for MSMEs with Marine Cargo Insurance to protect goods in transit and Trade Credit Insurance to safeguard export receivables against buyer default and specified political risks—supporting secure and confident international trade.
             </p>
-            <Image src={asset("image11.png")} alt="PORTMATRIX and Assure Bharat: Marine Cargo Insurance and Trade Credit Insurance" width={512} height={262} sizes="(min-width: 1024px) 480px, (min-width: 640px) 700px, 100vw" className="mt-6 h-auto w-full rounded-xl" />
+            <Image src={asset("image11.png")} alt="PORTMATRIX and Assure Bharat: Marine Cargo Insurance and Trade Credit Insurance" width={512} height={262} unoptimized className="mt-6 h-auto w-full max-w-[512px] rounded-xl" />
             <Link href="/services/msme-insurance" className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-navy underline-offset-4 hover:underline">
               Explore MSME insurance <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
@@ -59,7 +59,7 @@ export default function InsuranceAssociation() {
             <div id="insurance-boards" ref={track} className="flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain motion-reduce:scroll-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" onScroll={(event) => setActive(Math.round(event.currentTarget.scrollLeft / event.currentTarget.clientWidth))}>
               {boards.map((board, index) => (
                 <figure key={board.file} className="w-full shrink-0 snap-center" role="group" aria-roledescription="slide" aria-label={`${index + 1} of ${boards.length}: ${board.title}`}>
-                    <Image src={asset(board.file)} alt={`Assure Bharat — Our Partners in ${board.title}`} width={512} height={256} sizes="(min-width: 1024px) 660px, (min-width: 640px) 700px, 100vw" className="h-auto w-full" />
+                    <Image src={asset(board.file)} alt={`Assure Bharat — Our Partners in ${board.title}`} width={512} height={256} unoptimized className="h-auto w-full" />
                     <figcaption className="mt-4 min-h-11 text-sm text-navy">{board.title}</figcaption>
                 </figure>
               ))}

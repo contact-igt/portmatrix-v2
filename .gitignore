@@ -8,3 +8,6 @@
 npm-debug.log*
 .vercel
 .next-dev/
+
+# Local verification scripts and generated previews
+/output/
